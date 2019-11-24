@@ -1,0 +1,13 @@
+<div class="" style="min-height:93vh;">
+  <breadcrumb></breadcrumb>
+  <div class="container-fluid">
+    <uib-tabset>
+      <uib-tab active="searchTabActive">
+        <uib-tab-heading>
+          Browse Album <i ng-if="tab.cancel" class="fa fa-search"></i>
+        </uib-tab-heading>
+        <generic-Table callback-Fn = "tableAction" data="data.tableData" config-Obj="{{config}}"></generic-Table>
+      </uib-tab>
+    </uib-tabset>
+  </div>
+</div>

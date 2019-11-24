@@ -1,0 +1,258 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="main" id="main">
+  <head>
+    <meta charset="utf-8">
+    <title>{{BRAND_NAME}} - ERP</title>
+    <meta name="viewport" content="initial-scale=1">
+    <!-- stock css libraries -->
+
+    {% if useCDN %}
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" charset="utf-8">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" charset="utf-8">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/angular.chartjs/0.8.8/angular-chart.min.css" charset="utf-8">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.1/animate.min.css" charset="utf-8">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.4.0/rzslider.min.css" charset="utf-8">
+
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css"> -->
+    {% else %}
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" charset="utf-8">
+      <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" charset="utf-8">
+      <link rel="stylesheet" href="{% static 'css/angular-chart.min.css' %}" charset="utf-8">
+      <link rel="stylesheet" href="{% static 'css/animate.css' %}" charset="utf-8">
+      <link rel="stylesheet" href="{% static 'css/rzslider.min.css' %}" charset="utf-8">
+    {% endif %}
+    <link rel="stylesheet" href="{% static 'css/githubHighlightJSTheme.min.css' %}" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/angular-aside.min.css' %}" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/ng-tags-input.min.css' %}" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/octicons.css' %}" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/angular-ui-switch.min.css' %}" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/ripple.min.css' %}" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/foundation-icons.css' %}" charset="utf-8">
+    <!-- custom css -->
+    <link rel="stylesheet" href="{% static 'css/custom/base.css' %}" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/custom/navbarControls.css' %}" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/custom/calendar.css' %}" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/app.HR.css' %}" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/jquery.orgchart.min.css' %}" charset="utf-8">
+
+    {% for a in appsWithCss %}
+      <link rel="stylesheet" href="{% static '' %}css/{{a.name}}.css" charset="utf-8">
+    {% endfor %}
+
+
+    <style type="text/css">
+      .orgchart { background: #fff; }
+      .orgchart td.left, .orgchart td.right, .orgchart td.top { border-color: #aaa; }
+      .orgchart td>.down { background-color: #aaa; }
+      .orgchart .middle-level .title { background-color: var(--themeMain); }
+      .orgchart .middle-level .content { border-color: var(--themeMain); }
+      .orgchart .product-dept .title { background-color: #009933; }
+      .orgchart .product-dept .content { border-color: #009933; }
+      .orgchart .rd-dept .title { background-color: #993366; }
+      .orgchart .rd-dept .content { border-color: #993366; }
+      .orgchart .pipeline1 .title { background-color: #996633; }
+      .orgchart .pipeline1 .content { border-color: #996633; }
+      .orgchart .frontend1 .title { background-color: #cc0066; }
+      .orgchart .frontend1 .content { border-color: #cc0066; }
+      .orgchart .second-menu-icon {
+        transition: opacity .5s;
+        opacity: 0;
+        bottom: -15px;
+        z-index: 2;
+        font-size: 20px;
+        padding: 4px;
+        position: absolute;
+        margin: auto;
+        cursor: pointer;
+        right: 0px;
+
+      }
+      .orgchart .second-menu-icon:hover { color: #449d44; }
+      .orgchart .node:hover .second-menu-icon { opacity: 1;}
+      .orgchart .node .second-menu {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: -45px;
+        border-radius: 35px;
+        box-shadow: 0 0 10px 1px #999;
+        background-color: #fff;
+        z-index: 9999;
+      }
+      .orgchart .node .second-menu .avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+        float: left;
+        margin: 5px;
+      }
+    </style>
+
+
+    <style media="screen" ng-bind-html="theme"></style>
+  </head>
+  <body>
+
+    <div flash-message="4000" style="position:fixed;top:70px;right:10px;z-index:9999;min-width:300px;"></div>
+
+    {% verbatim %}
+    <div  id="sideMenu" style="background: var(--themeMain);width:5%;min-height:100vh;position:fixed;z-index:100;" class="sideMenuView" ng-include="sideMenu">
+    </div>
+
+  <div class="col-md-1 mainUIViewParent animateWidthChange" id="mainUIParent" style="overflow-x: hidden;{{sideMenuVisibility ? 'width:87%': 'width:95%;'}};{{mobileView ? 'width:70%': ';'}};padding:0px;right:0px;position:absolute;">
+    {% endverbatim %}
+      <div ng-include="headerUrl"></div>
+      <div id="mainUI" style=""  class="mainUIView" ui-view ng-if="modules.length>0">
+
+        <style>
+
+          .mainUIViewParent{
+            width:100% !important;
+            margin-left: 0px !important;
+          }
+          .sideMenuView{
+            display: none;
+          }
+
+          .mainUIView{
+            margin: 0px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+            color: rgb(23, 109, 158);
+            text-transform: uppercase;
+            font-family: -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Oxygen-Sans,
+                Ubuntu,
+                Cantarell,
+                Helvetica,
+                sans-serif;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+          }
+          body {
+            margin: 0;
+            padding: 0;
+          }
+
+          @keyframes dots {
+            50% {
+              transform: translateY(-.4rem);
+            }
+            100% {
+              transform: translateY(0);
+            }
+          }
+
+          .d {
+            animation: dots 1.5s ease-out infinite;
+          }
+          .d-2 {
+            animation-delay: .5s;
+          }
+          .d-3 {
+            animation-delay: 1s;
+          }
+          </style>
+
+          <img src="/static/images/spinner.gif" alt="">
+          Loading<span class="d">.</span><span class="d d-2">.</span><span class="d d-3">.</span>
+
+      </div>
+    </div>
+
+
+    <!-- contains very common ng templates used in the directives -->
+    <!-- Stock JS libraries -->
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$']]}
+      });
+    </script>
+
+    {% if useCDN %}
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.17/angular-ui-router.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.4.9/angular-sanitize.min.js"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.1.2/ui-bootstrap-tpls.min.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-chart.js/0.8.8/angular-chart.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.6.3/fabric.min.js"></script>
+      <!-- <script src="https://autobahn.s3.amazonaws.com/autobahnjs/latest/autobahn.min.jgz"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.3.4/tinymce.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+      <script src="https://pc035860.github.io/angular-highlightjs/angular-highlightjs.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-audio/1.7.2/angular.audio.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/6.4.0/rzslider.min.js"></script>
+      <!-- <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.1/angular.js" data-semver="1.4.1"></script> -->
+
+    {% else %}
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script> -->
+      <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+      <script src="{% static 'js/jquery.cookie-1.4.1.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/angular.min.js' %}"></script>
+      <script src="{% static 'js/angular-ui-router.min.js' %}"></script>
+      <script src="{% static 'js/angular-sanitize.min.js' %}"></script>
+      <script src="{% static 'js/Chart.min.js' %}"></script>
+      <script src="{% static 'js/angular-chart.min.js' %}"></script>
+      <script src="{% static 'js/fabric.min.js' %}"></script>
+      <script src="{% static 'js/tinymce.min.js' %}"></script>
+      <script src="{% static 'js/highlight.min.js' %}"></script>
+      <script src="{% static 'js/angular-highlightjs.min.js' %}"></script>
+      <script src="{% static 'js/angular.audio.min.js' %}"></script>
+      <script src="{% static 'js/rzslider.min.js' %}"></script>
+      <!-- <script src="{% static 'js/MathJax.js' %}"></script> -->
+    {% endif %}
+
+    <script src="{% static 'js/autobahn.min.js' %}"></script>
+    <script src="{% static 'js/ui-bootstrap-tpls-0.14.3.min.js' %}"></script>
+    <script src="{% static 'js/angular-bootstrap-confirm.min.js' %}"></script>
+    <script src="{% static 'js/ng-tinymce.js' %}"></script>
+    <script src="{% static 'js/ng-tags-input.min.js' %}"></script>
+    <script src="{% static 'js/angular-flash.js' %}"></script>
+    <script src="{% static 'js/ngDraggable.js' %}"></script>
+    <script src="{% static 'js/angular-aside.min.js' %}"></script>
+    <script src="{% static 'js/markdown.min.js' %}"></script>
+    <script src="{% static 'js/angular-ui-switch.min.js' %}"></script>
+    <script src="{% static 'js/jquery.orgchart.min.js' %}"></script>
+    <!-- Custom JS files -->
+    <script type="text/javascript">
+      var wampServer = '{{wampServer}}';
+      var wampBindName = "{{user.username}}";
+      var BRAND_LOGO = "{{BRAND_LOGO}}";
+    </script>
+    <script src="{% static 'js/custom/wampProcessors.js' %}"></script>
+    <script src="{% static 'js/custom/nativeJS.js' %}"></script>
+    <script src="{% static 'js/custom/ngLibreERP.js' %}"></script>
+    <script src="{% static 'js/custom/directives.js' %}"></script>
+    <script src="{% static 'js/custom/directive.calendar.js' %}"></script>
+    <script src="{% static 'js/custom/directive.table.js' %}"></script>
+    <script src="{% static 'js/custom/directives.native.js' %}"></script>
+    <script src="{% static 'js/custom/filters.js' %}"></script>
+    <script src="{% static 'js/custom/services.js' %}"></script>
+    <script src="{% static 'js/chart.funnel.bundled.min.js' %}"></script>
+    <script src="{% static 'js/gauge.min.js' %}"></script>
+
+    {% for a in appsWithJs %}
+      <script src="{% static '' %}js/{{a.name}}.js"></script>
+    {% endfor %}
+    {% for m in modules %}
+      <script src="{% static '' %}js/module.{{m.name}}.js"></script>
+    {% endfor %}
+
+
+
+  </body>
+</html>

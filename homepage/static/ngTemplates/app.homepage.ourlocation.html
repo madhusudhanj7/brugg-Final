@@ -1,0 +1,118 @@
+<div class="container-fluid" style="padding:0">
+  <div class="row" style="margin:0px">
+    <div class="col-md-12" style="padding:0px">
+      <img src="/static/images/brugg-elevator-seilvergleich-header.jpg" alt="" style="width:100%">
+    </div>
+  </div>
+<div class="row">
+
+</div>
+   <div class="row" style="padding-bottom:3em;margin:0em;" >
+     <div class="col-md-12" style="padding:0 4em 0em 4em" >
+     <h1 style="margin-left:40px;margin:1em;">Our locations</h1>
+   </div>
+     <div class="col-md-6" style="padding-top:0;margin:0;letter-spacing:1px;padding:0 4em 0em 4em">
+       <p style="margin-left:40px;font-size:20px;">With over 700 office locations in over 150 countries, we provide local knowledge with global experience.</p><br/>
+       <p style="margin-left:40px;font-size:20px;">Our structure is composed of the Executive and Regions. The Executive includes our global leadership, governance bodies and our four geographic Areas. Working together they oversee our global strategy, brand, business planning, investments and priorities.</p>
+     </div>
+     <div class="col-md-6" style="padding-top:0;margin:0;letter-spacing:1px;padding:0 4em 0em 4em" >
+       <p style="margin-left:40px;font-size:20px;">Our structure is composed of the Executive and Regions. The Executive includes our global leadership, governance bodies and our four geographic Areas. Working together they oversee our global strategy, brand, business planning, investments and priorities.<br/><br/>Our 28 Regions are grouped under four geographic Areas: Americas; Europe, Middle East, India and Africa (EMEIA); Asia-Pacific; and Japan.<br/></p>
+     </div>
+     <div class="col-md-12" style="padding-top:0;margin:0;letter-spacing:1px;padding:0 4em 0em 4em" >
+       <h1 style="margin-left:40px;margin:1em;">BRUGG locations</h1>
+     </div>
+     <!-- <div class="col-md-4 " style="text-align:left;font-size:16px;padding-top:0;margin-left:0;padding:0 4em 0em 6em;font-weight:300;">
+         <h2 style="font-size:40px;"><b>Our Offices<b></h2>
+           <hr style="border: 3.2px solid blue;" />
+         <h3 style="font-size:170px;">3</h3>
+         <p style="font-size:27px;">offfices around the world</p>
+       <br>
+   </div> -->
+   <!-- <div class="col-md-12" style="text-align:center">
+       <img src="/static/images/about/bruggworldmap.svg#svgView(preserveAspectRatio(none))" class="img-fluid"  style="width:90vw;height:75vh;border:1px solid #f2f2f2;padding:2em 0" alt="Responsive image">
+   </div> -->
+   <div id="map">
+
+   </div>
+   <div class="col-md-4 " style="text-align:left;font-size:20px;font-weight:300;padding:2em 4em 0em 6em;">
+   BRUGG LIFTING,<br>
+   Wydenstrasse 36,<br>
+   5242 Birr,<br>
+   Switzerland
+     </div>
+   <div class="col-md-4 " style="text-align:left;font-size:20px;font-weight:300;padding:2em 4em 0em 6em;">
+     BRUGG LIFTING,<br>
+     Chemin de la Forêt 12,<br>
+     1024 Ecublens,<br>
+     Switzerland
+     </div>
+   <div class="col-md-4 " style="text-align:left;font-size:20px;font-weight:300;padding:2em 4em 0em 6em;">
+     Global Elevator Components Ltd.<br>
+     Unit 4, Kinvara Business Centre,<br>
+     Braintree Road, Gransmore Green,<br>
+     Felsted, Essex, CM6 3LB,<br>
+     United Kingdom
+     </div>
+</div>
+<style type="text/css">
+  #map {
+    height: 500px;
+    width: 100%;
+  }
+
+</style>
+
+
+<script>
+function initMap() {
+var brugg1 = {lat: 47.440253, lng: 8.214229};
+var brugg2 = {lat: 46.541026, lng: 6.569576};
+var brugg3 = {lat: 51.545416, lng: 0.068368};
+
+var map = new google.maps.Map(
+  document.getElementById('map'), {zoom: 4, center: brugg1,
+   //  mapTypeControlOptions: {
+   //   mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.HYBRID]
+   // },
+   disableDefaultUI: true,
+   scaleControl: true,
+    zoomControl: true,
+    styles: [
+      {
+        elementType: 'geometry', stylers: [{color: '#2e2e38'}]
+      },
+      {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+      {elementType: 'labels.text.fill', stylers: [{color: '#f2f2f2'}]},
+
+      {
+      featureType: 'water',
+      elementType: 'geometry',
+      stylers: [{color: '#1a1a24'}]
+     },
+     {
+        featureType: 'water',
+        elementType: 'labels.text.fill',
+        stylers: [{color: '#ffffff'}]
+      },
+    ]
+
+  });
+ //  numberMarkerImg = {
+ //      url: '../images/mobile/map-marker.png',
+ //      size: new google.maps.Size(32, 38),
+ //      scaledSize: new google.maps.Size(32, 38),
+ //      labelOrigin: new google.maps.Point(9, 9)
+ // };
+
+
+var markerIcon = '/static/images/map/brugmap.png'
+
+var marker = new google.maps.Marker({position: brugg1, map: map,icon: {labelOrigin: new google.maps.Point(28, 30), url: markerIcon,scaledSize: new google.maps.Size(60, 60) },label:{text: '1', color: "#009de0"}});
+var marker2 = new google.maps.Marker({position: brugg2, map: map,icon: {labelOrigin: new google.maps.Point(28, 30), url: markerIcon,scaledSize: new google.maps.Size(60, 60)  },label:{text: '2', color: "#009de0"}});
+var marker3 = new google.maps.Marker({position: brugg3, map: map,icon: {labelOrigin: new google.maps.Point(28, 30), url: markerIcon ,scaledSize: new google.maps.Size(60, 60) },label:{text: '3', color: "#009de0"}});
+}
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWVDdvHzUtgxzKYzwuNwfRZJ6zfOHrZSM&callback=initMap">
+</script>

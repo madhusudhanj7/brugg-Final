@@ -1,0 +1,16 @@
+<div class="col-md-3" style="cursor:pointer" >
+  <div class="container-fluid card" style="border-radius:10px;border:1px solid #eee;margin-bottom:10px;padding:20px;">
+    <div class="row">
+      <div class="col-md-12 ">
+        <i class="fa fa-pencil fa-2x pull-right" style="color:blue" ng-click = "rowActionClicked('editLocations');$event.stopPropagation();"></i>
+      </div>
+      <div class="col-md-12">
+        <strong style="font-size:30px">{{data.name}}</strong><br>
+      </div>
+      <div class="col-md-12">
+        <i class="fa fa-trash fa-2x pull-right" style="color:red" ng-click="$event.stopPropagation()"   mwl-confirm title="Confirm" message="Are you sure?" confirm-text="Yes <i class='fa fa-check'></i>" cancel-text="No" on-confirm="rowActionClicked('delete');$event.stopPropagation();" confirm-button-type="default"
+        cancel-button-type="default"></i>
+      </div>
+    </div>
+  </div>
+</div>

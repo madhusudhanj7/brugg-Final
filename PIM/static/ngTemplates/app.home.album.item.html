@@ -1,0 +1,33 @@
+<style>
+#containerimages {
+  width: 90%;
+  border: 1px solid grey;
+  margin: 20px 20px 20px 20px;
+  overflow: visible;
+  box-shadow: 5px 5px 2px #888888;
+  position: relative;
+}
+
+#x {
+    position: absolute;
+    color: black;
+    top: -10px;
+    right: -10px;
+}
+</style>
+<div class="col-md-3" style="cursor:pointer;padding-bottom:15px" >
+  <!-- <div class="container-fluid card" style="border-radius:10px;border:1px solid #eee;margin-bottom:10px;padding:30px;height:20vh"> -->
+    <!-- <div class="row" >
+      <div class="col-md-12"> -->
+
+      <div id="containerimages">
+            <i  class="fa fa-close fa-2x"  mwl-confirm title="Confirm" message="Are you sure?" confirm-text="Yes <i class='fa fa-check'></i>" cancel-text="No" on-confirm="rowActionClicked('delete')" confirm-button-type="default"
+            cancel-button-type="default" id = "x"></i>
+    <img ng-src="{{data.image}}" alt="" class="bisection" style="height:25vh;width:100%">
+</div>
+      <!-- </div>
+
+
+    </div> -->
+  <!-- </div> -->
+</div>

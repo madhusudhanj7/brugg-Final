@@ -1,0 +1,34 @@
+<div class="row" ng-controller="controller.home.products.explore" style="padding:15px">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <strong style="font-size:30px">{{productDetails.itemNumber}}</strong> ({{productDetails.template.name}})<br>
+      <span ng-repeat="val in productDetails.fieldValues" style="font-size:20px">
+        <strong>{{val.field.name}} : </strong>
+        <span ng-if="val.field.type=='Char'">{{val.char}}</span>
+        <span ng-if="val.field.type=='Boolean'">{{val.bool}}</span>
+        <span ng-if="val.field.type=='Integer'">{{val.iValue}}</span>
+        <span ng-if="val.field.type=='float'">{{val.fValue}}</span>
+        <br>
+      </span>
+    </div>
+    <div class="col-md-6">
+      <h3>Edit Product Details</h3>
+      <div class="form-group">
+        <label>Item Number</label>
+        <input type="number" class="form-control" ng-model="productDetails.itemNumber" placeholder="Item Number (Integer)">
+      </div>
+      <div class="" ng-repeat="fld in productDetails.fieldValues">
+        <div class="form-group">
+          <label>{{fld.field.name}}</label> <span style="color:red" ng-if="fld.field.required">*</span>
+          <input type="text" class="form-control" ng-model="fld.field.value" placeholder="Some Text" ng-if="fld.field.type=='Char'" ng-init="fld.field.value=fld.char">
+          <input type="number" class="form-control" ng-model="fld.field.value" placeholder="Some Integer Value" ng-if="fld.field.type=='Integer'" ng-init="fld.field.value=fld.iValue">
+          <input type="number" class="form-control" ng-model="fld.field.value" placeholder="Some Float Value" ng-if="fld.field.type=='float'" ng-init="fld.field.value=fld.fValue">
+          <input type="checkbox" ng-model="fld.field.value" ng-if="fld.field.type=='Boolean'" ng-init="fld.field.value=fld.bool">
+        </div>
+      </div>
+      <span class="btn btn-success" ng-click="saveProduct()" style="margin-top:25px">Save</span>
+    </div>
+  </div>
+</div>
+</div>

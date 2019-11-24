@@ -1,0 +1,165 @@
+<div class="row" style="margin:0px;">
+
+
+  <ng-owl-carousel class="owl-theme" owl-items="images" owl-properties="properties" owl-ready="ready($api)">
+    <div ng-repeat="a in images">
+      <div class="anim-in-out anim-zoom-out">
+        <div style="background-image: url('{{a.img}}');" class="visualimg">
+          <div class="container visualcontent">
+            <div class="col-md-8">
+              <h4 style="color:#E6EBF0;font-weight: lighter;">{{a.title}}</h4>
+              <h2 style="color:{{a.headcol}};">{{a.head}}</h2>
+              <p style="color:{{a.paracol}}">{{a.para}}</p>
+              <div class="row visualbtn">
+                <div class="col-md-3 col-sm-3 col-xs-5">
+                  <a href="#" class="btn button-red" role="button"><span>{{a.btn1}}</span></a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-7" ng-show="{{a.btn2}}">
+                  <a href="#" class="btn button-white" role="button"><span>{{a.btn2}}</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-owl-carousel>
+  <!-- <div class="container clearfix">
+      <a ><img src="/static/images/homevisual1.jpg" style="float:left;" class="imag"/></a>
+      <a><img src="/static/images/homevisual2.jpg" style="float:left;" class="imag" /></a>
+      <a><img src="/static/images/homevisual3.jpg" style="float:left;"  class="imag" /></a>
+      <a><img src="/static/images/homevisual4.jpg" style="float:left;"  class="imag" /></a>
+      <a><img src="/static/images/homevisual5.jpg" style="float:left;"  class="imag" /></a>
+    </div> -->
+
+
+  <div class='container'>
+    <div class="row text-center div-style">
+      <h2>ABBYY solutions for business processes</h2>
+      <span>Powered by&nbsp;ABBYY technologies and platforms for document recognition, data capture, and language processing.</span>
+    </div>
+    <div class="row">
+      <div class=" col-md-4 ">
+        <div class=" row text-center">
+          <a href=""><img src="/static/images/account payable.svg" /></a>
+        </div>
+        <div class="row">
+          <h4 class=" text-center"><a href="">Accounts Payable</a></h4>
+          <p class="text-center" style="margin:0 5px 0 5px">Automated invoice processing makes AP departments more efficient and agile.</p>
+        </div>
+      </div>
+      <div class=" col-md-4">
+        <div class=" row text-center">
+          <a href=""><img src="/static/images/mobilecapture.svg" /></a>
+        </div>
+        <div class="row">
+          <h4 class=" text-center"><a href="">Mobile Capture</a></h4>
+          <p class="text-center" style="margin:0 5px 0 5px"> Captures content from document images and photos via tablets and smartphones. </p>
+        </div>
+      </div>
+      <div class=" col-md-4">
+        <div class=" row text-center">
+          <a href=""><img src="/static/images/digitalmailroom.svg" /></a>
+        </div>
+        <div class="row">
+          <h4 class=" text-center"><a href="">Digital Mailroom</a></h4>
+          <p class="text-center" style="margin:0 5px 0 5px">Automated digitization, classification and routing of all incoming mail</p>
+        </div>
+      </div>
+    </div>
+    <div class="row text-center div-style">
+      <a href="#" class="btn button-blue" role="button" style="font-size:17px"><span>GET MORE SOLUTIONS<i class=" glyphicon glyphicon-chevron-right"></i></span></a>
+    </div>
+  </div>
+
+  <div class="container-fluid" style="background-color:#f0f5fa;">
+    <div class="container" style="padding:2em 0 4em 0;">
+      <h2 class="text-center">ABBYY solutions for industries</h2>
+      <p class="text-center" style="font-size:1.3em;">Document capture and text analytics to cut costs, drive revenue, and mitigate risks.</p>
+      <ng-owl-carousel class="owl-theme" owl-items="navimg" owl-properties="property" owl-ready="ready($api)">
+        <div ng-repeat="a in navimg">
+          <div class="anim-in-out anim-zoom-out">
+            <img ng-src={{a.img}} class="imgposition fluid" />
+            <a href="#" class="btn imgnav" role="button"><span>{{a.text}}</span></a>
+          </div>
+        </div>
+      </ng-owl-carousel>
+      <div class="row text-center" style="margin-top:2em;">
+        <a href="#" class="btn button-blue" role="button" style="font-size:17px"><span>GET MORE SOLUTIONS<i class=" glyphicon glyphicon-chevron-right"></i></span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class='container'>
+    <div class="row text-center div-style">
+      <h2>ABBYY products</h2>
+    </div>
+    <div class="col-md-4 col-sm-12" style="min-height:40vh;margin-top: 2em;">
+      <div class="col-md-12 bg-1 text-center" style="min-height:35vh;">
+        <img src="/static/images/engine3.png" style="margin-top:2em"/>
+        <a href=''>
+          <h3 style="margin-top:-1em">ABBYY FineReader Engine</h3>
+        </a>
+        <h4 style="padding:1em 0 1em 0;">OCR, ICR, OMR, OBR, and document imaging SDK.</h4>
+        <a href="#" class="btn button-blue" role="button" style="font-size:17px;margin: 2em 0 1em 0"><span>REQUEST TRAIL</span></a>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-12" style="min-height:40vh; margin-top: 2em;">
+      <div class=" col-md-12 bg-2 text-center" style="min-height:35vh;">
+        <img src="/static/images/engine4.png" style="margin-top:-1em" />
+        <a href=''>
+          <h3 style="margin-top:-1em">ABBYY FineReader</h3>
+        </a>
+        <h4 style="padding:1em 0 1em 0;">Edit, convert, and compare PDFs and scans with PDF and OCR software.</h4>
+        <div class="row" style="margin-top:2em ">
+          <div class="col-md-offset-1 col-md-4 text-center" style="margin-bottom: 1em;">
+            <a href="#" class="btn button-blue" role="button" style="font-size:17px;"><span>WINDOWS</span></a>
+          </div>
+          <div class="col-md-4 col-md-offset-2  text-center" style="margin-bottom: 1em;">
+            <a href="#" class="btn button-blue" role="button" style="font-size:17px;"><span>MAC</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4  col-sm-12" style="min-height:40vh;margin-top: 2em;">
+      <div class=" col-md-12 bg-3 text-center" style="min-height:35vh;">
+        <img src="/static/images/engine5.png" style="margin-top:2em" />
+        <a href=''>
+          <h3 style="margin-top:-1em">ABBYY FlexiCapture</h3>
+        </a>
+        <h4 style="padding:1em 0 1em 0;">OCR, ICR, OMR, OBR, and document capture to ERP and ECM systems.</h4>
+        <a href="#" class="btn button-blue" role="button" style="font-size:17px;margin: 1em 0"><span>REQUEST DEMO</span></a>
+      </div>
+    </div>
+
+    <div class="col-md-12 text-center" style="padding:2em 0 2em 0;">
+      <a href="#" class="btn button-blue" role="button" style="font-size:17px"><span>VIEW ALL PRODUCTS<i class=" glyphicon glyphicon-chevron-right"></i></span></a>
+    </div>
+  </div>
+
+
+  <div class="container-fluid" style="background-color:#f0f5fa;">
+    <div class="container" style="padding-bottom:3em;">
+      <h2 class="text-center">Customer stories</h2>
+      <div class="col-md-4">
+        <img src="/static/images/customerstory.jpg" width="100%" />
+      </div>
+      <div class="col-md-8">
+        <h3 style="padding-bottom:0.5em;">PepsiCo automates invoice processing with ABBYY FlexiCapture</h3>
+        <span>AP information arrives at PepsiCo’s SAP ERP solution accessed remotely via the web; its cost is shared between company’s business entities.</span>
+        <div class="row">
+          <div style="padding-top:2em;" class="col-md-3">
+            <a href="#" class="btn button-blue" role="button" style="font-size:17px"><span>READ MORE</span></a>
+          </div>
+          <div style=" padding-top:2em;" class="col-md-3">
+            <a href="#" class="btn button-blue" role="button" style="font-size:17px;"><span>ALL CUSTOMER STORIES</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

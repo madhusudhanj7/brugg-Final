@@ -1,0 +1,23 @@
+<div class="col-md-3" style="cursor:pointer" >
+  <div class="container-fluid card" style="border-radius:10px;border:1px solid #eee;margin-bottom:10px;padding:30px;">
+    <div class="row">
+      <div class="col-md-10">
+        <strong style="font-size:30px">{{data.name}}</strong><br>
+
+      </div>
+      <div class="col-md-2">
+        <div class="row text-center">
+          <i class="fa fa-pencil fa-2x" ng-click = "rowActionClicked('accessoriesEditor');$event.stopPropagation();"></i>
+        </div>
+        <div class="row text-center">
+          <i class="fa fa-trash fa-2x" ng-click="$event.stopPropagation()"   mwl-confirm title="Confirm" message="Are you sure?" confirm-text="Yes <i class='fa fa-check'></i>" cancel-text="No" on-confirm="rowActionClicked('accessoriesDelete');$event.stopPropagation();" confirm-button-type="default"
+          cancel-button-type="default"></i>
+        </div>
+        <div class="row text-center">
+          <i class="fa fa-download fa-2x" ng-click = "rowActionClicked('accessoriesPdf');$event.stopPropagation();"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,195 @@
+<!-- <div class="" style="min-height:93vh;">
+
+<breadcrumb></breadcrumb>
+<div class="conainer" style="position:absolute">
+  <div class="row" style="height:225px">
+    <div class="col-md-2" style="height:225px"></div>
+    <div class="col-md-8" style="height:225px">
+      <div class="container-fluid" style="padding-top: 0px;padding-left: 250px;">
+        <div id="chart-container2"></div>
+      </div>
+  </div>
+  <div class="col-md-2" style="height:225px">
+
+  </div>
+  </div>
+  <div class="row" style="height:200px">
+    <div class="col-md-5" style="height:200px">
+      <div class="container-fluid" style="padding-left: 500px;">
+        <div id="chart-container1"></div>
+      </div>
+    </div>
+    <div class="col-md-2" style="height:200px">
+      <img src="/static/images/hero.jpg"></img>
+    </div>
+    <div class="col-md-5" style="height:200px">
+      <div class="container-fluid" style="padding-left: 200px;">
+        <div id="chart-container3"></div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style="height:225px">
+    <div class="col-md-2" style="height:225px"></div>
+    <div class="col-md-8" style="height:225px">
+      <div class="container-fluid" style="padding-top: 0px;padding-left: 250px;">
+        <div id="chart-container4"></div>
+      </div>
+    </div>
+    <div class="col-md-2" style="height:225px"></div>
+  </div>
+</div>
+
+</div> -->
+
+
+<div class="" style="min-height:93vh;position:relative;">
+
+  <breadcrumb></breadcrumb>
+  <div class="container-fluid">
+
+    <div class="col-md-11">
+      <!-- <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box bg-aqua">
+            <span class="info-box-icon info-box-faIcon"><i class="fa fa-link"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-text">Direct Messages</span>
+              <span class="info-box-number">163,921</span>
+              <div class="progress">
+                <div class="progress-bar" style="width: 40%"></div>
+              </div>
+              <span class="progress-description">
+                  40% Increase in 30 Days
+                </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box bg-green">
+            <span class="info-box-icon info-box-faIcon"><i class="fa fa-thumbs-o-up"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-text">Likes</span>
+              <span class="info-box-number">41,410</span>
+              <div class="progress">
+                <div class="progress-bar" style="width: 70%"></div>
+              </div>
+              <span class="progress-description">
+                  70% Increase in 30 Days
+                </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="info-box bg-red">
+            <span class="info-box-icon info-box-faIcon"><i class="fa fa-music"></i></span>
+            <div class="info-box-content">
+              <span class="info-box-text">Visitors</span>
+              <span class="info-box-number">{{totalVisitors}}</span>
+              <div class="progress">
+                <div class="progress-bar" style="width: 70%"></div>
+              </div>
+              <span class="progress-description">
+                  70% Increase in 30 Days
+                </span>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3>{{totalVisitors}}</h3>
+              <p>New Visitors</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-user-plus"></i>
+            </div>
+            <a href="#" class="small-box-footer">
+                More info <i class="fa fa-arrow-circle-right"></i>
+              </a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="small-box bg-green">
+            <div class="inner">
+              <h3>{{totalBlogSubs}}</h3>
+              <p>Blogs Subscribed</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-bell"></i>
+            </div>
+            <a href="#" class="small-box-footer">
+                More info <i class="fa fa-arrow-circle-right"></i>
+              </a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="small-box bg-yellow">
+            <div class="inner">
+              <h3>{{totalApiGent}}</h3>
+              <p>API Generated</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-key"></i>
+            </div>
+            <a href="#" class="small-box-footer">
+                More info <i class="fa fa-arrow-circle-right"></i>
+              </a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3>{{totalContacts}}</h3>
+              <p>Unique Contacts</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-phone-square"></i>
+            </div>
+            <a href="#" class="small-box-footer">
+                More info <i class="fa fa-arrow-circle-right"></i>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1">
+      <div ng-repeat="u in selectedUnit">
+        <input ng-model="selected.toWatch" type="radio" name="unit" ng-value="u">{{u}} <br>
+      </div>
+    </div>
+    <div class="col-md-12" style="padding:0px 80px;">
+      <canvas id="line" class="chart chart-line" chart-data="mainData" chart-labels="labels" chart-legend="true" chart-series="series" style="width:100%; height:60vh;">
+        </canvas>
+    </div>
+
+
+
+    <!-- <div class="col-md-3">
+        <div class="box box-widget widget-user-2">
+          <div class="widget-user-header bg-yellow">
+            <div class="widget-user-image">
+              <img class="img-circle" src="{{MEDIA_URL}}{{user.profile.displayPicture}}" alt="User Avatar">
+            </div>
+            <h3 class="widget-user-username">Nadia Carmichael</h3>
+            <h5 class="widget-user-desc">Lead Developer</h5>
+          </div>
+          <div class="box-footer no-padding">
+            <ul class="nav nav-stacked">
+              <li><a href="#">Projects <span class="pull-right badge bg-blue">31</span></a></li>
+              <li><a href="#">Tasks <span class="pull-right badge bg-aqua">5</span></a></li>
+              <li><a href="#">Completed Projects <span class="pull-right badge bg-green">12</span></a></li>
+              <li><a href="#">Followers <span class="pull-right badge bg-red">842</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div> -->
+
+
+
+
+  </div>
+
+
+</div>

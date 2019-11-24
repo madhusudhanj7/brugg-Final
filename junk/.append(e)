@@ -1,0 +1,164 @@
+Help on class set in module __builtin__:
+
+class sseett(object)
+ |  set() -> new empty set object
+ |  set(iterable) -> new set object
+ |  
+ |  Build an unordered collection of unique elements.
+ |  
+ |  Methods defined here:
+ |  
+ |  ____aanndd____(...)
+ |      x.__and__(y) <==> x&y
+ |  
+ |  ____ccmmpp____(...)
+ |      x.__cmp__(y) <==> cmp(x,y)
+ |  
+ |  ____ccoonnttaaiinnss____(...)
+ |      x.__contains__(y) <==> y in x.
+ |  
+ |  ____eeqq____(...)
+ |      x.__eq__(y) <==> x==y
+ |  
+ |  ____ggee____(...)
+ |      x.__ge__(y) <==> x>=y
+ |  
+ |  ____ggeettaattttrriibbuuttee____(...)
+ |      x.__getattribute__('name') <==> x.name
+ |  
+ |  ____ggtt____(...)
+ |      x.__gt__(y) <==> x>y
+ |  
+ |  ____iiaanndd____(...)
+ |      x.__iand__(y) <==> x&=y
+ |  
+ |  ____iinniitt____(...)
+ |      x.__init__(...) initializes x; see help(type(x)) for signature
+ |  
+ |  ____iioorr____(...)
+ |      x.__ior__(y) <==> x|=y
+ |  
+ |  ____iissuubb____(...)
+ |      x.__isub__(y) <==> x-=y
+ |  
+ |  ____iitteerr____(...)
+ |      x.__iter__() <==> iter(x)
+ |  
+ |  ____iixxoorr____(...)
+ |      x.__ixor__(y) <==> x^=y
+ |  
+ |  ____llee____(...)
+ |      x.__le__(y) <==> x<=y
+ |  
+ |  ____lleenn____(...)
+ |      x.__len__() <==> len(x)
+ |  
+ |  ____lltt____(...)
+ |      x.__lt__(y) <==> x<y
+ |  
+ |  ____nnee____(...)
+ |      x.__ne__(y) <==> x!=y
+ |  
+ |  ____oorr____(...)
+ |      x.__or__(y) <==> x|y
+ |  
+ |  ____rraanndd____(...)
+ |      x.__rand__(y) <==> y&x
+ |  
+ |  ____rreedduuccee____(...)
+ |      Return state information for pickling.
+ |  
+ |  ____rreepprr____(...)
+ |      x.__repr__() <==> repr(x)
+ |  
+ |  ____rroorr____(...)
+ |      x.__ror__(y) <==> y|x
+ |  
+ |  ____rrssuubb____(...)
+ |      x.__rsub__(y) <==> y-x
+ |  
+ |  ____rrxxoorr____(...)
+ |      x.__rxor__(y) <==> y^x
+ |  
+ |  ____ssiizzeeooff____(...)
+ |      S.__sizeof__() -> size of S in memory, in bytes
+ |  
+ |  ____ssuubb____(...)
+ |      x.__sub__(y) <==> x-y
+ |  
+ |  ____xxoorr____(...)
+ |      x.__xor__(y) <==> x^y
+ |  
+ |  aadddd(...)
+ |      Add an element to a set.
+ |      
+ |      This has no effect if the element is already present.
+ |  
+ |  cclleeaarr(...)
+ |      Remove all elements from this set.
+ |  
+ |  ccooppyy(...)
+ |      Return a shallow copy of a set.
+ |  
+ |  ddiiffffeerreennccee(...)
+ |      Return the difference of two or more sets as a new set.
+ |      
+ |      (i.e. all elements that are in this set but not the others.)
+ |  
+ |  ddiiffffeerreennccee__uuppddaattee(...)
+ |      Remove all elements of another set from this set.
+ |  
+ |  ddiissccaarrdd(...)
+ |      Remove an element from a set if it is a member.
+ |      
+ |      If the element is not a member, do nothing.
+ |  
+ |  iinntteerrsseeccttiioonn(...)
+ |      Return the intersection of two or more sets as a new set.
+ |      
+ |      (i.e. elements that are common to all of the sets.)
+ |  
+ |  iinntteerrsseeccttiioonn__uuppddaattee(...)
+ |      Update a set with the intersection of itself and another.
+ |  
+ |  iissddiissjjooiinntt(...)
+ |      Return True if two sets have a null intersection.
+ |  
+ |  iissssuubbsseett(...)
+ |      Report whether another set contains this set.
+ |  
+ |  iissssuuppeerrsseett(...)
+ |      Report whether this set contains another set.
+ |  
+ |  ppoopp(...)
+ |      Remove and return an arbitrary set element.
+ |      Raises KeyError if the set is empty.
+ |  
+ |  rreemmoovvee(...)
+ |      Remove an element from a set; it must be a member.
+ |      
+ |      If the element is not a member, raise a KeyError.
+ |  
+ |  ssyymmmmeettrriicc__ddiiffffeerreennccee(...)
+ |      Return the symmetric difference of two sets as a new set.
+ |      
+ |      (i.e. all elements that are in exactly one of the sets.)
+ |  
+ |  ssyymmmmeettrriicc__ddiiffffeerreennccee__uuppddaattee(...)
+ |      Update a set with the symmetric difference of itself and another.
+ |  
+ |  uunniioonn(...)
+ |      Return the union of sets as a new set.
+ |      
+ |      (i.e. all elements that are in either set.)
+ |  
+ |  uuppddaattee(...)
+ |      Update a set with the union of itself and others.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  ____hhaasshh____ = None
+ |  
+ |  ____nneeww____ = <built-in method __new__ of type object>
+ |      T.__new__(S, ...) -> a new object with type S, a subtype of T

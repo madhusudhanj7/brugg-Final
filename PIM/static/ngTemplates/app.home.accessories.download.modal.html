@@ -1,0 +1,15 @@
+<div  class="modal-header" style='text-align:center;'>
+  <h3>Generate Accessories PDF</h3>
+</div>
+  <div class="modal-body">
+    <div class="row">
+<div class="col-md-6">
+<div class="form-group">
+  <label for="">Select Accessorie</label>
+  <select  class="form-control" ng-model="form.accessories" ng-options="item for item in accessoriesList"></select>
+</div>
+</div>
+<div class="col-md-6" style="padding-top:30px">
+<button class="btn btn-primary" ng-click="generatePdfAccessories()"> Generate Pdf <//button>
+  </div>
+</div>

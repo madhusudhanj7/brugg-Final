@@ -1,0 +1,142 @@
+{% extends "index.html" %}{% load staticfiles %}
+
+{% block brugcontent %}
+
+{% verbatim %}
+  <div class="page-wrapper"style="background:#f3f3f3;" >
+    <div class="preloader"></div><!-- /.preloader -->
+    <div class="inner-banner text-center">
+      <div class="container">
+        <ul class="breadcrumb">
+
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8  col-sm-12 col-xs-12 ">
+    <section class="sec-pad-with-content-margin-30 gray-bg service-page-one" style="background:#f3f3f3;padding-bottom:20px" >
+        <div class="row">
+          <div class="sec-title">
+              <span class="tag-line">Traction Ropes</span>
+            </div>
+        {% endverbatim %}
+          {% for product in tractionTemples %}
+
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+              <a href="/products/{{product.name}}_{{product.pk}}">
+              <!-- <a href= "/products/"+product+"__"+id> -->
+              <div class="single-service-style-one">
+                <div class="top-box text-center">
+                  <div class="inner-content">
+                    <i class="facdori-icon-factory-1 box-icon"></i>
+                    <h3>{{product.name}}</h3>
+                  </div><!-- /.inner-content -->
+                </div><!-- /.top-box -->
+
+                <div class="image-block">
+                  <!-- <a href="/products/product"> -->
+                  <img src="{{product.defaultImage.url}}" alt="Awesome Image" />
+
+                  <div class="overlay">
+                    <div class="box">
+                      <div class="content">
+                        <div class="dotted"></div><!-- /.dotted -->
+                      </div><!-- /.content -->
+                    </div><!-- /.box -->
+                  </div><!-- /.overlay -->
+                </div><!-- /.image-block -->
+              </div><!-- /.single-service-style-one -->
+              </a>
+            </div><!-- /.col-lg-4 col-md-6 col-sm-6 -->
+
+          {% endfor %}
+      {% verbatim %}
+        </div><!-- /.row -->
+    </section><!-- /.sec-pad gray-bg -->
+  </div><!-- /.container -->
+
+  <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8  col-sm-12 col-xs-12 " >
+  <section class="sec-pad-with-content-margin-30 gray-bg service-page-one" style="background:#f3f3f3;padding-bottom:20px" >
+      <div class="row">
+        <div class="sec-title">
+            <span class="tag-line">Compensation Ropes</span>
+          </div>
+      {% endverbatim %}
+        {% for product in compensationTemples %}
+
+
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+            <a href="/products/{{product.name}}_{{product.pk}}">
+            <!-- <a href= "/products/"+product+"__"+id> -->
+            <div class="single-service-style-one">
+              <div class="top-box text-center">
+                <div class="inner-content">
+                  <i class="facdori-icon-factory-1 box-icon"></i>
+                  <h3>{{product.name}}</h3>
+                </div><!-- /.inner-content -->
+              </div><!-- /.top-box -->
+
+              <div class="image-block">
+                <!-- <a href="/products/product"> -->
+                <img src="{{product.defaultImage.url}}" alt="Awesome Image" />
+
+                <div class="overlay">
+                  <div class="box">
+                    <div class="content">
+                      <div class="dotted"></div><!-- /.dotted -->
+                    </div><!-- /.content -->
+                  </div><!-- /.box -->
+                </div><!-- /.overlay -->
+              </div><!-- /.image-block -->
+            </div><!-- /.single-service-style-one -->
+            </a>
+          </div><!-- /.col-lg-4 col-md-6 col-sm-6 -->
+
+        {% endfor %}
+    {% verbatim %}
+      </div><!-- /.row -->
+  </section><!-- /.sec-pad gray-bg -->
+</div><!-- /.container -->
+
+<div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8  col-sm-12 col-xs-12 ">
+<section class="sec-pad-with-content-margin-30 gray-bg service-page-one" style="background:#f3f3f3;" >
+    <div class="row">
+      <div class="sec-title">
+          <span class="tag-line">Governor Ropes</span>
+        </div>
+    {% endverbatim %}
+      {% for product in govenorTemples %}
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+          <a href="/products/{{product.name}}_{{product.pk}}">
+          <div class="single-service-style-one">
+            <div class="top-box text-center">
+              <div class="inner-content">
+                <i class="facdori-icon-factory-1 box-icon"></i>
+                <h3>{{product.name}}</h3>
+              </div>
+            </div>
+
+            <div class="image-block">
+              <img src="{{product.defaultImage.url}}" alt="Awesome Image" />
+
+              <div class="overlay">
+                <div class="box">
+                  <div class="content">
+                    <div class="dotted"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </a>
+        </div>
+
+      {% endfor %}
+  {% verbatim %}
+    </div><!-- /.row -->
+</section><!-- /.sec-pad gray-bg -->
+</div><!-- /.container -->
+
+  </div><!-- /.page-wrapper -->
+  {% endverbatim %}
+  {% endblock %}

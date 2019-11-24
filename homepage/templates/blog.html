@@ -1,0 +1,208 @@
+{% extends "index.html" %}{% load staticfiles %}
+
+{% block brugcontent %}
+
+{% verbatim %}
+<div class="body"  style="margin-top:78px;">
+  <div class="container-fluid hidden-xs hidden-sm" style="padding-left:0px;padding-right:0px;box-shadow: 0px 30px 50px 12px #d0d5dd">
+{% endverbatim %}
+
+
+
+<div style="width:100%;">
+  {% if firstSection|length > 0 %}
+  <div class="row">
+    <div class="blog_container">
+      <div class="flex_50Perc col-md-6" style="padding-right:0px;"  >
+        <a href="/blog/{{firstSection.0.title}}/"><img class="blog_image" src="{{firstSection.0.ogimage.url}}" alt="">
+          <p class="blog_text" style="color:#ffffff;">{{firstSection.0.title}}</p></a>
+        </div>
+        <div class="sec1Right">
+          {% if firstSection.1 %}
+          <div class="sec1RightBox1 col-md-6"style="padding-left:0.5px;"   >
+            <a href="/blog/{{firstSection.1.title}}/"><img class="blog_image" src="{{firstSection.1.ogimage.url}}" alt="" >
+              <p class="blog_text" style="color:#ffffff;">{{firstSection.1.title}}</p></a>
+            </div>
+            {% endif %}
+            {% for blog in firstSection|slice:"2:4" %}
+
+              <div class="sec1RightBox2 col-md-3" style="padding-left:0.5px;padding-right:0.5px;padding-top:1px;" >
+                <a href="/blog/{{blog.title}}/"><img class="blog_image" src="{{blog.ogimage.url}}" alt="" >
+                  <p class="blog_text" style="color:#ffffff;">{{blog.title}}</p></a>
+                </div>
+                {% endfor %}
+
+              </div>
+            </div>
+  </div>
+  {% endif %}
+  <div class="blog_container">
+
+    <div class="sec2Left ">
+      {% for blog in second_sec1 %}
+      <div class="flex_33Perc col-md-3" style="padding-left:0px;padding-right:1px;padding-top:1px;">
+        <a href="/blog/{{blog.title}}/"><img class="blog_image" src="/media/{{blog.ogimage}}" alt="">
+        <p class="blog_text" style="color:#ffffff;">{{blog.title}}</p></a>
+      </div>
+      {% endfor %}
+
+      {% for blog in second_sec2 %}
+      <div class="flex_33Perc col-md-4" style="padding-left:0px;padding-right:1px;padding-top:1px;">
+        <a href="/blog/{{blog.title}}/"><img class="blog_image" src="/media/{{blog.ogimage}}" alt="">
+        <p class="blog_text" style="color:#ffffff;">{{blog.title}}</p></a>
+      </div>
+      {% endfor %}
+
+      <div class="sec1Right">
+        {% if thirdSection.0 %}
+        <div class="sec1RightBox1" >
+          <a href="/blog/{{thirdSection.0.title}}/"><img class="blog_image" src="/media/{{thirdSection.0.ogimage}}" alt="">
+          <p class="blog_text" style="color:#ffffff;">{{thirdSection.0.title}}</p></a>
+        </div>
+        {% endif %}
+
+        {% for blog in thirdSection|slice:"2:4" %}
+        <div  class="sec1RightBox2" >
+          <a href="/blog/{{blog.title}}/"><img class="blog_image" src="/media/{{blog.ogimage}}" alt="">
+          <p class="blog_text" style="color:#ffffff;">{{blog.title}}</p></a>
+        </div>
+        {% endfor %}
+      </div>
+      {% if thirdSection.1 %}
+      <div  class="flex_50Perc" >
+        <a href="/blog/{{thirdSection.1.title}}/"><img class="blog_image" src="/media/{{thirdSection.1.ogimage}}" alt="">
+        <p class="blog_text" style="color:#ffffff;">{{thirdSection.1.title}}</p></a>
+      </div>
+      {% endif %}
+    </div>
+
+
+    {% verbatim %}
+
+
+      <div style="padding:0 15px;">
+        <div class="textHeading text-center">
+          <h4>Most Recent Posts</h4>
+        </div>
+        {% endverbatim %}
+        {% for blog in recentBlogs %}
+      <div style="border-bottom:1px solid #e0e0e0;">
+        <a href="/blog/{{blog.title}}/" style="text-decoration:none;" >
+          <p style="font-size:13px; font-weight:bold; cursor:pointer;margin-top:0px!important"><span> {{blog.title}} </span>  </p>
+        </a>
+      </div>
+      {% endfor %}
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  <div class="container-fluid hidden-lg hidden-md text-center" style="padding-left:0px;padding-right:0px;margin-top:150px;padding-bottom:30px;background:#fafafa">
+    <div class="row">
+      {% for blog in blogObj %}
+      <div class="col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10" style="margin-bottom:15px">
+        <a href="/blog/{{blog.title}}/"><img class="blog_image" src="{{blog.ogimage.url}}" alt="">
+          <p class="blog_text_mobile" style="color:#ffffff">{{blog.title}}</p></a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+</div>
+
+
+
+<style media="screen">
+/* .navbar{
+  background: #ffffff
+} */
+  .blog_text {
+    position: absolute;
+    bottom: 8px;
+    left: 20px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    /* text-shadow: 0 0 20px #000, 0 0 20px #000, 0 0 20px #000, 0 0 20px #090909, 0 0 20px #090909, 0 0 20px #000, 0 0 20px #0f0f0f, 0 0 20px #000; */
+  }
+
+  .blog_text_mobile {
+    position: absolute;
+    bottom: 8px;
+    right:30px;
+    left: 30px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    /* text-shadow: 0 0 20px #000, 0 0 20px #000, 0 0 20px #000, 0 0 20px #090909, 0 0 20px #090909, 0 0 20px #000, 0 0 20px #0f0f0f, 0 0 20px #000; */
+  }
+  .blog_image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+}
+.flex_50Perc {
+    flex: 50%;
+    height: 50vh;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+    /* background-color: #000; */
+}
+.sec1Right {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    flex: 50%;
+    /* height: 50vh */
+  }
+  .sec1RightBox1 {
+    flex: 100%;
+    height: 25vh;
+    position: relative;
+    cursor: pointer;
+    /* background-color: #000 */
+  }
+  .sec1RightBox2 {
+    flex: 50%;
+    height: 25vh;
+    position: relative;
+    cursor: pointer;
+    /* background-color: #000; */
+}
+.sec2Left {
+  flex: 75%;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+.flex_33Perc {
+    flex: 33%;
+    height: 25vh;
+    position: relative;
+    cursor: pointer;
+    /* background-color: #000 */
+  }
+  .blog_container {
+      display: flex;
+      display: -webkit-flex;
+      width: 100%;
+    }
+  .sec1Right {
+      display: flex;
+      display: -webkit-flex;
+      flex-wrap: wrap;
+      flex: 50%;
+      height: 50vh;
+    }
+  .sec2Right {
+    flex: 25%;
+    background-color: #eaeef5;
+</style>
+
+{% endblock %}

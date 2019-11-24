@@ -1,0 +1,69 @@
+<div class="modal-body" >
+  <div class="container-fluid">
+    <div class="container-fluid">
+      <div class="row text-center" style="margin-bottom:10px;width:50%">
+        <ul class="pager">
+          <li class="previous {{currentYear==joiningDateYear? 'disabled':''}}"><a href="" ng-click="prev()"><span aria-hidden="true">&larr;</span> Prev</a></li>
+          <li class="next {{currentYear==lastWorkingYear? 'disabled':''}}"><a href="" ng-click="next()">Next <span aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+        <span style="font-size:20px;">{{ currentYear }}</span>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-6 col-lg-6">
+          <table class="invoiceTable" style=" width: 100%;border-collapse: collapse;">
+            <tr ng-repeat="n in monthsData">
+              <td>
+                <!-- <span style="margin-left:4.5em;">{{ month }}</span>
+                <span class="pull-right"><i class="fa fa-eye" style="font-size:1.5em;margin:0 0.5em;cursor:pointer;color:#337ab7;" ng-model="attendance" ng-click="view(month)"></i></span> -->
+                <!-- <a style="cursor:pointer;" target="_blank"
+                href="/api/payroll/getPayMonthlyslip/?userid={{data.user}}&year={{currentYear}}&month={{month}}"><i class="fa fa-download" style="font-size:1.5em;margin:0 0.5em;cursor:pointer;" ></i></a></span> -->
+                <div class=" col-md-offset-3 col-md-6" ><span style="margin-left:-1em;" >{{n}}</span></div>
+                <div class=" col-md-1">
+                <span class="pull-right"><i class="fa fa-eye" style="font-size:1.5em;cursor:pointer;color:#337ab7;" ng-model="attendance" ng-click="view(n)"></i></span></div>
+                <div class="col-md-1">
+                <span ng-if="monthsForWhichPayslipsExist.indexOf(n) != -1"><a style="cursor:pointer;" target="_blank"
+                href="/api/payroll/getPayMonthlyslip/?userid={{data.user}}&year={{currentYear}}&month={{n}}"><i  class="fa fa-download" style="font-size:1.5em;cursor:pointer; "></i></a>
+              </span></div>
+            </td>
+            </tr>
+          </table>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="text-center" ng-if="attendance">
+            <h3 class="text-center">{{currentYear + '-' + currentMonth }}</h3>
+          <div class="row" >
+            <div class="col-md-7 text-right">
+              <strong>Total Days:</strong>
+            </div>
+            <div class="col-md-3 text-left">{{days}}
+            </div>
+          </div>
+          <div class="row" >
+            <div class="col-md-7 text-right">
+              <strong>Present Days:</strong>
+            </div>
+            <div class="col-md-3 text-left">{{presentDays}}
+            </div>
+          </div>
+          <div class="row" >
+            <div class="col-md-7 text-right">
+              <strong>Absent Days:</strong>
+            </div>
+            <div class="col-md-3 text-left">{{days - (presentDays+leaveDays)}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-7 text-right">
+              <strong>Leave Days:</strong>
+            </div>
+            <div class="col-md-3 text-left">{{leaveDays}}
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

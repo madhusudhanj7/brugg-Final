@@ -1,0 +1,248 @@
+{% load i18n %}
+{% verbatim %}
+
+<style media="screen">
+  .stricky-fixed .sub-menu{
+    margin-top: -3px;
+  }
+  .quote-btn:hover{
+    background: #009de0;
+    color:black
+  }
+</style>
+
+<header class="site-header header-one" style="margin-bottom:-80px;" >
+  <div class="top-bar" ng-click="focusInput();">
+    <div class = "container-fluid clearfix">
+      <div class=" col-lg-2 col-md-2  col-sm-10 col-xs-10 ">
+      <div class="col-md-offset-0   col-xs-offset-2 col-sm-offset-2 text-center" >
+        <a href="/" ><img style="background-color:white;object-fit: cover;padding-top:1%;height:143px" src="static/images/brugglifting.png" alt="Awesome Image" class="img-responsive" class="text-center"/></a>
+      </div>
+      </div>
+      <div class="text-right col-md-10  col-sm-12 col-xs-12" style="padding: 34px 0;padding-right: 60px;">
+      <div class="col-md-offset-0 col-sm-offset-0  col-xs-offset-3 ">
+        <div class="single-header-contact-info">
+          <div class="icon-block">
+            <i class="fa fa-envelope-open fa-2x"></i>
+          </div><!-- /.icon-block -->
+          <div class="text-block ">
+            <h3>orders.elevator@brugg.com</h3>
+            <p>Email address</p>
+          </div><!-- /.text-block -->
+        </div><!-- /.single-header-contact-info -->
+        <div class="single-header-contact-info">
+          <div class="icon-block">
+            <!-- <i class="facdori-icon-phone-call-1"></i> -->
+            <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+
+          </div><!-- /.icon-block -->
+          <div class="text-block ">
+            <h3>+41 56 464 42 42</h3>
+            <p>Phone line</p>
+          </div><!-- /.text-block -->
+        </div><!-- /.single-header-contact-info -->
+
+        <div class="single-header-contact-info">
+          <div class="icon-block">
+            <i class="fa fa-map-marker fa-2x"></i>
+          </div><!-- /.icon-block -->
+          <div class="text-block">
+            <h3>{% endverbatim %} {% trans 'nameId' %}{% verbatim %}</h3>
+            <p>Visit us</p>
+
+        </div><!-- /.text-block -->
+        </div><!-- /.single-header-contact-info -->
+        <div class="single-header-contact-info">
+          <div class="social float-rgiht">
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/user/brugglifting" target="_blank"><i class="fa fa-youtube-play"></i></a>
+          </div><!-- /.social -->
+      </div>
+        </div>
+      </div><!-- /.right-content -->
+    </div><!-- /.container -->
+  </div><!-- /.top-bar -->
+
+<div class="hidden-md hidden-lg">
+  <nav class="navbar navbar-expand-xs navbar-light header-navigation" style="min-height:8.5vh !important">
+    <div class="container clearfix " style="padding-left:-350px;  padding-top:19px; height:72px;">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="logo-box clearfix">
+        <button class="menu-toggler" data-target="#main-nav-bar">
+          <span style="color:#ffffff" class="fa fa-bars fa-2x"></span>
+        </button>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="main-navigation" id="main-nav-bar" style="padding-left:15px; margin-top:17px;">
+        <ul class=" navigation-box" >
+          <li class=" current">
+            <a href="">{% endverbatim %} {% trans 'companyId' %}{% verbatim %}</a>
+            <ul class="sub-menu">
+              <li><a href="/about">{% endverbatim %} {% trans 'aboutusId' %}{% verbatim %}</a></li>
+
+            </ul><!-- /.sub-menu -->
+          </li>
+          <li>
+            <a href="#">{% endverbatim %} {% trans 'elevatorId' %}{% verbatim %}</a>
+            <ul class="sub-menu">
+              <li><a href="/categories/traction-ropes">{% endverbatim %} {% trans 'tractionropesId' %}{% verbatim %}</a></li>
+              <li><a href="/categories/compensation-ropes">{% endverbatim %} {% trans 'compensationropesId' %}{% verbatim %}</a></li>
+              <li><a href="/categories/governor-ropes">{% endverbatim %} {% trans 'governarropesId' %}{% verbatim %}</a></li>
+            </ul><!-- /.sub-menu -->
+          </li>
+          <li>
+            <a href="/rope-selection">{% endverbatim %} {% trans 'ropeselectionId' %}{% verbatim %}</a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+
+      <div class="right-side-box" >
+<!-- <div class="hidden-xs"> -->
+          <span class="dropdown-toggle " type="button" data-toggle="dropdown" style="cursor:pointer;  margin-top:30px; padding-left:10px; color:white;"> <img ng-src="{{data.currentLang.flag}}" style="height:15px;" alt=""> {{data.currentLang.lang}}
+            <span class="caret"></span>
+          </span>
+        <!-- </div> -->
+          <ul class="dropdown-menu" style="position:absolute;top:68px;min-width:65px!important">
+            <li class="selectLang" style="left:40%;z-index:1000!important;background:#ffffff;"><a  href="" ng-repeat="l in langOptions" ng-click="changeLan(l)" ng-if="data.currentLang != l"><img ng-src="{{l.flag}}" style="height:15px;width:20px" alt=""> {{l.lang}}</a></li>
+          </ul>
+          <span class="quote-btn hidden-xs hidden-sm" ng-click="showInput()" style="padding:25.5px 122.5px;"><b style="margin-right:20px;">{% endverbatim %} {% trans 'searchId' %}{% verbatim %}</b> <span class="pull-right" ><i class="fa fa-search"></i></span></span>
+          <span class="quote-btn hidden-md hidden-lg" ng-click="showInput()" style=""><b style="margin-right:-50px;padding-left: 55px"></b> <span class="pull-right" ><i class="fa fa-search"></i></span></span>
+      </div>
+    </div>
+
+    <div class="col-md-10 col-sm-12 col-xs-12 pull-right text-center headerHover" style="padding:0px;min-height:50px;display:{{showBarSearch}};width: 100%;position:absolute;right:0px;" hidden>
+      <div class="col-md-12 text-center " style="background:#2e2e38;color:white;z-index:1000; height: 80px;padding-left:0;padding-top: 6px; padding-right: 0px" class="dropdown" >
+          <input autocomplete="off" type="search" maxlength="3048" class="serachQuery"  style="width:100% ;background:#2e2e38;border:none;padding-left: 40px;outline:none;" id='searchInput' ng-blur="blurText(event)" ng-model='querySearch' ng-change="getQuery()" autofocus>
+          <span ng-click="focusInput()"  style="cursor:pointer;position:relative;right:-150px; top:-22px; ">  <i class="fa fa-close" style="font-size:1.5em;"></i></span>
+          <div class="" style="margin-top: 10px;"  ng-mouseleave="stillShow.val = false" ng-mouseover="stillShow.val = true" >
+            <ul class="container_box box_hover" style="text-align:left;list-style-type:none;top:78px;left:0;background-color:#2e2e38;min-height:0; border-left:none;margin-left:0" ng-class="classAdd">
+              <li ng-repeat='r in results' style=" padding:10px 10px;cursor:pointer;border:none " ng-click="gotopage(r);">
+                <!-- <img ng-src="{{r.defaultImage}}" alt="" style="height:50px;width:50px;border-radius:25px;"> -->
+                <span style="color:#fff;font-weight:700;padding-left:1em;">{{r.name}}</span> </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<div class="hidden-xs hidden-sm">
+  <nav class="navbar navbar-expand-lg navbar-light header-navigation" style="min-height:8.5vh !important">
+     <div class="container clearfix" style="padding-left:50px;">
+       <!-- Brand and toggle get grouped for better mobile display -->
+       <div class="logo-box clearfix">
+         <button class="menu-toggler" data-target="#main-nav-bar">
+           <span style="color:#ffffff" class="fa fa-bars"></span>
+         </button>
+       </div>
+
+       <!-- Collect the nav links, forms, and other content for toggling -->
+       <div class="main-navigation" id="main-nav-bar" style="padding-left:15px">
+         <ul class=" navigation-box">
+           <li class=" current" >
+             <a href="">{% endverbatim %} {% trans 'companyId' %}{% verbatim %}</a>
+             <ul class="sub-menu">
+               <li><a href="/about">{% endverbatim %} {% trans 'aboutusId' %}{% verbatim %}</a></li>
+
+             </ul><!-- /.sub-menu -->
+           </li>
+           <li>
+             <a href="#">{% endverbatim %} {% trans 'elevatorId' %}{% verbatim %}</a>
+             <ul class="sub-menu">
+               <li><a href="/categories/traction-ropes">{% endverbatim %} {% trans 'tractionropesId' %}{% verbatim %}</a></li>
+               <li><a href="/categories/compensation-ropes">{% endverbatim %} {% trans 'compensationropesId' %}{% verbatim %}</a></li>
+               <li><a href="/categories/governor-ropes">{% endverbatim %} {% trans 'governarropesId' %}{% verbatim %}</a></li>
+             </ul><!-- /.sub-menu -->
+           </li>
+           <li>
+             <a href="/rope-selection">{% endverbatim %} {% trans 'ropeselectionId' %}{% verbatim %}</a>
+           </li>
+
+
+         </ul>
+       </div><!-- /.navbar-collapse -->
+       <div class="right-side-box" >
+           <span class="dropdown-toggle" type="button" data-toggle="dropdown" style="cursor:pointer;  margin-top:30px;color:white;"> <img ng-src="{{data.currentLang.flag}}" style="height:15px;" alt=""> {{data.currentLang.lang}}
+             <span class="caret"></span>
+           </span>
+           <ul class="dropdown-menu" style="position:absolute;top:76px;min-width:65px!important">
+             <li class="selectLang" style="left:40%;z-index:1000!important;background:#ffffff;"><a  href="" ng-repeat="l in langOptions" ng-click="changeLan(l)" ng-if="data.currentLang != l"><img ng-src="{{l.flag}}" style="height:15px;width:20px" alt=""> {{l.lang}}</a></li>
+           </ul>
+           <span class="quote-btn hidden-xs hidden-sm" ng-click="showInput()" style="padding:25.5px 122.5px;"><b style="margin-right:20px;">{% endverbatim %} {% trans 'searchId' %}{% verbatim %}</b> <span class="pull-right" ><i class="fa fa-search"></i></span></span>
+           <span class="quote-btn hidden-md hidden-lg" ng-click="showInput()" style="padding:25.5px 122.5px;"><b style="margin-right:20px;">{% endverbatim %} {% trans 'searchId' %}{% verbatim %}</b> <span class="pull-right" ><i class="fa fa-search"></i></span></span>
+       </div>
+
+     </div>
+     <div class="col-md-10 col-sm-12 col-xs-12 pull-right text-center headerHover" style="padding:0px;min-height:50px;display:{{showBarSearch}};width: 81.1%;position:absolute;right:0px;" hidden>
+       <div class="col-md-12 text-center " style="background:#2e2e38;color:white;z-index:1000; height: 80px;padding-left:0;padding-top: 26px;padding-right: 0px" class="dropdown" >
+           <input autocomplete="off" type="search" maxlength="2048" class="serachQuery"  style="width:97% ;background:#2e2e38;border:none;padding-left: 40px;" id='searchInput' ng-blur="blurText(event)" ng-model='querySearch' ng-change="getQuery()" >
+           <span ng-click="focusInput()"  style="cursor:pointer;position:relative;right:0px">  <i class="fa fa-close" style="font-size:1.5em;"></i></span>
+           <div class="" style="margin-top: 10px;"  ng-mouseleave="stillShow.val = false" ng-mouseover="stillShow.val = true" >
+             <ul class="container_box box_hover" style="text-align:left;list-style-type:none;top:78px;left:0;background-color:#2e2e38;min-height:0; border-left:none;margin-left:0" ng-class="classAdd">
+               <li ng-repeat='r in results' style=" padding:10px 10px;cursor:pointer;border:none " ng-click="gotopage(r);">
+                 <!-- <img ng-src="{{r.defaultImage}}" alt="" style="height:50px;width:50px;border-radius:25px;"> -->
+                 <span style="color:#fff;font-weight:700;padding-left:1em;">{{r.name}}</span> </li>
+             </ul>
+           </div>
+       </div>
+     </div>
+   </nav>
+</div>
+
+
+
+
+  <!-- FIXED MENU STRICKY MENU -->
+  <nav class="navbar navbar-expand-lg navbar-light header-navigation stricky stricky-menu">
+    <div class="container clearfix">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="logo-box clearfix">
+        <button class="menu-toggler" data-target="#main-nav-bar2" ng-click="showImage()">
+          <span style="color:#ffffff" class="fa fa-bars"></span>
+        </button>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+
+      <div class="main-navigation" id="main-nav-bar2" style="padding:0px;margin:-3px">
+        <ul class=" navigation-box ">
+          <li class="hidden-xs hidden-sm" style="background:#ffffff;padding-right:10px;padding-left: 200px;padding-top:10px;">
+            <a href="/" ><img style="background-color:white;height:40px;top: -25%;-ms-transform: translateY(25%);transform: translateY(25%);" src="static/images/brugglifting.png" alt="Awesome Image"  /></a></li>
+          <li class=" current">
+            <a href="#">{% endverbatim %} {% trans 'companyId' %}{% verbatim %}</a>
+            <ul class="sub-menu">
+              <li><a href="/about">{% endverbatim %} {% trans 'aboutusId' %}{% verbatim %}</a></li>
+
+            </ul><!-- /.sub-menu -->
+          </li>
+          <li>
+            <a href="">{% endverbatim %} {% trans 'elevatorId' %}{% verbatim %}</a>
+            <ul class="sub-menu">
+              <li><a href="/categories/traction-ropes">{% endverbatim %} {% trans 'tractionropesId' %}{% verbatim %}</a></li>
+              <li><a href="/categories/compensation-ropes">{% endverbatim %} {% trans 'compensationropesId' %}{% verbatim %}</a></li>
+              <li><a href="/categories/governor-ropes">{% endverbatim %} {% trans 'governarropesId' %}{% verbatim %}</a></li>
+            </ul><!-- /.sub-menu -->
+          </li>
+          <li>
+            <a href="/rope-selection">{% endverbatim %} {% trans 'ropeselectionId' %}{% verbatim %}</a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+      <div class="right-side-box" >
+        <!-- <div> -->
+          <span class="dropdown-toggle " type="button" data-toggle="dropdown" style="cursor:pointer;color:white;"> <img ng-src="{{data.currentLang.flag}}" style="height:15px;" alt=""> {{data.currentLang.lang}}
+            <span class="caret"></span>
+          </span>
+          <ul class="dropdown-menu" style="position:absolute;top:52px">
+            <li  class="hidden-xs hidden-sm" class="selectLang" style="left:40%;z-index:1000!important;background:#ffffff;min-width:65px!important"><a  href="" ng-repeat="l in langOptions" ng-click="changeLan(l)" ng-if="data.currentLang != l"><img ng-src="{{l.flag}}" style="height:15px;width:20px" alt=""> {{l.lang}}</a></li>
+          </ul>
+          <span class="quote-btn" ng-click="showInput()" style="padding:6.7% 5%;width:230px"><b>{% endverbatim %} {% trans 'searchId' %}{% verbatim %}</b> <span class="pull-right" ><i class="fa fa-search"></i></span></span>
+        <!-- </div> -->
+      </div>
+
+    </div>
+  </nav>
+
+</header>
+
+{% endverbatim %}

@@ -1,0 +1,45 @@
+<div class="" style="min-height:93vh;">
+  <breadcrumb></breadcrumb>
+  <div class="container-fluid">
+    <uib-tabset>
+      <uib-tab >
+        <uib-tab-heading>
+          Template Create  <i class="fa fa-plus"></i>
+        </uib-tab-heading>
+        <div style="margin-top:20px" ng-include="'/static/ngTemplates/app.homepage.productsTemplates.newForm.html'"></div>
+      </uib-tab>
+      <uib-tab active="searchTabActive">
+        <uib-tab-heading>
+          Browse Templates <i ng-if="tab.cancel" class="fa fa-search"></i>
+        </uib-tab-heading>
+        <generic-Table callback-Fn = "tableAction" data="data.tableData" config-Obj="{{config}}"></generic-Table>
+      </uib-tab>
+      <uib-tab >
+        <uib-tab-heading>
+          Product Create  <i class="fa fa-plus"></i>
+        </uib-tab-heading>
+        <div style="margin-top:20px" ng-include="'/static/ngTemplates/app.homepage.products.newForm.html'"></div>
+      </uib-tab>
+      <uib-tab>
+        <uib-tab-heading>
+          Browse Products <i ng-if="tab.cancel" class="fa fa-search"></i>
+        </uib-tab-heading>
+        <generic-Table callback-Fn = "productsTableAction" data="data.productsTableData" config-Obj="{{productsConfig}}"></generic-Table>
+      </uib-tab>
+      <uib-tab ng-repeat="tab in tabs" active="tab.active" disable="tab.disabled">
+        <uib-tab-heading >
+          {{tab.title}} <i ng-if="tab.cancel" class="fa fa-close" ng-click="closeTab($index);"></i>
+        </uib-tab-heading>
+        <div ng-if="tab.app == 'templateEditor'">
+          <div ng-include="'/static/ngTemplates/app.homepage.productsTemplates.newForm.html'"></div>
+        </div>
+        <div ng-if="tab.app == 'templateview'">
+          <div ng-include="'/static/ngTemplates/app.homepage.productsTemplates.explore.html'"></div>
+        </div>
+        <div ng-if="tab.app == 'productExplore'">
+          <div ng-include="'/static/ngTemplates/app.homepage.products.explore.html'"></div>
+        </div>
+      </uib-tab>
+    </uib-tabset>
+  </div>
+</div>

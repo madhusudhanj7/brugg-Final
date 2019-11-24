@@ -1,0 +1,18 @@
+[{
+  "model": "auth.user",
+  "pk": 72,
+  "fields": {
+    "password": "pbkdf2_sha256$30000$2ZLRNFmowCn1$y+POpwrpvXYY6mPIUaY7oKJ6R5dYhxnxbQ0p/9kdmCg=",
+    "last_login": "2017-03-31T07:30:52.713Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Admin",
+    "last_name": "Admin",
+    "email": "admin@cioc.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2016-08-05T13:31:35.424Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}]

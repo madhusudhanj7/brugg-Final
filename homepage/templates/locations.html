@@ -1,0 +1,876 @@
+{% extends "index.html" %}{% load staticfiles %}{% load i18n %}
+{% get_current_language as lang %}
+
+
+{% block brugcontent %}
+
+{% if locations %}
+    <script type="text/javascript">
+        (function () {window.locations = {{locations|safe}};})();
+    </script>
+{% endif %}
+{% verbatim %}
+
+
+<div class="container-fluid" style="padding:0">
+  <div class="row" style="margin:0px">
+    <div class="col-md-12 col-xs-12" style="padding:0px">
+      <img src="/static/images/brugg-elevator-seilvergleich-header.jpg" class="banner img-responsive" alt="" style="width:100%">
+    </div>
+  </div>
+  <div class="row">
+
+  </div>
+  <div class="row" style="padding-bottom:3em;margin:0em;">
+    <div class="col-md-12" >
+      <h1 style="margin:1em;">{% endverbatim %} {% trans 'l1Id' %}{% verbatim %}</h1>
+    </div>
+    <div class="col-md-6" style="padding-top:0;margin:0;letter-spacing:1px;">
+      <p style="margin-left:40px;font-size:20px;">{% endverbatim %} {% trans 'l2Id' %}{% verbatim %}</p>
+    </div>
+    <div class="col-md-6" style="padding-top:0;margin:0;letter-spacing:1px;">
+      <p style="margin-left:40px;font-size:20px;">{% endverbatim %} {% trans 'l3Id' %}{% verbatim %}</p>
+    </div>
+    <div class="col-md-12" style="padding-top:0;margin:0;letter-spacing:1px;">
+      <h1 style="margin-left:40px;margin:1em;">BRUGG locations</h1>
+    </div>
+    <!-- <div class="col-md-4 " style="text-align:left;font-size:16px;padding-top:0;margin-left:0;padding:0 4em 0em 6em;font-weight:300;">
+         <h2 style="font-size:40px;"><b>Our Offices<b></h2>
+           <hr style="border: 3.2px solid blue;" />
+         <h3 style="font-size:170px;">3</h3>
+         <p style="font-size:27px;">offfices around the world</p>
+       <br>
+   </div> -->
+    <!-- <div class="col-md-12" style="text-align:center">
+       <img src="/static/images/about/bruggworldmap.svg#svgView(preserveAspectRatio(none))" class="img-fluid"  style="width:90vw;height:75vh;border:1px solid #f2f2f2;padding:2em 0" alt="Responsive image">
+   </div> -->
+    <!-- <div id="map" class="col-hidden-md col-xs-12" style="width:100%;height:400px;"> -->
+    <div class="container-fluid" style="padding:0">
+      <div id="map" class="col-md-offset-2 col-md-10 col-sm-12 col-xs-12">
+      </div>
+    </div>
+    <div class="row" style="padding-top:2em;">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 location_headers" >
+        <div class="sec-title " style="margin:0px">
+          <span class="tag-line" style="display:inline"> Brugg Lifting </span>
+            <img src="/static/images/map/brugmapBlue.png" class=" img-responsive" alt="" style="display:inline">
+        </div>
+      </div>
+    </div>
+
+
+
+
+      {% endverbatim %}
+
+      {% for c in toreturn %}
+        {% if c.representation == 0 %}
+          {% if lang == 'en' %}
+            <div class="{% if forloop.counter|divisibleby:4 %}row{% endif %}">
+              <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="font-size:20px;padding:2em 0em 0em 0;text-align: center;letter-spacing:1px;float:left">
+                <a style="color:#7f8284; cursor:pointer;border:1px solid white!important;outline:none " href={{c.url | safe}} target="_blank">
+                <div class="" style="" >{{c.en | safe}}
+                </div>
+                </a>
+              </div>
+            </div>
+          {% endif %}
+          {% if lang == 'de' %}
+          <div class="{% if forloop.counter|divisibleby:4 %}row{% endif %}">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="font-size:20px;padding:2em 0em 0em 0;text-align: center;letter-spacing:1px;">
+              <a style="color:#7f8284; cursor:pointer;border:1px solid white!important;outline:none " href={{c.url | safe}} target="_blank">
+              <div class="" style="" >{{c.de | safe}}
+              </div>
+              </a>
+            </div>
+          </div>
+          {% endif %}
+          {% if lang == 'zh' %}
+          <div class="{% if forloop.counter|divisibleby:4 %}row{% endif %}">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="font-size:20px;padding:2em 0em 0em 0;text-align: center;letter-spacing:1px;">
+              <a style="color:#7f8284; cursor:pointer;border:1px solid white!important;outline:none " href={{c.url | safe}} target="_blank">
+              <div class="" style="" >{{c.zh | safe}}
+              </div>
+              </a>
+            </div>
+            </div>
+          {% endif %}
+
+        {% endif %}
+      {% endfor %} {% verbatim %}
+      <!-- <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="font-size:20px;padding:2em 0em 0em 0;text-align: center;letter-spacing:1px;">
+        <a style="color:#7f8284; cursor:pointer;border:1px solid white!important;outline:none " href="https://maps.google.com/?q=Brugg Lifting Wydenstrasse 36, 5242 Birr, Switzerland" target="_blank">
+        <p style="margin:0;padding:0;">Brugg Lifting</p>
+        <p style="margin:0;padding:0">Wydenstrasse 36,</p>
+        <p style="margin:0;padding:0">5242 Birr,</p>
+        <p style="margin:0;padding:0">{% endverbatim %} {% trans 'address1Id' %}{% verbatim %}</p>
+        </a>
+
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="font-size:20px;padding:2em 0em 0em 0;text-align: center;letter-spacing:1px;">
+        <a style="color:#7f8284; cursor:pointer;border:1px solid white!important;outline:none " href="https://maps.google.com/?q=Brugg Lifting Chemin de la Forêt 12, 1024 Ecublens, Switzerland" target="_blank">
+        <p style="margin:0;padding:0">Brugg Lifting</p>
+        <p style="margin:0;padding:0">Chemin de la Forêt 12,</p>
+        <p style="margin:0;padding:0">1024 Ecublens,</p>
+        <p style="margin:0;padding:0">{% endverbatim %} {% trans 'address2Id' %}{% verbatim %}</p>
+      </a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="font-size:20px;padding:2em 0em 0em 0;text-align: center;letter-spacing:1px;">
+        <a style="color:#7f8284; cursor:pointer;border:1px solid white!important;outline:none " href="https://maps.google.com/?q=Brugg Lifting 3411 Turkey Mtn. Road NE Rome, Georgia 30161 USA" target="_blank">
+        <p style="margin:0;padding:0">Brugg Lifting</p>
+        <p style="margin:0;padding:0">3411 Turkey Mtn. Road NE</p>
+        <p style="margin:0;padding:0">Rome, Georgia 30161</p>
+        <p style="margin:0;padding:0">{% endverbatim %} {% trans 'address3Id' %}{% verbatim %}</p>
+        </a>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="font-size:20px;padding:2em 0em 0em 0;text-align: center;letter-spacing:1px;">
+        <a style="color:#7f8284; cursor:pointer;border:1px solid white!important;outline:none " href="https://maps.google.com/?q=Brugg Lifting P O Box 231265 Dubai UAE" target="_blank">
+        <p style="margin:0;padding:0">Brugg Lifting</p>
+        <p style="margin:0;padding:0">P O Box 231265 </p>
+        <p style="margin:0;padding:0">{% endverbatim %} {% trans 'address4Id' %}{% verbatim %}</p>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="font-size:20px;padding:2em 0em 0em 0;text-align: center;letter-spacing:1px;">
+          <a style="color:#7f8284; cursor:pointer;border:1px solid white!important;outline:none " href="https://maps.google.com/?q=Brugg Lifting, Plant 1 Nr.88 Jinling East Road Suzhou Industrial Park Jiangsu Province, 215121 P.R. China" target="_blank">
+        <p style="margin:0;padding:0">Brugg Lifting</p>
+        <p style="margin:0;padding:0">Plant 1</p>
+        <p style="margin:0;padding:0">Nr.88 Jinling East Road</p>
+        <p style="margin:0;padding:0">Suzhou Industrial Park</p>
+        <p style="margin:0;padding:0">Jiangsu Province, 215121</p>
+        <p style="margin:0;padding:0">{% endverbatim %} {% trans 'address5Id' %}{% verbatim %}</p>
+        </a>
+      </div>
+    </div> -->
+    <div class="row" style="padding-top:2em;">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-left:72px;text-align: left;letter-spacing:1px;">
+        <div class="sec-title " style="margin:0px">
+          <span class="tag-line" style="display:inline"> Brugg Lifting Representation </span>
+            <img src="/static/images/map/BruggLocationWhite2.png" class=" img-responsive" alt="" style="display:inline">
+        </div>
+      </div>
+    </div>
+    {% endverbatim %}
+
+    {% for c in toreturn %}
+      {% if c.representation == 1 %}
+        {% if lang == 'en' %}
+          <div class="{% if forloop.counter|divisibleby:4 %}row{% endif %}">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="font-size:20px;padding:2em 0em 0em 0;text-align: center;letter-spacing:1px;float:left">
+              <a style="color:#7f8284; cursor:pointer;border:1px solid white!important;outline:none " href="https://maps.google.com/?q=Brugg Lifting Wydenstrasse 36, 5242 Birr, Switzerland" target="_blank">
+              <div class="" style="" >{{c.en | safe}}
+              </div>
+              </a>
+            </div>
+          </div>
+        {% endif %}
+        {% if lang == 'de' %}
+        <div class="{% if forloop.counter|divisibleby:4 %}row{% endif %}">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="font-size:20px;padding:2em 0em 0em 0;text-align: center;letter-spacing:1px;">
+            <a style="color:#7f8284; cursor:pointer;border:1px solid white!important;outline:none " href="https://maps.google.com/?q=Brugg Lifting Wydenstrasse 36, 5242 Birr, Switzerland" target="_blank">
+            <div class="" style="" >{{c.de | safe}}
+            </div>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+        {% if lang == 'zh' %}
+        <div class="{% if forloop.counter|divisibleby:4 %}row{% endif %}">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="font-size:20px;padding:2em 0em 0em 0;text-align: center;letter-spacing:1px;">
+            <a style="color:#7f8284; cursor:pointer;border:1px solid white!important;outline:none " href="https://maps.google.com/?q=Brugg Lifting Wydenstrasse 36, 5242 Birr, Switzerland" target="_blank">
+            <div class="" style="" >{{c.zh | safe}}
+            </div>
+            </a>
+          </div>
+          </div>
+        {% endif %}
+
+      {% endif %}
+    {% endfor %} {% verbatim %}
+
+  </div>
+</div>
+<style type="text/css">
+  #map {
+    height: 500px;
+    width: 94%;
+    margin-left: 55px;
+  }
+
+  .address {
+    width: 100%;
+  }
+
+  .banner {
+    height: 40vh;
+  }
+
+  @media (max-width:997px) {
+    #map {
+      margin-left: 0;
+      width: 100%;
+      height: 300px;
+    }
+
+    .address {
+      width: 28%;
+    }
+
+    .banner {
+      height: 50vh;
+    }
+  }
+</style>
+
+
+<script type="text/javascript">
+
+  function initMap() {
+    var locations = window.locations
+
+    var map = new google.maps.Map(
+      document.getElementById('map'), {
+        zoom: 2,
+        center: {
+          lat:locations[0].fields.lat,
+          lng:locations[0].fields.long
+        },
+        //  mapTypeControlOptions: {
+        //   mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.HYBRID]
+        // },
+        disableDefaultUI: true,
+        scaleControl: true,
+        zoomControl: true,
+        styles: [{
+            elementType: 'geometry',
+            stylers: [{
+              color: '#2e2e38'
+            }]
+          },
+          {
+            elementType: 'labels.text.stroke',
+            stylers: [{
+              color: '#242f3e'
+            }]
+          },
+          {
+            elementType: 'labels.text.fill',
+            stylers: [{
+              color: '#f2f2f2'
+            }]
+          },
+
+          {
+            featureType: 'water',
+            elementType: 'geometry',
+            stylers: [{
+              color: '#1a1a24'
+            }]
+          },
+          {
+            featureType: 'water',
+            elementType: 'labels.text.fill',
+            stylers: [{
+              color: '#ffffff'
+            }]
+          },
+        ]
+
+      });
+    for(var i=0;i<locations.length;i++){
+      var lat = locations[i].fields.lat
+      var long = locations[i].fields.long
+      var positionObj = {
+        lat:lat,
+        lng:long
+      }
+
+        if(locations[i].fields.representation == false){
+          var markerIcon = '/static/images/map/brugmap.png';
+        }else{
+          var markerIcon = '/static/images/map/BruggLocationWhite.png';
+        }
+
+        var marker = new google.maps.Marker({
+          position: positionObj,
+          map: map,
+          icon: {
+            labelOrigin: new google.maps.Point(28, 30),
+            url: markerIcon,
+            scaledSize: new google.maps.Size(60, 60)
+          }
+        });
+    }
+
+    // var brugg1 = {
+    //   lat: 47.440350,
+    //   lng: 8.215310
+    // };
+    // var brugg2 = {
+    //   lat: 46.540020,
+    //   lng: 6.572310
+    // };
+    // var brugg3 = {
+    //   lat: 34.227871,
+    //   lng: -85.181309
+    // };
+    // var brugg4 = {
+    //   lat: 25.045655,
+    //   lng: 55.132930
+    // };
+    // var brugg5 = {
+    //   lat: 32.035365,
+    //   lng: 118.837738
+    // };
+    // var brugg6 = {
+    //   lat: 45.409320,
+    //   lng: 9.271450
+    // };
+    //
+    // var brugg7 = {
+    //   lat: 51.480227,
+    //   lng: 0.279126
+    // };
+    // var brugg8 = {
+    //   lat: 52.655048,
+    //   lng: 19.087555
+    // };
+    //
+    // var brugg9 = {
+    //   lat: 48.066600,
+    //   lng: 9.255320
+    // };
+    //
+    // var brugg10 = {
+    //   lat: 40.679085,
+    //   lng: -74.249119
+    // };
+    //
+    // var brugg11 = {
+    //   lat: 25.837194,
+    //   lng: -80.187649
+    // };
+    //
+    // var brugg12 = {
+    //   lat: 43.799470,
+    //   lng: -79.194630
+    // };
+    //
+    // var brugg13 = {
+    //   lat: 36.138401,
+    //   lng: -115.184441
+    // };
+    //
+    // var brugg14 = {
+    //   lat: 41.729990,
+    //   lng: -83.495090
+    // };
+    //
+    // var brugg15 = {
+    //   lat: 49.191754,
+    //   lng: -122.963652
+    // };
+    //
+    // var brugg16 = {
+    //   lat: 25.923730,
+    //   lng: -80.226408
+    // };
+    //
+    // var brugg17 = {
+    //   lat: 41.626890,
+    //   lng: -87.677360
+    // };
+    //
+    // var brugg18 = {
+    //   lat: 29.374737,
+    //   lng: 47.979361
+    // };
+    //
+    // var brugg19 = {
+    //   lat: 1.351394,
+    //   lng: 103.967691
+    // };
+    //
+    // var brugg20 = {
+    //   lat: 39.795853,
+    //   lng: -104.994993
+    // };
+    //
+    // var brugg21 = {
+    //   lat: 22.300870,
+    //   lng: 114.178340
+    // };
+    //
+    // var brugg22 = {
+    //   lat: 37.477136,
+    //   lng: 127.019659
+    // };
+    //
+    // var brugg23 = {
+    //   lat: 13.881591,
+    //   lng: 100.644533
+    // };
+    //
+    // var brugg24 = {
+    //   lat: 14.604190,
+    //   lng: 121.021940
+    // };
+    //
+    // var brugg25 = {
+    //   lat: -37.837711,
+    //   lng: 145.280640
+    // };
+
+
+    //
+    // var map = new google.maps.Map(
+    //   document.getElementById('map'), {
+    //     zoom: 2,
+    //     center: brugg1,
+    //     //  mapTypeControlOptions: {
+    //     //   mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.HYBRID]
+    //     // },
+    //     disableDefaultUI: true,
+    //     scaleControl: true,
+    //     zoomControl: true,
+    //     styles: [{
+    //         elementType: 'geometry',
+    //         stylers: [{
+    //           color: '#2e2e38'
+    //         }]
+    //       },
+    //       {
+    //         elementType: 'labels.text.stroke',
+    //         stylers: [{
+    //           color: '#242f3e'
+    //         }]
+    //       },
+    //       {
+    //         elementType: 'labels.text.fill',
+    //         stylers: [{
+    //           color: '#f2f2f2'
+    //         }]
+    //       },
+    //
+    //       {
+    //         featureType: 'water',
+    //         elementType: 'geometry',
+    //         stylers: [{
+    //           color: '#1a1a24'
+    //         }]
+    //       },
+    //       {
+    //         featureType: 'water',
+    //         elementType: 'labels.text.fill',
+    //         stylers: [{
+    //           color: '#ffffff'
+    //         }]
+    //       },
+    //     ]
+    //
+    //   });
+    //  numberMarkerImg = {
+    //      url: '../images/mobile/map-marker.png',
+    //      size: new google.maps.Size(32, 38),
+    //      scaledSize: new google.maps.Size(32, 38),
+    //      labelOrigin: new google.maps.Point(9, 9)
+    // };
+
+
+    // var markerIcon = '/static/images/map/brugmap.png';
+    // var markerIcon1 = '/static/images/map/BruggLocationWhite.png';
+    //
+    // var marker = new google.maps.Marker({
+    //   position: brugg1,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '1',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker1 = new google.maps.Marker({
+    //   position: brugg2,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '1',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker2 = new google.maps.Marker({
+    //   position: brugg3,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '1',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker3 = new google.maps.Marker({
+    //   position: brugg4,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '1',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker4 = new google.maps.Marker({
+    //   position: brugg5,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    //
+    // var marker5 = new google.maps.Marker({
+    //   position: brugg6,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker6 = new google.maps.Marker({
+    //   position: brugg7,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker7 = new google.maps.Marker({
+    //   position: brugg8,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker8 = new google.maps.Marker({
+    //   position: brugg9,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker8 = new google.maps.Marker({
+    //   position: brugg9,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker9 = new google.maps.Marker({
+    //   position: brugg10,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker10 = new google.maps.Marker({
+    //   position: brugg11,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker11 = new google.maps.Marker({
+    //   position: brugg12,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker12 = new google.maps.Marker({
+    //   position: brugg13,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker13 = new google.maps.Marker({
+    //   position: brugg14,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker14 = new google.maps.Marker({
+    //   position: brugg15,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker15 = new google.maps.Marker({
+    //   position: brugg16,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker16 = new google.maps.Marker({
+    //   position: brugg17,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker17 = new google.maps.Marker({
+    //   position: brugg18,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker18 = new google.maps.Marker({
+    //   position: brugg19,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker19 = new google.maps.Marker({
+    //   position: brugg20,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker20 = new google.maps.Marker({
+    //   position: brugg21,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker21 = new google.maps.Marker({
+    //   position: brugg22,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker22 = new google.maps.Marker({
+    //   position: brugg23,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker23 = new google.maps.Marker({
+    //   position: brugg24,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+    // var marker24 = new google.maps.Marker({
+    //   position: brugg25,
+    //   map: map,
+    //   icon: {
+    //     labelOrigin: new google.maps.Point(28, 30),
+    //     url: markerIcon1,
+    //     scaledSize: new google.maps.Size(60, 60)
+    //   },
+    //   label: {
+    //     // text: '2',
+    //     color: "#009de0"
+    //   }
+    // });
+  }
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAWVDdvHzUtgxzKYzwuNwfRZJ6zfOHrZSM&callback=initMap">
+</script>
+
+
+
+
+<a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-long-arrow-up"></i></a>
+
+
+
+{% endverbatim %}
+
+{% endblock %}
+
+{% block brugjs %}
+
+<!-- <script>
+  var a = 0;
+  $(window).scroll(function() {
+
+    var oTop = $('#counter').offset().top - window.innerHeight;
+    if (a == 0 && $(window).scrollTop() > oTop) {
+      $('.counter-value').each(function() {
+        var $this = $(this),
+          countTo = $this.attr('data-count');
+        $({
+          countNum: $this.text()
+        }).animate({
+            countNum: countTo
+          },
+
+          {
+
+            duration: 7000,
+            easing: 'swing',
+            step: function() {
+              $this.text(Math.floor(this.countNum));
+            },
+            complete: function() {
+              $this.text(this.countNum);
+              //alert('finished');
+            }
+
+          });
+      });
+      a = 1;
+    }
+
+  });
+</script> -->
+{% endblock %}

@@ -1,0 +1,25 @@
+<div class="col-md-3">
+  <div class="container-fluid card" style="border-radius:10px;border:1px solid green;margin-bottom:10px">
+    <div class="row" style="padding:10px;font-size:20px">
+      <div class="col-md-9">
+      <h4><strong>Category : </strong>{{data.tipname}}</h4>
+      <h4><strong>Language : </strong>{{data.lang}}</h4>
+    </div>
+    <div class="col-md-3">
+      <i class="fa fa-trash fa-x pull-right" style="color:red;cursor:pointer" mwl-confirm title="Confirm" message="Are you sure?" confirm-text="Yes <i class='fa fa-check'></i>" cancel-text="No" on-confirm="rowActionClicked('delete')" confirm-button-type="default"
+      cancel-button-type="default"></i>
+      <i class="fa fa-pencil fa-x pull-right" style="color:blue;cursor:pointer;margin-right:10px" ng-click="rowActionClicked('editApptips')"></i>
+    </div>
+
+
+      </div>
+
+    <div class="row">
+      <!-- <div class="col-md-6">
+        <i class="fa fa-eye fa-2x" style="cursor:pointer" ng-click="rowActionClicked('viewApptips')"></i>
+      </div> -->
+      <div class="col-md-6">
+      </div>
+    </div>
+  </div>
+</div>

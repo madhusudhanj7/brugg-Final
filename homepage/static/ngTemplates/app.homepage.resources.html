@@ -1,0 +1,165 @@
+<div class="row" style="margin:0px;color:#fff;background-image:linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.86)), url('/static/images/press-room-header.jpg');background-size: cover;background-repeat:no-repeat;height:40vh;padding-top:60px;">
+  <div class="col-md-8 col-md-offset-1">
+    <h2>RPA Resources</h2>
+    <h3>Know-how, useful information and support for your RPA journey, no matter its complexity.</h3>
+  </div>
+</div>
+<div class="resource_div">
+  <div class="resource_container">
+    <div class="resource resource_primary" ng-click="openResource('how_to_guide')">
+      <div class="res_1">
+        <div class="res_icon">
+          <img src="/static/images/notebook.svg" width="100%">
+        </div>
+        <span class="res_description">How to Guides</span>
+      </div>
+    </div>
+    <div class="resource resource_secondary" ng-click="openCustom('custom_ml_ai')">
+      <div class="res_2">
+        <div class="res_icon"> <img src="/static/images/chip.svg" width="100%">
+        </div>
+        <span class="res_description"> Custom ML/AI </span>
+      </div>
+    </div>
+
+    <div class="resource resource_clear" ng-click="openDoc('documentation')">
+      <div class="res_3">
+        <div class="res_icon"> <img src="/static/images/arm.svg" width="100%">
+        </div>
+        <span class="res_description">API Documentation</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row"style="margin:0px;padding-top:10px;padding-bottom:20px;">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-3" style="margin-top:10px;"ng-repeat="i in [1,2,3,4]">
+        <div class="container-fluid" >
+          <div class="thumbnil" style="background-image: url('/static/images/ai.jpg');">
+            <div class="thumbnil_overlay" ng-click="watchVideo(v,$index)">
+              <span class="play12"> <i class="fa fa-play" aria-hidden="true"></i></i></span>
+            </div>
+          </div>
+          <div class="vid_desc">
+            <span>
+              <strong> Intro at AI.</strong>
+            </span><br>
+            <span class="text-muted">Tried&Refused Productions.</span><br>
+            <span class="text-muted"> 3 days ago</span>
+          </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+<div class="row" style="margin:0px;margin-bottom:30px;">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-3 box12" style="position:relative;box-sizing:border-box">
+      <div class="shaddowed noPadding container-fluid">
+        <div class="row" style="background-image:url('/static/images/word.png');background-size:cover;height:30vh;width:100%;padding:0;margin:0px;">
+        </div>
+        <div class="container-fluid" style="min-height:200px;">
+          <h3>Digitally signed Pdf documents</h3>
+
+          <span class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolo t, sed do eiusmod tempor incididunt ut labore </span>
+
+          <div class="row" style="position:absolute;bottom:5px;width:100%;font-size:20px;">
+            <div class="col-md-8" style="color:#FF540A;float:left">
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-4" style="float:right;padding-right:50px;">
+              20 <i class="fa fa-cloud-download" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"ng-click="custom_detail('card',$index)">
+        <span class="search12"> <i class="fa fa-search" aria-hidden="true"></i></span>
+      </div>
+    </div>
+    <div class="col-md-3 box12 ">
+      <div class="shaddowed noPadding container-fluid">
+        <div class="row" style="background-image:url('/static/images/docu.jpg');background-size:cover;height:30vh;width:100%;padding:0;margin:0px;">
+        </div>
+        <div class="container-fluid" style="min-height:200px;">
+          <h3>Digitally signed Pdf documents</h3>
+
+          <span class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolo t, sed do eiusmod tempor incididunt ut labore </span>
+
+          <div class="row" style="position:absolute;bottom:5px;width:100%;font-size:20px;">
+            <div class="col-md-8" style="color:#FF540A;float:left;">
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-4" style="float:right;padding-right:50px;">
+              20 <i class="fa fa-cloud-download" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"ng-click="custom_detail('card',$index)">
+        <span class="search12"> <i class="fa fa-search" aria-hidden="true"></i></span>
+      </div>
+    </div>
+    <div class="col-md-3 box12">
+      <div class="shaddowed noPadding container-fluid">
+        <div class="row" style="background-image:url('/static/images/lap.jpg');background-size:cover;height:30vh;width:100%;padding:0;margin:0px;">
+        </div>
+        <div class="container-fluid" style="min-height:200px;">
+          <h3>Digitally signed Pdf documents</h3>
+          <span class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolo t, sed do eiusmod tempor incididunt ut labore </span>
+          <div class="row" style="position:absolute;bottom:5px;width:100%;font-size:20px;">
+            <div class="col-md-8" style="color:#FF540A;float:left;">
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-4" style="float:right;padding-right:50px;">
+              20 <i class="fa fa-cloud-download" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"ng-click="custom_detail('card',$index)">
+        <span class="search12"> <i class="fa fa-search" aria-hidden="true"></i></span>
+      </div>
+    </div>
+    <div class="col-md-3 box12">
+      <div class="shaddowed noPadding container-fluid">
+        <div class="row" style="background-image:url('/static/images/paper.jpg');background-size:cover;height:30vh;width:100%;padding:0;margin:0px;">
+        </div>
+        <div class="container-fluid" style="min-height:200px;">
+          <h3>Digitally signed Pdf documents</h3>
+          <span class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolo t, sed do eiusmod tempor incididunt ut labore </span>
+          <div class="row" style="position:absolute;bottom:5px;width:100%;font-size:20px;">
+            <div class="col-md-8" style="color:#FF540A;float:left;">
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <div class="col-md-4" style="float:right;padding-right:50px;">
+              20 <i class="fa fa-cloud-download" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"ng-click="custom_detail('card',$index)">
+        <span class="search12"> <i class="fa fa-search" aria-hidden="true"></i></span>
+      </div>
+    </div>
+
+
+  </div>
+</div>

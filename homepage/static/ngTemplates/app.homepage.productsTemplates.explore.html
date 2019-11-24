@@ -1,0 +1,62 @@
+<div class="row" ng-controller="controller.home.productsTemplate.explore" style="padding:15px">
+<div class="container-fluid" >
+  <div class="row">
+    <img ng-src="{{templateDetails.backgroundImage1}}" alt="Background Image" width="100%" height="350px">
+
+  </div>
+  <div class="row"  >
+    <div class="col-md-10" style="background-color:#363535;color:white;padding:15px;border-radius:0px 0px 0px 0px">
+      <strong style="font-size:30px">{{templateDetails.name}} </strong> {{templateDetails.description}}
+    </div>
+    <div class="col-md-2 linkd" style="padding-top:2%;color:#363535">
+    <a href = "/media/{{templateDetails.name}}_{{templateDetails.pk}}_en.pdf" target="_blank"  >  <i class="fa fa-download fa-3x">
+    </i> </a>
+    <!-- <a href = "/media/?product={{templateDetails.name}}.pdf" target="_blank" ng-if="!templateDetails.pdfgenerated" >  <i class="fa fa-download fa-3x">
+    </i> </a> -->
+    <button class="btn btn-primary"  ng-click="generatePDF()" style="margin-top:-25px;margin-left:10px">Generate PDF</button>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:30px">
+    <div class="col-md-3">
+      <img ng-src="{{templateDetails.defaultImage}}" alt="Image" width="100%">
+    </div>
+    <div class="col-md-9">
+      <span ng-bind-html="templateDetails.rteData"></span><br>
+      <div class="col-md-12">
+        <table class="table table-hover">
+          <thead>
+            <tr >
+              <th scope="col">Item Number</th>
+              <th scope="col" ng-repeat="field in tempFieldsData">{{field.name}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="prod in tempProductsData">
+              <th scope="row">{{prod.itemNumber}}</th>
+              <td ng-repeat="val in prod.fieldValues">
+                <span ng-if="val.field.type=='Char'">{{val.char}}</span>
+                <span ng-if="val.field.type=='Boolean'">{{val.bool}}</span>
+                <span ng-if="val.field.type=='Integer'">{{val.iValue}}</span>
+                <span ng-if="val.field.type=='float'">{{val.fValue}}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+<style media="screen">
+  .row .linkd a:hover{
+    color:#337ab7;
+    text-decoration:none;
+  }
+
+  .row .linkd .btn:hover{
+    background-color:#337ab7;
+    text-decoration:none;
+  }
+</style>

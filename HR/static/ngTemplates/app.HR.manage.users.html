@@ -1,0 +1,47 @@
+<div class="" style="min-height:93vh;">
+  <breadcrumb></breadcrumb>
+  <div class="container-fluid">
+    <uib-tabset>
+      <uib-tab >
+        <uib-tab-heading>
+          New  <i class="fa fa-plus"></i>
+        </uib-tab-heading>
+        <generic-Form template="'/static/ngTemplates/app.HR.form.newUser.html'" data="newUser" submit-Fn="createUser()" form-title="'Create New User'"></generic-Form>
+      </uib-tab>
+      <uib-tab active="searchTabActive">
+        <uib-tab-heading >
+          Search  <i ng-if="tab.cancel" class="fa fa-search"></i>
+        </uib-tab-heading>
+
+        <generic-Table callback-Fn = "tableAction" data="data.tableData" config-Obj="{{config}}"></generic-Table>
+
+      </uib-tab>
+      <uib-tab ng-repeat="tab in tabs" active="tab.active" disable="tab.disabled">
+        <uib-tab-heading >
+          {{tab.title}} <i ng-if="tab.cancel" class="fa fa-close" ng-click="closeTab($index);"></i>
+        </uib-tab-heading>
+        <div ng-if="tab.app == 'editProfile'">
+          <div ng-include="'/static/ngTemplates/app.HR.form.userProfile.html'"></div>
+        </div>
+        <div ng-if="tab.app == 'editMaster'">
+          <generic-Form template="'/static/ngTemplates/app.HR.form.editMaster.html'" data="tab.data" submit-Fn="updateUserMasterDetails($index)" form-title="tab.title"></generic-Form>
+        </div>
+        <div ng-if="tab.app == 'editPermissions'">
+          <div ng-include="'/static/ngTemplates/app.HR.form.editPermissions.html'"></div>
+        </div>
+
+        <div ng-if="tab.app == 'editDesignation'">
+          <div ng-include="'/static/ngTemplates/app.HR.form.editDesignation.html'" data="tab.data" submit-Fn="editDesignation($index)" form-title="tab.title"></div>
+        </div>
+
+        <div ng-if="tab.app == 'editPayroll'">
+          <div ng-include="'/static/ngTemplates/app.HR.form.editPayroll.html'"></div>
+
+        </div>
+        <div ng-if="tab.app == 'viewProfile'">
+          <div ng-include="'/static/ngTemplates/app.HR.manage.users.explore.html'"></div>
+        </div>
+      </uib-tab>
+    </uib-tabset>
+  </div>
+</div>

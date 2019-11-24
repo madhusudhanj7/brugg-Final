@@ -1,0 +1,298 @@
+<div class="container-fluid" style="padding:0;">
+  <div class="container-fluid" style="width:100%;padding: 0;brightness(40%);">
+    <img src="/static/images/inner-banner-1-1.jpg" alt="" style="width:100%">
+  </div>
+  <div class="container">
+    <div class="row" style="padding:2em 0">
+      <div class="col-md-3 col-xs-12">
+        <img ng-src="{{templateDetails.defaultImage}}" alt="" style="width:70%;height:12em;">
+      </div>
+      <div class="col-md-6 col-xs-12" style="padding:3em 0em">
+        <h3 style="margin-top:0"><b>{{templateDetails.name}}</b></h3>
+        <span>{{templateDetails.description}}</span>
+
+      </div>
+      <div class="col-md-3  col-xs-12" style="padding:4em 0em; " id="link" >
+      <a href = "media/{{templateDetails.name}}.pdf" target="_blank" ng-if="!templateDetails.pdfgenerated" >  <i class="fa fa-download fa-3x">
+      </i> </a>
+
+      </div>
+    </div>
+
+    <div class="row" style="padding:2em 0">
+      <h3 style="margin-top:0;padding:0 0 0 2em"><b>{{templateDetails.name}}</b></h3>
+      <div class="col-md-6 col-xs-12">
+        <div ng-bind-html="templateDetails.rteData1_en"></div>
+      </div>
+      <div class="col-md-6 col-xs-12" ng-bind-html="templateDetails.rteData2_en">
+        <!-- <h3 style="margin-top:0"><b>Vollstahlseil, 9 Litzen, gesondert verseilt</b></h3>
+        <span>Für höchste Anforderungen im Bezug auf Bruchkraft,Dehnung und Fahrtenzahl, auch bei erschwertenMontagesituationen. Empfohlen für Rundrillen mit einem Unterschnittwinkel ≤ 85°.</span> -->
+      </div>
+    </div>
+
+    <div class="row" style="padding:2em 0">
+      <div class="col-md-3 col-xs-12" class="overlayy">
+        <div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,4);padding:2em;  background: #009de0; ">
+          <p style=" margin-top:0; color:white; font-size:22px"><b>{{templateDetails.keyword1.value}}
+              {{templateDetails.keyword1.unit}}</b></p>
+          <span style="color:white; font-size:18px">{{templateDetails.keyword1.description}}</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-12">
+        <div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,4);padding:2em; background: #009de0;">
+          <h3 style=" margin-top:0; color:white; font-size:22px"><b>{{templateDetails.keyword1.value}}
+              {{templateDetails.keyword2.unit}}</b></h3>
+          <span style="color:white; font-size:18px">{{templateDetails.keyword2.description}}</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-12">
+        <div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,4);padding:2em; background: #009de0;">
+          <h3 style=" margin-top:0; color:white; font-size:22px"><b>{{templateDetails.keyword1.value}}
+              {{templateDetails.keyword3.unit}}</b></h3>
+          <span style="color:white; font-size:18px">{{templateDetails.keyword3.description}}</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-12">
+        <div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,4);padding:2em;  background: #009de0;">
+          <h3 style=" margin-top:0; color:white; font-size:22px "><b>{{templateDetails.keyword1.value}}
+              {{templateDetails.keyword4.unit}}</b></h3>
+          <span style="color:white; font-size:18px">{{templateDetails.keyword4.description}}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="row" style="padding:2em 0">
+      <div class="col-md-12 col-xs-12" style="padding:2em">
+        <h3 style="margin-top:0"><b>Steel core rope, 9 strands, separate lay</b></h3>
+        <span>For highest demands on breaking force, elongation and number of trips, also under difficult installation conditions. Recommended for round grooves with an undercut angle of ≤ 85°.</span>
+      </div>
+    </div> -->
+
+    <div class="row" style="padding:2em 2em">
+      <div class="col-md-12 col-xs-12 " style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);padding:2em;position:relative;">
+        <div class="row">
+          <div class="col-md-3">
+            <span class="pull-right">
+              <h4 style="margin-top:0">Breaking Load :</h4>
+            </span>
+          </div>
+          <div class="col-md-6">
+            <input type="range" min="{{minload}}" max="{{maxload}}" step={{step}} ng-model="load" ng-change="updateTextInput(load,weight);">
+          </div>
+          <div class="col-md-3">
+            <span class="arrowIndicator"><b>{{load}} (kN)</b></span>
+          </div>
+        </div>
+        <div class="row" style="margin-top:1em;">
+
+          <div class="col-md-3">
+            <span class="pull-right">
+              <h4 style="margin-top:0">Weight :</h4>
+            </span>
+          </div>
+          <div class="col-md-6">
+            <input type="range" min="{{minweight}}" max="{{maxweight}}" step={{step}} ng-model="weight" ng-change="updateTextInput(load,weight);">
+          </div>
+          <div class="col-md-3">
+            <span class="arrowIndicator"><b>{{weight}} (kg/100m)</b></span>
+          </div>
+
+          <div class="col-md-12 text-center " style="padding-top:2em" ng-if="tempProductsData.length<1">
+            <span style="color:#009DE0">No Product Available for this Range</span>
+          </div>
+          <div class="col-md-12  " style="padding-top:2em" ng-if="tempProductsData.length>=1">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Item Number</th>
+                  <th scope="col" ng-repeat="field in tempFieldsData">{{field.name}}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="prod in dataFilter">
+                  <th scope="row">{{prod.itemNumber}}</th>
+                  <td ng-repeat="val in prod.fieldValues">
+                    <span ng-if="val.field.type=='Char'">{{val.char}}</span>
+                    <span ng-if="val.field.type=='Boolean'">{{val.bool}}</span>
+                    <span ng-if="val.field.type=='Integer'">{{val.iValue}}</span>
+                    <span ng-if="val.field.type=='float'">{{val.fValue}}</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <div class="row"> -->
+    <!-- <div class="container-fluid" style="padding: 2em 0;">
+      <div class="col-md-6" style="text-align:justify;font-size:16px;">
+        <ng-owl-carousel class="owl-theme" owl-items="images" owl-properties="properties1" owl-ready="ready($api)">
+          <div ng-repeat="a in images1" class="ng-scope">
+            <div class="anim-in-out anim-zoom-out">
+              <div style="background-color: #009de0 ;padding: 30px; padding-bottom: 0px;  min-height: 46vh; background-repeat: no-repeat; background-size: cover;color:#000 " class="visualimg">
+                <div style="padding-top: 0em; padding-bottom: 0em;" class=" visualcontent">
+                  <img src="static/images/about/review.png" alt="review" style="width:40px; height:60px; position: relative; padding-top: 1em;">
+                  <div class="container-fluid" style="margin-top: 20px; margin-bottom: 0px;">
+
+                    <!- <img style="" ng-src={{a.img}} class="img-circle" style="width:50px; height:50px position: relative; bottom: 0px;"> -->
+    <!-- <p style="color:white">{{a.name}}</p> -->
+    <!-- <p style="color:white">{{a.review}}</p> -->
+    <!-- <div class="column "> -->
+
+
+    <!-- <div class="col-md-5"> -->
+    <!-- <hr> -->
+    <!-- <div id=""> -->
+    <!-- <img src="static/images/about/john.jpg" class="img-circle" alt="Cinque Terre" style="width:100px; height:100px position: relative; bottom: 100px;"> -->
+    <!-- <br> -->
+    <!-- <p class="text" style="color:white; font-size:22px;  ">Kaycee Thyfault</p> -->
+    <!-- <p class="text" style="color:white; font-size:17px;  ">Our Customers<br> -->
+    <!-- </p> -->
+    <!-- </div> -->
+    <!-- </div>
+
+                      <div class="col-md-7">
+                        <div style="position: relative; bottom: 0px;" class="">
+                          <p class="text" style="color:white; font-size:24px;text-align:left; ">This is due to their excellent service,
+                            competative pricing and customer support.
+                            It's throughly refresing to get such a
+                            personal touch.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-owl-carousel>
+      </div> -->
+
+
+
+
+    <!-- <div class="col-md-6" style="font-size:16px;"> -->
+    <!-- <p style="font-size:20px; text-align: left; ">TESTIMONIAL</p> -->
+    <!-- <p style="text-align:left;font-size:42px; line-height: 1.3; margin-top:60px; margin-left: 30px; width: auto; "><b>You are in Very Good Hands, Check What our Customers are Talking About</b></p><br> -->
+    <!-- <button type="button" class="btn " style="padding:0.8em 1.2em;background-color:#009de0;color:#fff;border-radius: 0;color:#fff;  width: 250px;
+        height: 75px; font-size: 22px; margin-left: 130px"><b>Get A Quote</b></button>
+      </div>
+    </div> -->
+
+    <div class="container-fluid" style="border-top:1px solid #f2f2f2;padding-bottom:4em;">
+      <h2 style="padding:1em 0em;font-weight:700">Related Articles</h1>
+
+
+        <div class="row" style="padding:2em 0">
+
+          <div class="services">
+            <div class="col-md-4">
+              <figure class="snip1174 navy col-md-4">
+                <img src="static/images/about/bg1.jpg" alt="sq-sample33" / style="width:360px; height:380px">
+                <figcaption>
+                  <p class="heading" style="padding:1em; font-size:20px; color: #fff; text-align: center; cursor:pointer;font-weight:700">{{templateDetails.name}}</p>
+                  <p class="card-text" style="padding:1em; font-size:20px; color: #fff; text-align: center;">Accelerate Your SAP S/4HANA Migration with the RPA <br><br><br>
+                    <a href="" style="font-size:15px; color: #fff; text-align: center;">Read More</a>
+                  </p>
+
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col-md-4">
+              <figure class="snip1174 red col-md-4">
+                <img src="static/images/about/bg1.jpg" alt="sq-sample33" /style="width:360px; height:380px">
+                <figcaption>
+                  <p class="heading" style="padding:1em; font-size:20px; color: #fff; text-align: center; cursor:pointer;font-weight:700">{{templateDetails.name}}</p>
+                  <p class="card-text" style="padding:1em; font-size:20px; color: #fff; text-align: center;">A Closer Look at our Series D Funding Round-and Why It's So Exciting<br><br><br>
+                    <a href="" style="font-size:15px; color: #fff; text-align: center; ">Read More</a>
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="col-md-4">
+              <figure class="snip1174 navy col-md-4">
+                <img src="static/images/about/bg1.jpg" alt="sq-sample33" / style="width:360px; height:380px">
+                <figcaption>
+                  <p class="heading" style="padding:1em; font-size:20px; color: #fff; text-align: center; cursor:pointer;font-weight:700">{{templateDetails.name}}</p>
+                  <p class="card-text" style="padding:1em; font-size:20px; color: #fff; text-align: center; ">The Ultimate RPA Glossary Robotic Process Automation Definitions to Know<br><br><br>
+                    <a href="" style="font-size:15px; color: #fff; text-align: center; ">Read More</a>
+                  </p>
+                </figcaption>
+              </figure>
+            </div>
+
+            <style>
+              .heading:hover{
+            color: #009de0 !important ;
+          }
+            /* .container-fluid .container .link a:hover{
+              color:black !important;
+            } */
+            </style>
+
+            <!-- <div class="col-md-4 col-xs-12">
+        <div style=" background: #009de0;">
+          <div class="card">
+            <div class="card-header" style="padding:2em; font-size:16px; color: #fff; text-align: center;">{{templateDetails.name}}</div>
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text" style="padding:2.2em; font-size:20px; color: #fff; text-align: center;">Accelerate Your SAP S/4HANA Migration with the RPA <br><br>
+                <button type="button" class="btn btn-default" style=" text-align: center; position:relative; left:0%; align-items: center; justify-content: center; width:150px; height:40px; padding:0.8em 1.2em;background-color:#fff;color:#000;border-radius: 0;color:#009de0;"><b>Read
+                    More</b></button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-xs-12">
+        <div style="; background: #009de0;">
+          <div class="card">
+            <div class="card-header" style="padding:2em; font-size:16px; color: #fff; text-align: center;">{{templateDetails.name}}</div>
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text" style="padding:2.2em; font-size:20px; color: #fff; text-align: center;">A Closer Look at our Series D Funding Round-and Why It's So Exciting<br><br>
+                <button type="button" class="btn btn-default" style=" text-align: center; position:relative; left:0%; align-items: center; justify-content: center; width:150px; height:40px; padding:0.8em 1.2em;background-color:#fff;color:#000;border-radius: 0;color:#009de0;"><b>Read
+                    More</b></button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-4 col-xs-12">
+        <div style=" background: #009de0;">
+          <div class="card">
+            <div class="card-header" style="padding:2em;font-size:16px; color: #fff; text-align: center;">{{templateDetails.name}}</div>
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text" style="padding:2.2em; font-size:20px; color: #fff; text-align: center;">The Ultimate RPA Glossary Robotic Process Automation Definitions to Know<br><br>
+                <button type="button" class="btn btn-default" style=" text-align: center; position:relative; left:0%; align-items: center; justify-content: center; width:150px; height:40px; padding:0.8em 1.2em;background-color:#fff;color:#000;border-radius: 0;color:#009de0;"><b>Read
+                    More</b></button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>  -->
+
+
+        </div>
+
+
+
+        </div>
+        <a href="/blogs">
+          <button type="button" class="btn " style="padding:0.8em 1.2em;background-color:#009de0;color:#fff;border-radius: 0;color:#fff;  width: 200px;
+      height: 65px; font-size: 18px; margin-left: 130px  position: relative; ">Read More Articles</button></a>
+    </div>
+
+  </div>
+
+</div>

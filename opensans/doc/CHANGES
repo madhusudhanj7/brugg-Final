@@ -1,0 +1,25 @@
+VERSION 2.2:
+        - Fix ligatures for hyphens
+        - Fix font family definition with proportional numbers
+	- Fix font name in XeLaTeX/LuaLaTeX mode
+
+VERSION 2.1:
+        - Fix OT1 encoding with italic shape
+        - Fix packaging according to CTAN guidelines
+
+VERSION 2.0:
+        - Complete rewrite of the TeX metric file generation (otftotfm is now
+          used instead of fontinst)
+        - Support for XeLaTeX and LuaLaTeX
+        - Add bold condensed font
+        - Improve support for figure variant selection
+        - Drop faked smallcaps support
+        - Fix kerning with uppercase Greek diacritics
+        - Add "scaled" alias option
+        - Fix NFSS shape for condensed fonts
+
+VERSION 1.2:
+        - remove unneeded call to textcomp package in opensans.sty
+
+VERSION 1.1:
+        - fix bad weight substitution when using light weight and slanted shape

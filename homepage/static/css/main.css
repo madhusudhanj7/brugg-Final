@@ -1,0 +1,183 @@
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+body,
+html {
+  font-family: 'Roboto' !important;
+}
+/*.wowbook-pdf-text
+	div
+		user-select text !important*/
+.container {
+  *zoom: 1;
+  width: auto;
+  max-width: 1024px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+.container:before,
+.container:after {
+  content: '';
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+.container-fluid {
+  width: 100%;
+}
+.align-v {
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+@media only screen and (min-width: 768px) {
+  .visible-sm {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+.wowbook-controls {
+  background-image: none !important;
+  background: #005e86 !important;
+}
+.wowbook-controls a {
+  font-size: 22px !important;
+  font-weight: 300;
+}
+.wowbook-controls a:hover,
+.wowbook-controls a:focus {
+  background: #009de0 !important;
+}
+.wowbook-toc {
+  background-image: none !important;
+  background: #005e86 !important;
+}
+.wowbook-toc h1 {
+  color: #fff !important;
+}
+.wowbook-toc a {
+  border-top: none !important;
+  color: #fff !important;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 0.045rem;
+}
+.wowbook-toc a:hover,
+.wowbook-toc a:focus {
+  background: #009de0 !important;
+}
+.wowbook-find-count {
+  top: 10px;
+}
+.wowbook-thumbnails {
+  background: #005e86 !important;
+}
+.wowbook-thumbnails .wowbook-button {
+  background: #009de0 !important;
+}
+input.wowbook-find-text {
+  height: 45px;
+  padding: 0px 10px;
+  font-size: 14px;
+  border: none;
+  margin-top: 10px;
+  outline: none;
+}
+input.wowbook-find-text::placeholder {
+  color: #fff;
+}
+input.wowbook-find-text:focus {
+  outline: none;
+}
+a.wowbook-close {
+  display: none !important;
+}
+#findbar label {
+  display: none !important;
+}
+.container-form {
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+@media only screen and (max-width: 767px) {
+  .container-form {
+    width: 100%;
+  }
+}
+.container-form form {
+  position: relative;
+  z-index: 9999999999;
+}
+.container-form form input {
+  height: 35px;
+  padding: 0px 5px;
+  border: none;
+}
+.container-form form input:focus,
+.container-form form input:hover {
+  outline: none;
+}
+.container-form form input[type="button"] {
+  height: 35px !important;
+  display: inline-block;
+  background: #009de0;
+  border: none;
+  color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0px 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.container-form form input[type="button"]:hover,
+.container-form form input[type="button"]:focus {
+  background: #005e86;
+}

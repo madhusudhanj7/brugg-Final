@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-03 10:21+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/header.html:13
+msgid "homeId"
+msgstr "ホーム"
+
+#: templates/header.html:13
+msgid "serviceId"
+msgstr "サービス内容"
+
+#: templates/header.html:13
+msgid "applicationId"
+msgstr "アプリケーションのヒント"
+
+#: templates/header.html:13
+msgid "referenceId"
+msgstr "参照"
+
+#: templates/header.html:13
+msgid "productId"
+msgstr "製品情報"
+
+#: templates/header.html:13
+msgid "companyId"
+msgstr "会社"
+
+#: templates/header.html:13
+msgid "elevatorId"
+msgstr "エレベーターロープ"
+
+#: templates/header.html:13
+msgid "blogId"
+msgstr "ブログ"
+
+#: templates/header.html:13
+msgid "ropeselectionId"
+msgstr "ロープの選択"
+
+#: templates/header.html:13
+msgid "ropecomparisonId"
+msgstr "ロープ比較"
+
+#: templates/header.html:13
+msgid "tractionropesId"
+msgstr "牽引ロープ"
+
+#: templates/header.html:13
+msgid "compensationropesId"
+msgstr "体重補正ロープ"
+
+#: templates/header.html:13
+msgid "governarropesId"
+msgstr "ゴブナーロープ"
+
+#: templates/header.html:13
+msgid "wireId"
+msgstr "ワイヤーロープ＆リフティングメディア"
+
+#: templates/header.html:13
+msgid "architecturalId"
+msgstr "建築用ロープ"
+
+#: templates/header.html:13
+msgid "aboutusId"
+msgstr "私たちに関しては"
+
+#: templates/header.html:13
+msgid "careesId"
+msgstr "キャリア"
+
+#: templates/header.html:13
+msgid "contactusId"
+msgstr "お問い合わせ"
+
+#: templates/header.html:13
+msgid "prevId"
+msgstr "前"
+
+#: templates/header.html:13
+msgid "nextId"
+msgstr "次"
+
+#: templates/header.html:13
+msgid "blogupdateId"
+msgstr "定期的なブログの更新を入手する"
+
+#: templates/header.html:13
+msgid "sendId"
+msgstr "更新を送信する"
+
+#: templates/header.html:13
+msgid "postId"
+msgstr "最新の投稿"
+
+#: templates/career.html:13
+msgid "storyId"
+msgstr
+"オバマ大統領の2008年のキャンペーン・トレイルの成功から生まれたBRUGG LIFTINGは、世界がデータを行動に変えることを可能にするために設立されました。\n "
+" \n"
+" 過去7年間で、BRUGG LIFTINGは単純なWebサイトのA / Bテストをはるかに超えて進化しました。私たちは最近、世界中どこでも、あらゆるチャンネル、あらゆるデバイス、あらゆるアプリケーションにおいて、実験を可能にするための世界最先端の実験プラットフォームを発表しました。\n"
+" \n"
+"BRUGG LIFTINGにより、役員、マーケティング担当者、製品管理者、および開発者は勇敢になり、より良いビジネス決定を下すことができます。"
+"\n    "
+"\n    "
+
+#: templates/career.html:13
+msgid "workId"
+msgstr "BRUGG LIFTINGで働く"
+
+#: templates/career.html:13
+msgid "Why you'll love it here"
+msgstr "私たちは、あらゆる種類の経歴を持つ、感動的で賢い、そして動機のある個人のチームを構築しています。成長とメンタリングのための数え切れないほどの機会をもって、私たちは各従業員が彼らにとって正しい道を切り開くのを手助けするよう努めます。. Work @ BRUGG LIFTING"

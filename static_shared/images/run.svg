@@ -1,0 +1,16 @@
+<svg width="120" height="120" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g fill="none">
+<rect width="110.481" height="110.773" transform="translate(8.63184 8.45377)" fill="#03B4EE"/>
+<rect width="110.481" height="110.773" fill="white" fill-opacity="0.8"/>
+<rect x="0.75" y="0.75" width="108.981" height="109.273" stroke-width="1.5" stroke="#03B4EE"/>
+<path d="M 0 34.084L 0 0L 47.2158 34.084L 47.2158 0" stroke-width="1.5" transform="translate(31.6323 37.5961)" stroke="#03B4EE"/>
+<rect width="21.4617" height="21.3025" transform="translate(20.9014 26.9448)" fill="white"/>
+<rect x="0.75" y="0.75" width="19.9617" height="19.8025" stroke-width="1.5" transform="translate(20.9014 26.9448)" stroke="#03B4EE"/>
+<rect width="21.4617" height="21.3025" transform="translate(68.1172 26.9447)" fill="white"/>
+<rect x="0.75" y="0.75" width="19.9617" height="19.8025" stroke-width="1.5" transform="translate(68.1172 26.9447)" stroke="#03B4EE"/>
+<rect width="21.4617" height="21.3025" transform="translate(20.9014 61.0289)" fill="white"/>
+<rect x="0.75" y="0.75" width="19.9617" height="19.8025" stroke-width="1.5" transform="translate(20.9014 61.0289)" stroke="#03B4EE"/>
+<rect width="21.4617" height="21.3025" transform="translate(68.1172 61.0289)" fill="white"/>
+<rect x="0.75" y="0.75" width="19.9617" height="19.8025" stroke-width="1.5" transform="translate(68.1172 61.0289)" stroke="#03B4EE"/>
+</g>
+</svg>

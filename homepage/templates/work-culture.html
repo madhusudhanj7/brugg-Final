@@ -1,0 +1,158 @@
+{% extends "index.html" %}{% load staticfiles %}{% load i18n %}
+{% get_current_language as lang %}
+{% block brugcontent %}
+
+{% verbatim %}
+
+<div class="container-fluid" style="padding:0">
+
+  <!-- <div class="row" style="margin:0px;background: url('/static/images/about/about.jpg');background-repeat: no-repeat;background-size: cover;min-height:400px;padding:140px 0px 0px 0px;background-position:center;"></div> -->
+  <div class="row" style="margin:0px">
+    <div class="col-md-12" style="padding:0px;height:40vh;background: url('/static/images/Img 1.jpg');background-repeat: no-repeat;background-size: auto;">
+    </div>
+  </div>
+  <div class="row" style="margin:0px;padding:30px;color:#022750;font-family:sans-serif;">
+    <div class="col-md-12 text-center col-xs-12" style="">
+      <h1 style="font-size:50px;font-weight:400;">Work Culture</h1>
+    </div>
+    <br><br><br>
+
+    <div class="col-md-8 col-md-offset-2 col-sm-12" style="padding-top:1em" ;>
+      <div class="col-md-6 col-xs-12" style="text-align:justify;font-size:16px;font-weight:300;">
+        <p>{% endverbatim %} {% trans 'workA' %}{% verbatim %}</p>
+
+        <p>{% endverbatim %} {% trans 'workB' %}{% verbatim %}</p>
+
+      </div>
+
+      <div class="col-md-6 col-xs-12 text-center" style="text-align:justify;font-size:16px;font-weight:300;">
+        <p>{% endverbatim %} {% trans 'workC' %}{% verbatim %}</p>
+        <p>{% endverbatim %} {% trans 'workD' %}{% verbatim %}</p>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="row text-center">
+    <div class=" col-lg-12 col-md-12  col-xs-12 col-sm-12" style="margin:0px;background: url('/static/images/Img 2.jpg');background-repeat: no-repeat;background-size: cover;min-height:500px;padding:140px 0px 0px 0px;background-position:center;">>
+    </div>
+  </div>
+  <div class="row owl-theme" style="margin:0px;">
+    <div class="col-md-12 text-center" style="padding:30px;">
+      <h3 style="font-size:30px;font-weight:400;">{% endverbatim %} {% trans 'workE' %}{% verbatim %}</h3>
+    </div>
+    <div class="" ng-controller="main">
+      <div class="col-md-12">
+        <div class="col-md-10 col-md-offset-1 text-center">
+          <div class="row" style="margin:0px;">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="col-md-12">
+                <ng-owl-carousel class="owl-theme" owl-items="brands" owl-properties="properties" owl-ready="ready($api)">
+                  <div ng-repeat="b in brands" style="padding:10px;">
+                    <div class="anim-in-out anim-zoom-out">
+                      <div style="padding:20px;">
+                        <img class="img" ng-src="{{b.dp}}" />
+                      </div>
+                    </div>
+                  </div>
+                </ng-owl-carousel>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="margin:0px;">
+    <div class="col-md-12 text-center" style="padding:30px;font-size:20px;font-weight:400;">
+      <h1 class="thm-btn style-two" ><a href="/blogs" style="color: #002c42">{% endverbatim %} {% trans 'workF' %}{% verbatim %}</a></h1>
+      <p>&emsp;</p>
+      <p>{% endverbatim %} {% trans 'workG' %}{% verbatim %}</p>
+      <!-- <p> our team.</p> -->
+    </div>
+    <div class="text-center" style="padding-bottom:20px;" ng-click="openCaeerModal()">
+      <h1 class="thm-btn style-two" type="button" data-toggle="modal" data-target="#myModal">{% endverbatim %} {% trans 'workH' %}{% verbatim %}</h1>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Join us in an exciting journey</h4>
+          </div>
+          <div class="modal-body" style="padding:20px;">
+            <div class="row" style="margin-bottom:30px">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" placeholder="Name" id="name" ng-model="form.name">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" placeholder="Email" id="email" ng-model="form.email">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" class="form-control" placeholder="Phone" id="phone" ng-model="form.phone">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Cover</label>
+                    <textarea type="text" class="form-control" rows="4" id="cover" placeholder="Cover"  ng-model="form.cover_letter"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Resume:</label>
+                    <input id="cvfile" type="file" file-model="form.cv_file">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <h3 style="color:#025d13" ng-if="success.length>1">{{success}}</h3>
+                  <h3 style="color:#da1600" ng-if="error.length>1">{{error}}</h3>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" ng-if = "!loader" ng-click="submit()">Apply</button>
+            <button class="btn btn-default" ng-if = "loader" > <i class="fa fa-spinner fa-spin" style="font-size:24px"></i></button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+  </div>
+</div>
+{% endverbatim %}
+
+
+
+
+{% endblock %}

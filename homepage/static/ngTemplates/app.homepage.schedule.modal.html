@@ -1,0 +1,51 @@
+<div class="col-md-6 calenderDiv" style="padding:30px;padding-right:0px;border:none;" ng-if="calendar">
+  <div class="text-center calendarBox">
+    <img src="/static/images/user7-128x128.jpg" class="img img-circle" style="">
+    <br>
+    <h5>Find a time to Meet Clara </h5>
+    <!-- <div class="input-group" style="margin-top:35px;">
+      <input type="text" class="form-control" show-weeks="false" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="form.dated" is-open="status.opened" />
+      <span class="input-group-btn">
+        <button type="button" class="btn btn-default" ng-click="status.opened = true;"><i class="glyphicon glyphicon-calendar"></i></button>
+      </span>
+    </div> -->
+    <div class="col-xs-12 text-center">
+      <div class="scheduleDatePic" datepicker-append-to-body="true" uib-datepicker="yyyy-MM-dd" ng-model="form.dated" show-weeks="false"></div>
+    </div>
+  </div>
+</div>
+<div class="col-md-6 text-center slotBox" style="background-color:white;min-height:490px;" ng-if="calendar">
+  <!-- <h1> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</h1> -->
+  <div class="row">
+    <h3>Time Slot</h3>
+    <div class="col-md-4 col-xs-4 flex text-left" ng-repeat="timeVal in timeSlot">
+      <input type="radio" name="slot" ng-model="form.slot" value="{{timeVal.time}}"><strong> {{timeVal.time}} </strong>
+    </div>
+  </div>
+  <form>
+  <div class="row" style="padding-top:30px">
+    <div class="col-md-12">
+      <!-- <h3>Leave your Name and Email-Id</h3> -->
+      <input type="text" class="form-control" ng-model="form.name" placeholder="Name*" required>
+    </div>
+  </div>
+  <div class="row" style="padding-top:10px">
+    <div class="col-md-12">
+      <!-- <h3>Add your Email Id</h3> -->
+      <input type="email" class="form-control" ng-model="form.emailId" placeholder="Email-Id*" required>
+    </div>
+  </div>
+  <div class="row" style="padding-top:30px">
+    <button type="submit" class="btn btn-primary" ng-click="scheduleMeeting()">Schedule</button>
+  </div>
+</form>
+</div>
+<div class="col-md-12 text-center" style="background-color:white;min-height:490px;" ng-if="thankYou">
+  <h2 style="position:absolute;top:200px;left:200px;align:center">Thank You!!! Please check your mail</h2>
+</div>
+
+<style media="screen">
+  .modal-content {
+    border: none;
+  }
+</style>

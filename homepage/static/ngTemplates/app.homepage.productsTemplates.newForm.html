@@ -1,0 +1,360 @@
+<div class="container-fluid" ng-controller="controller.home.productsTemplate.form">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>{{mode=='new'?'Create':'Edit'}} Template <span class="btn btn-danger pull-right" ng-if="mode=='new'" mwl-confirm title="Confirm" message="Are you sure?" confirm-text="Yes <i class='fa fa-check'></i>" cancel-text="No" on-confirm="resetTemplate()"
+          confirm-button-type="default" cancel-button-type="default">Reset <i class="fa fa-refresh"></i></span></h3>
+
+      <div class="form-group">
+        <label>Template Name</label>
+        <input type="text" class="form-control" ng-model="templateForm.name" placeholder="Template Name">
+      </div>
+
+      <div class="form-group">
+        <label>Parent Name</label>
+        <select class="form-control" ng-model="templateForm.parent_name">
+          <option value="traction-ropes">Traction Ropes</option>
+          <option value="compensation-ropes">Compensation Ropes</option>
+          <option value="governor-ropes">Governor Ropes</option>
+          <option value="innovation">Innovation</option>
+        </select>
+        <!-- <div class="input-group"> -->
+        <div>
+
+          <!-- <input uib-typeahead="p as p.parent_name for p in templateSearch($viewValue)" ng-model="templateForm.parent_name" class="form-control" placeholder="Parent Name"> -->
+          <!-- <span class="input-group-addon">Add</span> -->
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Tag Line (EN)</label>
+        <textarea type="text" class="form-control" ng-model="templateForm.description" rows="1"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Tag Line (DE)</label>
+        <textarea type="text" class="form-control" ng-model="templateForm.des_de" rows="1"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Tag Line (ZH)</label>
+        <textarea type="text" class="form-control" ng-model="templateForm.des_ch" rows="1"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Small Description (For catalog in EN)</label>
+        <textarea ui-tinymce="tinymceOptions" ng-model="templateForm.rteDescription"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Small Description (For catalog in DE)</label>
+        <textarea ui-tinymce="tinymceOptions" ng-model="templateForm.rteDescription_de"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Small Description (For catalog in ZH)</label>
+        <textarea ui-tinymce="tinymceOptions" ng-model="templateForm.rteDescription_ch"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>RTE Para1 (EN)</label>
+        <textarea ui-tinymce="tinymceOptions" ng-model="templateForm.rteData1_en"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>RTE Para1 (DE)</label>
+        <textarea ui-tinymce="tinymceOptions" ng-model="templateForm.rteData1_otl"></textarea>
+      </div>
+      <div class="form-group">
+        <label>RTE Para1 (ZH)</label>
+        <textarea ui-tinymce="tinymceOptions" ng-model="templateForm.rteData1_ch"></textarea>
+      </div>
+      <div class="form-group">
+        <label>RTE Para2 (EN)</label>
+        <textarea ui-tinymce="tinymceOptions" ng-model="templateForm.rteData2_en"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>RTE Para2 (DE)</label>
+        <textarea ui-tinymce="tinymceOptions" ng-model="templateForm.rteData2_otl"></textarea>
+      </div>
+      <div class="form-group">
+        <label>RTE Para2 (ZH)</label>
+        <textarea ui-tinymce="tinymceOptions" ng-model="templateForm.rteData2_ch"></textarea>
+      </div>
+
+      <br>
+      <div class="form-group">
+
+        <div class="row">
+          <div class="col-md-4">
+            <label>E-Module :</label>
+          </div>
+          <div class="col-md-4">
+            <div class="col-md-9">
+            <input type="text" class="form-control" id="" ng-model="templateForm.keyword1_u" placeholder="Value1">
+          </div>
+          <div class="col-md-3">
+        <label>N/mm2</label>
+        <!-- <label ng-if="templateForm.parent_name=='innovation'">psi</label> -->
+        </div>
+        </div>
+          <div class="col-md-4">
+              <div class="col-md-9">
+            <input type="text" class="form-control" id="" ng-model="templateForm.keyword1_d" placeholder="Value2">
+          </div>
+          <div class="col-md-3">
+            <label ng-if="templateForm.parent_name!='innovation'">psi</label>
+            <label ng-if="templateForm.parent_name=='innovation'">psi</label>
+        </div>
+        </div>
+        </div>
+      </div>
+<br>
+      <div class="form-group">
+
+        <div class="row">
+          <div class="col-md-4">
+            <label>Elastic Elongation :</label>
+          </div>
+          <div class="col-md-4">
+            <div class="col-md-9">
+            <input type="text" class="form-control" id="" ng-model="templateForm.keyword2_u" placeholder="Value1">
+          </div>
+          <div class="col-md-3">
+        <label>%</label>
+        </div>
+        </div>
+          <div class="col-md-4">
+              <div class="col-md-9">
+            <input type="text" class="form-control" id="" ng-model="templateForm.keyword2_d" placeholder="Value2">
+          </div>
+          <div class="col-md-3">
+        <label>in/100ft</label>
+        </div>
+        </div>
+        </div>
+      </div>
+<br>
+      <div class="form-group">
+
+        <div class="row">
+          <div class="col-md-4">
+            <label>Permenant Elongation :</label>
+          </div>
+          <div class="col-md-4">
+            <div class="col-md-9">
+            <input type="text" class="form-control" rows="4" id="" ng-model="templateForm.keyword3_u" placeholder="Value1">
+          </div>
+          <div class="col-md-3">
+        <label>%</label>
+        </div>
+        </div>
+          <div class="col-md-4">
+                <div class="col-md-9">
+            <input type="text" class="form-control" rows="4" id="" ng-model="templateForm.keyword3_d" placeholder="Value2">
+          </div>
+          <div class="col-md-3">
+        <label>in/100ft</label>
+        </div>
+        </div>
+        </div>
+      </div>
+<br>
+      <div class="form-group">
+
+        <div class="row">
+          <div class="col-md-4">
+            <label>Lifting Height :</label>
+          </div>
+          <div class="col-md-4">
+<div class="col-md-9">
+            <input type="text" class="form-control" rows="4" id="" ng-model="templateForm.keyword4_u" placeholder="Value1">
+          </div>
+          <div class="col-md-3">
+          <label >m</label>
+        </div>
+        </div>
+          <div class="col-md-4">
+            <div class="col-md-9">
+            <input type="text" class="form-control" rows="4" id="" ng-model="templateForm.keyword4_d" placeholder="Value2">
+          </div>
+          <div class="col-md-3">
+            <label ng-if="templateForm.parent_name!='innovation'">ft</label>
+            <label ng-if="templateForm.parent_name=='innovation'">ft</label>
+        </div>
+      </div>
+        </div>
+      </div>
+
+<br>
+      <div class="form-group">
+        <label>Product Fields</label>
+        <div class="row">
+          <div class="col-md-3">
+            <input type="text" class="form-control" id="" ng-model="templateForm.productfields_1" placeholder="description1">
+          </div>
+          <div class="col-md-3">
+            <input type="text" class="form-control" id="" ng-model="templateForm.productfields_2" placeholder="description2">
+          </div>
+          <div class="col-md-3">
+            <input type="text" class="form-control" id="" ng-model="templateForm.productfields_3" placeholder="description3">
+          </div>
+          <div class="col-md-3">
+            <input type="text" class="form-control" id="" ng-model="templateForm.productfields_4" placeholder="description4">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Table Disclaimer (EN)</label>
+        <textarea type="text" class="form-control" rows="4" id="" ng-model="templateForm.disclaimer_en " placeholder="Description"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Table Disclaimer (DE)</label>
+        <textarea type="text" class="form-control" rows="4" id="" ng-model="templateForm.disclaimer_otl" placeholder="Description"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Table Disclaimer (ZH)</label>
+        <textarea type="text" class="form-control" rows="4" id="" ng-model="templateForm.disclaimer_ch" placeholder="Description"></textarea>
+      </div>
+
+      <div class="row">
+        <div class=" col-md-3 form-group">
+        <label>Color</label>
+        <input type="color" class="form-control " ng-model="templateForm.color" placeholder="Color Code"  value="#e66465">
+      </div>
+      </div>
+
+      <div class="form-group">
+        <label>Bisection Image</label>
+        <input type="file" file-model="templateForm.defaultImage">
+      </div>
+      <div class="form-group">
+        <label>First Page Background Image(JPG,A4 Size)</label>
+        <input type="file" file-model="templateForm.backgroundImage1">
+      </div>
+      <div class="form-group">
+        <label>Second Page Background Image(JPG,A4 Size)</label>
+        <input type="file" file-model="templateForm.backgroundImage2">
+      </div>
+      <div class="form-group">
+        <label>Elevator Catalog Background1(JPG,A4 Size)</label>
+        <input type="file" file-model="templateForm.catalogBG1">
+      </div>
+
+      <div class="form-group">
+        <label>Elevator Catalog Background2(JPG,A4 Size)</label>
+        <input type="file" file-model="templateForm.catalogBG2">
+      </div>
+
+      <!-- <div class="form-group">
+        <label>Product Image1</label>
+        <input type="file" file-model="templateForm.productImage2">
+      </div>
+
+      <div class="form-group">
+        <label>Product Image2</label>
+        <input type="file" file-model="templateForm.productImage2">
+      </div> -->
+
+
+
+      <media-Field data="templateForm.media" url="/api/homepage/media/"></media-Field>
+      <!-- <div class="form-group">
+        <label>Ropes</label>
+        <select class="form-control" ng-model="templateForm.ropes">
+          <option value="Tractionropes">Tractionropes</option>
+          <option value="Compensationropes">Compensationropes</option>
+          <option value="Governorropes">Governorropes</option>
+        </select>
+      </div> -->
+      <!-- <div class="form-group">
+        <label>Elastic Elongation</label>
+        <input type="text" class="form-control" ng-model="templateForm.elastic_elongation"></input>
+      </div>
+      <div class="form-group">
+        <label>Permenant Elongation</label>
+        <input type="text" class="form-control" ng-model="templateForm.permenant_elongation"></input>
+      </div>
+      <div class="form-group">
+        <label>Lifting height</label>
+        <input type="text" class="form-control" ng-model="templateForm.lifting_height"></input>
+      </div> -->
+      <span class="btn btn-primary" ng-click="saveTemplate()" style="margin-top:15px">Save</span>
+    </div>
+
+
+
+    <div class="col-md-6" ng-if="templateForm.pk">
+      <h3>Add Fields To Template <span class="btn btn-success pull-right" ng-click="addField()">Add <i class="fa fa-plus"></i></span></h3>
+      <div class="" ng-if="fieldForm.showForm">
+        <div class="form-group">
+          <label>Field Name</label>
+          <input type="text" class="form-control" ng-model="fieldForm.name" placeholder="Field Name">
+        </div>
+        <div class="form-group">
+          <label>Type</label>
+          <select class="form-control" ng-model="fieldForm.type">
+            <option value="Boolean">Boolean</option>
+            <option value="Char">Char</option>
+            <option value="float">float</option>
+            <option value="Integer">Integer</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Dimensions</label>
+          <input type="text" class="form-control" ng-model="fieldForm.dimensions" placeholder="Dimensions">
+        </div>
+        <div class="form-group">
+          <label>Required</label>
+          <input type="checkbox" ng-model="fieldForm.required">
+        </div>
+
+        <div class="form-group">
+          <label>In PDF</label>
+          <input type="checkbox" ng-model="fieldForm.inPdf">
+        </div>
+        <div class="form-group">
+          <label>IN UI</label>
+          <input type="checkbox" ng-model="fieldForm.inUI">
+        </div>
+        <span class="btn btn-primary" ng-click="saveTemplateField()" style="margin-top:15px">Save</span>
+      </div>
+      <div class="" ng-if="tempFieldsData.length>0" style="padding-top:25px">
+        <div class="col-md-12" ng-repeat="field in tempFieldsData">
+          <div class="card" style="margin-bottom:5px;border-radius:10px">
+            <div class="row" style="padding:10px">
+              <div class="col-md-12">
+                <div class="col-md-3">
+                  <strong>Name</strong><br>{{field.name}}
+                </div>
+                <div class="col-md-2">
+                  <strong>Type</strong><br>{{field.type}}
+                </div>
+                <div class="col-md-2">
+                  <strong>Required</strong><br><i class="fa {{field.required?'fa-check-circle':'fa-times-circle-o'}} fa-lg"></i>
+                </div>
+                <div class="col-md-2">
+                  <strong>In PDF</strong><br><i class="fa {{field.inPdf?'fa-check-circle':'fa-times-circle-o'}} fa-lg"></i>
+                </div>
+                <div class="col-md-2">
+                  <strong>IN UI</strong><br><i class="fa {{field.inUI?'fa-check-circle':'fa-times-circle-o'}} fa-lg"></i>
+                </div>
+                <div class="col-md-1">
+                  <strong>Edit</strong><br>  <i class="fa fa-pencil" ng-click="editField($index)"></i>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!-- <div class="row" style="padding:5px 20px">
+           <div class="col-md-6">
+                <i class="fa fa-trash fa-2x" style="color:red;cursor:pointer" mwl-confirm title="Confirm" message="Are you sure?" confirm-text="Yes <i class='fa fa-check'></i>" cancel-text="No" on-confirm="deleteField($index)" confirm-button-type="default"
+                  cancel-button-type="default"></i>
+              </div>
+           <div class="col-md-6">
+                <i class="fa fa-pencil fa-2x pull-right" style="color:blue;cursor:pointer" ng-click="editField($index)"></i>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

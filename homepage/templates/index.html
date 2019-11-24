@@ -1,0 +1,104 @@
+{% extends "base.html" %} {% load staticfiles %} {% block specific_head %}
+<title>{% if title %} {{title}} - {% endif %}  BRUGG LIFTING</title>
+<base href="/">
+{% endblock %} {% block specific_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,800,900" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/magnific-popup.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/hover-min.css' %}">
+<link rel="stylesheet" type="text/css" href="/plugins/facdori-icon/style.css">
+<link rel="stylesheet" type="text/css" href="/plugins/bands-icon/style.css">
+<link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/owl.theme.default.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-select.min.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- main template stylesheet -->
+<link rel="stylesheet" href="{% static 'css/bruggstyle.css' %}">
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+<!-- <link href="{% static 'css/homepage.css' %}" rel="stylesheet"> -->
+<link rel="stylesheet" href="/plugins/flag-icon-css/css/flag-icon.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/angular.chartjs/0.8.8/angular-chart.min.css" charset="utf-8">
+{% endblock %} {% block header %} {% include "header.html" %} {% endblock %}
+<!-- Header -->
+{% block content %}
+  {% block brugcontent %}{% endblock %}
+
+{% include "footer.html" %}
+
+ {% endblock %}{% block specific_js %}
+
+<script>
+  var erpUrl = '{{erpUrl}}';
+  var apiManagerUrl = '{{apiManagerUrl}}';
+
+  window.addEventListener('error', function(e) {
+    var errorText = [
+        e.message,
+        'URL: ' + e.filename,
+        'Line: ' + e.lineno + ', Column: ' + e.colno,
+        'Stack: ' + (e.error && e.error.stack || '(no stack trace)')
+    ].join('\n');
+
+    // Example: log errors as visual output into the host page.
+    // Note: you probably don’t want to show such errors to users, or
+    //       have the errors get indexed by Googlebot; however, it may
+    //       be a useful feature while actively debugging the page.
+    // var DOM_ID = 'rendering-debug-pre';
+    // if (!document.getElementById(DOM_ID)) {
+    //     var log = document.createElement('pre');
+    //     log.id = DOM_ID;
+    //     log.style.whiteSpace = 'pre-wrap';
+    //     log.textContent = errorText;
+    //     if (!document.body) document.body = document.createElement('body');
+    //     document.body.insertBefore(log, document.body.firstChild);
+    // } else {
+    //     document.getElementById(DOM_ID).textContent += '\n\n' + errorText;
+    // }
+
+    // Example: log the error to remote service.
+    // Note: you can log errors to a remote service, to understand
+    //       and monitor the types of errors encountered by regular users,
+    //       Googlebot, and other crawlers.
+
+
+    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+    xmlhttp.open("POST", "/api/ERP/webError/");
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send(JSON.stringify({ "data": errorText }));
+
+    // var client = new XMLHttpRequest();
+    // client.open('POST', 'https://example.com/logError');
+    // client.setRequestHeader('Content-Type', 'text/plain;charset=UTF-8');
+    // client.send(errorText);
+
+  });
+
+</script>
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/js.cookie.min.js' %}"></script>
+<script src="{% static 'js/angular.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'js/isotope.js' %}"></script>
+<script src="{% static 'js/waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'js/isotope.js' %}"></script>
+<script src="{% static 'js/bootstrap-select.min.js' %}"></script>
+<script src="{% static 'js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'js/app.homepage.js' %}" defer></script>
+<script src="{% static 'js/wow.js' %}"></script>
+<script src="{% static 'js/theme.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script><!-- google map helper -->
+
+{% block brugjs %}{% endblock %}
+{% endblock %}

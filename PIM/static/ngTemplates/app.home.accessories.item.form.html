@@ -1,0 +1,32 @@
+<div class="container-fluid" ng-controller="controller.home.accessories.item.form">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Create Product</h3>
+
+      <div class="form-group">
+        <label>Item Number</label>
+        <input type="number" class="form-control" ng-model="productForm.itemNumber" placeholder="Item Number (Integer)">
+      </div>
+      <div class="form-group">
+        <label>Product</label>
+        <input uib-typeahead="p as p.basicProductName for p in accesstemplateSearch($viewValue)" ng-model="productForm.template" type="text" class="form-control" placeholder="Search and Select Template">
+        <p class="help-block">Please Search and Select Product</p>
+      </div>
+
+       <span class="btn btn-success" ng-click="saveProduct()" style="margin-top:25px">Save</span>
+    </div>
+      <div class="col-md-6" ng-if="productFieldData.length>0">
+      <h3>Please Fill The Form</h3>
+      <div class="" ng-repeat="field in productFieldData">
+        <div class="form-group">
+          <label>{{field.name}}</label> <span style="color:red" ng-if="field.required">*</span>
+          <input type="text" class="form-control" ng-model="field.value" placeholder="Some Text" ng-if="field.type=='Char'" ng-init="field.value=''">
+          <input type="number" class="form-control" ng-model="field.value" placeholder="Some Integer Value" ng-if="field.type=='Integer'" ng-init="field.value=0">
+          <input type="number" class="form-control" ng-model="field.value" placeholder="Some Float Value" ng-if="field.type=='float'" ng-init="field.value=0.0">
+          <input type="checkbox" ng-model="field.value" ng-if="field.type=='Boolean'" ng-init="field.value=false">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

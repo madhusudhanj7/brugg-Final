@@ -1,0 +1,75 @@
+{% extends "index.html" %}{% load staticfiles %}{% load i18n %}
+{% get_current_language as lang %}
+
+{% block brugcontent %}
+
+{% verbatim %}
+
+<div class="page-wrapper">
+  <div class="preloader"></div><!-- /.preloader -->
+  <div class="inner-banner text-center">
+    <div class="container">
+      <ul class="breadcrumb">
+
+      </ul>
+    </div>
+  </div>
+  <!-- <section class="sec-pad-with-content-margin-30 gray-bg service-page-one"> -->
+  <div class="row gray-bg sec-pad-with-content-margin-30 service-page-one">
+    <div class="col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8 col-sm-12">
+      <div class="row" style="margin-bottom:50px">
+        <div class="sec-title" style="padding-left:15px">
+          <span class="tag-line"> Application</span>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <div class="row" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);padding:0em;position:relative;margin:5px">
+            <img ng-src="/static/images/brugImages/application1template.png" alt="" class="bisection" style="width:100%">
+            <div class="text-center" style="padding:1em">
+              <a href="/static/document/Brugg_AnwedHinweis_DE_EN.pdf"> BRUGG_ANWEDHINWEIS_DE_EN </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <div class="row" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);padding:0em;position:relative;margin:5px;">
+            <img ng-src="/static/images/brugImages/application2template.png" alt="" class="bisection" style="width:100%">
+            <div class="text-center" style="padding:1em">
+              <a href="/static/document/Brugg_CTP_Wartung.pdf"> BRUGG_CTP_WARTUNG </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <div class="row" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);padding:0em;position:relative;margin:5px;">
+            <img ng-src="/static/images/brugImages/application3template.png" alt="" class="bisection" style="width:100%">
+            <div class="text-center" style="padding:1em">
+              <a href="/static/document/Brugg_RPM_BedAnleitung_DE_EN.pdf"> BRUGG_RPM_BEDANLEITUNG_DE_EN </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-bottom:50px">
+        <div class="col-md-4 col-xs-12">
+          <div class="row" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);padding:0em;position:relative;margin:5px;">
+            <img ng-src="/static/images/brugImages/application4template.png" alt="" class="bisection" style="width:100%">
+            <div class="text-center" style="padding:1em">
+              <a href="/static/document/GDC_Manual.pdf"> GDC_MANUAL </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-12">
+          <div class="row" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);padding:0em;position:relative;margin:5px">
+            <img ng-src="/static/images/brugImages/application5template.png" alt="" class="bisection" style="width:100%">
+            <div class="text-center" style="padding:1em">
+              <a href="/static/document/RLE_Manual.pdf"> RLE_MANUAL </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- <section> -->
+    </div>
+
+
+{% endverbatim %}
+{% endblock %}

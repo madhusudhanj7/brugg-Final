@@ -1,0 +1,128 @@
+{% load i18n %}
+{% get_current_language as lang %}
+
+<style media="screen">
+  .container{
+    width: 1170px;
+  }
+  .link-lists li{
+    margin-top:0px!important
+  }
+</style>
+
+
+<div class="row site-footer" style="padding:30px">
+<div class="col-sm-12 col-xs-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
+    <footer >
+        <div class="main-footer">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                        <div class="footer-widget about-widget">
+                            <div class="widget-title">
+                                <h3>{% trans 'footerA' %}</h3>
+                            </div><!-- /.widget-title -->
+                            <p>{% trans 'footerB' %}</p>
+                            <!-- <img src="images/footer-map-1-1.jpg" alt="Awesome Image"/> -->
+                            <a href="/locations" class="find-us-link"><i class="fa fa-map-marker"></i>{% trans 'footerC' %}</a>
+                        </div><!-- /.footer-widget -->
+                    </div><!-- /.col-lg-3 -->
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <div class="footer-widget links-widget">
+                            <div class="widget-title">
+                                <h3>{% trans 'footerH' %}</h3>
+                            </div><!-- /.widget-title -->
+                            <div class="link-wrapper clearfix">
+                                <ul class="link-lists">
+                                    <!-- <li><a href="#">Why Choose</a></li> -->
+                                    <li><a href="/about">{% trans 'footerA' %}</a></li>
+                                    <li><a href="/applicationtips">{% trans 'footerJ' %}</a></li>
+                                    <li><a href="/accessories">{% trans 'footerK' %}</a></li>
+                                    <li><a href="/blogs">{% trans 'footerL' %}</a></li>
+                                    <li><a href="/locations">{% trans 'footerM' %}</a></li>
+                                    <!-- <li><a href="/reference">Refernces</a></li> -->
+                                    <li><a href="/legal-privacy">{% trans 'footerO' %}</a></li>
+                                    <li><a href="/sitemap">{% trans 'footerP' %}</a></li>
+                                </ul>
+                                <ul class="link-lists">
+                                    <!-- <li><a href="#">Contact Us</a></li> -->
+                                    <!-- <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms of Use</a></li> -->
+                                </ul><!-- /.link-lists -->
+                            </div><!-- /.link-wrapper -->
+                        </div><!-- /.footer-widget -->
+                    </div><!-- /.col-lg-3 -->
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <div class="footer-widget service-links-widget">
+                            <div class="widget-title">
+                                <h3>{% trans 'footerD' %}</h3>
+                            </div><!-- /.widget-title -->
+                            <ul class="link-lists">
+                                <li><a href="/categories/traction-ropes">{% trans 'footerE' %}</a></li>
+                                <li><a href="/categories/compensation-ropes">{% trans 'footerF' %}</a></li>
+                                <li><a href="/categories/governor-ropes">{% trans 'footerG' %}</a></li>
+                                <!-- <li><a href="#">Mechanical Engineering</a></li>
+                                <li><a href="#">Power Energies</a></li> -->
+                            </ul><!-- /.link-lists -->
+                        </div><!-- /.footer-widget -->
+                    </div><!-- /.col-lg-3 -->
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                      <div class="footer-widget service-links-widget">
+                          <div class="widget-title">
+                              <h3>{% trans 'footerR' %}</h3>
+                          </div><!-- /.widget-title -->
+                          <ul class="link-lists">
+                              <li><a href="/api/homepage/book/?doc=/media/broucher_{{lang}}.pdf"target="_blank">{% trans 'footerS' %}</a></li>
+                              <li><a href="/api/homepage/book/?doc=/media/CTP_{{lang}}.pdf"target="_blank">{% trans 'footerT' %}</a></li>
+                              <li><a href="/product-info" >{% trans 'footerU' %}</a></li>
+                              <li><a href="/technical-information" >{% trans 'footerV' %}</a></li>
+                              <li><a href="/pdfapplication" >{% trans 'footerW' %}</a></li>
+                          </ul><!-- /.link-lists -->
+                      </div><!-- /.footer-widget -->
+                        <!-- <div class="footer-widget contact-widget">
+                            <ul class="contact-infos">
+                                <li>
+                                    <i class="fa fa-map-marker fa-2x"></i>
+
+                                </li>
+                                <li>
+                                  <i class="fa fa-envelope-open fa-2x"></i>
+                                  info.lifting@brugg.com
+                                </li>
+                                <li>
+                                  <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+
+                                  +41 56 464 42 42
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div><!-- /.col-lg-3 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+      <!-- /.main-footer -->
+        <div class="bottom-footer">
+            <div class="">
+                <div class="container-inner clearfix">
+                    <div class="left-content text-left col-sm-12 col-xs-12 col-md-6 col-lg-6">
+                        <p>&copy; {% trans 'footerQ' %}   </p>
+                    </div>
+                    <div class="right-content text-left hidden-lg hidden-md col-sm-12 col-xs-12">
+                        <div class="social">
+                            <!-- <a href="#"><i class="fa fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a> -->
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.youtube.com/user/brugglifting" ><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                    <div class="right-content text-right hidden-sm hidden-xs col-md-6 col-lg-6">
+                        <div class="social">
+                            <!-- <a href="#"><i class="fa fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a> -->
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.youtube.com/user/brugglifting" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><!-- /.site-footer -->
+  </div>

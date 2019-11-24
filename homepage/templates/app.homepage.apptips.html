@@ -1,0 +1,171 @@
+{% extends "index.html" %}{% load staticfiles %}
+
+{% block brugcontent %}
+
+
+
+<div class="row" style="margin:0px">
+  <div class="col-md-12" style="padding:0px">
+    <img class="hidden-xs" src="/static/images/about/apptips.jpg" alt="" style="width:100%;height:40vh">
+    <img class="visible-xs" src="/static/images/about/apptips_alt.jpeg" alt="" style="width:100%;height:40vh">
+  </div>
+</div>
+
+
+
+
+ <div class="container " style='width:100%'>
+ <div class="col-md-12 col-xs-12 " style='width:100%'>
+  <h1 style="font-size:2em;font-weight:400;color:#009DE0;">Elevator ropes from Brugg Lifting. Tips for rope handling.</h1>
+  <div class="col-md-10 text-left" style="padding-top:1em;text-align:justify">
+    This section provides important information and tips regarding the properties of ropes and the handling of ropes. If required, we will provide you with additional information and will of course be available to us to answer any questions.</div>
+
+
+
+
+<div class="" style="margin-top:100px">
+
+<div class="clearfix"></div>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  {% for i in tips %}
+
+<div class="panel panel-default" style="margin:20px 0 ">
+  <div class="panel-heading" role="tab" id="headingOne">
+    <h4 class="panel-title">
+    <div role="button" data-toggle="collapse" data-parent="#accordion" data-target="#{{i.pk}}" aria-expanded="true" aria-controls="collapseOne">
+      {{i.tipname}}<span class="pull-right"><i class="fa fa-plus" aria-hidden="true"></i></span>
+    </div>
+  </h4>
+  </div>
+  <div id="{{i.pk}}" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingOne">
+
+    <div class="panel-body">
+
+      <div class="col-md-{{i.size}} col-xs-12" style="padding:2em;">
+      {% if i.mediaTyp == 'image' %}
+      <div class="col-md-12 col-xs-12 text-center" style="padding:0;" >
+          <img src="{{i.image1.url}}" class="img-fluid" style="max-width:80%" alt="Responsive image">
+        </div>
+        {% endif %}
+        {% if i.mediaTyp == 'video' %}
+        <div class="col-md-12 col-xs-12 text-center" style="padding:0;" >
+            <video width="100%" controls>
+                <source src="{{i.image1.url}}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+          </div>
+          {% endif %}
+        <div class="col-md-12 col-xs-12 " style="padding:0; padding-top:1em">
+          <div class="" style="text-align: justify" >{{i.text | safe}}
+          </div>
+        </div>
+      </div>
+
+
+      {% for j in i.children.all %}
+      <div class="col-md-{{j.size}} col-xs-12" style="padding:2em;">
+      {% if j.mediaTyp == 'image' %}
+      <div class="col-md-12 col-xs-12 text-center" style="padding:0;" >
+          <img src="{{j.image1.url}}" class="img-fluid" style="max-width:80%" alt="Responsive image">
+        </div>
+        {% endif %}
+        {% if j.mediaTyp == 'video' %}
+        <div class="col-md-12 col-xs-12 text-center" style="padding:0;" >
+            <video width="100%" controls>
+                <source src="{{j.image1.url}}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+          </div>
+          {% endif %}
+        <div class="col-md-12 col-xs-12 " style="padding:0; padding-top:1em">
+          <div class="" style="text-align: justify" >{{j.text | safe}}
+          </div>
+        </div>
+      </div>
+    {%endfor%}
+    </div>
+  </div>
+</div>
+
+{%endfor%}
+</div>
+</div>
+
+
+   <!-- <div class="panel-group" id="accordion" style="padding-top:3em;">
+    <hr>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <div data-toggle="collapse" data-parent="#accordion" style="cursor:pointer">Transport <span class="pull-right"><i class="fa fa-plus" aria-hidden="true"></i></span></div>
+        </h4>
+      </div>
+      <div class="panel-collapse collapse ">
+        <div class="panel-body" style="padding-top:1.5em;" data-parent="#accordion">
+          <div class="row">
+            <div class="col-md-4 col-md-offset-1" style="padding-top:3em;">
+               <img src="{{a.image1}}" class="img-fluid" style="width:70%;" alt="Responsive image">
+            </div>
+            <div class="col-md-4 col-md-offset-1 pull-right" style="padding-top:3em;">
+              <img src="/static/images/trans_01_r.jpg" class="img-fluid" style="width:70%;" alt="Responsive image">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-md-offset-4 pull-right" style="padding:3em;">Text is herereeeeeeeeee
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-md-offset-1" style="padding-top:3em;">
+              <img src="/static/images/trans_02_f.jpg" class="img-fluid" style="width:70%;" alt="Responsive image">
+
+            </div>
+            <div class="col-md-4 col-md-offset-1 pull-right" style="padding-top:3em;">
+              <img src="/static/images/trans_02_r.jpg" class="img-fluid" style="width:70%;" alt="Responsive image">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4  pull-left" style="padding:3em;">Avoid direct contact with forks or other hard surfaces.
+            </div>
+            <div class="col-md-4  pull-right" style="padding:3em;">Use slings or other appropriate lifting devices when handling coils.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div> -->
+
+</div>
+</div>
+
+{% endblock %}
+
+{% block brugjs %}
+<script>
+$(document).ready(function() {
+
+  $(".toggle-accordion").on("click", function() {
+    var accordionId = $(this).attr("accordion-id"),
+      numPanelOpen = $(accordionId + ' .collapse.in').length;
+
+    $(this).toggleClass("active");
+
+    if (numPanelOpen == 0) {
+      openAllPanels(accordionId);
+    } else {
+      closeAllPanels(accordionId);
+    }
+  })
+
+  openAllPanels = function(aId) {
+    console.log("setAllPanelOpen");
+    $(aId + ' .panel-collapse:not(".in")').collapse('show');
+  }
+  closeAllPanels = function(aId) {
+    console.log("setAllPanelclose");
+    $(aId + ' .panel-collapse.in').collapse('hide');
+  }
+
+});
+</script>
+{%endblock%}

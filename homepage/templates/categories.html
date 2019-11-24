@@ -1,0 +1,73 @@
+{% extends "index.html" %}{% load staticfiles %}
+
+{% block brugcontent %}
+
+{% verbatim %}
+  <div class="page-wrapper  gray-bg">
+    <div class="preloader"></div><!-- /.preloader -->
+    <div class="row" style="margin:0px">
+      <div class="col-md-12" style="padding:0px">
+        <img src="/static/images/brugImages/9.jpg" alt="" style="width:100%;height:40vh">
+      </div>
+    </div>
+    <section class="sec-pad-with-content-margin-30 gray-bg service-page-one">
+      <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+        <div class="row">
+        {% endverbatim %}
+          {% for product in productTemples %}
+
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+              <a href="/products/{{product.name}}_{{product.pk}}">
+              <!-- <a href= "/products/"+product+"__"+id> -->
+              <div class="single-service-style-one">
+                <div class="top-box text-center changewidth">
+                  <div class="inner-content">
+                    <i class="facdori-icon-factory-1 box-icon"></i>
+                    <h1>{{product.name}}</h1>
+                  </div><!-- /.inner-content -->
+                </div><!-- /.top-box -->
+
+                <div class="image-block imgewidth">
+                  <!-- <a href="/products/product"> -->
+                  <img src="{{product.defaultImage.url}}" alt="Awesome Image" />
+
+                  <div class="overlay">
+                    <div class="box">
+                      <div class="content">
+                        <div class="dotted"></div><!-- /.dotted -->
+                      </div><!-- /.content -->
+                    </div><!-- /.box -->
+                  </div><!-- /.overlay -->
+                </div><!-- /.image-block -->
+              </div><!-- /.single-service-style-one -->
+              </a>
+            </div><!-- /.col-lg-4 col-md-6 col-sm-6 -->
+
+          {% endfor %}
+      {% verbatim %}
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.sec-pad gray-bg -->
+  </div><!-- /.page-wrapper -->
+  <style type="text/css">
+
+    .single-service-style-one .changewidth{
+      width:100%;
+    }
+    .single-service-style-one .imgewidth{
+      width:100%;
+    }
+
+    /* @media (max-width:768px) {
+
+      .single-service-style-one .changewidth{
+        width:29%;
+      }
+      .single-service-style-one .imgewidth{
+        width:29%;
+      }
+    } */
+  </style>
+  {% endverbatim %}
+  {% endblock %}

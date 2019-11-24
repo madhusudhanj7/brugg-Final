@@ -1,0 +1,21 @@
+<div class="col-md-3">
+  <div class="container-fluid card" style="border-radius:10px;border:1px solid green;margin-bottom:10px">
+    <div class="row" style="padding:10px;font-size:20px">
+      <!-- <strong>{{job.name}}</strong> -->
+      <strong>Job Title:</strong> {{data.name}}<br>
+      <strong>Job Type:</strong>{{data.jobtype}}<br>
+    </div>
+    <div class="row container-fluid" style="padding-top:20px;height:70px;">
+    <div class="row">
+      <!-- <div class="col-md-2">
+        <i class="fa fa-eye fa-2x" style="cursor:pointer" ng-click="rowActionClicked('viewTemplate')"></i>
+      </div> -->
+      <div class="col-md-2">
+        <i class="fa fa-pencil fa-2x pull-right" style="color:blue;cursor:pointer" ng-click="rowActionClicked('edit')"></i>
+      </div>
+      <div class="col-md-2">
+        <i class="fa fa-trash fa-2x" style="cursor:pointer;color:red;" ng-click="rowActionClicked('delete')"></i>
+      </div>
+    </div>
+  </div>
+</div>

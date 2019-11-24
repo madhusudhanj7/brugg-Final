@@ -1,0 +1,430 @@
+{% extends "index.html" %}{% load staticfiles %}{% load i18n %}
+{% get_current_language as lang %}
+
+{% block brugcontent %}
+
+{% verbatim %}
+
+<div class="container-fluid" style="padding:0;">
+  <div class="container-fluid" style="width:100%;padding: 0;brightness(40%);">
+    <img src="/static/images/brugImages/9.jpg" alt="" class="banner" style="width:100%">
+  </div>
+  {% endverbatim %}
+  {% if lang == 'zh' %}
+    <div class="container" style="width:100%">
+      <div class="row" style="padding:2em 0">
+        <div class="col-md-3 col-xs-5">
+          <img ng-src="{{templateDetails.defaultImage.url}}" alt="" class="bisection" style="">
+        </div>
+        <div class="col-md-6 col-xs-3" style="padding:3em 0em">
+          <h3 style="margin-top:0"><b>{{templateDetails.name}}</b></h3>
+          <span>{{templateDetails.des_ch}}</span>
+
+        </div>
+        <div class="col-md-3  col-xs-4 download" style="" id="link" >
+          <h4><a href = "media/{{templateDetails.name}}_{{templateDetails.pk}}_{{lang}}.pdf" target="_blank"  > <i class="fa fa-download"></i> 下载PDF
+         </a> </h4>
+        <!-- <h4><a href = "media/{{templateDetails.name}}.pdf" target="_blank"  >  View Video
+        </i> </a></h4> -->
+        </div>
+      </div>
+
+      <div class="row" style="padding:2em 1em">
+        <!-- <h3 style="margin-top:0;padding:0 0 0 0.5em"><b>{{templateDetails.name}}</b></h3> -->
+        <div class="col-md-6 col-xs-12">
+          <div >{{rteData1_ch}}</div>
+        </div>
+        <div class="col-md-6 col-xs-12" >{{rteData2_ch}}
+          <!-- <h3 style="margin-top:0"><b>Vollstahlseil, 9 Litzen, gesondert verseilt</b></h3>
+          <span>Für höchste Anforderungen im Bezug auf Bruchkraft,Dehnung und Fahrtenzahl, auch bei erschwertenMontagesituationen. Empfohlen für Rundrillen mit einem Unterschnittwinkel ≤ 85°.</span> -->
+        </div>
+      </div>
+  {% elif lang == 'de' %}
+    <div class="container" style="width:100%">
+      <div class="row" style="padding:2em 0">
+        <div class="col-md-3 col-xs-5">
+          <img ng-src="{{templateDetails.defaultImage.url}}" alt="" class="bisection" style="">
+        </div>
+        <div class="col-md-6 col-xs-3" style="padding:3em 0em">
+          <h3 style="margin-top:0"><b>{{templateDetails.name}}</b></h3>
+          <span>{{templateDetails.des_de}}</span>
+
+        </div>
+        <div class="col-md-3  col-xs-4 download" style="" id="link" >
+          <h4><a href = "media/{{templateDetails.name}}_{{templateDetails.pk}}_{{lang}}.pdf" target="_blank"  > <i class="fa fa-download"></i> PDF Herunterladen
+         </a> </h4>
+        <!-- <h4><a href = "media/{{templateDetails.name}}.pdf" target="_blank"  >  View Video
+        </i> </a></h4> -->
+        </div>
+      </div>
+
+      <div class="row" style="padding:2em 1em">
+        <!-- <h3 style="margin-top:0;padding:0 0 0 0.5em"><b>{{templateDetails.name}}</b></h3> -->
+        <div class="col-md-6 col-xs-12">
+          <div >{{rteData1_de}}</div>
+        </div>
+        <div class="col-md-6 col-xs-12" >{{rteData1_de}}
+          <!-- <h3 style="margin-top:0"><b>Vollstahlseil, 9 Litzen, gesondert verseilt</b></h3>
+          <span>Für höchste Anforderungen im Bezug auf Bruchkraft,Dehnung und Fahrtenzahl, auch bei erschwertenMontagesituationen. Empfohlen für Rundrillen mit einem Unterschnittwinkel ≤ 85°.</span> -->
+        </div>
+      </div>
+
+    {% else %}
+      <div class="container" style="width:100%">
+        <div class="row" style="padding:2em 0">
+          <div class="col-md-3 col-xs-5">
+            <img ng-src="{{templateDetails.defaultImage.url}}" alt="" class="bisection" style="">
+          </div>
+          <div class="col-md-6 col-xs-3" style="padding:3em 0em">
+            <h1 style="margin-top:0"><b>{{templateDetails.name}}</b></h1>
+            <span>{{templateDetails.description}}</span>
+
+          </div>
+          <div class="col-md-3  col-xs-4 download" style="" id="link" >
+            <h4><a href = "media/{{templateDetails.name}}_{{templateDetails.pk}}_{{lang}}.pdf" target="_blank"  > <i class="fa fa-download"></i>   Download PDF
+           </a> </h4>
+          <!-- <h4><a href = "media/{{templateDetails.name}}.pdf" target="_blank"  >  View Video
+          </i> </a></h4> -->
+          </div>
+        </div>
+
+        <div class="row" style="padding:2em 1em">
+          <!-- <h3 style="margin-top:0;padding:0 0 0 0.5em"><b>{{templateDetails.name}}</b></h3> -->
+          <div class="col-md-6 col-xs-12">
+            <div >{{rteData1_en}}</div>
+          </div>
+          <div class="col-md-6 col-xs-12" >{{rteData2_en}}
+            <!-- <h3 style="margin-top:0"><b>Vollstahlseil, 9 Litzen, gesondert verseilt</b></h3>
+            <span>Für höchste Anforderungen im Bezug auf Bruchkraft,Dehnung und Fahrtenzahl, auch bei erschwertenMontagesituationen. Empfohlen für Rundrillen mit einem Unterschnittwinkel ≤ 85°.</span> -->
+          </div>
+        </div>
+    {% endif %}
+
+
+    <div class="row" style="">
+      <div class="col-md-3 col-xs-12" style="margin-top:2em">
+        <div style="box-shadow: 0 4px 8px 0 rgb(101, 100, 100);padding:2em; background: #009de0;">
+          <h3 style=" margin-top:0; color:white; font-size:22px"><b>{{keyword1.value1}}
+              %</b></h3>
+          <span style="color:white; font-size:18px">Elastic Elongation</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-12" style="margin-top:2em">
+        <div style="box-shadow: 0 2px 8px 0 rgb(101, 100, 100);padding:2em; background: #009de0;">
+          <h3 style=" margin-top:0; color:white; font-size:22px"><b>{{keyword2.value1}}
+              %</b></h3>
+          <span style="color:white; font-size:18px">Elastic Elongation</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-12" style="margin-top:2em">
+        <div style="box-shadow: 0 2px 8px 0 rgb(101, 100, 100);padding:2em; background: #009de0;">
+          <h3 style=" margin-top:0; color:white; font-size:22px"><b>{{keyword3.value1}}
+              %</b></h3>
+          <span style="color:white; font-size:18px">Permenant Elongation</span>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-12" style="margin-top:2em">
+        <div style="box-shadow: 0 2px 8px 0 rgb(101, 100, 100);padding:2em;  background: #009de0;">
+          <h3 style=" margin-top:0; color:white; font-size:22px "><b>{{keyword4.value1}}
+              m</b></h3>
+          <span style="color:white; font-size:18px">Lifting Height</span>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- <div class="col-md-3 col-xs-12">
+      <div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,4);padding:2em;  background: #009de0;">
+        <h3 style=" margin-top:0; color:white; font-size:22px "><b>{{keyword4.value1}}
+            {{keyword4.unit}}</b></h3>
+        <span style="color:white; font-size:18px">{{keyword4.description}}</span>
+      </div>
+    </div> -->
+
+
+{% verbatim %}
+
+
+    <!-- <div class="row" style="padding:2em 0">
+      <div class="col-md-12 col-xs-12" style="padding:2em">
+        <h3 style="margin-top:0"><b>Steel core rope, 9 strands, separate lay</b></h3>
+        <span>For highest demands on breaking force, elongation and number of trips, also under difficult installation conditions. Recommended for round grooves with an undercut angle of ≤ 85°.</span>
+      </div>
+    </div> -->
+
+    <div class="row" style="padding:2em 2em">
+      <div class="col-md-12 col-xs-12 " style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);padding:2em;position:relative;">
+        <div class="row">
+          <div class="col-md-offset-9 col-md-3 text-right">
+            <label class="switch">
+              <input type="checkbox" id="togBtn" checked>
+              <div class="slider round">
+                <span class="on">kN</span>
+                <span class="off">lb</span>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <span class="pull-right">
+              <h4 style="margin-top:0">Breaking Load :</h4>
+            </span>
+          </div>
+          <div class="col-md-6">
+            <!-- <input type="range" min="{{minload}}" max="{{maxload}}" step={{step}} ng-model="load" onchange="updateTextInput(load,weight);"> -->
+            <input type="range" id="load" min=0  max=100  onchange="updateTextInput();" class="slider1">
+          </div>
+          <div class="col-md-3">
+            <span><b  id="loadSpan"> </b></span>
+          </div>
+        </div>
+        <div class="row" style="margin-top:1em;">
+
+          <div class="col-md-3">
+            <span class="pull-right">
+              <h4 style="margin-top:0">Weight :</h4>
+            </span>
+          </div>
+          <div class="col-md-6">
+            <!-- <input type="range" min="{{minweight}}" max="{{maxweight}}" step={{step}} ng-model="weight" onchange="updateTextInput(load,weight);"> -->
+            <input type="range" id="weight" min=0 max=100 onchange="updateTextInput();" class="slider1">
+          </div>
+          <div class="col-md-3">
+              <span><b  id="weightSpan"> </b></span>
+            <!-- <span class="arrowIndicator"><b>{{weight}} (kg/100m)</b></span> -->
+              <!-- <span ><b id="weightSpan"  min=0  > </b></span> -->
+          </div>
+
+          <!-- <div class="col-md-12 text-center " style="padding-top:2em" ng-if="tempProductsData.length<1">
+            <span style="color:#009DE0">No Product Available for this Range</span>
+          </div> -->
+          {% endverbatim %}
+
+          <div class="col-md-12 col-xs-12 table-responsive " style="padding-top:2em">
+            <table class="table table-hover">
+              <thead id="defaultTableHead">
+                <tr>
+                  <th scope="col">Item Number</th>
+                  {% for field in tempFieldsData%}
+                  <th scope="col" >{{field.name}}</th>
+                  {% endfor %}
+                </tr>
+              </thead>
+              {% verbatim %}
+              <tbody id="defaultTable">
+                {% endverbatim %}
+                  {% for prod in data%}
+                <tr>
+                  {% for a in prod%}
+                  <td>
+                    <span>{{a}}</span>
+                  </td>
+                  {% endfor %}
+                </tr>
+                {% endfor %}
+              </tbody>
+                {% verbatim %}
+                <thead id="newTableHead">
+                </thead>
+                <tbody id="newTable">
+                </tbody>
+                  {% endverbatim %}
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12  col-md-12">
+        <div class="brand-carousel-wrapper">
+          <div class="brand-carousel-product owl-theme owl-carousel">
+          {% for i in albumImages%}
+          <div class="item">
+            {% if i.mediaType == 'image' %}
+              <img src="{{i.attachment.url}}" alt="Awesome Image"  style="height:450px"/>
+            {% endif %}
+            {% if i.mediaType == 'video' %}
+            <!-- <video type="video/mp4" class="video" autobuffer="autobuffer" preload="preload" autoplay="autoplay" muted="muted" loop="loop" src="{{i.attachment.url}}" width="280" height="450"></video> -->
+            <iframe style="width:100%" height="450" src="{{i.attachment.url}}" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+
+            {% endif %}
+
+
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+  </div>
+  </div>
+{% verbatim %}
+  </div>
+
+</div>
+<style type="text/css">
+
+  .banner{
+    height:40vh;
+  }
+  .bisection{
+    width:70%;
+    height:12em;
+  }
+  .download{
+    padding:3em 0em;
+  }
+
+  @media (max-width:768px) {
+
+    .banner{
+      height:50vh;
+    }
+    .bisection{
+      width:100%;
+      height:8em;
+    }
+    .download{
+      padding:0em 0em;
+    }
+  }
+</style>
+{% endverbatim %}
+<script>
+productsPage_id = '{{productsPage_id}}'
+var loadMax = '{{loadMax}}'
+var weightMax = '{{weightMax}}'
+var weightlbMax ='{{weightlbMax}}'
+var loadlbMax = '{{loadlbMax}}'
+document.getElementById('load').value = 0;
+document.getElementById('weight').value = 0;
+document.getElementById('togBtn').checked = true;
+
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+document.getElementById("loadSpan").innerHTML= "0 (kN)";
+document.getElementById("load").max= parseInt(loadMax);
+document.getElementById("weightSpan").innerHTML="0 (kg/100m)";
+document.getElementById("weight").max=parseInt(weightMax);
+document.getElementById("newTable").style.display = "none";
+document.getElementById("newTableHead").style.display = "none";
+function updateTextInput() {
+var load = document.getElementById('load').value
+var weight = document.getElementById('weight').value
+var checkbox = document.querySelector('input[type="checkbox"]');
+if (checkbox.checked) {
+  var checkVal = "KN"
+  document.getElementById("loadSpan").innerHTML=load + " (kN)";
+  document.getElementById("weightSpan").innerHTML=weight + " (kg/100m)";
+  document.getElementById("load").max= parseInt(loadMax);
+  document.getElementById("weight").max=parseInt(weightMax);
+} else {
+  var checkVal = "LB"
+  document.getElementById("loadSpan").innerHTML=load + " (lbs)";
+  document.getElementById("weightSpan").innerHTML=weight + " (lb/ft)";
+  document.getElementById("load").max= parseInt(loadlbMax);
+  document.getElementById("weight").max=parseInt(weightlbMax);
+}
+var xhr = new XMLHttpRequest();
+  var data = JSON.stringify({
+      "load":load,
+      "weight":weight,
+      "pkVal" : productsPage_id,
+      "checkVal" : checkVal,
+    });
+  xhr.onreadystatechange = function () {
+      if (this.readyState != 4) return;
+      if (this.status == 200) {
+        document.getElementById("defaultTable").style.display = "none";
+        document.getElementById("defaultTableHead").style.display = "none";
+        document.getElementById("newTable").style.display = "";
+        document.getElementById("newTableHead").style.display = "";
+        document.getElementById("newTable").innerHTML = "";
+        document.getElementById("newTableHead").innerHTML = "";
+        var tds = document.getElementsByTagName('th');
+        pixel_list = []
+        for (var td in tds) {
+          if (tds[td].nodeType == 1)
+          pixel_list.push(parseFloat(tds[td].offsetWidth,10) + "pk")
+      }
+      var val = this.responseText;
+      var newVal = val.split('[').join('');
+      oldval = newVal.split("']");
+
+      var tableHead = document.getElementById("newTableHead");
+      var tr = document.createElement('tr');
+      tableHead.appendChild(tr);
+      var valData = []
+      valDataHead =  oldval[0].split(",")
+      for (var j = 0; j < valDataHead.length; j++) {
+        if (valDataHead[j]!="") {
+          var tdataHead = document.createElement('td');
+          tdataHead.align="center"
+          tr.appendChild(tdataHead);
+          var span = document.createElement('strong');
+          var rowVal = valDataHead[j].replace(/u'/gm,'');
+          var rowVal = rowVal.replace(/'/gm,'');
+          span.appendChild(document.createTextNode(rowVal));
+          tdataHead.appendChild(span);
+        }
+      }
+
+      var tableBody = document.getElementById("newTable");
+      for (var i = 1; i < oldval.length; i++) {
+        var tr = document.createElement('tr');
+        tableBody.appendChild(tr);
+        var valData = []
+        valData =  oldval[i].split(",")
+        for (var j = 0; j < valData.length; j++) {
+          if (valData[j]!="") {
+            var tdata = document.createElement('td');
+            tdata.align="center"
+            tr.appendChild(tdata);
+            var span = document.createElement('span');
+            var rowVal = valData[j].replace(/u'/gm,'');
+            var rowVal = rowVal.replace(/'/gm,'');
+            span.appendChild(document.createTextNode(rowVal));
+            tdata.appendChild(span);
+          }
+        }
+      }
+      tableBody.appendChild(tr);
+    }
+  };
+xhr.open("POST", "/productsRefresh", true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+xhr.send(data);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  var checkbox = document.querySelector('input[type="checkbox"]');
+  checkbox.addEventListener('change', function () {
+    updateTextInput()
+  });
+  updateTextInput()
+});
+
+</script>
+{% endblock %}

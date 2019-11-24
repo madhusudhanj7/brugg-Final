@@ -1,0 +1,138 @@
+<div class="row">
+  <div style="background-image: url('{{templateDetails.backgroundImage1}}');background-repeat: no-repeat;background-size: cover;min-height:40vh;"></div>
+</div>
+
+<div class="row">
+  <div class="col-md-10" style="background:black;color:white;height:80px;padding-left:300px;padding-top:20px"><strong style="font-size:30px">{{templateDetails.name}} </strong> {{templateDetails.description}}</div>
+  <div id = "link1" class="col-md-1 col-xs-6 text-center" style="background:#009de0;color:white;height:80px;padding:20px;">
+    <a href = "/media/{{templateDetails.name}}.pdf" target="_blank" ng-if="!templateDetails.pdfgenerated" >  <i class="fa fa-download fa-3x">
+    </i> </a>
+  </div>
+  <div id = "link2"class="col-md-1 col-xs-6  text-center" style="background:#c61010;color:white;height:80px;padding:20px;">
+    <a href = "/api/homepage/book/?doc=/static/pdf/brugg.pdf" target="_blank"  >  <i class="fa fa-book fa-3x">
+    </i> </a>
+  </div>
+</div>
+<div class="container" >
+    <!-- <div class="row" style="margin-top:30px;">
+      <div class="col-md-3 col-xs-12" style="padding:0 10px;">
+        <img ng-src="{{templateDetails.backgroundImage2}}" alt="backgroundImage2" width="100%">
+      </div>
+    </div> -->
+      <div class="row">
+        <div class="col-md-3 col-xs-12" style="padding-top:40px;">
+          <img ng-src="{{templateDetails.backgroundImage2}}" alt="backgroundImage2" width="100%">
+          <div ng-if="templateDetails.media.length>0" ng-repeat="data in templateDetails.media" style="padding-top:10px;">
+            <img ng-if="data.mediaType=='image'" ng-src="{{data.attachment}}" alt="Image" width="100%">
+            <img ng-if="data.mediaType=='onlineImage'" ng-src="{{data.link}}" alt="Image" width="100%">
+          </div>
+        </div>
+        <div class="col-md-8  col-xs-6 " style="color:black;padding-left:0px;padding-top:30px;" ng-bind-html="templateDetails.rteData1_otl"></div>
+        <div class="col-md-8  col-xs-6 " style="color:black;padding-left:0px;padding-top:20px;" ng-bind-html="templateDetails.rteData1_en"> </div>
+
+        <!-- <div class="row">
+          <div class="col-md-6" style="color:black;height:80px;padding-top:20px"><strong style="font-size:30px;">{{templateDetails.name}} </strong> {{templateDetails.description}}</div>
+          <!-- <img ng-src="{{templateDetails.backgroundImage1}}" alt="backgroundImage2" width="100%"> -->
+
+      </div>
+
+      <div class="row">
+        <div class="row">
+          <div class="col-md-4  col-xs-6 " style="color:black;padding-left:15px;padding-top:20px;" ng-bind-html="templateDetails.rteData2_otl"></div>
+          <div class="row" style="padding-top:20px;">
+            <div class="col-md-1 col-md-offset-1  col-xs-12 " style="width:70px;height:70px;background-color:lightblue;" >
+              <div class="text-center" style="padding-top:10px;"><strong>{{templateDetails.keyword1.value}}</strong></div>
+              <div class="text-center" style="padding-top:10px;"><span>{{templateDetails.keyword1.unit}}</span></div>
+              <div style="padding-top:30px;"><span>{{templateDetails.keyword1.description}}</span></div>
+            </div>
+            <div class="col-md-1  col-md-offset-1 col-xs-12 " style="width:70px;height:70px;background-color:lightblue;" >
+              <div class="text-center" style="padding-top:10px;"><strong>{{templateDetails.keyword2.value}}</strong></div>
+              <div class="text-center" style="padding-top:10px;"><span>{{templateDetails.keyword2.unit}}</span></div>
+              <div class="text-center" style="padding-top:20px;"><span>{{templateDetails.keyword2.description}}</span></div>
+            </div>
+            <div class="col-md-1 col-md-offset-1  col-xs-12 " style="width:70px;height:70px;background-color:lightblue;" >
+              <div class="text-center" style="padding-top:10px;"><strong>{{templateDetails.keyword3.value}}</strong></div>
+              <div class="text-center" style="padding-top:10px;"><span>{{templateDetails.keyword3.unit}}</span></div>
+              <div class="text-center" style="padding-top:20px;"><span>{{templateDetails.keyword3.description}}</span></div>
+            </div>
+            <div class="col-md-1 col-md-offset-1  col-xs-12 " style="width:70px;height:70px;background-color:lightblue;" >
+              <div class="text-center" style="padding-top:10px;"><strong>{{templateDetails.keyword4.value}}</strong></div>
+              <div class="text-center" style="padding-top:10px;"><span>{{templateDetails.keyword4.unit}}</span></div>
+              <div class="text-center" style="padding-top:20px;"><span>{{templateDetails.keyword4.description}}</span></div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4   col-xs-6 " style="color:black;padding-left:27px;padding-top:20px;" ng-bind-html="templateDetails.rteData2_en"></div>
+        </div>
+        <div class="col-md-4 col-xs-8" style="height:160px;" >
+          <div style="height:40px;">
+          </div>
+          <div style="background-color:#F6F6F6;height:55px;display: table;width:100%" ng-click="templateDetails.clicked=!templateDetails.clicked">
+            <span class="text-center" style="  display:table-cell;text-align:center;vertical-align: middle;width:100%" >Click to see this  Data</span></br>
+          </div>
+          <span class="geryColor">Technical Data</span>
+        </div>
+
+        <div class="col-md-12 col-xs-12 text-center"  style="border:1px solid #f2f2f2;margin:1em;padding:2em;position:relative;" >
+          <div class="pull-right" ng-click = "templateDetails.clicked =false" style="width:30px;height:30px;border-radius:15px;background-color:#d2d2d2;cursor:pointer;position:absolute;top:-15px;right:10px;">
+            <i class="fa fa-remove " style="font-size:20px;padding-top:3px"></i>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <span class="pull-right">Breaking Load(kN) :</span>
+            </div>
+            <div class="col-md-6" >
+              <input type="range"  min="{{minload}}" max="{{maxload}}" step={{step}} ng-model="load"  ng-change="updateTextInput(load,weight);">
+            </div>
+            <div class="col-md-2">
+              <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{load}} (kN)</span>
+            </div>
+          </div>
+          <div class="row" style="margin-top:1em;">
+
+            <div class="col-md-4">
+              <span class="pull-right">Weight(kg/100m) :</span>
+            </div>
+            <div class="col-md-6">
+              <input type="range" min="{{minweight}}" max="{{maxweight}}" step={{step}} ng-model="weight"  ng-change="updateTextInput(load,weight);">
+            </div>
+            <div class="col-md-2">
+              <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{weight}} (kg/100m)</span>
+            </div>
+
+            <div class="col-md-8 col-md-offset-1 " style="padding-top:50px" ng-show="templateDetails.clicked">
+              <table class="table table-hover">
+                <thead>
+                  <tr >
+                    <th scope="col">Item Number</th>
+                    <th scope="col" ng-repeat="field in tempFieldsData">{{field.name}}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr ng-repeat="prod in tempProductsData">
+                    <th scope="row">{{prod.itemNumber}}</th>
+                    <td ng-repeat="val in prod.fieldValues">
+                      <span ng-if="val.field.type=='Char'">{{val.char}}</span>
+                      <span ng-if="val.field.type=='Boolean'">{{val.bool}}</span>
+                      <span ng-if="val.field.type=='Integer'">{{val.iValue}}</span>
+                      <span ng-if="val.field.type=='float'">{{val.fValue}}</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row" ng-if="templateDetails.media.length>0" ng-repeat="data in templateDetails.media" >
+  <div ng-if="data.mediaType=='video'">
+    <video id="video" controls style="position:relative;width:15vw;">
+    <source ng-src="{{data.attachment}}" type="video/mp4"></source>
+  </video>
+  </div>
+  <div ng-if="data.mediaType=='onlineVideo'" style="margin:0 2em;">
+    <iframe width="290" height="200" ng-src={{getProperURL(data.link)}} frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>

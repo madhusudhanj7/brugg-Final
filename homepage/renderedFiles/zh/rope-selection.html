@@ -1,0 +1,927 @@
+rope-selection
+
+
+
+
+
+
+
+
+BRUGG LIFTING
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .stricky-fixed .sub-menu{
+    margin-top: -3px;
+  }
+  .quote-btn:hover{
+    background: #009de0;
+    color:black
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+info.lifting@brugg.com
+Email address
+
+
+
+
+
+
+
+
++41 56 464 42 42
+Phone line
+
+
+
+
+
+
+
+ Brugg Drahtseil AG Birr 瑞士
+Visit us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 公司
+
+ About US
+
+
+
+ 电梯绳
+
+Traction Ropes
+Compensation Ropes
+Governor Ropes
+
+
+
+ 电梯 选择
+
+
+
+
+
+  {{data.currentLang.lang}}
+
+
+
+
+ {{l.lang}}
+
+ 搜寻
+
+
+
+
+
+
+
+
+
+{{r.name}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 公司
+
+ About US
+
+
+
+ 电梯绳
+
+Traction Ropes
+Compensation Ropes
+Governor Ropes
+
+
+
+ 电梯 选择
+
+
+
+
+  {{data.currentLang.lang}}
+
+
+
+ {{l.lang}}
+
+ 搜寻
+ 搜寻
+
+
+
+
+
+
+
+
+{{r.name}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 公司
+
+ About US
+
+
+
+ 电梯绳
+
+Traction Ropes
+Compensation Ropes
+Governor Ropes
+
+
+
+ 电梯 选择
+
+
+
+
+
+  {{data.currentLang.lang}}
+
+
+
+ {{l.lang}}
+
+ 搜寻
+
+
+
+
+
+
+ .checkmark{
+   position:absolute;
+   top:10px;
+   right:10px;
+   height: 20px;
+   width: 20px;
+   background-color: #fff;
+   border:1px solid #009de0;
+   border-radius: 50%;
+ }
+ input:checked ~ .checkmark   {
+   border-width:1;
+   border-color: #009de0;
+
+}
+ .zoom  {
+  transform: scale(1.1);
+  transition: all 200ms ease-in;
+}
+ .zoomout  {
+  transform: scale(1);
+  transition: all 200ms ease-in;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+input:checked ~ .checkmark:after {
+  display: block;
+}
+.checkmark:after {
+ 	content:'\2713';
+  position:'absolute';
+  top:-7px;
+  right:3px;
+  color:#009de0;
+}
+
+input[type=range][orient=vertical]
+{
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 20px;
+    height: 175px;
+    padding: 0 5px;
+}
+
+input[type="range"]::-moz-range-track {
+  background-color: #b2b2b2;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background-image: url('https://i.ya-webdesign.com/images/elevator-vector-doors-6.png');
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type="range"] {
+ border:2px solid #009de0;
+ background-color: #b2b2b2;
+
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background-image: url('https://i.ya-webdesign.com/images/elevator-vector-doors-6.png');
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background-image: url('https://i.ya-webdesign.com/images/elevator-vector-doors-6.png');
+
+  cursor: pointer;
+}
+.smalldevice{
+  display:none;
+}
+.largedevice{
+  display:block;
+}
+.imagepading{
+  padding-top:322px;
+  height:1054px;
+}
+.slider{
+  top: 425px;
+  left: 270px;
+  height: 524px;
+}
+.spanTag{
+  color: #7f8284;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  width:60px;
+  border-bottom: 2px solid #009de0;
+  letter-spacing: .2em;
+  text-align: center;
+}
+.spanTag1{
+  color: #7f8284;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  letter-spacing: .2em;
+  width:60px;
+  text-align: center;
+}
+
+@media (max-width:768px) {
+  .smalldevice{
+    display:block;
+    margin-top:2em;
+  }
+  .imagepading{
+    padding-top:0;
+    height:600px;
+  }
+  .slider{
+    top: 425px;
+    left: 270px;
+    height: 524px;
+  }
+  .largedevice{
+    display:none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+300 m
+980 ft
+
+
+200 m
+650 ft
+
+
+100 m
+300 ft
+
+
+50 m
+150 ft
+
+
+
+
+
+300 m
+980 ft
+
+
+200 m
+650 ft
+
+
+100 m
+300 ft
+
+
+50 m
+150 ft
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            To choose the appropriate rope for your application, drag the elevator car to the desired height.
+            Click on the selected rope for further details.This rope selection provides a guideline only and is not meant to replace an exact calculation.
+
+
+
+
+
+
+
+
+
+
+
+            {{config.productCode}}
+
+
+
+
+{{config.calculation}}
+{{config.caldeno}}
+
+
+
+
+            {{config.val1}}
+
+
+
+
+            {{config.val2}}
+
+
+
+
+
+
+
+
+            Type of Rope
+
+
+
+
+            E-Modul
+             N/mm2x106psi
+
+
+
+
+            elastic elongation %
+
+
+
+
+            permanent elongation %
+
+
+
+
+
+
+
+
+
+            To choose the appropriate rope for your application, drag the elevator car to the desired height.
+            Click on the selected rope for further details.This rope selection provides a guideline only and is not meant to replace an exact calculation.aaaaaaaaaaaa
+
+
+
+
+
+
+
+
+
+
+            {{config.productCode}}
+
+
+
+
+{{config.calculation}}
+{{config.caldeno}}
+
+
+
+
+            {{config.val1}}
+
+
+
+
+            {{config.val2}}
+
+
+
+
+
+
+
+
+            Type of Rope
+
+
+
+
+            E-Modul
+             N/mm2x106psi
+
+
+
+
+            elastic elongation %
+
+
+
+
+            permanent elongation %
+
+
+
+
+
+
+
+
+
+
+
+
+
+            To choose the appropriate rope for your application, drag the elevator car to the desired height.
+            Click on the selected rope for further details.This rope selection provides a guideline only and is not meant to replace an exact calculation.
+
+
+
+
+
+
+
+
+
+
+
+            {{config.productCode}}
+
+
+
+
+{{config.calculation}}
+{{config.caldeno}}
+
+
+
+
+            {{config.val1}}
+
+
+
+
+            {{config.val2}}
+
+
+
+
+
+
+
+
+
+
+            Type of Rope
+
+
+
+
+
+            E-Modul
+             N/mm2x106psi
+
+
+
+
+            elastic elongation %
+
+
+
+
+            permanent elongation %
+
+
+
+
+
+
+
+
+
+            To choose the appropriate rope for your application, drag the elevator car to the desired height.
+            Click on the selected rope for further details.This rope selection provides a guideline only and is not meant to replace an exact calculation.aaaaaaaaaaaa
+
+
+
+
+
+
+
+
+
+
+              {{config.productCode}}
+
+
+
+
+{{config.calculation}}
+{{config.caldeno}}
+
+
+
+
+              {{config.val1}}
+
+
+
+
+              {{config.val2}}
+
+
+
+
+
+
+
+
+
+
+              Type of Rope
+
+
+
+
+
+              E-Modul
+               N/mm2x106psi
+
+
+
+
+              elastic elongation %
+
+
+
+
+              permanent elongation %
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // $('.img-ms-form').click(function(){
+  //   $(this).next('div.radio').find('input[type="radio"]').prop('checked', true);
+  // });
+
+
+  .container{
+    width: 1170px;
+  }
+  .link-lists li{
+    margin-top:0px!important
+  }
+
+
+
+
+
+
+
+
+
+About Us
+
+Brugg Lifting is a division of Brugg Group of Companies, headquartered in Switzerland. We manufacture and supply elevator ropes across the world.
+
+Find us on a map
+
+
+
+
+
+Links
+
+
+
+
+About Us
+Application Tips
+Accessories
+Blog
+Our Locations
+
+Legal And Privacy
+Sitemap
+
+
+
+
+
+
+
+
+
+
+
+Products
+
+
+Traction Ropes
+Compensation Ropes
+Governor Ropes
+
+
+
+
+
+
+
+Catalogue
+
+
+Elevator Ropes
+CTP
+
+
+
+
+
+
+
+
+
+
+
+© Copyright 2019 Brugg Lifting
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  var erpUrl = '';
+  var apiManagerUrl = '';
+
+  window.addEventListener('error', function(e) {
+    var errorText = [
+        e.message,
+        'URL: ' + e.filename,
+        'Line: ' + e.lineno + ', Column: ' + e.colno,
+        'Stack: ' + (e.error && e.error.stack || '(no stack trace)')
+    ].join('\n');
+
+    // Example: log errors as visual output into the host page.
+    // Note: you probably don’t want to show such errors to users, or
+    //       have the errors get indexed by Googlebot; however, it may
+    //       be a useful feature while actively debugging the page.
+    // var DOM_ID = 'rendering-debug-pre';
+    // if (!document.getElementById(DOM_ID)) {
+    //     var log = document.createElement('pre');
+    //     log.id = DOM_ID;
+    //     log.style.whiteSpace = 'pre-wrap';
+    //     log.textContent = errorText;
+    //     if (!document.body) document.body = document.createElement('body');
+    //     document.body.insertBefore(log, document.body.firstChild);
+    // } else {
+    //     document.getElementById(DOM_ID).textContent += '\n\n' + errorText;
+    // }
+
+    // Example: log the error to remote service.
+    // Note: you can log errors to a remote service, to understand
+    //       and monitor the types of errors encountered by regular users,
+    //       Googlebot, and other crawlers.
+
+
+    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+    xmlhttp.open("POST", "/api/ERP/webError/");
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send(JSON.stringify({ "data": errorText }));
+
+    // var client = new XMLHttpRequest();
+    // client.open('POST', 'https://example.com/logError');
+    // client.setRequestHeader('Content-Type', 'text/plain;charset=UTF-8');
+    // client.send(errorText);
+
+  });

@@ -1,0 +1,17 @@
+<div class="modal-header">
+  <h3>View Products</h3>
+</div>
+  <div class="modal-body">
+    <table class="table">
+  <thead>
+    <tr>
+      <th  ng-repeat = "n in heading">{{n}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat = "t in accessoriesData track by $index">
+      <th ng-repeat = "val in t track by $index">{{val}}</th>
+    </tr>
+  </tbody>
+</table>
+  </div>

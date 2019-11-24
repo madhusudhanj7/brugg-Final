@@ -1,0 +1,91 @@
+{% load i18n %}
+<div class="row" style="margin:0px;background: url('/static/images/about-header.jpg');background-repeat: no-repeat;background-size: cover;min-height:400px;padding:140px 0px 0px 0px;background-position:center;">
+  <div class="col-md-12 text-center col-xs-12" style="color:#fff;padding:30px;">
+    <h1 style="font-size:50px;font-weight:600;">{% trans 'workId'  %}</h1>
+  </div>
+  <div class="text-center">
+    <button type="button" class="button" style="width:300px;border:2px solid #4a90e2;padding:10px;font-size:16px;font-weight:bold;border-radius:40px;background-color:Transparent;color:#fff">JOIN THE TEAM</button>
+  </div>
+</div>
+<div class="row" style="margin:0px;">
+  <div class="col-md-10 col-md-offset-1 text-center"style="padding:0px">
+    <div class="col-md-6 col-sm-12"style="text-align:left;font-size:16px;">
+      <h3 style="font-weight:600;">Our Story</h3>
+      <span>
+        {% trans 'storyId' as var %}
+        {{ var|linebreaksbr }}
+        <a class="btn btn-primary btn-rounded">Explore BRUGG LIFTING Jobs</a>
+      </span>
+    </div>
+    <div class="col-md-6 col-sm-12"style="padding:10px 0px 10px 0px;">
+      <img src="/static/images/our-story.jpg" style="width:100%;">
+    </div>
+  </div>
+</div>
+<div class="row" style="margin:0px;color:#262e45;">
+  <div class="col-md-10 col-md-offset-1 text-center"style="padding:0px">
+    <div class="col-md-6 col-sm-12"style="padding:10px 0px 10px 0px;">
+      <img src="/static/images/love-it.jpg" style="width:100%;">
+    </div>
+    <div class="col-md-6 col-sm-12"style="text-align:left;font-size:16px;">
+      <h3 style="font-weight:600;">Why you'll love it here</h3>
+        <p>{% trans "Why you'll love it here" %}</p>
+    </div>
+  </div>
+</div>
+<div class="row" style="margin:0px;background-color:#262e45;color:#fff;">
+  <div class="col-md-4 col-md-offset-1"style="padding-top:30px;">
+    <h3>Locations</h3>
+    <span>Headquartered in San Francisco, we’re quickly expanding our global presence with offices in New York, Austin, Amsterdam, London, Cologne, Munich, and Sydney.</span>
+  </div>
+  <div class="col-md-6 col-sm-12">
+    <img src="/static/images/world-white.svg" style="width:100%;">
+  </div>
+</div>
+<div class="row" style="margin:0px;background: url('/static/images/food.jpg');background-repeat: no-repeat;background-size: cover;min-height:500px;padding:130px 20px 130px 30px;background-position:center;">
+  <div class="col-md-5 col-md-offset-4 col-sm-12" style="color:#fff;padding:30px;background-color:#fff;border-radius:5px;color:#061549;padding:30px 50px 30px 50px">
+    <h1 style="font-size:30px;font-weight:600;">We've got your back</h1>
+    <div class="" style="padding-top:20px;">
+      <p>At BRUGG LIFTING, we offer a wide array of benefits and perks to help our employees strike just the right balance between work time and personal time. We’re all about optimizing productivity by maximizing joy.</p>
+      <div class="" style="padding:5px;line-height:35px;">
+        <ul class="list-unstyled">
+          <li><i class="fa fa-usd"></i> Competitive pay and equity</li>
+          <li><i class="fa fa-stethoscope"></i> Full medical coverage</li>
+          <li><i class="fa fa-bus"></i> Public transit reimbursement</li>
+          <li><i class="fa fa-heart-o"></i> Health and wellness stipend</li>
+          <li><i class="fa fa-calendar-o"></i> Unlimited time off</li>
+          <li><i class="fa fa-user"></i> 17 weeks of parental leave</li>
+          <li><i class="fa fa-hand-paper-o"></i> Community volunteering</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% verbatim %}
+<div class="row" style="margin:0px;background-color:#f7f7f7;padding:30px;">
+  <div class="col-md-12 text-center">
+    <h1>Job Openings</h1>
+    <span class="col-md-3" style="padding:50px;font-size:18px;"ng-repeat="job in jobs">
+      <div class="card shaddowed"style="padding:30px;background-color:#fff;border-radius:5px;text-align:left;">
+        <strong> Type: </strong> <span>{{job.jobtype}}</span><br>
+        <strong>Name :</strong>  <span>{{job.name}}</span><br>
+        <strong>Max CTC :</strong>  <span>{{job.maxctc}}</span><br>
+        <strong>Skills :</strong>  <span>{{job.skills}}</span><br>
+        <div class="text-center"style="padding-top:15px;">
+          <button type="button" class="btn btn-primary"ng-click="apply($index)">Apply</button>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+{% endverbatim %}
+<div class="row" style="margin:0px;padding:10px;">
+  <div class="col-md-12 text-center">
+    <h1>BRUGG LIFTING is for everyone</h1>
+  </div>
+  <div class="col-md-6 col-md-offset-3 text-center" style="padding:10px;font-size:16px;line-height:30px;font-family:sans-serif;text-align:center">
+    <span>At BRUGG LIFTING, we embody inclusion and embrace diversity.  BRUGG LIFTING is an equal opportunity employer and makes employment decisions on the basis of merit.  BRUGG LIFTING prohibits
+      discrimination based on race, color, religion, sex, sexualidentity, gender identity, marital status, veteran status, nationality, citizenship, age, disability, medical condition, pregnancy, or any other unlawful consideration.
+    </span>
+  </div>
+</div>

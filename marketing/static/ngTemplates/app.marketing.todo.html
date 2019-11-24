@@ -1,0 +1,40 @@
+
+<h1>{{name}}</h1>
+
+        <p ng-repeat="t in tasks" ng-model="name">{{ t.name }}<span ng-click="remove()">×</span></p>
+        <p ng-repeat="t in tasks" ng-model ="number">{{ t.number }}<span ng-click="remove()">×</span></p>
+        <p ng-repeat="t in tasks" ng-model="status">{{ t.status }}<span ng-click="remove()">×</span></p>
+        <p ng-repeat="t in tasks" ng-model="fValue">{{ t.fValue }}<span ng-click="remove()">×</span></p>
+        <p ng-repeat="t in tasks" ng-model="pic">{{ t.pic}}<span ng-click="remove()">×</span></p>
+        <p ng-repeat="t in tasks" ng-model="file">{{ t.file }}<span ng-click="remove()">×</span></p>
+
+
+<form >
+    <div class="container" style="padding-top:50px">
+          <div class="form-group">
+            <label  >Name:</label>
+            <input ng-model="name"  type="text" class="form-control"   placeholder="Enter Name">
+          </div>
+          <div class="form-group">
+            <label >Number</label>
+            <input ng-model=number  type="number" class="form-control"  placeholder="Enter Number">
+          </div>
+          <div class="form-group form-check">
+            <label class="form-check-label" for="exampleCheck1" ng-model="status">Status</label>
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          </div>
+          <div class="form-group">
+            <label >Float Value</label>
+            <input ng-model="fValue" type="number" class="form-control"  placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label >Pic</label>
+            <img ng-src="pic" alt="Image" width="100%"
+          </div>
+          <div class="form-group">
+            <label >File</label>
+            <input ng-model="file" type="file" class="form-control-file" >
+          </div>
+          <button type="submit" class="btn btn-primary" ng-click="add()">Submit</button>
+    </div>
+</form>

@@ -1,0 +1,232 @@
+<br/>
+<br/>
+<div class="container-fluid" style="margin:0;padding:0;">
+  <div  style="background-image: url('static/images/brugg-elevator-seile-header.jpg');background-repeat: no-repeat;background-size: cover;min-height:40vh;">
+  </div>
+
+  <div class="container">
+    <div style="margin-top:2em">
+      <span style="color:#079DE0;font-size:28px;margin-top:2em">Elevator ropes from Brugg Lifting. Highest quality.</span><br/>
+    </div>
+    <div style="margin-top:2em;font-size:16px;">
+      <span>Our ropes are constructed using advanced production techniques, implementing the most stringent test and control procedures in order to meet the most demanding user specifications. This creates a line of products that offer very low diameter reductions, high breaking force, round cross sections, great ride quality, low stretch over the ropes lifetime.  This in turn provides maximum rope life expectancy.</span>
+    </div>
+    <!-- <hr> -->
+    <div class="" style="margin-top:2em;">
+      <ul class="nav nav-tabs">
+        <li ><a href="/meter">Rope Selection</a></li>
+        <li ><a href="/rope_comparison">Rope Comparison</a></li>
+        <li ><a href="/traction_ropes">Traction Ropes</a></li>
+        <li ><a href="/weight_compensation_ropes">Compensation Ropes</a></li>
+        <li class="active"><a href="/govenar_ropes">Governor Ropes</a></li>
+      </ul>
+    </div>
+    <!-- <hr> -->
+    <div style="margin-top:3em;font-size:14px;">
+      <div class="row text-center" ng-repeat="c in governorRope">
+        <div class="col-md-offset-2 col-md-2 col-xs-4 " >
+          <span >{{c.name}}  </span>
+        </div>
+        <div class="col-md-8 col-xs-8 text-left" >
+        <span style="">{{c.description}}</span>
+        </div>
+        <div class="col-md-2 col-xs-4" style="height:160px;" >
+          <img id="hoverZoom" src="static/images/8x19r_s.jpg" ng-click= 'tableshow("firstimg")'/><br/>
+          <img id="hoverImg" src="static/images/magnifier.png" ng-click= 'tableshow("firstimg")'/>
+          <span > 8x19S-SFC ,1770 B sZ (RRL) </span>
+        </div>
+        <div class="col-md-2 col-xs-4" style="height:160px;">
+          <div style="height:40px;text-align:left">
+          </div>
+          <div style="background-color:#F6F6F6;height:55px;display: table;width:100%">
+            <span style="   display:table-cell;text-align:center;vertical-align: middle;width:100%">{{c.elastic_elongation}}</span><br/>
+          </div>
+          <span class="geryColor">Elastic elongation</span>
+        </div>
+        <div class="col-md-2 col-xs-4" style="height:160px;">
+          <div style="height:40px;text-align:left">
+          </div>
+          <div style="background-color:#F6F6F6;height:55px;display: table;width:100%">
+            <span style="   display:table-cell;text-align:center;vertical-align: middle;width:100%">{{c.permenant_elongation}}</span><br/>
+          </div>
+          <span class="geryColor">permanent  elongation</span>
+        </div>
+        <div class="col-md-6 col-xs-12" style="height:160px;" >
+            <div style="height:40px;">
+            </div>
+            <div style="background-color:#F6F6F6;height:55px;display: table;width:100%" ng-click="dataView($index)">
+              <span class="text-center" style="  display:table-cell;text-align:center;vertical-align: middle;width:100%" >Click to see this Technical Data</span></br>
+            </div>
+            <span class="geryColor">Technical Data</span>
+          </div>
+          <div class="" >
+            <span>{{c.disclaimer_en}}</span>
+          </div>
+          <div class="col-md-12 col-xs-12 text-center" ng-if="display[$index]" style="border:1px solid #f2f2f2;margin:1em;padding:2em;position:relative;" >
+            <div class="pull-right" ng-click = "close($index)" style="width:30px;height:30px;border-radius:15px;background-color:#d2d2d2;cursor:pointer;position:absolute;top:-15px;right:10px;">
+              <i class="fa fa-remove " style="font-size:20px;padding-top:3px"></i>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <span class="pull-right">Breaking Load(kN) :</span>
+              </div>
+              <div class="col-md-6">
+                <input type="range"   min="{{minweight}}" max="{{maxweight}}" step={{step}} ng-model="load"  ng-change="updateTextInput(load,weight);">
+              </div>
+              <div class="col-md-2">
+                <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{load}} (kN)</span>
+              </div>
+            </div>
+            <div class="row" style="margin-top:1em;"> manage.py
+
+               <div class="col-md-4">
+                 <span class="pull-right">Weight(kg/100m) :</span>
+               </div>
+               <div class="col-md-6">
+                 <input type="range"   min="{{minweight}}" max="{{maxweight}}" step={{step}} ng-model="weight" ng-change="updateTextInput(load,weight);">
+               </div>
+               <div class="col-md-2">
+                 <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{weight}} (kg/100m)</span>
+               </div>
+
+               <div class="col-md-12 table-responsive" style="margin-top:2em;" ng-if="table">
+                 <table class="table text-center table-hover">
+                   <thead >
+                     <tr class="table ">
+                       <th class="text-center"   >Item No</th>
+                       <th class="text-center"  ng-repeat = "d in tableData" >{{d.field.name}}</th>
+                     </tr>
+                     <tr class="table ">
+                       <th class="text-center" ></th>
+                       <th class="text-center" ng-repeat = "d in tableData" >{{d.field.dimensions}}</th>
+                     </tr>
+
+                   </thead>
+                   <tbody>
+                     <tr ng-repeat = "a in dataFilter">
+                       <td>{{a.itemNumber}}
+                       <td ng-repeat = "d in a.fieldValues">{{d.field.type=='Char'?d.char:(d.field.type == 'Boolean'?d.bool:(d.field.type =='Integer'?d.iValue:d.fValue))}}</td>
+                     </tr>
+                   </tbody>
+                 </table>
+               </div>
+                </div>
+              </div>
+           <hr>
+        </div>
+    </div>
+
+
+
+
+      <!-- <div class="row text-center">
+        <div class="col-md-offset-2 col-md-2 col-xs-4 " >
+          <span >6x19  </span>
+        </div>
+        <div class="col-md-8 col-xs-8 text-left" >
+        <span style="">Wire rope with polypropylene core, 6 strands, Seale</span>
+        </div>
+        <div class="col-md-2 col-xs-4" style="height:160px;" >
+          <img id="hoverZoom" src="static/images/6x19_small.jpg" ng-click= 'tableshow("secondimg")'/><br/>
+          <img id="hoverImg" src="static/images/magnifier.png" ng-click= 'tableshow("secondimg")'/>
+          <span > 6x19S-SFC ,1960 B sZ (RRL) </span>
+        </div>
+        <div class="col-md-2 col-xs-4" style="height:160px;">
+          <div style="height:40px;text-align:left">
+          </div>
+          <div style="background-color:#F6F6F6;height:55px;display: table;width:100%">
+            <span style="   display:table-cell;text-align:center;vertical-align: middle;width:100%">0,084 %</span><br/>
+          </div>
+          <span class="geryColor">Elastic elongation</span>
+        </div>
+        <div class="col-md-2 col-xs-4" style="height:160px;">
+          <div style="height:40px;text-align:left">
+          </div>
+          <div style="background-color:#F6F6F6;height:55px;display: table;width:100%">
+            <span style="   display:table-cell;text-align:center;vertical-align: middle;width:100%">0,22 %</span><br/>
+          </div>
+          <span class="geryColor">permanent  elongation</span>
+        </div>
+        <div class="col-md-6 col-xs-12" style="height:160px;" >
+            <div style="height:40px;">
+            </div>
+            <div style="background-color:#F6F6F6;height:55px;display: table;width:100%" ng-click="dataView('sixnineteen')">
+              <span class="text-center" style="  display:table-cell;text-align:center;vertical-align: middle;width:100%" >Click to see this Technical Data</span></br>
+            </div>
+            <span class="geryColor">Technical Data</span>
+          </div>
+          <div class="" >
+            <span>For high demands on elongation and corrosion protection with special rope lubrication.</span>
+          </div>
+      </div>
+      <div class="row text-center" ng-if="display.sixnineteen" style="border:1px solid #f2f2f2;margin:1em;padding:2em;position:relative;" >
+        <div class="pull-right" ng-click = "close('sixnineteen')" style="width:30px;height:30px;border-radius:15px;background-color:#d2d2d2;cursor:pointer;position:absolute;top:-15px;right:10px;">
+          <i class="fa fa-remove " style="font-size:20px;padding-top:3px"></i>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <span class="pull-right">Breaking Load(kN) :</span>
+          </div>
+          <div class="col-md-6">
+            <input type="range"  min="20" max="30" step="0.5" ng-model="load"  ng-change="updateTextInput(load,weight,'sixnineteen');">
+          </div>
+          <div class="col-md-2">
+            <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{load}} (kN)</span>
+          </div>
+        </div>
+        <div class="row" style="margin-top:1em;">
+
+           <div class="col-md-4">
+             <span class="pull-right">Weight(kg/100m) :</span>
+           </div>
+           <div class="col-md-6">
+             <input type="range" name="points" min="10" max="20" step="0.5" ng-model="weight"  ng-change="updateTextWeight(load,weight,'sixnineteen');">
+           </div>
+           <div class="col-md-2">
+             <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{weight}} (kg/100m)</span>
+           </div>
+
+            <div class="col-md-12 table-responsive" style="margin-top:2em;" ng-if="table">
+              <table class="table text-center table-hover">
+                <thead >
+                  <tr class="table ">
+                    <th class="text-center" width='10%'>Item No</th>
+                    <th class="text-center" width='20%' colspan="2" >Rope</th>
+                    <th class="text-center" width='20%'  colspan="2" >Breaking Load</th>
+                    <th class="text-center" width='20%'  colspan="2" >Weight</th>
+                    <th class="text-center" width='30%'  >Contruction</th>
+                  </tr>
+                  <tr class="table ">
+                    <th></th>
+                    <th class="text-center">mm</th>
+                    <th class="text-center">in</th>
+                    <th class="text-center">kN</th>
+                    <th class="text-center">lbs</th>
+                    <th class="text-center">kg/100m</th>
+                    <th class="text-center">lb/ft</th>
+                    <th></th>
+                  </tr>
+
+                </thead>
+                <tbody>
+                  <tr ng-repeat = "d in dataFilter">
+                    <td>{{d.no}}</td>
+                    <td>{{d.ropemm}}</td>
+                    <td>{{d.ropein}}</td>
+                    <td>{{d.loadkn}}</td>
+                    <td>{{d.loadlbs}}</td>
+                    <td>{{d.weightkg}}</td>
+                    <td>{{d.weightlb}}</td>
+                    <td>{{d.construction}}</td>
+                  </tr>
+                </tbody>
+              </table>
+             </div>
+             </div>
+          </div>
+
+
+  </div> -->
+
+  <!-- </div>
+</div> -->

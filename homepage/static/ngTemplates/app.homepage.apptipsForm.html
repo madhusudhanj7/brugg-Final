@@ -1,0 +1,112 @@
+<div class="container-fluid" ng-controller="controller.home.apptips.form">
+  <div class="row">
+
+
+
+
+    <div class="col-md-6">
+
+      <h3 ng-if="mode=='new'">Create Apptips</h3>
+      <h3 ng-if="mode=='edit'">Edit {{apptipsForm.tipname}}</h3>
+
+
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" ng-model="apptipsForm.tipname" placeholder="Title">
+      </div>
+      <div class="form-group">
+        <label>Size</label>
+        <select class="form-control" ng-model="apptipsForm.size">
+          <option value="6">6</option>
+          <option value="12">12</option>
+        </select>
+        </div>
+      <div class="form-group">
+        <label>Text</label>
+        <textarea type="text"  ui-tinymce="tinymceOptions" class="form-control" ng-model="apptipsForm.text" placeholder="text here"> </textarea>
+      </div>
+      <div class="form-group">
+        <label for="">Language</label>
+        <select  class="form-control" ng-model="apptipsForm.lang" ng-options="lang for lang in languages"></select>
+      </div>
+      <div class="form-group">
+        <label for="">Media Type</label>
+        <select  class="form-control" ng-model="apptipsForm.mediaTyp" ng-options="a for a in media"></select>
+      </div>
+
+      <div class="form-group">
+        <label>Upload Image/Video</label>
+        <input type="file" file-model="apptipsForm.image1">
+      </div>
+      <!-- <div class="form-group">
+        <label>Template</label>
+        <input uib-typeahead="p as p.tipname for p in apptipSearch($viewValue)" ng-model="apptipsForm.heading" type="text" class="form-control" placeholder="Search and Select Template">
+        <p class="help-block">Please Search and Select ApplicationTips</p>
+      </div> -->
+      <button type="button" class="btn btn-primary" ng-click="save()">Save</button>
+    </div>
+
+
+    <div class="col-md-6" ng-if="mode=='edit'">
+      <h3>Add  Template <span class="btn btn-success pull-right" ng-click="addTemplate()">Add <i class="fa fa-plus"></i></span></h3>
+
+      <div class="col-md-12" ng-if="templateForm">
+        <div class="form-group">
+          <label>Size</label>
+          <select class="form-control" ng-model="apptipsAddform.size">
+            <option value="6">6</option>
+            <option value="12">12</option>
+          </select>
+          </div>
+        <div class="form-group">
+          <label>Text</label>
+          <textarea type="text"  ui-tinymce="tinymceOptions" class="form-control" ng-model="apptipsAddform.text" placeholder="Text here"> </textarea>
+        </div>
+        <div class="form-group">
+          <label for="">Media Type</label>
+          <select  class="form-control" ng-model="apptipsAddform.mediaTyp" ng-options="a for a in media"></select>
+        </div>
+        <div class="form-group">
+          <label>Upload Image/Video</label>
+          <input type="file" file-model="apptipsAddform.image1">
+        </div>
+        <span class="btn btn-primary" ng-click="saveTemplate()" style="margin-top:15px">{{addOredit}}</span>
+      </div>
+
+      <div class="col-md-12" >
+        <div class="card" style="margin-top:10px;border-radius:10px" ng-repeat="a in appTipsdata" ng-if="a.pk != apptipsForm.pk">
+
+          <div class="row" style="padding:10px">
+            <div class="col-md-12">
+              <div class="col-md-2  text-center">
+                <strong>Size</strong><br>{{a.size}}
+              </div>
+              <div class="col-md-6  text-center">
+                <strong>Text</strong><br>{{a.text}}
+              </div>
+              <div class="col-md-2  text-center" ng-if="a.heading.pk">
+                <strong>Image/Video</strong><br>
+                <img src="{{a.image1}}" width="60px" height="60px">
+              </div>
+              <div class="col-md-1  text-center">
+                <strong>Edit</strong><br>  <i class="fa fa-pencil" ng-click="editField($index,a.pk)"></i>
+              </div>
+              <div class="col-md-1 text-center">
+                <strong>Delete</strong><br>  <i class="fa fa-trash fa-x " style="color:red;cursor:pointer" mwl-confirm title="Confirm" message="Are you sure?" confirm-text="Yes <i class='fa fa-check'></i>" cancel-text="No" on-confirm="deleteChild($index,a.pk)" confirm-button-type="default"
+                cancel-button-type="default"></i>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+  </div>
+</div>

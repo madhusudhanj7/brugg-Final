@@ -1,0 +1,52 @@
+
+<div class="row" style="margin:8vh">
+  <div class="row" style="margin:0px;">
+    <div class="col-md-12" >
+        <ng-owl-carousel class="owl-theme" owl-items="friends" owl-properties="properties" owl-ready="ready($api)">
+          <div ng-repeat="a in friends" style="padding:10px;">
+            <div class="anim-in-out anim-zoom-out" >
+              <div style="padding-right:20px;padding-left:20px;">
+              <img class="img" ng-src="{{a.dp}}" style="height:3vh"/>
+            </div>
+            </div>
+          </div>
+        </ng-owl-carousel>
+    </div>
+    <div>
+
+<div class="row" style="margin-top:8vh;">
+
+  <h1>home page</h1>
+
+  <div class="row mainSection">
+      <div class="col-md-8 col-md-offset-2 shaddowed noPadding">
+        <div class="col-md-6 noPadding" style="height:60vh;">
+          <img src="/static/images/register.jpg" style="width:100%;">
+          <div style="padding:20px;">
+            <p>It has been a fascinating journey so far to watch
+               the adoption of RPA technology among client organizations.
+                We have observed several different paths to adoption while everyone
+                 is still wondering if there is one template for the best
+              approach.</p>
+              <button type="button" class="btn btn-success" name="">Read Article</button>
+          </div>
+        </div>
+        <div class="col-md-6" style="height:60vh;padding:20px;">
+          <div class="row" ng-repeat="i in articles" style="{{$odd ? 'background:#f6f6ff;':''}}">
+            <div class="col-md-12">
+              <div class="col-md-2 images">
+                <img src="/static/images/bars.png" style="width:100%;">
+              </div>
+              <div class="col-md-10">
+                <h3>RPA technology among client organizations.</h3>
+                <p>Read More...</p>
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <button type="button" class="btn btn-warning"> load more.</button>
+        </div>
+      </div>
+  </div>
+
+</div>

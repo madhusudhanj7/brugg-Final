@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Apply</h3>
+      <div class="form-group">
+      <label>Job Title</label>
+      <input type="text" class="form-control" ng-model="form.name" placeholder="Name">
+    </div>
+
+    <div class="form-group">
+      <label>Job Type</label>
+      <select class="form-control" ng-model="form.jobtype">
+        <option value="Intern">Intern</option>
+        <option value="Contract">Contract</option>
+        <option value="Fulltime">Full Time</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Skills</label>
+      <textarea type="text" class="form-control" ng-model="form.skills" placeholder="Skills"></textarea>
+    </div>
+        <div class="form-group">
+        <label>Description</label>
+
+        <textarea type="text" class="form-control" ng-model="form.description"
+          placeholder= "Description"></textarea>
+      </div>
+        <div class="form-group">
+        <label>Status</label>
+        <br />
+        <input type="radio" ng-model="form.status" >  Visible
+      </div>
+
+
+      <div class="form-group">
+        <label>Maximum CTC</label>
+        <input type="number" class="form-control" ng-model="form.maxctc" placeholder="Maxctc">
+      </div>
+
+      <button type="button" class="btn btn-primary" ng-click="add()">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br />
+<br />

@@ -1,0 +1,30 @@
+<div class="" style="min-height:93vh;">
+  <breadcrumb></breadcrumb>
+  <div class="container-fluid">
+    <uib-tabset>
+      <uib-tab >
+        <uib-tab-heading>
+         Create  <i class="fa fa-plus"></i>
+        </uib-tab-heading>
+        <div style="margin-top:20px" ng-include="'/static/ngTemplates/app.homepage.apptipsForm.html'"></div>
+      </uib-tab>
+      <uib-tab active="searchTabActive">
+        <uib-tab-heading>
+          Browse AppTips <i ng-if="tab.cancel" class="fa fa-search"></i>
+        </uib-tab-heading>
+        <generic-Table callback-Fn = "tableAction" data="data.tableData" config-Obj="{{config}}"></generic-Table>
+      </uib-tab>
+      <uib-tab ng-repeat="tab in tabs" active="tab.active" disable="tab.disabled">
+        <uib-tab-heading >
+          {{tab.title}} <i ng-if="tab.cancel" class="fa fa-close" ng-click="closeTab($index);"></i>
+        </uib-tab-heading>
+        <div ng-if="tab.app == 'ApptipsEditor'">
+          <div ng-include="'/static/ngTemplates/app.homepage.apptipsForm.html'"></div>
+        </div>
+        <div ng-if="tab.app == 'Apptipsview'">
+          <div ng-include="'/static/ngTemplates/app.homepage.apptips.explore.html'"></div>
+        </div>
+      </uib-tab>
+    </uib-tabset>
+  </div>
+</div>

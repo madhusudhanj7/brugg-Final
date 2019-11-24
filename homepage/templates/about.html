@@ -1,0 +1,76 @@
+{% extends "index.html" %}{% load staticfiles %}{% load i18n %}
+{% get_current_language as lang %}
+
+{% block brugcontent %}
+
+{% verbatim %}
+
+<div class="container-fluid" style="padding:0;font-family: 'Barlow Condensed';font-size: 16px;line-height: 30px;font-weight: 500;">
+
+<!-- <div class="row" style="margin:0px;background: url('/static/images/about/about.jpg');background-repeat: no-repeat;background-size: cover;min-height:400px;padding:140px 0px 0px 0px;background-position:center;"></div> -->
+<div class="row" style="margin:0px">
+  <div class="col-md-12" style="padding:0px">
+    <img src="/static/images/brugImages/9.jpg" alt="" style="width:100%;height:40vh">
+  </div>
+</div>
+<div class="row" style="margin:0px;padding:5% 5% 5% 5%;">
+  <div class="col-md-12 col-lg-12 col-sm-12 text-center col-xs-12" style="">
+    <h1 style="font-size:50px;font-weight:400;color:#022750;">{% endverbatim %} {% trans 'aboutusId' %}{% verbatim %} </h1>
+  </div>
+
+</div>
+  <div class="row text-center" style="margin:0px;padding:5% 10%;background:#035f87;color:#ffffff">
+  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 ">
+    <h1> {% endverbatim %} {% trans 'aboutA' %}{% verbatim %}</h1>
+    <h3>  {% endverbatim %} {% trans 'aboutB' %}{% verbatim %}</h3>
+  </div>
+  <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12 text-left" style="font-size:20px">
+    <p>{% endverbatim %} {% trans 'aboutC' %}{% verbatim %}</p>
+  </div>
+  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 ">
+
+  </div>
+  <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12 text-left" style="font-size:20px">
+
+    <p>{% endverbatim %} {% trans 'aboutD' %}{% verbatim %}</p>
+
+  </div>
+  </div>
+  <div class="row text-center" style="margin:0px;padding:5% 10%;background:#838383;color:#ffffff" >
+  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 ">
+    <h1>  {% endverbatim %} {% trans 'aboutF' %}{% verbatim %}</h1>
+      <h3> {% endverbatim %} {% trans 'aboutG' %}{% verbatim %} </h3>
+  </div>
+  <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12 text-left" style="font-size:20px">
+    <p>​​{% endverbatim %} {% trans 'aboutH' %}{% verbatim %}</p>
+  </div>
+  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 ">
+
+  </div>
+  <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12 text-left" style="font-size:20px">
+
+    <p>{% endverbatim %} {% trans 'aboutI' %}{% verbatim %}</p>
+
+  </div>
+  </div>
+  <div class="row text-center" style="margin:0px;padding:5% 10%;">
+  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 " style="color:#009de0">
+    <h1>  {% endverbatim %} {% trans 'aboutJ' %}{% verbatim %}</h1>
+    <h3> {% endverbatim %} {% trans 'aboutK' %}{% verbatim %}</h3>
+  </div>
+  <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12 text-left" style="font-size:20px">
+    <p>{% endverbatim %} {% trans 'aboutL' %}{% verbatim %}</p>
+
+
+  </div>
+  <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 " style="color:#009de0">
+
+  </div>
+  <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12 text-left" style="font-size:20px">
+    <p>{% endverbatim %} {% trans 'aboutM' %}{% verbatim %}</p>
+
+  </div>
+  </div>
+</div>
+{% endverbatim %}
+{% endblock %}

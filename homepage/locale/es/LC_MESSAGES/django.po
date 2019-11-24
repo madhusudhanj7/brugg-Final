@@ -1,0 +1,131 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-02 21:07+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/header.html:13
+msgid "homeId"
+msgstr "Casa"
+
+#: templates/header.html:13
+msgid "serviceId"
+msgstr "Servicios"
+
+#: templates/header.html:13
+msgid "applicationId"
+msgstr "Consejos de aplicación"
+
+#: templates/header.html:13
+msgid "referenceId"
+msgstr "Referencia"
+
+#: templates/header.html:13
+msgid "productId"
+msgstr "Productos"
+
+#: templates/header.html:13
+msgid "companyId"
+msgstr "Empresa"
+
+#: templates/header.html:13
+msgid "elevatorId"
+msgstr "Cuerdas de elevador"
+
+#: templates/header.html:13
+msgid "blogId"
+msgstr "Blogs"
+
+#: templates/header.html:13
+msgid "ropeselectionId"
+msgstr "Selección de cuerdas"
+
+#: templates/header.html:13
+msgid "ropecomparisonId"
+msgstr "Comparación de cuerdas"
+
+#: templates/header.html:13
+msgid "tractionropesId"
+msgstr "Cuerdas de tracción"
+
+#: templates/header.html:13
+msgid "compensationropesId"
+msgstr "Cuerdas de compensación de peso"
+
+#: templates/header.html:13
+msgid "governarropesId"
+msgstr "Cuerdas govenar"
+
+#: templates/header.html:13
+msgid "wireId"
+msgstr "Cables y medios de elevación"
+
+#: templates/header.html:13
+msgid "architecturalId"
+msgstr "Cuerdas arquitectonicas"
+
+#: templates/header.html:13
+msgid "aboutusId"
+msgstr "Sobre nosotros"
+
+#: templates/header.html:13
+msgid "careesId"
+msgstr "Carreras profesionales"
+
+#: templates/header.html:13
+msgid "contactusId"
+msgstr "Contáctenos"
+
+#: templates/header.html:13
+msgid "prevId"
+msgstr "Anterior"
+
+#: templates/header.html:13
+msgid "nextId"
+msgstr "Siguiente"
+
+#: templates/header.html:13
+msgid "blogupdateId"
+msgstr "Obtener actualizaciones regulares de blog"
+
+#: templates/header.html:13
+msgid "sendId"
+msgstr "Enviar actualizaciones!"
+
+#: templates/header.html:13
+msgid "postId"
+msgstr "Publicaciones más recientes"
+
+#: templates/career.html:13
+msgid "storyId"
+msgstr
+"Nacido del éxito de la campaña electoral del presidente Obama en 2008, se fundó BRUGG LIFTING para permitir al mundo convertir los datos en acción.\n "
+" \n"
+"Durante los últimos siete años, BRUGG LIFTING ha evolucionado mucho más allá de las simples pruebas A / B de sitios web. Recientemente, lanzamos la plataforma de experimentación líder en el mundo para permitir la experimentación en todas partes: en toda la experiencia del cliente, en cualquier canal, para cualquier dispositivo, en cualquier aplicación.\n"
+" \n"
+"BRUGG LIFTING permite a los ejecutivos, comercializadores, gerentes de productos y desarrolladores ser valientes y tomar mejores decisiones de negocios."
+"\n    "
+"\n    "
+
+
+#: templates/career.html:13
+msgid "workId"
+msgstr "Trabajo @ BRUGG LIFTING"
+
+#: templates/career.html:13
+msgid "Why you'll love it here"
+msgstr "Estamos creando un equipo de personas inspiradas, inteligentes y motivadas de todo tipo de orígenes. Con innumerables oportunidades para el crecimiento y la mentoría, nos esforzamos por ayudar a cada empleado a forjar el camino correcto para ellos. Trabajar en BRUGG LIFTING"

@@ -1,0 +1,140 @@
+{% load staticfiles %}
+
+{% block specific_css %}
+<link rel="stylesheet" href="{% static 'css/main.css'%}" type="text/css">
+<link rel="stylesheet" href="{% static 'css/wow_book.css'%}" type="text/css" />
+<link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css">
+{% endblock %}
+
+<!-- <head>
+	<meta charset="utf-8">
+	<title>Brugg Lifting</title>
+	<meta name="description" content="">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui,maximum-scale=2">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui,maximum-scale=1">
+	<meta http-equiv="cleartype" content="on"> -->
+
+
+<!-- </head> -->
+
+
+{% block brugcontent %}
+
+{% verbatim %}	<!-- Add your site or application content here -->
+	<div id="container-ek">
+
+		<div class='book_container'>
+			<div id="catalog"></div>
+		</div>
+		<!-- <div class="container-form">
+			<form>
+				<input type="tel" id="ek" placeholder="go to page" />
+				<input type="button" id="submit" value="OK" />
+			</form>
+		</div> -->
+	</div>
+	{% endverbatim %}
+	{% endblock %}
+
+
+{% block specific_js %}
+<script src="{% static 'js/libs/modernizr-2.7.1.min.js' %} "></script>
+	<script src= "{% static 'js/libs/jquery-2.1.0.min.js' %}"></script>
+	<script src="{% static 'js/helper.js' %}"></script>
+	<script src="{% static 'js/pdf.combined.min.js' %}"></script>
+	<script src="{% static 'js/wow_book.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+
+
+		<script type="text/javascript">
+
+		$(function(){
+
+
+
+			var bookOptions = {
+				height   : 500
+				,width    : 800
+				// ,maxWidth : 800
+				,maxHeight : 1200
+
+				,centeredWhenClosed : true
+				,hardcovers : true
+				,flipSound: false
+				,pageNumbers: false
+				,pdfFind: true
+				,toolbar : "lastLeft, left, right, lastRight, find, toc, zoomin, zoomout, fullscreen, thumbnails, download"
+				,thumbnailsPosition : 'left'
+				,responsiveHandleWidth : 50
+				,turnPageDuration: 500
+				,zoomMax: 3
+
+				,container: window
+				,containerPadding: "25px",
+				responsiveSinglePage: function( book ){
+				      // return true (and activate single page mode)
+				      // if the container width is less than 500
+				      return $(window).width() < 800;
+				    }
+				//,toolbarContainerPosition: "top" // default "bottom"
+
+				// The pdf and your webpage must be on the same domain
+				,pdf: '{{bookurl}}'
+				,pdfTextSelectable: true
+				,tocHeader: "Index"
+				,toolbarIcons: "icomoon"
+
+				// Uncomment the option toc to create a Table of Contents
+				,toc: [                    // table of contents in the format
+					[ "Going up is our Motto.", 1 ], // [ "title", index number (=pageNumber-1) ]
+					[ "Services", 3],
+					[ "Ropes at a Glance", 5],
+					[ "Rope Comparison", 7],
+					[ "Rope Comparison . i-Line", 8],
+					[ "Elevator Ropes . Accessories", 9],
+					[ "HRS", 11],
+					[ "DP9", 12],
+					[ "SCX9", 13],
+					[ "MCX9", 14],
+					[ "8x19", 15],
+					[ "TSR", 16],
+					[ "8x19 . 8x25", 17],
+					[ "6x25", 18],
+					[ "6x19 . 8x19", 19],
+					[ "Designations and Classifications", 20],
+					[ "APAG Threaded Swaged Sockets", 21],
+					[ "Eyelet Bolt with Swaged Thimble", 22],
+					[ "Wedge Socket Asymmetrical", 23],
+					[ "Elastomer Buffers", 25],
+					[ "Spring", 26],
+					[ "Door Closing Rope Sets", 27],
+					[ "Door Closing Rope Flex . Rope clamp", 28],
+					[ "RPM Rope Performance Measurement Device", 29],
+					[ "GDC Grove Depth Comparator", 30],
+					[ "RWG Rope Wear Gauge", 30],
+					[ "VT-Lube Lubricant", 31],
+					[ "Rope Cutters", 31],
+					[ "Packaging", 32],
+					[ "Support", 33],
+					[ "Contact", 34],
+				]
+			};
+
+			$('#catalog').wowBook( bookOptions ); // create the book
+
+			// How to use wowbook API
+			// var book=$.wowBook("#book"); // get book object instance
+			// book.gotoPage( 4 ); // call some method
+		})
+	</script>
+
+	<script>
+		$(document).ready(function (){
+			$('.wowbook-toc-item a').click(function(){
+				$('.wowbook-toc').css('display', 'none');
+			})
+		});
+	</script>
+	{% endblock %}

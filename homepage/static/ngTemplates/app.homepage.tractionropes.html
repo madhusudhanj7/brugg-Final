@@ -1,0 +1,736 @@
+<br/>
+<br/>
+<div class="container-fluid" style="margin:0;padding:0;">
+  <div  style="background-image: url('static/images/brugg-elevator-seile-header.jpg');background-repeat: no-repeat;background-size: cover;min-height:40vh;">
+  </div>
+
+  <div class="container">
+    <div style="margin-top:2em">
+      <span style="color:#079DE0;font-size:28px;margin-top:2em">Elevator ropes from Brugg Lifting. Highest quality.</span><br/>
+    </div>
+    <div style="margin-top:2em;font-size:16px;">
+      <span>Our ropes are constructed using advanced production techniques, implementing the most stringent test and control procedures in order to meet the most demanding user specifications. This creates a line of products that offer very low diameter reductions, high breaking force, round cross sections, great ride quality, low stretch over the ropes lifetime.  This in turn provides maximum rope life expectancy.</span>
+    </div>
+    <!-- <hr> -->
+    <div class="" style="margin-top:2em;">
+      <ul class="nav nav-tabs">
+        <li ><a href="/meter">Rope Selection</a></li>
+        <!-- <li ><a href="/rope_comparison">Rope Comparison</a></li> -->
+        <li class="active"><a href="/traction_ropes">Traction Ropes</a></li>
+        <li><a href="/weight_compensation_ropes">Compensation Ropes</a></li>
+        <li><a href="/govenar_ropes">Governor Ropes</a></li>
+      </ul>
+    </div>
+    <!-- <hr> -->
+    <div style="margin-top:3em;font-size:14px;">
+
+    <div class="row text-center" ng-repeat="a in tractionRope" style="margin-top:3em;padding-bottom:2em;font-size:14px;border-bottom:1px solid #f2f2f2">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-2 col-xs-4 "  style="padding-left:2.5em;">
+          <span >{{a.name}}</span>
+        </div>
+        <div class="col-md-8 col-xs-8 text-left" >
+        <span style="">{{a.description}}</span>
+        </div>
+      </div>
+      <div class="col-md-2 col-xs-4" style="height:160px;" >
+        <img id="hoverZoom" src="static/images/hrs_s.jpg" ng-click= 'tableshow("firstimg")'/><br/>
+        <img id="hoverImg" src="static/images/magnifier.png" ng-click= 'tableshow("firstimg")'/>
+        <span>9x19S-PWRC   , 1570 U sZ (RRL)</span>
+      </div>
+
+      <div class="col-md-2 col-xs-4" style="height:160px;">
+        <div style="height:40px;text-align:left">
+        </div>
+        <div style="background-color:#BAE0F3;height:55px;display: table;width:100%">
+          <span style="   display:table-cell;text-align:center;vertical-align: middle;width:100%">{{a.elastic_elongation}}</span><br/>
+        </div>
+        <span class="geryColor">Elastic elongation</span>
+      </div>
+
+        <div class="col-md-2  col-xs-4" style="height:160px;">
+          <div style="height:40px;" style="height:160px;">
+          </div>
+          <div style="background-color:#BAE0F3;height:55px;display: table;width:100%">
+            <span style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">{{a.permenant_elongation}}</span><br/>
+          </div>
+          <span class="geryColor">Permanent  elongation</span>
+        </div>
+
+        <div class="col-md-2 col-xs-4" >
+          <div style="height:40px;" style="height:160px;">
+          </div>
+          <div style="background-color:#BAE0F3;height:55px;display: table;width:100%">
+            <span style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">{{a.lifting_height}}</span><br/>
+          </div>
+          <span class="geryColor">Lifting height <div popover-placement="bottom" data-toggle="tooltip" popover-class="dynamic-popover" uib-popover="The defined lifting height
+            is based on an elevator with a 1:1 suspension and is only indicative. It does not replace the exact calculation according to the system specifications."
+             popover-trigger="mouseenter"> <i class="fa fa-info" style="color:#009de0;" ></i></div></span>
+        </div>
+
+          <div class="col-md-4 col-xs-8" style="height:160px;" >
+            <div style="height:40px;">
+            </div>
+            <div style="background-color:#BAE0F3;height:55px;display: table;width:100%" ng-click="dataView($index)">
+              <span class="text-center" style="  display:table-cell;text-align:center;vertical-align: middle;width:100%" >Click to see this Technical Data</span></br>
+            </div>
+            <span class="geryColor">Technical Data</span>
+          </div>
+
+        <div class="col-md-12 col-xs-12" >
+          <span>{{a.disclaimer_en}}</span>
+        </div>
+        <div class="col-md-12 col-xs-12 text-center" ng-if="display[$index]" style="border:1px solid #f2f2f2;margin:1em;padding:2em;position:relative;" >
+          <div class="pull-right" ng-click = "close($index)" style="width:30px;height:30px;border-radius:15px;background-color:#d2d2d2;cursor:pointer;position:absolute;top:-15px;right:10px;">
+            <i class="fa fa-remove " style="font-size:20px;padding-top:3px"></i>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <span class="pull-right">Breaking Load(kN) :</span>
+            </div>
+            <div class="col-md-6">
+              <input type="range"  min="{{minload}}" max="{{maxload}}" step={{step}} ng-model="load"  ng-change="updateTextInput(load,weight);">
+            </div>
+            <div class="col-md-2">
+              <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{load}} (kN)</span>
+            </div>
+          </div>
+          <div class="row" style="margin-top:1em;">
+
+            <div class="col-md-4">
+              <span class="pull-right">Weight(kg/100m) :</span>
+            </div>
+            <div class="col-md-6">
+              <input type="range" min="{{minweight}}" max="{{maxweight}}" step={{step}} ng-model="weight"  ng-change="updateTextInput(load,weight);">
+            </div>
+            <div class="col-md-2">
+              <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{weight}} (kg/100m)</span>
+            </div>
+
+            <div class="col-md-12 table-responsive" style="margin-top:2em;" ng-if="table">
+              <table class="table text-center table-hover">
+                <thead >
+                  <tr class="table ">
+                    <th class="text-center"   >Item No</th>
+                    <th class="text-center"  ng-repeat = "d in tableData" >{{d.field.name}}</th>
+                  </tr>
+                  <tr class="table ">
+                    <th class="text-center" ></th>
+                    <th class="text-center" ng-repeat = "d in tableData" >{{d.field.dimensions}}</th>
+                  </tr>
+
+                </thead>
+                <tbody>
+                  <tr ng-repeat = "a in dataFilter">
+                    <td>{{a.itemNumber}}
+                    <td ng-repeat = "d in a.fieldValues">{{d.field.type=='Char'?d.char:(d.field.type == 'Boolean'?d.bool:(d.field.type =='Integer'?d.iValue:d.fValue))}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+      <hr>
+      </div>
+  </div>
+</div>
+  <!-- <div class="row text-center">
+    <div class="col-md-offset-2 col-md-2 col-xs-4 " >
+      <span >DP9  </span>
+    </div>
+    <div class="col-md-8 col-xs-8 text-left" >
+    <span style="">Wire rope with polypropylene fiber core, 9 strands, parallel lay</span>
+    </div>
+    <div class="col-md-2 col-xs-4" style="height:160px;" >
+      <img id="hoverZoom" src="static/images/dp9_s.jpg" ng-click= 'tableshow("secondimg")'/><br/>
+      <img id="hoverImg" src="static/images/magnifier.png" ng-click= 'tableshow("secondimg")'/>
+      <span>9x19S-PWRC , 1370/1570/1770 U sZ (RRL)</span>
+    </div>
+    <div class="col-md-2 col-xs-4" style="height:160px;">
+      <div style="height:40px;text-align:left">
+      </div>
+      <div style="background-color:#FEFCCC;height:55px;display: table;width:100%">
+        <span style="   display:table-cell;text-align:center;vertical-align: middle;width:100%">0,112 %</span><br/>
+      </div>
+      <span class="geryColor">Elastic elongation</span>
+    </div>
+
+      <div class="col-md-2  col-xs-4" style="height:160px;">
+        <div style="height:40px;" style="height:160px;">
+        </div>
+        <div style="background-color:#FEFCCC;height:55px;display: table;width:100%">
+          <span style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">0,25 %</span><br/>
+        </div>
+        <span class="geryColor">Permanent  elongation</span>
+      </div>
+      <div class="col-md-2 col-xs-4" >
+        <div style="height:40px;" style="height:160px;">
+        </div>
+        <div style="background-color:#FEFCCC;height:55px;display: table;width:100%">
+          <span style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">≤ 250 m , ≤ 800 ft</span><br/>
+        </div>
+        <span class="geryColor">Lifting height <div popover-placement="bottom" popover-class="dynamic-popover" uib-popover="The defined lifting height
+          is based on an elevator with a 1:1 suspension and is only indicative. It does not replace the exact calculation according to the system specifications."
+           popover-trigger="mouseenter"> <i class="fa fa-info" style="color:#009de0;" ></i></div></span>
+      </div>
+      <div class="col-md-4 col-xs-8" style="height:160px;" >
+        <div style="height:40px;">
+        </div>
+        <div style="background-color:#FEFCCC;height:55px;display: table;width:100%" ng-click="dataView('dp')">
+          <span class="text-center" style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">Click to see this Technical data</span></br>
+        </div>
+        <span class="geryColor">Technical Data</span>
+      </div>
+      <div class="col-md-12 col-xs-12" >
+        <span>For high demands on breaking force, elongation and number of trips. Recommended for conical grooves and undercut round grooves.</span>
+      </div>
+  </div>
+
+  <div class="row text-center" ng-if="display.dp" style="border:1px solid #f2f2f2;margin:1em;padding:2em;position:relative;" >
+    <div class="pull-right" ng-click = "close('dp')" style="width:30px;height:30px;border-radius:15px;background-color:#d2d2d2;cursor:pointer;position:absolute;top:-15px;right:10px;">
+      <i class="fa fa-remove " style="font-size:20px;padding-top:3px"></i>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <span class="pull-right">Breaking Load(kN) :</span>
+      </div>
+      <div class="col-md-6">
+        <input type="range"  min="30" max="150" step="0.5" ng-model="load"  ng-change="updateTextInput(load,weight,'dp');">
+      </div>
+      <div class="col-md-2">
+        <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{load}} (kN)</span>
+      </div>
+    </div>
+    <div class="row" style="margin-top:1em;">
+
+       <div class="col-md-4">
+         <span class="pull-right">Weight(kg/100m) :</span>
+       </div>
+       <div class="col-md-6">
+         <input type="range" name="points" min="20" max="110" step="0.5" ng-model="weight"  ng-change="updateTextWeight(load,weight,'dp');">
+       </div>
+       <div class="col-md-2">
+         <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{weight}} (kg/100m)</span>
+       </div>
+
+    <div class="col-md-12 table-responsive" style="margin-top:2em;" ng-if="table">
+      <table class="table text-center table-hover">
+        <thead >
+          <tr class="table ">
+            <th class="text-center" width='10%'>Item No</th>
+            <th class="text-center" width='20%' colspan="2" >Rope</th>
+            <th class="text-center" width='20%'  colspan="2" >Breaking Load</th>
+            <th class="text-center" width='20%'  colspan="2" >Weight</th>
+            <th class="text-center" width='30%'  >Contruction</th>
+          </tr>
+          <tr class="table ">
+            <th></th>
+            <th class="text-center">mm</th>
+            <th class="text-center">in</th>
+            <th class="text-center">kN</th>
+            <th class="text-center">lbs</th>
+            <th class="text-center">kg/100m</th>
+            <th class="text-center">lb/ft</th>
+            <th></th>
+          </tr>
+
+        </thead>
+        <tbody>
+          <tr ng-repeat = "d in dataFilter">
+            <td>{{d.no}}</td>
+            <td>{{d.ropemm}}</td>
+            <td>{{d.ropein}}</td>
+            <td>{{d.loadkn}}</td>
+            <td>{{d.loadlbs}}</td>
+            <td>{{d.weightkg}}</td>
+            <td>{{d.weightlb}}</td>
+            <td>{{d.construction}}</td>
+          </tr>
+        </tbody>
+      </table>
+     </div>
+     </div>
+  </div>
+<hr>
+<div class="row text-center">
+  <div class="col-md-offset-2 col-md-2 col-xs-4 " >
+    <span >SCX9  </span>
+  </div>
+  <div class="col-md-8 col-xs-8 text-left" >
+  <span style="">Steel core rope, 9 strands, separate lay</span>
+  </div>
+  <div class="col-md-2 col-xs-4" style="height:160px;" >
+    <img id="hoverZoom" src="static/images/scx9_s.jpg" ng-click= 'tableshow("thirdimg")'/><br/>
+    <img id="hoverImg" src="static/images/magnifier.png" ng-click= 'tableshow("thirdimg")'/>
+    <span>9x19S-IWRC  , 1570 U sZ (RRL)</span>
+  </div>
+  <div class="col-md-2 col-xs-4" style="height:160px;">
+    <div style="height:40px;text-align:left">
+    </div>
+    <div style="background-color:#E2EFF8;height:55px;display: table;width:100%">
+      <span style="   display:table-cell;text-align:center;vertical-align: middle;width:100%">0,108 %</span><br/>
+    </div>
+    <span class="geryColor">Elastic elongation</span>
+  </div>
+
+    <div class="col-md-2  col-xs-4" style="height:160px;">
+      <div style="height:40px;" style="height:160px;">
+      </div>
+      <div style="background-color:#E2EFF8;height:55px;display: table;width:100%">
+        <span style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">0,16 %</span><br/>
+      </div>
+      <span class="geryColor">Permanent  elongation</span>
+    </div>
+    <div class="col-md-2 col-xs-4" >
+      <div style="height:40px;" style="height:160px;">
+      </div>
+      <div style="background-color:#E2EFF8;height:55px;display: table;width:100%">
+        <span style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">≤ 325 m , ≤ 1000 ft</span><br/>
+      </div>
+      <span class="geryColor">Lifting height <div popover-placement="bottom" popover-class="dynamic-popover" uib-popover="The defined lifting height
+        is based on an elevator with a 1:1 suspension and is only indicative. It does not replace the exact calculation according to the system specifications."
+         popover-trigger="mouseenter"> <i class="fa fa-info" style="color:#009de0;" ></i></div></span>
+    </div>
+    <div class="col-md-4 col-xs-8" style="height:160px;" >
+      <div style="height:40px;">
+      </div>
+      <div style="background-color:#E2EFF8;height:55px;display: table;width:100%" ng-click="dataView('scx')">
+        <span class="text-center" style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">Click to see this Technical Data</span></br>
+      </div>
+      <span class="geryColor">Technical Data</span>
+    </div>
+    <div class="col-md-12 col-xs-12" >
+      <span>For highest demands on breaking force, elongation and number of trips, also under difficult installation conditions. Recommended for round grooves with an undercut angle of ≤ 85°.</span>
+    </div>
+</div>
+
+<div class="row text-center" ng-if="display.scx" style="border:1px solid #f2f2f2;margin:1em;padding:2em;position:relative;" >
+  <div class="pull-right" ng-click = "close('scx')" style="width:30px;height:30px;border-radius:15px;background-color:#d2d2d2;cursor:pointer;position:absolute;top:-15px;right:10px;">
+    <i class="fa fa-remove " style="font-size:20px;padding-top:3px"></i>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <span class="pull-right">Breaking Load(kN) :</span>
+    </div>
+    <div class="col-md-6">
+      <input type="range"  min="40" max="250" step="0.5" ng-model="load"  ng-change="updateTextInput(load,weight,'scx');">
+    </div>
+    <div class="col-md-2">
+      <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{load}} (kN)</span>
+    </div>
+  </div>
+  <div class="row" style="margin-top:1em;">
+
+     <div class="col-md-4">
+       <span class="pull-right">Weight(kg/100m) :</span>
+     </div>
+     <div class="col-md-6">
+       <input type="range" name="points" min="20" max="160" step="0.5" ng-model="weight"  ng-change="updateTextWeight(load,weight,'scx');">
+     </div>
+     <div class="col-md-2">
+       <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{weight}} (kg/100m)</span>
+     </div>
+
+  <div class="col-md-12 table-responsive" style="margin-top:2em;" ng-if="table">
+    <table class="table text-center table-hover">
+      <thead >
+        <tr class="table ">
+          <th class="text-center" width='10%'>Item No</th>
+          <th class="text-center" width='20%' colspan="2" >Rope</th>
+          <th class="text-center" width='20%'  colspan="2" >Breaking Load</th>
+          <th class="text-center" width='20%'  colspan="2" >Weight</th>
+          <th class="text-center" width='30%'  >Contruction</th>
+        </tr>
+        <tr class="table ">
+          <th></th>
+          <th class="text-center">mm</th>
+          <th class="text-center">in</th>
+          <th class="text-center">kN</th>
+          <th class="text-center">lbs</th>
+          <th class="text-center">kg/100m</th>
+          <th class="text-center">lb/ft</th>
+          <th></th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr ng-repeat = "d in dataFilter">
+          <td>{{d.no}}</td>
+          <td>{{d.ropemm}}</td>
+          <td>{{d.ropein}}</td>
+          <td>{{d.loadkn}}</td>
+          <td>{{d.loadlbs}}</td>
+          <td>{{d.weightkg}}</td>
+          <td>{{d.weightlb}}</td>
+          <td>{{d.construction}}</td>
+        </tr>
+      </tbody>
+    </table>
+   </div>
+   </div>
+</div>
+<hr>
+
+<div class="row text-center">
+  <div class="col-md-offset-2 col-md-2 col-xs-4 " >
+    <span >MCX9  </span>
+  </div>
+  <div class="col-md-8 col-xs-8 text-left" >
+  <span style="">Steel Core Rope, 9 Strands, Parallel Lay</span>
+  </div>
+  <div class="col-md-2 col-xs-4" style="height:160px;" >
+    <img id="hoverZoom" src="static/images/mcx9_s.jpg" ng-click= 'tableshow("fourthimg")'/><br/>
+    <img id="hoverImg" src="static/images/magnifier.png" ng-click= 'tableshow("fourthimg")'/>
+    <span> 9x19S-IWRC ,1570 U sZ </span>
+  </div>
+  <div class="col-md-2 col-xs-4" style="height:160px;">
+    <div style="height:40px;text-align:left">
+    </div>
+    <div style="background-color:#F9DA97;height:55px;display: table;width:100%">
+      <span style="   display:table-cell;text-align:center;vertical-align: middle;width:100%">0,120 %</span><br/>
+    </div>
+    <span class="geryColor">Elastic elongation</span>
+  </div>
+
+    <div class="col-md-2  col-xs-4" style="height:160px;">
+      <div style="height:40px;" style="height:160px;">
+      </div>
+      <div style="background-color:#F9DA97;height:55px;display: table;width:100%">
+        <span style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">0,3 %</span><br/>
+      </div>
+      <span class="geryColor">Permanent  elongation</span>
+    </div>
+    <div class="col-md-2 col-xs-4" >
+      <div style="height:40px;" style="height:160px;">
+      </div>
+      <div style="background-color:#F9DA97;height:55px;display: table;width:100%">
+        <span style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">≤ 200 m , ≤ 650 ft</span><br/>
+      </div>
+      <span class="geryColor">Lifting height <div popover-placement="bottom" popover-class="dynamic-popover" uib-popover="The defined lifting height
+        is based on an elevator with a 1:1 suspension and is only indicative. It does not replace the exact calculation according to the system specifications."
+         popover-trigger="mouseenter"> <i class="fa fa-info" style="color:#009de0;" ></i></div></span>
+    </div>
+    <div class="col-md-4 col-xs-8" style="height:160px;" >
+      <div style="height:40px;">
+      </div>
+      <div style="background-color:#F9DA97;height:55px;display: table;width:100%" ng-click="dataView('mcx')">
+        <span class="text-center" style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">Click to see this Technical Data</span></br>
+      </div>
+      <span class="geryColor">Technical Data</span>
+    </div>
+    <div class="col-md-12 col-xs-12" >
+      <span>For high demands on breaking force, elongation and number of trips. Recommended for round grooves with an undercut angle of ≤ 85°.</span>
+    </div>
+</div>
+
+<div class="row text-center" ng-if="display.mcx" style="border:1px solid #f2f2f2;margin:1em;padding:2em;position:relative;" >
+  <div class="pull-right" ng-click = "close('mcx')" style="width:30px;height:30px;border-radius:15px;background-color:#d2d2d2;cursor:pointer;position:absolute;top:-15px;right:10px;">
+    <i class="fa fa-remove " style="font-size:20px;padding-top:3px"></i>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <span class="pull-right">Breaking Load(kN) :</span>
+    </div>
+    <div class="col-md-6">
+      <input type="range"  min="30" max="150" step="0.5" ng-model="load"  ng-change="updateTextInput(load,weight,'mcx');">
+    </div>
+    <div class="col-md-2">
+      <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{load}} (kN)</span>
+    </div>
+  </div>
+  <div class="row" style="margin-top:1em;">
+
+     <div class="col-md-4">
+       <span class="pull-right">Weight(kg/100m) :</span>
+     </div>
+     <div class="col-md-6">
+       <input type="range" name="points" min="20" max="100" step="0.5" ng-model="weight"  ng-change="updateTextWeight(load,weight,'mcx');">
+     </div>
+     <div class="col-md-2">
+       <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{weight}} (kg/100m)</span>
+     </div>
+
+  <div class="col-md-12 table-responsive" style="margin-top:2em;" ng-if="table">
+    <table class="table text-center table-hover">
+      <thead >
+        <tr class="table ">
+          <th class="text-center" width='10%'>Item No</th>
+          <th class="text-center" width='20%' colspan="2" >Rope</th>
+          <th class="text-center" width='20%'  colspan="2" >Breaking Load</th>
+          <th class="text-center" width='20%'  colspan="2" >Weight</th>
+          <th class="text-center" width='30%'  >Contruction</th>
+        </tr>
+        <tr class="table ">
+          <th></th>
+          <th class="text-center">mm</th>
+          <th class="text-center">in</th>
+          <th class="text-center">kN</th>
+          <th class="text-center">lbs</th>
+          <th class="text-center">kg/100m</th>
+          <th class="text-center">lb/ft</th>
+          <th></th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr ng-repeat = "d in dataFilter">
+          <td>{{d.no}}</td>
+          <td>{{d.ropemm}}</td>
+          <td>{{d.ropein}}</td>
+          <td>{{d.loadkn}}</td>
+          <td>{{d.loadlbs}}</td>
+          <td>{{d.weightkg}}</td>
+          <td>{{d.weightlb}}</td>
+          <td>{{d.construction}}</td>
+        </tr>
+      </tbody>
+    </table>
+   </div>
+   </div>
+</div>
+<hr>
+
+<div class="row text-center">
+  <div class="col-md-offset-2 col-md-2 col-xs-4 " >
+    <span >8x19  </span>
+  </div>
+  <div class="col-md-8 col-xs-8 text-left" >
+  <span style="">Wire rope with sisal fiber core, 8 strands</span>
+  </div>
+  <div class="col-md-2 col-xs-4" style="height:160px;" >
+    <img id="hoverZoom" src="static/images/8x19_s.jpg" ng-click= 'tableshow("fifthimg")'/><br/>\
+    <img id="hoverImg" src="static/images/magnifier.png" ng-click= 'tableshow("fifthimg")'/>
+    <span>8x19S-NFC  , 1370/1570/1770 U sZ (RRL)</span>
+  </div>
+  <div class="col-md-2 col-xs-4" style="height:160px;">
+    <div style="height:40px;text-align:left">
+    </div>
+    <div style="background-color:#EEEEEE;height:55px;display: table;width:100%">
+      <span style="   display:table-cell;text-align:center;vertical-align: middle;width:100%">0,122 %</span><br/>
+    </div>
+    <span class="geryColor">Elastic elongation</span>
+  </div>
+
+    <div class="col-md-2  col-xs-4" style="height:160px;">
+      <div style="height:40px;" style="height:160px;">
+      </div>
+      <div style="background-color:#EEEEEE;height:55px;display: table;width:100%">
+        <span style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">0,26 %</span><br/>
+      </div>
+      <span class="geryColor">Permanent  elongation</span>
+    </div>
+    <div class="col-md-2 col-xs-4" >
+      <div style="height:40px;" style="height:160px;">
+      </div>
+      <div style="background-color:#EEEEEE;height:55px;display: table;width:100%">
+        <span style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">≤ 200 m  , ≤ 650 ft</span><br/>
+      </div>
+      <span class="geryColor">Lifting height <div popover-placement="bottom" popover-class="dynamic-popover" uib-popover="The defined lifting height
+        is based on an elevator with a 1:1 suspension and is only indicative. It does not replace the exact calculation according to the system specifications."
+         popover-trigger="mouseenter"> <i class="fa fa-info" style="color:#009de0;" ></i></div></span>
+    </div>
+    <div class="col-md-4 col-xs-8" style="height:160px;" >
+      <div style="height:40px;">
+      </div>
+      <div style="background-color:#EEEEEE;height:55px;display: table;width:100%" ng-click="dataView('eight')">
+        <span class="text-center" style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">Click to see this Technical Data</span></br>
+      </div>
+      <span class="geryColor">Technical Data</span>
+    </div>
+    <div class="col-md-12 col-xs-12" >
+      <span>For high demands on elongation also under difficult installation conditions. Recommended for all groove shapes.</span>
+    </div>
+</div>
+
+<div class="row text-center" ng-if="display.eight" style="border:1px solid #f2f2f2;margin:1em;padding:2em;position:relative;" >
+  <div class="pull-right" ng-click = "close('eight')" style="width:30px;height:30px;border-radius:15px;background-color:#d2d2d2;cursor:pointer;position:absolute;top:-15px;right:10px;">
+    <i class="fa fa-remove " style="font-size:20px;padding-top:3px"></i>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <span class="pull-right">Breaking Load(kN) :</span>
+    </div>
+    <div class="col-md-6">
+      <input type="range"  min="20" max="150" step="0.5" ng-model="load"  ng-change="updateTextInput(load,weight,'eight');">
+    </div>
+    <div class="col-md-2">
+      <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{load}} (kN)</span>
+    </div>
+  </div>
+  <div class="row" style="margin-top:1em;">
+
+     <div class="col-md-4">
+       <span class="pull-right">Weight(kg/100m) :</span>
+     </div>
+     <div class="col-md-6">
+       <input type="range" name="points" min="20" max="100" step="0.5" ng-model="weight"  ng-change="updateTextWeight(load,weight,'eight');">
+     </div>
+     <div class="col-md-2">
+       <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{weight}} (kg/100m)</span>
+     </div>
+
+  <div class="col-md-12 table-responsive" style="margin-top:2em;" ng-if="table">
+    <table class="table text-center table-hover">
+      <thead >
+        <tr class="table ">
+          <th class="text-center" width='10%'>Item No</th>
+          <th class="text-center" width='20%' colspan="2" >Rope</th>
+          <th class="text-center" width='20%'  colspan="2" >Breaking Load</th>
+          <th class="text-center" width='20%'  colspan="2" >Weight</th>
+          <th class="text-center" width='30%'  >Contruction</th>
+        </tr>
+        <tr class="table ">
+          <th></th>
+          <th class="text-center">mm</th>
+          <th class="text-center">in</th>
+          <th class="text-center">kN</th>
+          <th class="text-center">lbs</th>
+          <th class="text-center">kg/100m</th>
+          <th class="text-center">lb/ft</th>
+          <th></th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr ng-repeat = "d in dataFilter">
+          <td>{{d.no}}</td>
+          <td>{{d.ropemm}}</td>
+          <td>{{d.ropein}}</td>
+          <td>{{d.loadkn}}</td>
+          <td>{{d.loadlbs}}</td>
+          <td>{{d.weightkg}}</td>
+          <td>{{d.weightlb}}</td>
+          <td>{{d.construction}}</td>
+        </tr>
+      </tbody>
+    </table>
+   </div>
+   </div>
+</div>
+<hr>
+
+<div class="row text-center">
+  <div class="col-md-offset-2 col-md-2 col-xs-4 " >
+    <span >TSR  </span>
+  </div>
+  <div class="col-md-8 col-xs-8 text-left" >
+  <span style="">Steel core rope, 6 strands, zinc-plated, separate lay</span>
+  </div>
+  <div class="col-md-2 col-xs-4" style="height:160px;" >
+    <img id="hoverZoom" src="static/images/tsr_s.jpg" ng-click= 'tableshow("sixthimg")'/><br/>
+    <img id="hoverImg" src="static/images/magnifier.png" ng-click= 'tableshow("sixthimg")'/>
+    <span>6x19W-IWRC  , 1960 B sZ (RRL)</span>
+  </div>
+  <div class="col-md-2 col-xs-4" style="height:160px;">
+    <div style="height:40px;text-align:left">
+    </div>
+    <div style="background-color:#F6F6F6;height:55px;display: table;width:100%">
+      <span style="   display:table-cell;text-align:center;vertical-align: middle;width:100%">0,104 %</span><br/>
+    </div>
+    <span class="geryColor">Elastic elongation</span>
+  </div>
+
+    <div class="col-md-2  col-xs-4" style="height:160px;">
+      <div style="height:40px;" style="height:160px;">
+      </div>
+      <div style="background-color:#F6F6F6;height:55px;display: table;width:100%">
+        <span style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">0,50 %</span><br/>
+      </div>
+      <span class="geryColor">Permanent  elongation</span>
+    </div>
+    <div class="col-md-2 col-xs-4" >
+      <div style="height:40px;" style="height:160px;">
+      </div>
+      <div style="background-color:#F6F6F6;height:55px;display: table;width:100%">
+        <span style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">≤ 175 m  , ≤ 550 ft</span><br/>
+      </div>
+      <span class="geryColor">Lifting height <div popover-placement="bottom" popover-class="dynamic-popover" uib-popover="The defined lifting height
+        is based on an elevator with a 1:1 suspension and is only indicative. It does not replace the exact calculation according to the system specifications."
+         popover-trigger="mouseenter"> <i class="fa fa-info" style="color:#009de0;" ></i></div></span>
+    </div>
+    <div class="col-md-4 col-xs-8" style="height:160px;" >
+      <div style="height:40px;">
+      </div>
+      <div style="background-color:#F6F6F6;height:55px;display: table;width:100%" ng-click="dataView('tsr')">
+        <span class="text-center" style="  display:table-cell;text-align:center;vertical-align: middle;width:100%">Click to see this Technical Data</span></br>
+      </div>
+      <span class="geryColor">Technical Data</span>
+    </div>
+    <div class="col-md-12 col-xs-12" >
+      <span>For high demands on small traction sheaves. Suitable for conical grooves of ≥ 45°.</span>
+    </div>
+</div>
+<hr>
+
+<div class="row text-center" ng-if="display.tsr" style="border:1px solid #f2f2f2;margin:1em;padding:2em;position:relative;" >
+  <div class="pull-right" ng-click = "close('tsr')" style="width:30px;height:30px;border-radius:15px;background-color:#d2d2d2;cursor:pointer;position:absolute;top:-15px;right:10px;">
+    <i class="fa fa-remove " style="font-size:20px;padding-top:3px"></i>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <span class="pull-right">Breaking Load(kN) :</span>
+    </div>
+    <div class="col-md-6">
+      <input type="range"  min="30" max="50" step="0.5" ng-model="load"  ng-change="updateTextInput(load,weight,'tsr');">
+    </div>
+    <div class="col-md-2">
+      <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{load}} (kN)</span>
+    </div>
+  </div>
+  <div class="row" style="margin-top:1em;">
+
+     <div class="col-md-4">
+       <span class="pull-right">Weight(kg/100m) :</span>
+     </div>
+     <div class="col-md-6">
+       <input type="range" name="points" min="10" max="30" step="0.5" ng-model="weight"  ng-change="updateTextWeight(load,weight,'tsr');">
+     </div>
+     <div class="col-md-2">
+       <span style="color:#000;background-color:#f2f2f2;display:block;width:100%">{{weight}} (kg/100m)</span>
+     </div>
+
+  <div class="col-md-12 table-responsive" style="margin-top:2em;" ng-if="table">
+    <table class="table text-center table-hover">
+      <thead >
+        <tr class="table ">
+          <th class="text-center" width='10%'>Item No</th>
+          <th class="text-center" width='20%' colspan="2" >Rope</th>
+          <th class="text-center" width='20%'  colspan="2" >Breaking Load</th>
+          <th class="text-center" width='20%'  colspan="2" >Weight</th>
+          <th class="text-center" width='30%'  >Contruction</th>
+        </tr>
+        <tr class="table ">
+          <th></th>
+          <th class="text-center">mm</th>
+          <th class="text-center">in</th>
+          <th class="text-center">kN</th>
+          <th class="text-center">lbs</th>
+          <th class="text-center">kg/100m</th>
+          <th class="text-center">lb/ft</th>
+          <th></th>
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr ng-repeat = "d in dataFilter">
+          <td>{{d.no}}</td>
+          <td>{{d.ropemm}}</td>
+          <td>{{d.ropein}}</td>
+          <td>{{d.loadkn}}</td>
+          <td>{{d.loadlbs}}</td>
+          <td>{{d.weightkg}}</td>
+          <td>{{d.weightlb}}</td>
+          <td>{{d.construction}}</td>
+        </tr>
+      </tbody>
+    </table>
+   </div>
+   </div>
+</div>
+  </div>
+ -->
+ <br/>
+ <br/>
+ <br/>
+  </div>
+<!-- </div> -->

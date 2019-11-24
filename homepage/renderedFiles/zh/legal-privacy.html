@@ -1,0 +1,503 @@
+legal_privacy
+
+
+
+
+
+
+
+
+BRUGG LIFTING
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .stricky-fixed .sub-menu{
+    margin-top: -3px;
+  }
+  .quote-btn:hover{
+    background: #009de0;
+    color:black
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+info.lifting@brugg.com
+Email address
+
+
+
+
+
+
+
+
++41 56 464 42 42
+Phone line
+
+
+
+
+
+
+
+ Brugg Drahtseil AG Birr 瑞士
+Visit us
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 公司
+
+ About US
+
+
+
+ 电梯绳
+
+Traction Ropes
+Compensation Ropes
+Governor Ropes
+
+
+
+ 电梯 选择
+
+
+
+
+
+  {{data.currentLang.lang}}
+            
+
+
+
+ {{l.lang}}
+
+ 搜寻 
+ 
+
+
+
+
+
+ 
+
+
+{{r.name}} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 公司
+
+ About US
+
+
+
+ 电梯绳
+
+Traction Ropes
+Compensation Ropes
+Governor Ropes
+
+
+
+ 电梯 选择
+
+
+
+
+  {{data.currentLang.lang}}
+             
+
+
+ {{l.lang}}
+
+ 搜寻 
+ 搜寻 
+
+
+
+
+
+ 
+
+
+{{r.name}} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 公司
+
+ About US
+
+
+
+ 电梯绳
+
+Traction Ropes
+Compensation Ropes
+Governor Ropes
+
+
+
+ 电梯 选择
+
+
+
+
+
+  {{data.currentLang.lang}}
+            
+
+
+ {{l.lang}}
+
+ 搜寻 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Approvals
+
+
+
+
+
+ CONFORMITY CERTIFICATE 
+
+
+
+
+
+
+
+ TYPE EXAMINATION CERTIFICATE 
+
+
+
+
+
+
+
+ TYPE EXAMINATION CERTIFICATE 
+
+
+
+
+
+
+ Certificates
+
+
+
+
+
+ SQS CERTIFICATE 
+
+
+
+
+
+
+ Environmental Protection
+
+
+
+
+
+ ENVIRONMENTAL POLICY 
+
+
+
+
+
+
+ Annual Report
+
+
+
+
+
+ ANNUAL REPORT 
+
+
+
+
+
+
+
+
+
+  .container{
+    width: 1170px;
+  }
+  .link-lists li{
+    margin-top:0px!important
+  }
+
+
+
+
+
+
+
+
+
+About Us
+
+Brugg Lifting is a division of Brugg Group of Companies, headquartered in Switzerland. We manufacture and supply elevator ropes across the world.
+
+Find us on a map
+
+
+
+
+
+Links
+
+
+
+
+About Us
+Application Tips
+Accessories
+Blog
+Our Locations
+
+Legal And Privacy
+Sitemap
+
+
+
+
+
+
+
+
+
+
+
+Products
+
+
+Traction Ropes
+Compensation Ropes
+Governor Ropes
+
+
+
+
+
+
+
+Catalogue
+
+
+Elevator Ropes
+CTP
+
+
+
+
+
+
+
+
+
+
+
+© Copyright 2019 Brugg Lifting
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  var erpUrl = '';
+  var apiManagerUrl = '';
+
+  window.addEventListener('error', function(e) {
+    var errorText = [
+        e.message,
+        'URL: ' + e.filename,
+        'Line: ' + e.lineno + ', Column: ' + e.colno,
+        'Stack: ' + (e.error && e.error.stack || '(no stack trace)')
+    ].join('\n');
+
+    // Example: log errors as visual output into the host page.
+    // Note: you probably don’t want to show such errors to users, or
+    //       have the errors get indexed by Googlebot; however, it may
+    //       be a useful feature while actively debugging the page.
+    // var DOM_ID = 'rendering-debug-pre';
+    // if (!document.getElementById(DOM_ID)) {
+    //     var log = document.createElement('pre');
+    //     log.id = DOM_ID;
+    //     log.style.whiteSpace = 'pre-wrap';
+    //     log.textContent = errorText;
+    //     if (!document.body) document.body = document.createElement('body');
+    //     document.body.insertBefore(log, document.body.firstChild);
+    // } else {
+    //     document.getElementById(DOM_ID).textContent += '\n\n' + errorText;
+    // }
+
+    // Example: log the error to remote service.
+    // Note: you can log errors to a remote service, to understand
+    //       and monitor the types of errors encountered by regular users,
+    //       Googlebot, and other crawlers.
+
+
+    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+    xmlhttp.open("POST", "/api/ERP/webError/");
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send(JSON.stringify({ "data": errorText }));
+
+    // var client = new XMLHttpRequest();
+    // client.open('POST', 'https://example.com/logError');
+    // client.setRequestHeader('Content-Type', 'text/plain;charset=UTF-8');
+    // client.send(errorText);
+
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

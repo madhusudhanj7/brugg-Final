@@ -1,0 +1,617 @@
+{% extends "index.html" %}{% load staticfiles %}
+{% block brugcontent %}
+{% load i18n %}
+{% verbatim %}
+
+<style media="screen">
+ .checkmark{
+   position:absolute;
+   top:10px;
+   right:10px;
+   height: 20px;
+   width: 20px;
+   background-color: #fff;
+   border:1px solid #009de0;
+   border-radius: 50%;
+ }
+ input:checked ~ .checkmark   {
+   border-width:1;
+   border-color: #009de0;
+
+}
+ .zoom  {
+  transform: scale(1.1);
+  transition: all 200ms ease-in;
+}
+ .zoomout  {
+  transform: scale(1);
+  transition: all 200ms ease-in;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+input:checked ~ .checkmark:after {
+  display: block;
+}
+.checkmark:after {
+ 	content:'\2713';
+  position:'absolute';
+  top:-7px;
+  right:3px;
+  color:#009de0;
+}
+
+input[type=range][orient=vertical]
+{
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 20px;
+    height: 175px;
+    padding: 0 5px;
+}
+
+input[type="range"]::-moz-range-track {
+  background-color: #b2b2b2;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background-image: url('https://i.ya-webdesign.com/images/elevator-vector-doors-6.png');
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type="range"] {
+ border:2px solid #009de0;
+ background-color: #b2b2b2;
+
+}
+
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background-image: url('https://i.ya-webdesign.com/images/elevator-vector-doors-6.png');
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background-image: url('https://i.ya-webdesign.com/images/elevator-vector-doors-6.png');
+
+  cursor: pointer;
+}
+.smalldevice{
+  display:none;
+}
+.largedevice{
+  display:block;
+}
+.imagepading{
+  padding-top:322px;
+  height:1054px;
+}
+.slider{
+  top: 425px;
+  left: 270px;
+  height: 524px;
+}
+.spanTag{
+  color: #7f8284;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  width:60px;
+  border-bottom: 2px solid #009de0;
+  letter-spacing: .2em;
+  text-align: center;
+}
+.spanTag1{
+  color: #7f8284;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  letter-spacing: .2em;
+  width:60px;
+  text-align: center;
+}
+
+@media (max-width:768px) {
+  .smalldevice{
+    display:block;
+    margin-top:2em;
+  }
+  .imagepading{
+    padding-top:0;
+    height:600px;
+  }
+  .slider{
+    top: 425px;
+    left: 270px;
+    height: 524px;
+  }
+  .largedevice{
+    display:none;
+  }
+}
+
+</style>
+
+<div style="background-color:#f8f8f8">
+
+
+
+<div class="row" style="margin:0px;">
+    <div class="col-md-12" style="padding:0px">
+      <img src="/static/images/tesla/ropeSelectionBanner.jpg" alt="" style="width:100%;height:40vh">
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 smalldevice" >
+    <div class="  col-xs-6 text-center"  for="test1" style="padding:0 20px;" >
+      <div ng-class="home" style="width:100%;position:relative;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2);background-color: white;" ng-click="submitSelect(true)"  >
+        <div style="display:block;text-align:right;padding-right:5px">
+          <input class="" type="radio" id="test1" ng-model="pulleys" ng-value="true" ng-click="submitPulley()"  ng-checked="true" ng-hide="true">
+          <span class="checkmark" ></span>
+        </div>
+        <img class="img-ms-form" ng-click="pulleys = true" src="/static/images/tesla/pulley1.png" alt="" style="width:auto;height:10vh;margin-bottom: 2em;margin-top: 2em" >
+      </div>
+    </div>
+    <div class="col-xs-6 text-center"  for="test1" style="padding:0 20px;" >
+      <div  ng-class="home1" style="width:100%;position:relative;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);background-color: white;" ng-click="submitSelect(false)" >
+        <div style="display:block;text-align:right;padding-right:5px">
+          <input class="radio-custom" type="radio" id="test2" ng-model="pulleys" ng-value="false" ng-click="submitPulley()" ng-hide="true" >
+          <span class="checkmark" ></span>
+        </div>
+        <img class="img-ms-form" ng-click="pulleys = true" src="/static/images/tesla/pulley2.png" alt="" style="width:auto;height:10vh;margin-bottom: 2em;margin-top: 2em" >
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <img src="/static/images/tesla/pulley1.jpeg" class="img-ms-form">
+<div class="radio">
+  <label class="radio"><input type="radio" name="optradio-1" required>Option 1</label>
+</div> -->
+<div class="page-wrapper" >
+<!-- <div class="container"  style="padding-top:100px;"> -->
+
+
+  <div class="col-md-4 text-right" style="min-height:100vh;position:relative;">
+    <img class="imagepading" src="/static/images/tesla/bruggbuild.png" style="width:600px;left:110px;" alt="">
+    <div class="largedevice">
+      <div style="position: absolute;top: 450px;left: 130px;">
+        <span class="spanTag" >300 m </span><br />
+        <span class="spanTag1" >980 ft </span>
+      </div>
+      <div style="position: absolute;top: 600px;left: 130px;">
+        <span class="spanTag" >200 m </span><br />
+        <span class="spanTag1" >650 ft </span>
+      </div>
+      <div style="position: absolute;top: 750px;left: 130px;">
+        <span class="spanTag" >100 m </span><br />
+        <span class="spanTag1" >300 ft </span>
+      </div>
+      <div style="position: absolute;top: 850px;left: 130px;">
+        <span class="spanTag" >50 m </span><br />
+        <span class="spanTag1" >150 ft </span>
+      </div>
+      <input type="range" name="" value="" orient="vertical"  style="position: absolute;top: 430px;left: 270px;height: 522px;" ng-model="sliderVal">
+    </div>
+    <div class="smalldevice" >
+      <div style="position: absolute;top: 70px;left: 20px;">
+        <span class="spanTag" >300 m </span><br />
+        <span class="spanTag1" >980 ft </span>
+      </div>
+      <div style="position: absolute;top: 200px;left: 20px;">
+        <span class="spanTag" >200 m </span><br />
+        <span class="spanTag1" >650 ft </span>
+      </div>
+      <div style="position: absolute;top: 350px;left: 20px;">
+        <span class="spanTag" >100 m </span><br />
+        <span class="spanTag1" >300 ft </span>
+      </div>
+      <div style="position: absolute;top: 450px;left: 20px;">
+        <span class="spanTag" >50 m </span><br />
+        <span class="spanTag1" >150 ft </span>
+      </div>
+      <input type="range" name="" value="" orient="vertical" style="position: absolute;top: 80px;left: 150px;height: 430px;" ng-model="sliderVal">
+    </div>
+  </div>
+
+
+  <div class="col-md-3  text-center largedevice" style="min-height:100vh;background-color:#f8f8f8" >
+    <div class="container" style="margin-top:140px">
+
+      <div class=" col-md-4 hidden-xs" >
+        <div class="col-md-6 col-sm-6   text-center"  for="test1" style="padding:0 10px;" >
+          <div ng-class="home" style="width:100%;position:relative;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2);background-color: white;" ng-click="submitSelect(true)">
+            <div style="display:block;text-align:right;padding-right:5px;">
+              <input class="" type="radio" id="test1" ng-model="pulleys" ng-value="true" ng-click="submitPulley()"  ng-checked="true" ng-hide="true">
+              <span class="checkmark" ></span>
+            </div>
+            <img class="img-ms-form" ng-click="pulleys = true" src="/static/images/tesla/pulley1.png" alt="" style="width:auto;height:10vh;margin-bottom: 2em;margin-top: 2em" >
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6   text-center"  for="test1" style="padding:0 10px;" >
+          <div ng-class="home1" style="width:100%;position:relative;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);background-color: white;" ng-click="submitSelect(false)">
+            <div style="display:block;text-align:right;padding-right:5px">
+              <input class="radio-custom" type="radio" id="test2" ng-model="pulleys" ng-value="false" ng-click="submitPulley()" ng-hide="true" >
+              <span class="checkmark" ></span>
+            </div>
+           <img class="img-ms-form" ng-click="pulleys = true" src="/static/images/tesla/pulley2.png" alt="" style="width:auto;height:10vh;margin-bottom: 2em;margin-top: 2em" >
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- <div class="col-md-6 col-sm-6  col-xs-12 text-center"  for="test1" style="padding:10px;" >
+          <img class="img-ms-form" ng-click="pulleys = true" src="/static/images/tesla/pulley1.png" alt="" style="width:auto;height:10vh" ><br/>
+          <input type="radio" id="test1" ng-model="pulleys" ng-value="true" ng-click="submitPulley()" style="display :inline-block;text-align: center" ng-checked="true" ><br/>
+
+        </div> -->
+        <!-- <div class="col-md-6 col-sm-6 visibel-xs col-xs-12 text-center" for="test1" style="padding:10px;" >
+          <img src="/static/images/tesla/pulley2.png" ng-click="pulleys = false" alt="" style="width:auto;height:10vh" ><br/>
+          <input type="radio" id="test2" ng-model="pulleys" ng-value="false" ng-click="submitPulley()" style="display :inline-block;text-align: center"><br/>
+
+        </div> -->
+
+
+    <div class="">
+
+    <div ng-if="pulleys" class="largedevice">
+
+      <div class="row" ng-if="sliderVal<=5">
+        <div class="col-md-10  text-left" style="margin-top:2em;font-size:16px;">
+          <span>
+            {% endverbatim %} {% trans 'calculatorDescription' %}{% verbatim %}
+            <!-- To choose the appropriate rope for your application, drag the elevator car to the desired height.
+            Click on the selected rope for further details.This rope selection provides a guideline only and is not meant to replace an exact calculation. -->
+          </span>
+        </div>
+      </div>
+      <div class="" style="padding-top:{{dataPadding}}">
+
+        <div class="row" ng-repeat="config in configs" style="margin-bottom:10px;cursor:pointer" ng-if="sliderVal>config.min && sliderVal<config.max" ng-click="changeUrl(config.url)">
+
+          <div class="col-md-2">
+            <div style="border:solid 1px #eeeeee;height:60px;width:60px;background-image:url({{config.image}}); background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover;">
+
+          </div>
+        </div>
+        <div class="col-md-2" style="color:#686868">
+          <div style="border:solid 1px #eeeeee;height:60px;width:60px;padding-top:15px;background:{{config.color}}" class="text-center">
+            {{config.productCode}}
+          </div>
+        </div>
+        <div class="col-md-2" style="color:#686868">
+          <div style="border:solid 1px #eeeeee;height:60px;width:70px;padding-top:0px;background:{{config.color}}" class="text-center">
+            <span>{{config.calculation}}</span> <br>
+            <span style="border-top:2px solid #686868;padding-top: 4px;">{{config.caldeno}}</span>
+          </div>
+        </div>
+        <div class="col-md-2" style="color:#686868">
+          <div style="border:solid 1px #eeeeee;height:60px;width:60px;padding-top:15px;background:{{config.color}}" class="text-center">
+            {{config.val1}}
+          </div>
+        </div>
+        <div class="col-md-2" style="color:#686868">
+          <div style="border:solid 1px #eeeeee;height:60px;width:60px;padding-top:15px;background:{{config.color}}" class="text-center">
+            {{config.val2}}
+          </div>
+        </div>
+      </div>
+      <div class='row' ng-if="sliderVal>5" style="line-height: 20px;">
+        <div class="col-md-2" style="">
+        </div>
+        <div class="col-md-2" style="">
+          <div style="" class="text-center">
+            Type of Rope
+          </div>
+        </div>
+        <div class="col-md-2" style="">
+          <div style="" class="text-center">
+            E-Modul
+            <span style="border-bottom:1px solid #a2a2a2"> N/mm<sup>2</sup></span><br>x10<sup>6</sup>psi
+          </div>
+        </div>
+        <div class="col-md-2" style="">
+          <div style="" class="text-center">
+            elastic elongation %
+          </div>
+        </div>
+        <div class="col-md-2" style="">
+          <div style="" class="text-center">
+            permanent elongation %
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+    <div ng-if="!pulleys" class="largedevice">
+
+      <div class="row" ng-if="sliderVal<=5">
+        <div class="col-md-10 text-left" style="margin-top:2em;font-size:16px;">
+          <span>
+              {% endverbatim %} {% trans 'calculatorDescription' %}{% verbatim %}
+            <!-- To choose the appropriate rope for your application, drag the elevator car to the desired height.
+            Click on the selected rope for further details.This rope selection provides a guideline only and is not meant to replace an exact calculation.aaaaaaaaaaaa -->
+        </div>
+      </div>
+      <div class="" style="padding-top:{{dataPadding}}">
+
+        <div class="row" ng-repeat="config in doublepully" style="margin-bottom:10px;cursor:pointer" ng-if="sliderVal>config.min && sliderVal<config.max" ng-click="changeUrl(config.url)">
+
+          <div class="col-md-2">
+            <div style="border:solid 1px #eeeeee;height:60px;width:60px;background-image:url({{config.image}}); background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover;">
+
+          </div>
+        </div>
+        <div class="col-md-2" style="color:#686868">
+          <div style="border:solid 1px #eeeeee;height:60px;width:60px;padding-top:15px;background:{{config.color}}" class="text-center">
+            {{config.productCode}}
+          </div>
+        </div>
+        <div class="col-md-2" style="color:#686868">
+          <div style="border:solid 1px #eeeeee;height:60px;width:70px;padding-top:0px;background:{{config.color}}" class="text-center">
+            <span>{{config.calculation}}</span> <br>
+            <span style="border-top:2px solid #686868;padding-top: 4px;">{{config.caldeno}}</span>
+          </div>
+        </div>
+        <div class="col-md-2" style="color:#686868">
+          <div style="border:solid 1px #eeeeee;height:60px;width:60px;padding-top:15px;background:{{config.color}}" class="text-center">
+            {{config.val1}}
+          </div>
+        </div>
+        <div class="col-md-2" style="color:#686868">
+          <div style="border:solid 1px #eeeeee;height:60px;width:60px;padding-top:15px;background:{{config.color}}" class="text-center">
+            {{config.val2}}
+          </div>
+        </div>
+      </div>
+      <div class='row' ng-if="sliderVal>5" style="line-height: 20px;">
+        <div class="col-md-2" style="">
+        </div>
+        <div class="col-md-2" style="">
+          <div style="" class="text-center">
+            Type of Rope
+          </div>
+        </div>
+        <div class="col-md-2" style="">
+          <div style="" class="text-center">
+            E-Modul
+            <span style="border-bottom:1px solid #a2a2a2"> N/mm<sup>2</sup></span><br>x10<sup>6</sup>psi
+          </div>
+        </div>
+        <div class="col-md-2" style="">
+          <div style="" class="text-center">
+            elastic elongation %
+          </div>
+        </div>
+        <div class="col-md-2" style="">
+          <div style="" class="text-center">
+            permanent elongation %
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </div>
+
+
+  <div class="row">
+
+  <div class=' smalldevice'>
+    <div ng-if="pulleys">
+
+      <div class="row" ng-if="sliderVal<=5" style="">
+        <div class="  text-left" style="margin-top:2em;font-size:16px;margin:3em">
+          <span>
+              {% endverbatim %} {% trans 'calculatorDescription' %}{% verbatim %}
+            <!-- To choose the appropriate rope for your application, drag the elevator car to the desired height.
+            Click on the selected rope for further details.This rope selection provides a guideline only and is not meant to replace an exact calculation. -->
+          </span>
+        </div>
+      </div>
+      <div class=" " style="padding-top:0;padding-left: 2.5em;">
+
+        <div class="row" ng-repeat="config in configs" style="margin-bottom:10px;cursor:pointer,padding-left: 1.5em;" ng-if="sliderVal>config.min && sliderVal<config.max" ng-click="changeUrl(config.url)">
+
+          <div class="col-xs-2">
+            <div style="border:solid 1px #eeeeee;height:60px;width:60px;background-image:url({{config.image}}); background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover;">
+
+          </div>
+        </div>
+        <div class="col-xs-2" style="color:#686868">
+          <div style="border:solid 1px #eeeeee;height:60px;width:60px;padding-top:15px;background:{{config.color}}" class="text-center">
+            {{config.productCode}}
+          </div>
+        </div>
+        <div class="col-xs-2" style="color:#686868">
+          <div style="border:solid 1px #eeeeee;height:60px;width:70px;padding-top:0px;background:{{config.color}}" class="text-center">
+            <span>{{config.calculation}}</span> <br>
+            <span style="border-top:2px solid #686868;padding-top: 4px;">{{config.caldeno}}</span>
+          </div>
+        </div>
+        <div class="col-xs-2" style="color:#686868">
+          <div style="border:solid 1px #eeeeee;height:60px;width:60px;padding-top:15px;background:{{config.color}}" class="text-center">
+            {{config.val1}}
+          </div>
+        </div>
+        <div class="col-xs-2" style="color:#686868">
+          <div style="border:solid 1px #eeeeee;height:60px;width:60px;padding-top:15px;background:{{config.color}}" class="text-center">
+            {{config.val2}}
+          </div>
+        </div>
+      </div>
+      <div class='row' ng-if="sliderVal>5" style="line-height: 20px;">
+        <div class="col-xs-2" style="">
+          <div style="" class="text-center">
+          </div>
+        </div>
+        <div class="col-xs-2" style="">
+          <div style="" class="text-center">
+            Type of Rope
+
+          </div>
+        </div>
+        <div class="col-xs-2" style="">
+          <div style="" class="text-center">
+            E-Modul
+            <span style="border-bottom:1px solid #a2a2a2"> N/mm<sup>2</sup></span><br>x10<sup>6</sup>psi
+          </div>
+        </div>
+        <div class="col-xs-2" style="">
+          <div style="" class="text-center">
+            elastic elongation %
+          </div>
+        </div>
+        <div class="col-xs-2" style="">
+          <div style="" class="text-center">
+            permanent elongation %
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div ng-if="!pulleys" >
+
+      <div class="row" ng-if="sliderVal<=5">
+        <div class="col-xs-12 text-left" style="margin-top:2em;font-size:16px;">
+          <span>
+              {% endverbatim %} {% trans 'calculatorDescription' %}{% verbatim %} 
+            <!-- To choose the appropriate rope for your application, drag the elevator car to the desired height.
+            Click on the selected rope for further details.This rope selection provides a guideline only and is not meant to replace an exact calculation.aaaaaaaaaaaa -->
+          </div>
+        </div>
+        <div class="" style="padding-top:0;padding-left: 1.5em;">
+
+          <div class="row" ng-repeat="config in configs" style="margin-bottom:10px;cursor:pointer" ng-if="sliderVal>config.min && sliderVal<config.max" ng-click="changeUrl(config.url)">
+
+            <div class="col-xs-2">
+              <div style="border:solid 1px #eeeeee;height:60px;width:60px;background-image:url({{config.image}}); background-position: center; /* Center the image */
+              background-repeat: no-repeat; /* Do not repeat the image */
+              background-size: cover;">
+
+            </div>
+          </div>
+          <div class="col-xs-2" style="color:#686868">
+            <div style="border:solid 1px #eeeeee;height:60px;width:60px;padding-top:15px;background:{{config.color}}" class="text-center">
+              {{config.productCode}}
+            </div>
+          </div>
+          <div class="col-xs-2" style="color:#686868">
+            <div style="border:solid 1px #eeeeee;height:60px;width:70px;padding-top:0px;background:{{config.color}}" class="text-center">
+              <span>{{config.calculation}}</span> <br>
+              <span style="border-top:2px solid #686868;padding-top: 4px;">{{config.caldeno}}</span>
+            </div>
+          </div>
+          <div class="col-xs-2" style="color:#686868">
+            <div style="border:solid 1px #eeeeee;height:60px;width:60px;padding-top:15px;background:{{config.color}}" class="text-center">
+              {{config.val1}}
+            </div>
+          </div>
+          <div class="col-xs-2" style="color:#686868">
+            <div style="border:solid 1px #eeeeee;height:60px;width:60px;padding-top:15px;background:{{config.color}}" class="text-center">
+              {{config.val2}}
+            </div>
+          </div>
+        </div>
+        <div class='row' ng-if="sliderVal>5" style="line-height: 20px;">
+          <div class="col-xs-2" style="">
+            <div style="" class="text-center">
+            </div>
+          </div>
+          <div class="col-xs-2" style="">
+            <div style="" class="text-center">
+              Type of Rope
+
+            </div>
+          </div>
+          <div class="col-xs-2" style="">
+            <div style="" class="text-center">
+              E-Modul
+              <span style="border-bottom:1px solid #a2a2a2"> N/mm<sup>2</sup></span><br>x10<sup>6</sup>psi
+            </div>
+          </div>
+          <div class="col-xs-2" style="">
+            <div style="" class="text-center">
+              elastic elongation %
+            </div>
+          </div>
+          <div class="col-xs-2" style="">
+            <div style="" class="text-center">
+              permanent elongation %
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+  </div>
+  </div>
+
+
+
+
+  <div class="col-md-3 col-md-offset-1 " style="background:#f3f3f3;margin-top:130px;margin-bottom:100px;background-color:#fff">
+    <div class="col-md-12 " style="padding-top:2em">
+      <canvas id="myChart" width="100%" height="65"></canvas>
+    </div>
+    <div class="col-md-12" style="padding-top:20px;">
+      <canvas id="myChart2" width="100%" height="65"></canvas>
+    </div>
+    <div class="col-md-12" style="padding-top:20px;">
+      <canvas id="myChart3" width="100%" height="65"></canvas>
+    </div>
+  </div>
+
+
+</div><!-- /.page-wrapper -->
+
+
+</div>
+<a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-long-arrow-up"></i></a>
+
+
+</div>
+
+{% endverbatim %}
+<script type="text/javascript">
+
+  // $('.img-ms-form').click(function(){
+  //   $(this).next('div.radio').find('input[type="radio"]').prop('checked', true);
+  // });
+</script>
+
+{% endblock %}
+
+
+
+
+{% block brugjs %}
+{% endblock %}

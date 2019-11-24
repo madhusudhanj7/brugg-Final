@@ -1,0 +1,27 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#" ng-app="app" ng-controller="main" id="main">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- stock css libraries -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" charset="utf-8">
+
+    <!-- <link rel="stylesheet" href="{% static 'css/custom/base.css' %}" charset="utf-8"> -->
+
+    {% block specific_head %}{% endblock %}
+    {% block specific_css %}{% endblock %}
+  </head>
+  <body id="page-top" class="index" style="overflow:hidden">
+      {% block header %}{% endblock %}
+      {% block content %}{% endblock %}
+      {% block footer %}{% endblock %}
+    <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+
+    {% block specific_js %}{% endblock %}
+  </body>
+</html>

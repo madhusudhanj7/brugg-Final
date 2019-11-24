@@ -1,0 +1,695 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-02 21:08+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/header.html:13
+msgid "homeId"
+msgstr "Home"
+
+#: templates/header.html:13
+msgid "serviceId"
+msgstr "Services"
+
+#: templates/header.html:13
+msgid "nameId"
+msgstr "Brugg Drahtseil AG, Wydenstrasse 36 CH-5242 Birr, 瑞士"
+
+
+#: templates/header.html:13
+msgid "applicationId"
+msgstr "Application Tips"
+
+#: templates/header.html:13
+msgid "referenceId"
+msgstr "Reference"
+
+#: templates/header.html:13
+msgid "productId"
+msgstr "Products"
+
+#: templates/header.html:13
+msgid "companyId"
+msgstr "公司"
+
+#: templates/header.html:13
+msgid "elevatorId"
+msgstr "电梯绳"
+
+#: templates/header.html:13
+msgid "blogId"
+msgstr "Blogs"
+
+#: templates/header.html:13
+msgid "ropeselectionId"
+msgstr "电梯 选择"
+
+#: templates/header.html:13
+msgid "ropecomparisonId"
+msgstr "Rope Comparison"
+
+#: templates/header.html:13
+msgid "tractionropesId"
+msgstr "牵引 绳"
+
+#: templates/header.html:13
+msgid "compensationropesId"
+msgstr "补偿 绳索"
+
+#: templates/header.html:13
+msgid "governarropesId"
+msgstr "限 速 器 钢丝 绳"
+
+#: templates/header.html:13
+msgid "wireId"
+msgstr "Wire Ropes & Lifting Medium"
+
+#: templates/header.html:13
+msgid "architecturalId"
+msgstr "Architectural Ropes"
+
+#: templates/about.html:13
+msgid "aboutusId"
+msgstr "关于 我们"
+
+
+#: templates/about.html:13
+msgid "aboutA"
+msgstr "我们是谁"
+
+#: templates/about.html:13
+msgid "aboutB"
+msgstr "电梯 绳技 的 带头"
+
+#: templates/about.html:13
+msgid "aboutC"
+msgstr "我们在Brugg Lifting开发和制造技术先进的电梯绳索。作为技术领先者，我们为客户提供创新产品。 "
+
+#: templates/about.html:13
+msgid "aboutD"
+msgstr "我们对细节的关注确保我们在制造过程的每个层面都达到完美，直到绳索的交付等。 "
+
+#: templates/about.html:13
+msgid "aboutE"
+msgstr "我们相信去'额外米'"
+
+#: templates/about.html:13
+msgid "aboutF"
+msgstr "我们的任务"
+
+#: templates/about.html:13
+msgid "aboutG"
+msgstr "上升"
+
+#: templates/about.html:13
+msgid "aboutH"
+msgstr " 随着 世界 各地 的城市 越来越 高， 我司 配备 技术革新 世界 上 一些 最高 的。凭借我们的创新产品，如涂层绳索和皮带，我们确保我们的产品在高速和无反弹时提供最佳性能"
+
+#: templates/about.html:13
+msgid "aboutI"
+msgstr "没有人像我们一样了解绳索。而且，凭借我们遍布全球的优秀客户服务团队，我们提供所需的专业知识，使每个项目都取得成功。"
+
+#: templates/about.html:13
+msgid "aboutJ"
+msgstr "我司 的 历史"
+
+#: templates/about.html:13
+msgid "aboutK"
+msgstr "一个人。一个愿景。上升"
+
+#: templates/about.html:13
+msgid "aboutL"
+msgstr "Brugg Lifting 是电梯绳索生产领域的全球领先组织。我们的历史可以追溯到一百多年前，我们的创始人Gottlieb Suhner。 1896年5月，Gottlieb Suhner在瑞士布鲁格开设了一家电缆厂，奠定了我们公司的基础。 "
+
+#: templates/about.html:13
+msgid "aboutM"
+msgstr "1910年，布鲁格成为瑞士第一家生产山地缆车绳索的公司。 Kabelwerke Brugg早在1985年就进入了全球市场，并在休斯敦设立了分公司。通过收购位于Shaffhausen的Schweizerische Seilindustrie AG，同年扩大了生产的钢丝绳段。"
+
+#: templates/work.html:13
+msgid "workA"
+msgstr "在今天的世界中，如果有一个常数，那就是变化。在这个快节奏的世界中，布鲁格提升高度重视人类利用技术提供洞察力的能力，从而产生重大影响。在这个不断变化的环境中，我们需要有才能的人来帮助我们的客户了解技术和创新的可能性。我们需要人们充满激情，好奇心和需要有所作为的人。 "
+
+#: templates/work.html:13
+msgid "workB"
+msgstr "在Brugg Lifting，我们为您提供加入我们时的卓越体验。我们确保您与我们在一起的时间，无论是长期还是短期，都可以丰富并为您增添价值。 "
+
+#: templates/work.html:13
+msgid "workC"
+msgstr "在Brugg Lifting，我们每个人都努力在我们所做的每一件事情上都做出额外的“米”。无论是我们接近客户还是彼此的方式。我们为员工创造机会，改变他们的生活和周围的人。我们相信这有助于我们为世界提供技术发展和无可挑剔的服务。 "
+
+#: templates/work.html:13
+msgid "workD"
+msgstr "在这里，在Brugg Lifting中，您会发现人们投资于利用技术和创新来创造对人们生活的影响。 "
+
+#: templates/work.html:13
+msgid "workE"
+msgstr "我们邀请您探索BRUGG LIFTING的世界 "
+
+#: templates/work.html:13
+msgid "workF"
+msgstr "博客"
+
+#: templates/work.html:13
+msgid "workG"
+msgstr "让世界上升吧 "
+
+#: templates/work.html:13
+msgid "workH"
+msgstr "跟我们工作 "
+
+
+
+#: templates/index.html:13
+msgid "indexA"
+msgstr "了解 我们"
+
+#: templates/index.html:13
+msgid "indexB"
+msgstr "欢迎  光临 到 我们 的 "
+
+#: templates/index.html:13
+msgid "indexB1"
+msgstr " 工业企业  "
+
+#: templates/index.html:13
+msgid "indexC"
+msgstr "Brugg Lifting 是 电梯 绳技 的 带头  "
+
+#: templates/index.html:13
+msgid "indexD"
+msgstr "我司铭言：上升"
+
+#: templates/index.html:13
+msgid "indexE"
+msgstr "每天 不负众望。我司 产制 电梯绳 使用 新锐技 和 创新 对 高效 ，速度 和 安全。 随着 世界 各地 的城市 越来越 高， 我司 配备 技术革新 世界 上 一些 最高 的。"
+
+#: templates/index.html:13
+msgid "indexF"
+msgstr "我司 在 欧洲， 北美 和 亚洲 拥有 三 个 产区    基地 和 六 配送 中心。 "
+
+#: templates/index.html:13
+msgid "indexG"
+msgstr "我们 的 名言 - 上升 - 是 我们 生产 的 每 一 见 的 基础 "
+
+#: templates/index.html:13
+msgid "indexH"
+msgstr "以 我司技艺 精湛 员工， 我司提供 密切注视 细部， 联系， 和 专门 知识 带来 达到 我们 铭言。 "
+
+#: templates/index.html:13
+msgid "indexI"
+msgstr "我司 提供 你 电梯 绳索技 在 最高 价值标准 "
+
+#: templates/index.html:13
+msgid "indexJ"
+msgstr "什么 使 我司 上升 "
+
+#: templates/index.html:13
+msgid "indexK"
+msgstr "制品 "
+
+#: templates/index.html:13
+msgid "indexL"
+msgstr "我司 电梯 绳索 在 制造 和 建 实用 先进 技术 和 革新 从 严格 质量 管理 和 质检 步骤。"
+
+#: templates/index.html:13
+msgid "Work CultureL"
+msgstr "工作 氛围 "
+
+#: templates/index.html:13
+msgid "indexM"
+msgstr "我司 带来 人 同 以 多样 以 根底 到 创造 混阔 环境 "
+
+#: templates/index.html:13
+msgid "indexN"
+msgstr "革新 "
+
+#: templates/index.html:13
+msgid "indexO"
+msgstr "我司 在 带头 制品 CTP® 绳 的 世界第一技 在 和 其 效膟 和 作用。"
+
+#: templates/index.html:13
+msgid "indexP"
+msgstr "为什么 栓则 我司 "
+
+#: templates/index.html:13
+msgid "indexQ"
+msgstr "我司 在 十 多年 里 革命 电梯 绳技。"
+
+#: templates/index.html:13
+msgid "indexR"
+msgstr "安全无虞 "
+
+
+#: templates/index.html:13
+msgid "indexS"
+msgstr "我司 电梯 绳索 是 特制 替 安全 无虞 运输 在    非常 快速 速度。我司 电梯 绳索 在 已知 的 替 高效 和 耐久力。 "
+
+#: templates/index.html:13
+msgid "indexT"
+msgstr "送达 巧妙 的 事"
+
+#: templates/index.html:13
+msgid "indexU"
+msgstr "我司 聘用 技艺精湛 员工 到 帮助 你 选 对 电梯绳索 替 你 大楼。"
+
+#: templates/index.html:13
+msgid "indexV"
+msgstr "成立 于 "
+
+#: templates/index.html:13
+msgid "indexW"
+msgstr "我司 在 电梯 绳索  产制 领域 的 100 多年。  "
+
+#: templates/index.html:13
+msgid "indexX"
+msgstr "联系 我司 "
+
+#: templates/index.html:13
+msgid "indexY"
+msgstr "Brugg Lifting 配备 联系 答案 和 巧妙， 咨询业， 提供概念 和 专门知识 - 总是 要 加倍 努力 的 我司 客户 。 "
+
+#: templates/index.html:13
+msgid "indexZ"
+msgstr "关于我们 "
+
+#: templates/footer.html:13
+msgid "footerA"
+msgstr "关于我们"
+
+#: templates/footer.html:13
+msgid "footerB"
+msgstr "Brugg Lifting 是 一个 分支 Brugg Group 的 公司，其 公司本部 是 在 瑞士。我司 出产 和 供应 电梯 绳索 满世界。  "
+
+#: templates/footer.html:13
+msgid "footerC"
+msgstr "在 世界地图 找 我司 "
+
+#: templates/footer.html:13
+msgid "footerD"
+msgstr "制品 "
+
+#: templates/footer.html:13
+msgid "footerE"
+msgstr "牵引 绳 "
+
+#: templates/footer.html:13
+msgid "footerF"
+msgstr "补偿 绳索 "
+
+#: templates/footer.html:13
+msgid "footerG"
+msgstr "限 速 器 钢丝 绳 "
+
+#: templates/footer.html:13
+msgid "footerH"
+msgstr "友情链接 "
+
+#: templates/footer.html:13
+msgid "footerJ"
+msgstr "应用提示 "
+
+#: templates/footer.html:13
+msgid "footerK"
+msgstr "配件 "
+
+#: templates/footer.html:13
+msgid "footerL"
+msgstr "博客 "
+
+#: templates/footer.html:13
+msgid "footerM"
+msgstr "我司 处所 "
+
+#: templates/footer.html:13
+msgid "footerN"
+msgstr "职业 生涯 "
+
+#: templates/footer.html:13
+msgid "footerO"
+msgstr "法律 和 隐私政策 "
+
+#: templates/footer.html:13
+msgid "footerP"
+msgstr "网站 图"
+
+#: templates/footer.html:13
+msgid "footerQ"
+msgstr "版权 2019 Brugg Lifting "
+
+#: templates/footer.html:13
+msgid "footerR"
+msgstr "目录"
+
+#: templates/footer.html:13
+msgid "footerS"
+msgstr "电梯绳"
+
+#: templates/footer.html:13
+msgid "footerT"
+msgstr "CTP"
+
+#: templates/footer.html:13
+msgid "footerU"
+msgstr "产品信息"
+
+#: templates/footer.html:13
+msgid "footerV"
+msgstr "技术信息"
+
+#: templates/footer.html:13
+msgid "footerW"
+msgstr "应用"
+
+#: templates/header.html:13
+msgid "searchId"
+msgstr "搜寻"
+
+
+#: templates/header.html:13
+msgid "careesId"
+msgstr "Careers"
+
+#: templates/header.html:13
+msgid "contactusId"
+msgstr "Contact US"
+
+#: templates/header.html:13
+msgid "prevId"
+msgstr "Previous"
+
+#: templates/header.html:13
+msgid "nextId"
+msgstr "Next"
+
+#: templates/header.html:13
+msgid "blogupdateId"
+msgstr "Get Regular Blog Updates"
+
+#: templates/header.html:13
+msgid "sendId"
+msgstr "Send Updates!"
+
+#: templates/homepage.index.html:13
+msgid "title1Id"
+msgstr "我们 帮助 你 提升 你"
+
+#: templates/homepage.index.html:13
+msgid "title2Id"
+msgstr "我们 以 创新 为 动力"
+
+#: templates/homepage.index.html:13
+msgid "discoverId"
+msgstr "发现 更多"
+
+#: templates/homepage.index.html:13
+msgid "contentId"
+msgstr "Get to know us"
+
+#: templates/homepage.index.html:13
+msgid "content1Id"
+msgstr "Welcome to our"
+
+#: templates/homepage.index.html:13
+msgid "content2Id"
+msgstr "Industrial Business"
+
+#: templates/header.html:13
+msgid "postId"
+msgstr "Most Recent Posts"
+
+#: templates/career.html:13
+msgid "storyId"
+msgstr
+"Born from the success of President Obama’s 2008 campaign trail, BRUGG LIFTING was founded to enable the world to turn data into action.\n "
+" \n"
+" Over the past seven years, BRUGG LIFTING has evolved far beyond simple website A/B testing. We recently launched the world’s leading Experimentation Platform to enable experimentation everywhere: across the entire customer experience, on any channel, for any device, in any application.\n"
+" \n"
+"BRUGG LIFTING allows executives, marketers, product managers, and developers to be brave and make better business decisions."
+"\n    "
+"\n    "
+
+#: templates/career.html:13
+msgid "workId"
+msgstr "Work @ BRUGG LIFTING"
+
+#: templates/career.html:13
+msgid "Why you'll love it here"
+msgstr "We’re building a team of inspired, smart, and driven individuals from all sorts of backgrounds. With countless opportunities for growth and mentorship, we strive to help each employee carve out the path that’s right for them."
+
+#: templates/loction.html:13
+msgid "address1Id"
+msgstr "瑞士"
+
+#: templates/loction.html:13
+msgid "address2Id"
+msgstr "瑞士"
+
+#: templates/loction.html:13
+msgid "address3Id"
+msgstr "美国"
+
+#: templates/loction.html:13
+msgid "address4Id"
+msgstr "迪拜 阿拉伯联合酋长国"
+
+#: templates/loction.html:13
+msgid "address5Id"
+msgstr "中国"
+
+#: templates/loction.html:13
+msgid "address6Id"
+msgstr "英国"
+
+#: templates/loction.html:13
+msgid "address7Id"
+msgstr "意大利"
+
+
+#: templates/loction.html:13
+msgid "address8Id"
+msgstr "波兰"
+
+#: templates/loction.html:13
+msgid "address9Id"
+msgstr "德国"
+
+#: templates/loction.html:13
+msgid "address10Id"
+msgstr "美国"
+
+#: templates/loction.html:13
+msgid "address11Id"
+msgstr "美国"
+
+#: templates/loction.html:13
+msgid "address12Id"
+msgstr "加拿大"
+
+
+#: templates/loction.html:13
+msgid "address13Id"
+msgstr "美国"
+
+#: templates/loction.html:13
+msgid "address14Id"
+msgstr "美国"
+
+#: templates/loction.html:13
+msgid "address15Id"
+msgstr "加拿大"
+
+#: templates/loction.html:13
+msgid "address16Id"
+msgstr "美国"
+
+#: templates/loction.html:13
+msgid "address17Id"
+msgstr "科威特城"
+
+#: templates/loction.html:13
+msgid "address18Id"
+msgstr "新加坡"
+
+#: templates/loction.html:13
+msgid "address19Id"
+msgstr "福田 深圳"
+
+#: templates/loction.html:13
+msgid "address20Id"
+msgstr "香港"
+
+#: templates/loction.html:13
+msgid "address21Id"
+msgstr "首尔  韩国"
+
+#: templates/loction.html:13
+msgid "address22Id"
+msgstr "泰国"
+
+
+#: templates/loction.html:13
+msgid "address23Id"
+msgstr "菲侓滨"
+
+#: templates/loction.html:13
+msgid "address24Id"
+msgstr "澳大利亚"
+
+#: templates/loction.html:13
+msgid "l1Id"
+msgstr "Brugg Lifting 环游世界"
+
+#: templates/loction.html:13
+msgid "l2Id"
+msgstr "我司 在 欧洲， 北美 和 亚洲 拥有 三 个 产区    基地 和 六 配送 中心。早在1985年，我们就已经成为一家全球性公司。我们的结构由生产区域和销售区域组成。他们共同监督我们的业务战略，计划和优先事项."
+
+#: templates/loction.html:13
+msgid "l3Id"
+msgstr "这种结构经过精简，有助于我们在全球范围内提供卓越的客户服务。通过我们的办事处，我们可以到达世界各地的一些发展最快的国家。我们的电梯绳索已被用于从中国到北美的建筑物中。在全球业务中，我们扩大了业务范围和经验。"
+
+
+#: templates/rope-selection.html:13
+msgid "calculatorDescription"
+msgstr "要为您的应用选择合适的绳索，请将电梯轿厢拖动到所需的高度。 单击选定的绳索以获取更多详细信息。此绳索选择仅提供指导，并不意味着替代精确的计算。"
+
+
+#: templates/innovation.html:13
+msgid "coatedProduct"
+msgstr "涂层产品"
+
+#: templates/innovation.html:13
+msgid "productH1"
+msgstr "Brugg Lifting的电梯绳索。"
+
+#: templates/innovation.html:13
+msgid "productH2"
+msgstr "CTP®涂层传动产品"
+
+#: templates/innovation.html:13
+msgid "productD2"
+msgstr "CTP®是世界首创，结合了技术创新的最高要求。 在功能和效率方面，这条高端绳索无与伦比。"
+
+#: templates/innovation.html:13
+msgid "productDeT1"
+msgstr "降低总成本达40％"
+
+#: templates/innovation.html:13
+msgid "productDeD1"
+msgstr "较小的绳索直径和较小的驱动力可以减少资金和运营成本。"
+
+#: templates/innovation.html:13
+msgid "productDeT2"
+msgstr "降低多达100％的维护成本"
+
+#: templates/innovation.html:13
+msgid "productDeD2"
+msgstr "CTP®是一个独立的系统，不需要润滑也不需要维护。"
+
+#: templates/innovation.html:13
+msgid "productDeT3"
+msgstr "享受更好的旅行舒适度"
+
+#: templates/innovation.html:13
+msgid "productDeD3"
+msgstr "聚合物涂层消除或强烈吸收了振动，这大大有助于平稳运行。"
+
+
+#: templates/innovation.html:13
+msgid "productDeT4"
+msgstr "使用寿命增加三倍"
+
+#: templates/innovation.html:13
+msgid "productDeD4"
+msgstr "由于牵引绳轮和电梯绳索不易磨损，因此减少了绳索更换的频率和相关成本。"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapT"
+msgstr "网站 图"
+
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH1"
+msgstr "关于我们"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH2"
+msgstr "职业 生涯"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH3"
+msgstr "我司 处所"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH4"
+msgstr "参考文献"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH5"
+msgstr "应用提示"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH6"
+msgstr "电梯绳"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH7"
+msgstr "牵引 绳"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH8"
+msgstr "补偿 绳索"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH9"
+msgstr "限 速 器 钢丝 绳"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH10"
+msgstr "新"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH11"
+msgstr "牵引 绳"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH12"
+msgstr "补偿 绳索"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH13"
+msgstr "限 速 器 钢丝 绳"
+
+
+#: templates/app.sitemap.html:13
+msgid "index1"
+msgstr "多年的创新"
+
+#: templates/app.sitemap.html:13
+msgid "index2"
+msgstr "业务部门"
+
+#: templates/app.sitemap.html:13
+msgid "index3"
+msgstr "公司"
+
+#: templates/app.sitemap.html:13
+msgid "index4"
+msgstr "国家"
+
+#: templates/app.sitemap.html:13
+msgid "index5"
+msgstr "客户"

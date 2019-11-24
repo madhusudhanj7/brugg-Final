@@ -1,0 +1,68 @@
+<!--
+<div class="container-fluid" style="padding-top:50px;padding:0px;background:#f6f6f6">
+  <div class="row" style="margin:0px">
+    <div class="col-md-12" style="padding:0px">
+      <img src="/static/images/inner-banner-1-1.jpg" alt="" style="width:100%">
+    </div>
+  </div>
+</div>
+  <div class="container" >
+  <div class="row" style="padding-top:0;padding-bottom:30px;" >
+    <div class=" col-md-4 col-sm-12 text-center newPage1"  ng-repeat = "s in products track by $index" style="margin:0;padding:0" >
+      <div class="row" style="margin-top:30px" >
+        <div class="newPageChild1" style="padding: 39.5px 0;width:370px;">
+        <i class="fa fa-industry fa-2x"></i>
+        <h3 style="font-weight: 600;">{{s.name}}</h3>
+      </div>
+      <div class=" newPageChild2" style="min-height:300px;margin:0;padding:0;margin-top:30px;" ng-click='view(s.name,s.pk)'>
+        <img class="img-responsive"  ng-src="{{s.defaultImage}}" alt="" style="width:370px;height:300px;">
+        <div class="overlay">
+          <h1> . . . </h1>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="inner-banner text-center">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <span>Our Services</span>
+                </li>
+            </ul>
+            <h1>Services Style 01</h1>
+        </div>
+</div>
+
+    <section class="sec-pad-with-content-margin-30 gray-bg service-page-one">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6" ng-repeat = "s in products track by $index" >
+                    <div class="single-service-style-one">
+                        <div class="top-box text-center">
+                            <div class="inner-content">
+                                <i class="facdori-icon-factory-1 box-icon"></i>
+                                <h3><a href="#">{{s.name}}</a></h3>
+                            </div>
+                        </div>
+                        <div class="image-block" ng-click='view(s.name,s.pk)'>
+                            <img ng-src="{{s.defaultImage}}" alt="Awesome Image">
+                            <div class="overlay">
+                                <div class="box">
+                                    <div class="content">
+                                        <div class="dotted">...</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

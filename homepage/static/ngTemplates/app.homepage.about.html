@@ -1,0 +1,115 @@
+<div class="container-fluid" style="padding:0">
+
+<!-- <div class="row" style="margin:0px;background: url('/static/images/about/about.jpg');background-repeat: no-repeat;background-size: cover;min-height:400px;padding:140px 0px 0px 0px;background-position:center;"></div> -->
+<div class="row" style="margin:0px">
+  <div class="col-md-12" style="padding:0px">
+    <img src="/static/images/about/about.jpg" alt="" style="width:100%;height:40vh">
+  </div>
+</div>
+<div class="row" style="margin:0px;padding:30px;color:#022750;font-family:sans-serif;">
+  <div class="col-md-12 text-center col-xs-12" style="">
+    <h1 style="font-size:50px;font-weight:400;">About us</h1>
+  </div>
+  <br><br><br>
+
+<div class="col-md-8 col-md-offset-2 col-sm-12" style="padding-top:1em";>
+    <div class="col-md-6 col-xs-12" style="text-align:justify;font-size:16px;font-weight:300;">
+      Brugg Lifting is a Brugg Group company comprising three production sites and six distribution companies in Europe, North-America and Asia. We are one of the leading manufacturers of elevator ropes, architectural ropes, wire ropes and lashing & lifting gear.
+
+We develop and produce technologically innovative products at the highest quality for customers all over the world. Our products have proven their efficiency in decades of use. Every day, they convey millions of people or millions of tons of goods safely, reliably and comfortably in the highest buildings on all continents, they add a timeless appeal to living spaces, or they move loads and secure transports for all applications in the industry, at construction sites, in the material handling sector and in the logistics sector.
+  </div>
+
+    <div class="col-md-6 col-xs-12 text-center" style="text-align:justify;font-size:16px;font-weight:300;">
+      Tailored to each of our products, we continuously develop and offer optimized services – from consulting and training services to user apps and Internet-based services for product management and rope configuration. All products and services are presented to you in detail on the pages of the respective segments.
+
+      They transport millions of people or millions of tonnes of goods daily safely, reliably and comfortably in the tallest buildings on every continent - creating habitats with a timeless appeal - or moving loads and securing transports for all applications in industry, construction, materials handling and logistics ,
+      Tailored to each of our products, we provide continuously optimized services - from consulting and training offerings to user apps to web services for product management and rope configuration.<br />
+    </div>
+  </div>
+
+
+
+
+</div>
+  <br><br>
+<div class="row" style="margin:0px;background: url('/static/images/about/buildings.jpg');background-repeat: no-repeat;background-size: cover;min-height:500px;padding:140px 0px 0px 0px;background-position:center;">
+</div>
+<div class="row owl-theme" style="margin:0px;">
+  <div class="col-md-12 text-center" style="padding:30px;">
+    <h3 style="font-size:30px;font-weight:400;">Welcome to the world of BRUGG LIFTING</h3>
+  </div>
+  <div class="" ng-controller="controller.index">
+    <div class="col-md-12">
+      <div class="col-md-10 col-md-offset-1 text-center">
+        <!-- <div class="col-md-3  col-sm-12" style="padding:30px;">
+        <img src="/static/images/otlogo.png" alt="" width="250px" height="57px">
+      </div>
+      <div class="col-md-3  col-sm-12" style="padding:30px;">
+        <img src="/static/images/otlogo.png" alt="" width="250px" height="57px">
+      </div>
+      <div class="col-md-3  col-sm-12" style="padding:30px;">
+        <img src="/static/images/otlogo.png" alt="" width="250px" height="57px">
+      </div>
+      <div class="col-md-3  col-sm-12" style="padding:30px;">
+        <img src="/static/images/otlogo.png" alt="" width="250px" height="57px">
+      </div> -->
+        <div class="row" style="margin:0px;">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-12">
+              <ng-owl-carousel class="owl-theme" owl-items="brands" owl-properties="properties" owl-ready="ready($api)">
+                <div ng-repeat="b in brands" style="padding:10px;">
+                  <div class="anim-in-out anim-zoom-out">
+                    <div style="padding:20px;">
+                      <img class="img" ng-src="{{b.dp}}" />
+                    </div>
+                  </div>
+                </div>
+              </ng-owl-carousel>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 col-md-offset-2 text-center">
+        <!-- <div class="col-md-4  col-sm-12" style="padding:30px;">
+        <img src="/static/images/otlogo.png" alt="" width="250px" height="57px">
+      </div>
+      <div class="col-md-4  col-sm-12" style="padding:30px;">
+        <img src="/static/images/otlogo.png" alt="" width="250px" height="57px">
+      </div>
+      <div class="col-md-4  col-sm-12" style="padding:30px;">
+        <img src="/static/images/otlogo.png" alt="" width="250px" height="57px">
+      </div> -->
+        <div class="row" style="margin:0px;">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-12">
+              <ng-owl-carousel class="owl-theme" owl-items="brands" owl-properties="properties" owl-ready="ready($api)">
+                <div ng-repeat="b in brands" style="padding:10px;">
+                  <div class="anim-zoom-out anim-in-out">
+                    <div style="padding:20px;">
+                      <img class="img" ng-src="{{b.dp}}" />
+                    </div>
+                  </div>
+                </div>
+              </ng-owl-carousel>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="row" style="margin:0px;">
+  <div class="col-md-12 text-center" style="padding:30px;font-size:20px;font-weight:400;">
+    <h1 style="font-size:40px;font-weight:600;">Blogs!</h1>
+    <p>&emsp;</p>
+    <p>Our happy customer base is growing and so are we.</p>
+    <p> our team.</p>
+  </div>
+  <div class="text-center" style="padding-bottom:20px;">
+    <a href="/blogs"class="btn btn-primary btn-rounded">BLOGS</a>
+  </div>
+</div>
+
+</div>

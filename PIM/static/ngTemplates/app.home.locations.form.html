@@ -1,0 +1,51 @@
+<div class="container-fluid" ng-controller="controller.home.locations.form">
+  <div class="row" style="margin-bottom:3em">
+    <div class="col-md-6">
+
+      <h3 ng-if="mode=='new'">Create Location</h3>
+      <h3 ng-if="mode!='new'">Edit {{form.name}}</h3>
+
+      <div class="pull-right">
+        <label style="margin-top:-20px">Brugg Loaction</label>
+        <switch ng-model="form.representation" class="green"></switch>
+        <label>Brugg Representation</label>
+      </div><br/><br/>
+
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control"  ng-model="form.name" placeholder="Name"> </input>
+      </div>
+
+      <div class="form-group">
+        <label>Latitude</label>
+        <input type="number" class="form-control"  ng-model="form.lat" placeholder="Latitude"> </input>
+      </div>
+
+      <div class="form-group">
+        <label>Longitude</label>
+        <input type="number"   class="form-control" ng-model="form.long" placeholder="Longitude"> </input>
+      </div>
+
+      <div class="form-group">
+        <label>Address(En)</label>
+        <textarea type="text"  ui-tinymce="tinymceOptions" class="form-control" ng-model="form.address_en" placeholder="Address here"> </textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Address(De)</label>
+        <textarea type="text"  ui-tinymce="tinymceOptions" class="form-control" ng-model="form.address_de" placeholder="Address here"> </textarea>
+      </div>
+
+      <div class="form-group">
+        <label>Address(Zh)</label>
+        <textarea type="text"  ui-tinymce="tinymceOptions" class="form-control" ng-model="form.address_zh" placeholder="Address here"> </textarea>
+      </div>
+      <div class="form-group">
+        <label>Google Map link</label>
+        <input type="text" class="form-control"  ng-model="form.shortUrl" placeholder="https://maps.google.com/?q=address"> </input>
+      </div>
+
+      <button type="button" class="btn btn-primary" ng-click="save()">Save</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,692 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-02 17:17+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+
+#: templates/header.html:13
+msgid "homeId"
+msgstr "Zuhause"
+
+#: templates/header.html:13
+msgid "serviceId"
+msgstr "Dienstleistungen"
+
+#: templates/header.html:13
+msgid "applicationId"
+msgstr "Toepassingstips"
+
+
+#: templates/header.html:13
+msgid "nameId"
+msgstr "Brugg Drahtseil AG, Wydenstrasse 36 CH-5242 Birr, Schweiz"
+
+
+#: templates/header.html:13
+msgid "referenceId"
+msgstr "Referenties"
+
+#: templates/header.html:13
+msgid "productId"
+msgstr "Produkte"
+
+#: templates/header.html:13
+msgid "companyId"
+msgstr "Unternehmen"
+
+#: templates/header.html:13
+msgid "elevatorId"
+msgstr "Aufzugseile"
+
+#: templates/header.html:13
+msgid "blogId"
+msgstr "Blogs"
+
+#: templates/header.html:13
+msgid "ropeselectionId"
+msgstr "Seilauswahl"
+
+#: templates/header.html:13
+msgid "searchId"
+msgstr "Suche"
+
+#: templates/header.html:13
+msgid "ropecomparisonId"
+msgstr "Seilvergleich"
+
+#: templates/header.html:13
+msgid "tractionropesId"
+msgstr "Zugseile"
+
+#: templates/header.html:13
+msgid "compensationropesId"
+msgstr "Ausgleichsseile"
+
+#: templates/header.html:13
+msgid "governarropesId"
+msgstr "Begrenzerseile"
+
+#: templates/header.html:13
+msgid "wireId"
+msgstr "Drahtseile & Hebemedium"
+
+#: templates/header.html:13
+msgid "architecturalId"
+msgstr "Architekturseile "
+
+#: templates/about.html:13
+msgid "aboutusId"
+msgstr "Über uns"
+
+
+#: templates/about.html:13
+msgid "aboutA"
+msgstr "Wer wir sind"
+
+#: templates/about.html:13
+msgid "aboutB"
+msgstr " fuhrend in der aufzugsseiltechnik.     "
+
+#: templates/about.html:13
+msgid "aboutC"
+msgstr "Wir bei Brugg Lifting entwickeln und fertigen technologisch fortschrittliche Aufzugsseile. Als Technologieführer bieten wir unseren Kunden innovative Produkte. "
+
+#: templates/about.html:13
+msgid "aboutD"
+msgstr "Unsere Liebe zum Detail stellt sicher, dass wir auf jeder Ebene des Herstellungsprozesses Perfektion erreichen, bis hin zur Lieferung der Seile und darüber hinaus. "
+
+#: templates/about.html:13
+msgid "aboutE"
+msgstr "Wir glauben, dass wir den 'Extra-Meter' machen sollten"
+
+#: templates/about.html:13
+msgid "aboutF"
+msgstr "Unsere Aufgabe"
+
+#: templates/about.html:13
+msgid "aboutG"
+msgstr "Hochgehen"
+
+#: templates/about.html:13
+msgid "aboutH"
+msgstr "Bei Brugg Lifting ist es unsere Mission, unseren Kunden auf der ganzen Welt ein sicheres Transportmittel zu bieten, da die Städte immer größer werden. Mit unseren innovativen Produkten wie beschichteten Seilen und Gurten stellen wir sicher, dass unsere Produkte die beste Leistung bei hoher Geschwindigkeit und ohne Rückprall bieten."
+
+#: templates/about.html:13
+msgid "aboutI"
+msgstr "Niemand kennt Seile so gut wie wir. Und mit unseren exzellenten Kundendienstteams auf der ganzen Welt stellen wir das Know-how zur Verfügung, das erforderlich ist, um jedes Projekt zum Erfolg zu führen."
+
+#: templates/about.html:13
+msgid "aboutJ"
+msgstr "Unsere Geschichte"
+
+#: templates/about.html:13
+msgid "aboutK"
+msgstr "Ein Mann. Eine Vision. Hochgehen."
+
+#: templates/about.html:13
+msgid "aboutL"
+msgstr "Brugg Lifting ist eine weltweit führende Organisation für die Herstellung von Aufzugsseilen. Unsere Geschichte reicht über hundert Jahre zurück und geht auf unseren Gründer Gottlieb Suhner zurück. Im Mai 1896 wurde der Grundstein für unser Unternehmen gelegt, als Gottlieb Suhner in Brugg, Schweiz, eine Kabelfabrik eröffnete. "
+
+#: templates/about.html:13
+msgid "aboutM"
+msgstr "1910 stellte Brugg als erstes Unternehmen in der Schweiz Seile für Bergbahnen her. Mit der Gründung einer Niederlassung in Houston sind die Kabelwerke Brugg bereits 1985 auf dem Weltmarkt vertreten. Das Segment der hergestellten Drahtseile wurde im selben Jahr durch die Akquisition der Schweizerischen Seilindustrie AG mit Sitz in Shaffhausen erweitert."
+
+
+#: templates/work.html:13
+msgid "workA"
+msgstr "In der heutigen Welt ist es Veränderung, wenn es eine Konstante gibt. In dieser schnelllebigen Welt legt Brugg Lifting großen Wert auf die Fähigkeit des Menschen, mithilfe von Technologie Einblicke zu gewähren, die einen signifikanten Einfluss haben. In diesem sich wandelnden Umfeld brauchen wir talentierte Mitarbeiter, die unseren Kunden helfen, sich durch die Möglichkeiten von Technologie und Innovation zu bewegen. Wir brauchen Menschen, die von Leidenschaft, Neugierde und dem Bedürfnis angetrieben werden, etwas zu bewirken. "
+
+#: templates/work.html:13
+msgid "workB"
+msgstr "Bei Brugg Lifting bieten wir Ihnen ein außergewöhnliches Erlebnis ab dem Zeitpunkt, an dem Sie zu uns stoßen. Wir sorgen dafür, dass Ihre Zeit bei uns, egal ob lang oder kurz, bereichert und Ihnen einen Mehrwert bietet. "
+
+#: templates/work.html:13
+msgid "workC"
+msgstr "Bei Brugg Lifting ist jeder von uns bestrebt, bei allem, was wir tun, einen Schritt weiter zu gehen. Ob wir auf diese Weise auf unsere Kunden zugehen oder aufeinander. Wir schaffen Möglichkeiten für unsere Mitarbeiter, um ihr Leben und das ihrer Umgebung zu verbessern. Wir glauben, dass dies uns hilft, technologische Entwicklungen sowie einwandfreie Dienstleistungen für die Welt bereitzustellen. "
+
+#: templates/work.html:13
+msgid "workD"
+msgstr "Hier bei Brugg Lifting finden Sie Menschen, die in den Einsatz von Technologie und Innovation investiert sind, um das Leben der Menschen zu beeinflussen. "
+
+#: templates/work.html:13
+msgid "workE"
+msgstr "Wir laden Sie ein, die Welt des BRUGG LIFTING zu entdecken "
+
+#: templates/work.html:13
+msgid "workF"
+msgstr "Blogs"
+
+#: templates/work.html:13
+msgid "workG"
+msgstr "Lassen Sie uns die Welt steigen lassen"
+
+#: templates/work.html:13
+msgid "workH"
+msgstr "Arbeite mit uns"
+
+
+
+#: templates/index.html:13
+msgid "indexA"
+msgstr "lerne uns kennen "
+
+#: templates/index.html:13
+msgid "indexB"
+msgstr "Willkommem in unserem  "
+
+#: templates/index.html:13
+msgid "indexB1"
+msgstr " Industriegeschaft "
+
+#: templates/index.html:13
+msgid "indexC"
+msgstr "Brugg Lifting ist fuhrend in der aufzugsseiltechnik.  "
+
+#: templates/index.html:13
+msgid "indexD"
+msgstr "Unser Motto: Hochgehen "
+
+#: templates/index.html:13
+msgid "indexE"
+msgstr "diesem anspruch werden wir jeden Tag gerecht. Mit modernster Technologie und Innovation fertigen wir Aufzugseile, die effizent, schnell und sicher sind. Mit Städten, die heute auf der ganzen Welt größer werden, unsere technologie und Innovation bieten Menschen ein sicheres Transportmittel in einigin der höchsten Gebäude der Welt."
+
+#: templates/index.html:13
+msgid "indexF"
+msgstr "Wir haben drei Produktionsstätten und sechs Vertriebszentren in Europa, Nordamerika und Asien."
+
+#: templates/index.html:13
+msgid "indexG"
+msgstr "Unser Zweck - hochgehen - ist die Grundlage für jedes Produkt, das wir herstellen  "
+
+#: templates/index.html:13
+msgid "indexH"
+msgstr "Die Liebe yum detail, die Unterstützung, die Lösungen und das Fachwissen hochqualifizierter Mitarbeiter erwecken unseren Zweck zum Leben "
+
+#: templates/index.html:13
+msgid "indexI"
+msgstr "Wir bieten Ihnen höchste Standards in der Aufzugsseiltechnik "
+
+#: templates/index.html:13
+msgid "indexJ"
+msgstr "Was uns dazu bringt, höher yu gehen "
+
+#: templates/index.html:13
+msgid "indexK"
+msgstr "Produkte "
+
+#: templates/index.html:13
+msgid "indexL"
+msgstr "Unsere Aufzugsseile werden mit den neuesten Technologien und Techniken unter strengen Qualitätskontrollen und Prüfverfahren hergestellt und gebaut"
+
+#: templates/index.html:13
+msgid "Work CultureL"
+msgstr "Arbeitskultur "
+
+#: templates/index.html:13
+msgid "indexM"
+msgstr "We bring diverse ideas, backgrounds, and mindsets together to create an inclusive environment "
+
+#: templates/index.html:13
+msgid "indexN"
+msgstr "Innovation "
+
+#: templates/index.html:13
+msgid "indexO"
+msgstr "Als Weltneuheit definiert CTP® die Technologie in Bezug auf Effizienz und Funktion neu "
+
+#: templates/index.html:13
+msgid "indexP"
+msgstr "Warum wählen uns die Leute? "
+
+#: templates/index.html:13
+msgid "indexQ"
+msgstr "Wir haben mehr als 10 Jahre Erfahrung in der Revolutionierung der Aufzugsseiltechnologie  "
+
+#: templates/index.html:13
+msgid "indexR"
+msgstr "Gesichert und geladen  "
+
+#: templates/index.html:13
+msgid "indexS"
+msgstr "Unsere Seile sind für den sicheren Transport bei hohen Geschwindigkeiten konstruiert. Sie sind bekannt für ihre Effizienz und Langlebigkeit."
+
+#: templates/index.html:13
+msgid "indexT"
+msgstr "Liefern Sie intelligente Arbeit"
+
+#: templates/index.html:13
+msgid "indexU"
+msgstr "Durch unser qualifiziertes und hochqualifiziertes Personal bieten wir Ihnen das Fachwissen bei der Auswahl der Seile, die für Ihr Gebäude am besten geeignet sind"
+
+#: templates/index.html:13
+msgid "indexV"
+msgstr "1896 gegründet"
+
+#: templates/index.html:13
+msgid "indexW"
+msgstr "Wir haben mehr als 100 Jahre Innovation in der Seilproduktion vorangetrieben  "
+
+#: templates/index.html:13
+msgid "indexX"
+msgstr "Wir unterstützen dich"
+
+#: templates/index.html:13
+msgid "indexY"
+msgstr "Brugg Lifting bietet Unterstützung und Lösungen, Beratung, Ideen und Know-how -immer etwas Besonderes für unsere Kunden "
+
+#: templates/index.html:13
+msgid "indexZ"
+msgstr "Über uns "
+
+#: templates/footer.html:13
+msgid "footerA"
+msgstr "Über uns"
+
+#: templates/footer.html:13
+msgid "footerB"
+msgstr "Brugg Lifting ist ein Geschäftsbereich der Brugg Gruppe mit Hauptsitz in der Schweiz. Wir produzieren und liefern weltweit Aufzugsseile.  "
+
+#: templates/footer.html:13
+msgid "footerC"
+msgstr "Finden Sie uns auf einer Karte "
+
+#: templates/footer.html:13
+msgid "footerD"
+msgstr "Produckte "
+
+#: templates/footer.html:13
+msgid "footerE"
+msgstr "Zugseile "
+
+#: templates/footer.html:13
+msgid "footerF"
+msgstr "Ausgleichsseile  "
+
+#: templates/footer.html:13
+msgid "footerG"
+msgstr "Begrenzerseile"
+
+#: templates/footer.html:13
+msgid "footerH"
+msgstr "Links "
+
+#: templates/footer.html:13
+msgid "footerJ"
+msgstr "Bewerbungstipps "
+
+#: templates/footer.html:13
+msgid "footerK"
+msgstr "Zubehör "
+
+#: templates/footer.html:13
+msgid "footerL"
+msgstr "Blogs "
+
+#: templates/footer.html:13
+msgid "footerM"
+msgstr "Unsere Standorte "
+
+#: templates/footer.html:13
+msgid "footerN"
+msgstr "Karriere "
+
+#: templates/footer.html:13
+msgid "footerO"
+msgstr "Rechtspolitik und Datenschutz - Bestimmungen "
+
+#: templates/footer.html:13
+msgid "footerP"
+msgstr "Seitenverzeichnis"
+
+#: templates/footer.html:13
+msgid "footerQ"
+msgstr "Urheberrechte 2019 Brugg Lifting "
+
+#: templates/footer.html:13
+msgid "footerR"
+msgstr "Katalog "
+
+#: templates/footer.html:13
+msgid "footerS"
+msgstr "Aufzugseile"
+
+#: templates/footer.html:13
+msgid "footerT"
+msgstr "CTP"
+
+#: templates/footer.html:13
+msgid "footerU"
+msgstr "Produktinformation"
+
+#: templates/footer.html:13
+msgid "footerV"
+msgstr "Technische Information"
+
+#: templates/footer.html:13
+msgid "footerW"
+msgstr "Anwendung"
+
+#: templates/header.html:13
+msgid "careesId"
+msgstr "Karriere"
+
+#: templates/header.html:13
+msgid "contactusId"
+msgstr "Kontaktiere uns"
+
+#: templates/header.html:13
+msgid "prevId"
+msgstr "Bisherige"
+
+#: templates/header.html:13
+msgid "nextId"
+msgstr "Nächster"
+
+#: templates/header.html:13
+msgid "blogupdateId"
+msgstr "Erhalten Sie regelmäßige Blog-Updates"
+
+#: templates/header.html:13
+msgid "sendId"
+msgstr "Updates senden!"
+
+#: templates/homepage.index.html:13
+msgid "title1Id"
+msgstr "Wir helfen lhnen, hoher zu steigen"
+
+#: templates/homepage.index.html:13
+msgid "title2Id"
+msgstr "Wir werden durch Innovation "
+
+#: templates/homepage.index.html:13
+msgid "contentId"
+msgstr "lerne uns kennen"
+
+#: templates/homepage.index.html:13
+msgid "content1Id"
+msgstr "Willkommem in"
+
+#: templates/homepage.index.html:13
+msgid "content2Id"
+msgstr "unserem Industriegeschaft"
+
+#: templates/homepage.index.html:13
+msgid "discoverId"
+msgstr "Entdecke Mehr"
+
+#: templates/header.html:13
+msgid "postId"
+msgstr "Neueste Beiträge"
+
+#: templates/career.html:13
+msgid "storyId"
+msgstr
+"BRUGG LIFTING wurde nach dem Erfolg der Kampagne von Präsident Obama im Jahr 2008 gegründet und wurde gegründet, um der Welt die Möglichkeit zu geben, Daten in die Tat umzusetzen.\n "
+" \n"
+" In den letzten sieben Jahren hat sich BRUGG LIFTING weit über das einfache Testen von Websites A / B hinaus entwickelt. Wir haben vor kurzem die weltweit führende Experimentierplattform eingeführt, um überall experimentieren zu können: über die gesamte Kundenerfahrung, auf jedem Kanal, auf jedem Gerät, in jeder Anwendung.\n"
+" \n"
+"Mit BRUGG LIFTING können Führungskräfte, Vermarkter, Produktmanager und Entwickler mutig sein und bessere Geschäftsentscheidungen treffen."
+"\n    "
+"\n    "
+
+#: templates/career.html:13
+msgid "workId"
+msgstr "Work @ BRUGG LIFTING"
+
+#: templates/career.html:13
+msgid "Why you'll love it here"
+msgstr "Wir bauen ein Team aus inspirierten, intelligenten und motivierten Personen mit unterschiedlichem Hintergrund. Mit unzähligen Möglichkeiten für Wachstum und Mentoring möchten wir jedem Mitarbeiter helfen, den für ihn richtigen Weg zu finden Work @ BRUGG LIFTING"
+
+
+#: templates/loction.html:13
+msgid "address1Id"
+msgstr "Schweiz"
+
+#: templates/loction.html:13
+msgid "address2Id"
+msgstr "Schweiz"
+
+#: templates/loction.html:13
+msgid "address3Id"
+msgstr "USA"
+
+#: templates/loction.html:13
+msgid "address4Id"
+msgstr "Dubai UAE"
+
+#: templates/loction.html:13
+msgid "address5Id"
+msgstr "P.R. China"
+
+#: templates/loction.html:13
+msgid "address6Id"
+msgstr "Großbritannien"
+
+#: templates/loction.html:13
+msgid "address7Id"
+msgstr "Italien"
+
+#: templates/loction.html:13
+msgid "address8Id"
+msgstr "Polen"
+
+#: templates/loction.html:13
+msgid "address9Id"
+msgstr "Deutschland"
+
+#: templates/loction.html:13
+msgid "address10Id"
+msgstr "USA"
+
+#: templates/loction.html:13
+msgid "address11Id"
+msgstr "USA"
+
+#: templates/loction.html:13
+msgid "address12Id"
+msgstr "Kanada"
+
+#: templates/loction.html:13
+msgid "address13Id"
+msgstr "USA"
+
+#: templates/loction.html:13
+msgid "address14Id"
+msgstr "USA"
+
+#: templates/loction.html:13
+msgid "address15Id"
+msgstr "Kanada"
+
+#: templates/loction.html:13
+msgid "address16Id"
+msgstr "USA"
+
+#: templates/loction.html:13
+msgid "address17Id"
+msgstr " "
+
+#: templates/loction.html:13
+msgid "address18Id"
+msgstr "Singapur"
+
+#: templates/loction.html:13
+msgid "address19Id"
+msgstr "Futian Shenzhen"
+
+#: templates/loction.html:13
+msgid "address20Id"
+msgstr "Hong Kong"
+
+
+#: templates/loction.html:13
+msgid "address21Id"
+msgstr "Korea"
+
+#: templates/loction.html:13
+msgid "address22Id"
+msgstr "Thailand"
+
+#: templates/loction.html:13
+msgid "address23Id"
+msgstr "Philippinen"
+
+#: templates/loction.html:13
+msgid "address24Id"
+msgstr "Australien"
+
+#: templates/loction.html:13
+msgid "l1Id"
+msgstr "Brugg Lifting um die Welt"
+
+#: templates/loction.html:13
+msgid "l2Id"
+msgstr "Brugg Lifting besteht aus drei Produktionsstandorten und sechs Vertriebsstandorten in Europa, Asien und Nordamerika. Bereits 1985 haben wir den Status eines globalen Unternehmens erlangt. Unsere Struktur setzt sich aus Produktionsregionen und Vertriebsregionen zusammen. Gemeinsam überwachen sie unsere Geschäftsstrategie, Pläne und Prioritäten"
+
+#: templates/loction.html:13
+msgid "l3Id"
+msgstr "Diese Struktur wurde optimiert, um einen außergewöhnlichen Kundenservice auf der ganzen Welt zu bieten. Durch unsere Standorte können wir einige der am schnellsten entwickelnden Länder in jeder Region der Welt erreichen. Unsere Aufzugseile wurden in Gebäuden von China bis Nordamerika eingesetzt. Durch unsere globale Präsenz haben wir unsere Reichweite und Erfahrung erweitert."
+
+#: templates/rope-selection.html:13
+msgid "calculatorDescription"
+msgstr "Ziehen Sie die Aufzugskabine auf die gewünschte Höhe, um das für Ihre Anwendung geeignete Seil auszuwählen. Klicken Sie auf das ausgewählte Seil, um weitere Informationen zu erhalten. Diese Seilauswahl dient nur als Richtlinie und ersetzt keine exakte Berechnung."
+
+#: templates/innovation.html:13
+msgid "coatedProduct"
+msgstr "Beschichtete Produkte"
+
+#: templates/innovation.html:13
+msgid "productH1"
+msgstr "Aufzugseile von Brugg Lifting."
+
+#: templates/innovation.html:13
+msgid "productH2"
+msgstr "CTP®-beschichtete Getriebeprodukte"
+
+#: templates/innovation.html:13
+msgid "productD2"
+msgstr "Als Weltneuheit vereint CTP® technologische Innovation für höchste Ansprüche. Dieses High-End-Seil ist in Bezug auf Funktion und Effizienz unschlagbar."
+
+#: templates/innovation.html:13
+msgid "productDeT1"
+msgstr "Reduzieren Sie Ihre Gesamtkosten um bis zu 40%"
+
+#: templates/innovation.html:13
+msgid "productDeD1"
+msgstr "Ein kleinerer Seildurchmesser und ein kleinerer Antrieb ermöglichen eine Reduzierung der Kapital- und Betriebskosten."
+
+#: templates/innovation.html:13
+msgid "productDeT2"
+msgstr "Reduzieren Sie Ihre Wartungskosten um bis zu 100%"
+
+#: templates/innovation.html:13
+msgid "productDeD2"
+msgstr "CTP® ist ein in sich geschlossenes System, das weder geschmiert noch gewartet werden muss."
+
+#: templates/innovation.html:13
+msgid "productDeT3"
+msgstr "Genießen Sie verbesserten Reisekomfort"
+
+#: templates/innovation.html:13
+msgid "productDeD3"
+msgstr "Die Polymerbeschichtung eliminiert oder absorbiert stark Vibrationen, was erheblich zu einem ruhigen Lauf beiträgt."
+
+#: templates/innovation.html:13
+msgid "productDeT4"
+msgstr "Erhöhen Sie die Lebensdauer um das Dreifache"
+
+#: templates/innovation.html:13
+msgid "productDeD4"
+msgstr "Da die Treibscheibe und das Aufzugsseil keinem Verschleiß unterliegen, werden die Häufigkeit des Seilwechsels und die damit verbundenen Kosten reduziert."
+
+#: templates/app.sitemap.html:13
+msgid "sitemapT"
+msgstr "Seitenverzeichnis"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH1"
+msgstr "Über uns"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH2"
+msgstr "Karriere"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH3"
+msgstr "Unsere Standorte"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH4"
+msgstr "Verweise"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH5"
+msgstr "Bewerbungstipps"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH6"
+msgstr "Aufzugseile"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH7"
+msgstr "Zugseile"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH8"
+msgstr "Ausgleichsseile"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH9"
+msgstr "Begrenzerseile"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH10"
+msgstr "Neu"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH11"
+msgstr "Zugseile"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH12"
+msgstr "Ausgleichsseile"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH13"
+msgstr "Begrenzerseile"
+
+#: templates/app.sitemap.html:13
+msgid "index1"
+msgstr "Jahre Innovation"
+
+#: templates/app.sitemap.html:13
+msgid "index2"
+msgstr "Geschäftsbereiche"
+
+#: templates/app.sitemap.html:13
+msgid "index3"
+msgstr "Unternehmen"
+
+#: templates/app.sitemap.html:13
+msgid "index4"
+msgstr "Länder"
+
+#: templates/app.sitemap.html:13
+msgid "index5"
+msgstr "Klientel"

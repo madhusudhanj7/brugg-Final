@@ -1,0 +1,212 @@
+<div class="shaddowed card bg-white" style="min-height:93vh;position:relative;">
+
+  <breadcrumb></breadcrumb>
+  <div class="container-fluid" style="width:100%;position:relative;">
+    <div ng-if="mode == 'edit' || mode=='new'">
+      <div class="row">
+
+        <div class="form-group col-md-6">
+          <div class="col-md-3">
+            <switch ng-model="modeToggle" class="green"></switch><span style="margin:9px;position:absolute;">{{modeToggle ? 'Body':'Header'}}</span>
+          </div>
+          <label class="control-label col-sm-1" >Title:</label>
+          <div class="col-md-8">
+            <input type="text" rows="3"  value="" class="form-control " required ng-model="editor.title"></input>
+          </div>
+        </div>
+
+        <div class= "form-group col-md-6">
+          <label class="control-label col-sm-2" >Tags :</label>
+          <div class="col-md-10">
+            <tags-input ng-model="editor.tags" add-on-paste="true" add-From-Autocomplete-Only="true" display-property="title">
+              <auto-complete source="loadTags($query)" load-on-down-arrow="true"></auto-complete>
+            </tags-input>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-9">
+          <textarea ng-if="modeToggle" ui-tinymce="tinymceOptions" ng-model="editor.source"></textarea>
+          <textarea ng-if="!modeToggle" ui-tinymce="tinymceOptions" ng-model="editor.header"></textarea>
+        </div>
+        <div class="col-md-3">
+          <div class="row text-center">
+            <h4>SEO related data</h4>
+          </div>
+          <div class="form-group">
+            <label>Youtube URL</label>
+            <input type="text" class="form-control" ng-model="editor.shortUrl">
+            <!-- <p class="help-block">It will be <span class="text-primary">jee-tips-and-tricks</span> for url : <span class="text-primary">https://24tutors.com/jee-tips-and-tricks</span> </p> -->
+          </div>
+
+          <div class="form-group">
+            <label>OG Video</label>
+            <input type="file" file-model="editor.ogvideo">
+          </div>
+
+          <div class="form-group">
+            <label>OG Image</label>
+            <input type="file" file-model="editor.ogimage">
+          </div>
+          <!-- <div class="row text-center">
+            OR
+          </div> -->
+          <div class="form-group">
+            <label>OG Image url</label>
+            <input type="text" class="form-control" ng-model="editor.ogimageUrl">
+          </div>
+
+          <div class="form-group">
+            <label>Description</label>
+            <input type="text" class="form-control" ng-model="editor.description">
+          </div>
+
+          <div class="form-group">
+            <label>Tags</label>
+            <input type="text" class="form-control" ng-model="editor.tagsCSV">
+            <p class="help-block">Comma seperated tags</p>
+          </div>
+          <div class="form-group">
+            <label>Section</label>
+            <input type="text" class="form-control" ng-model="editor.section">
+            <p class="help-block">Like calculus for an article on Maths</p>
+          </div>
+          <div class="form-group">
+            <label>Author</label>
+            <input type="text" class="form-control" ng-model="editor.author">
+          </div>
+          <div class="form-group">
+            <label>Language</label>
+            <select class="form-control" ng-model="editor.lang">
+              <option value="en">English</option>
+              <option value="fr">French</option>
+              <option value="jp">Japanese</option>
+              <option value="de">German</option>
+              <option value="es">Spanish</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div ng-if="mode == 'list'">
+      <div class="col-md-9">
+        <div class="row">
+          <!-- Each article bubble starts from here  -->
+          <div class="container-fluid" style="padding-left:30px;padding-right:30px;" ng-repeat="blog in blogs">
+            <div class="row">
+              <h3 ng-click="viewArticle($index)" style="cursor:pointer;" class="text-muted">{{blog.title}}</h3>
+            </div>
+            <div class="row">
+              <p style="text-align: justify;" ng-bind-html="blogs[$index].header">
+              </p>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="col-md-1">
+                  <img class="img-circle" ng-src="{{ me.url | getDP}}"  alt="My image" style="width:50px;height:50px;position: relative; left:-30px;"/>
+                </div>
+                <div class="col-md-11">
+                  <div class="row">
+                    <span ng-repeat="u in blog.users" >{{ u | getName}}</span>
+                  </div>
+                  <div class="row">
+                    <span class="badge">{{blog.created | date:'dd MMM yyyy, hh:mm a'}}</span>
+                    <span style="color:#666666;"> {{blog.likes.length}} Likes <i class="fa fa-thumbs-o-up"></i></span>
+                    <span style="color:#666666;"> {{blog.comments.length}} Comments <i class="fa fa-comments-o"></i></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="pull-right">
+                  <span class="label label-default {{$index | rainbow}}" ng-repeat="tag in blogs[$index].tags" style="margin-left:5px;">{{tag.title}}</span>
+                </div>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <!-- article listing bubble ends here  -->
+        </div>
+        <div class="row">
+          <nav>
+            <ul class="pager">
+              <li class="{{pageNo == 0? 'disabled' : ''}}"><a href="" ng-click="prevPage()" >Previous</a></li>
+              <li class="{{disableNext? 'disabled' : ''}}"><a href="" ng-click="nextPage()" >Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="col-md-3" >
+        <div class="row">
+          <a ui-sref="home.blog({id : '' , action:'new'})" class="btn btn-default"> New <i class="fa fa-file-o"></i></a>
+          <button class="btn btn-default" ng-click="toggleUser()"> {{filter.user == 'all' ? 'All articles' : 'My articles'}} <i class="fa fa-bars"></i></button>
+          <button class="btn btn-default" ng-click="toggleState()"> {{filter.state == 'published' ? 'Published' : 'Drafts'}} <i ng-if="filter.state == 'saved'" class="fa fa-floppy-o"></i></button>
+          <input type="text" value="" class="form-control" style="width:100%;margin-top:10px;" placeholder="Search title .." ng-model = "filter.text" ng-enter = "search()">
+          <hr>
+          <div class="form-group">
+            <label> Filter by categories :</label>
+            <tags-input ng-model="filter.tags" add-on-paste="true" add-From-Autocomplete-Only="true" display-property="title">
+              <auto-complete source="loadTags($query)" load-on-down-arrow="true"></auto-complete>
+            </tags-input>
+          </div>
+          <!-- <div class="form-group">
+            <label> Filter by Month :</label>
+            <div class="fullWidthDatePicker">
+              <uib-datepicker ng-model="filter.month" min-mode="month" datepicker-mode="'month'" ></uib-datepicker>
+            </div>
+          </div> -->
+        </div>
+        <hr>
+        <div class="row ">
+          <h4>Recommended:</h4>
+          <ul class="nav nav-sidebar sidebarList" style="width: 100%;position: relative;">
+            <li ng-repeat="b in recommended"><a ng-click="readRecommended(b.pk)" href=""><span class="label label-success">{{b.contentType}}</span> : {{b.title}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div ng-if="mode == 'read'">
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-{{articleInView.users.indexOf(me.url) !=-1 ? '5' : '4'}}">
+              <div class="btn-group">
+                <a type="button" class="btn btn-default pull-left" ng-click="goBack()"><i class="fa fa-arrow-left"></i>  Go back </a>
+                <a type="button" ng-if="articleInView.users.indexOf(me.pk) !=-1" class="btn btn-default pull-left" ng-click="edit()"><i class="fa fa-pencil"></i>  edit </a>
+                <a type="button" ng-if="articleInView.users.indexOf(me.pk) !=-1" class="btn btn-default pull-left" ng-click="delete()"><i class="fa fa-trash"></i> </a>
+              </div>
+              <img class="img-circle" ng-src="{{ articleInView.users[0] | getDP}}"  alt="My image" style="width:50px;height:50px;position: relative; right:-30px;"/>
+            </div>
+            <div class="col-md-{{articleInView.users.indexOf(me.url) !=-1 ? '7' : '8'}}">
+              <div class="row">
+                <span ng-repeat="u in articleInView.users" >{{ u | getName}}</span>
+              </div>
+              <div class="row">
+                <span class="badge">{{articleInView.created | date:'dd MMM yyyy, hh:mm a'}}</span>
+                <span style="color:#666666;"> {{articleInView.likes.length}} Likes <i class="fa {{liked ?'fa-thumbs-up':'fa-thumbs-o-up'}} fa-lg noselect" ng-click="like()"></i></span>
+                <span style="color:#666666;"> {{articleInView.comments.length}} Comments <i class="fa fa-comments-o"></i></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="pull-right">
+              <span class="label label-default {{$index | rainbow}}" ng-repeat="tag in articleInView.tags" style="margin-left:5px;">{{tag.title}}</span>
+            </div>
+          </div>
+        </div>
+        <h3> {{articleInView.title}}</h3>
+        <hr>
+        <div class="container-fluid" ng-bind-html = "articleInView.source">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <input type="text" class="form-control" style="width:100%" ng-enter = "comment()" placeholder="Comment... " ng-model = "comment.text">
+        <div ng-repeat="comment in articleInView.comments">
+          <comment-bubble data = "comment" on-Delete = "onCommentDelete($index)" config-Obj="configObj"></comment-bubble>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

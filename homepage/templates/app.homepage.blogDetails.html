@@ -1,0 +1,64 @@
+{% load i18n %}
+
+
+  {% verbatim %}
+<div style="margin-top:50px;" style="width:100%;">
+
+  <div style="wdth:100%;">
+    <div style="height:50vh;position:relative;background-color:#595959">
+      <img class="blog_image" ng-src="{{blogDetail.ogimage}}" alt="">
+      <div style=" position:absolute;top:50%;color:black;left:50%;transform: translate(-50%,-50%);text-align:center">
+        <p style="color:white">{{blogDetail.created | getDateNum}}-{{blogDetail.created | getMonth}}-{{blogDetail.created | getYear}}</p>
+        <p class="blogDetailsTitle">{{blogDetail.title}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid blogContent">
+    <div class="row">
+      <div class="col-md-8">
+        <p style="font-size:16px;" ng-bind-html="blogDetail.source"></p>
+      </div>
+
+      <div class="col-md-4 blogUpdates">
+        <div class="socialIcons">
+          <div>
+            {% endverbatim %}<a href="{{linkedinUrl}}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>{% verbatim %}
+          </div>
+          <div>
+            {% endverbatim %}<a href="{{facebookUrl}}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>{% verbatim %}
+          </div>
+          <div>
+            {% endverbatim %}<a href="{{twitterUrl}}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>{% verbatim %}
+          </div>
+          <div>
+            {% endverbatim %}<a href="{{youtubeUrl}}" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>{% verbatim %}
+          </div>
+        </div>
+        <div class="bottomLine" style="padding:0 15px;">
+          <div class="textHeading">
+            <h4>{% endverbatim %} {% trans 'blogupdateId' %}{% verbatim %}</h4>
+          </div>
+          <div class="inputEmail">
+            <input type="text" name="" value="" ng-model="emailAddress" placeholder="email address">
+          </div>
+          <div class="sendUpdates" ng-click=sendUpdates()>
+            {% endverbatim %} {% trans 'sendId' %}{% verbatim %}
+          </div>
+        </div>
+        <div style="padding:0 15px;">
+          <div class="textHeading">
+            <h4>{% endverbatim %} {% trans 'postId' %}{% verbatim %}</h4>
+          </div>
+          <div style="padding:0 30px;">
+            <div style="border-bottom:1px solid #e0e0e0;" ng-repeat="p in recentPosts">
+              <h4 ng-click="openBlog(p.shortUrl,p.pk)" style="font-size:14px; font-weight:bold; cursor:pointer;"> <span>{{$index + 1}}. </span> <span> {{p.title}} </span>  </h4>
+            </div>
+          </div>
+          {% endverbatim %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

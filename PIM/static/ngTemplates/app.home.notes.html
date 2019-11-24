@@ -1,0 +1,13 @@
+<div class="" style="min-height:93vh;position:relative;">
+
+  <breadcrumb></breadcrumb>
+  <div class="container-fluid" style="width:100%;position:relative;">
+    <button type="button"class="btn btn-default" ng-click="pencil()"> {{editor.pencil ? 'Text' : 'Pencil'}}</button>
+    <div class="btn-group">
+      <button type="button" class="btn btn-success" ng-click="save()"> <i class="fa fa-floppy-o"></i></button>
+      <button type="button" class="btn btn-default" ng-click="clearAll()"> <i class="fa fa-eraser"></i></button>
+      <button type="button" class="btn btn-default" ng-click="addImage()"> <i class="fa fa-image"></i> Add Image</button>
+    </div>
+    <canvas id="canvas" ></canvas>
+  </div>
+</div>

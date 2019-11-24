@@ -1,0 +1,48 @@
+<nav class="navbar navbar-default navbar-fixed-top animateWidthChange"  id="navbarTop" style="{{sideMenuVisibility ? 'margin-left:13%': 'margin-left:5%'}} {{mobileView ? 'margin-left:31%':''}};">
+  <div class="container-fluid" style="height:100%;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navBar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" href="/" style="margin-left:0px;padding:7px">
+        <img ng-src="{{brandLogo}}" style="margin-top:5px;max-width:150px;" />
+        <!-- <span><h1 style="margin:0px;">CIOC</h1></span> -->
+      </a>
+      <div class="navbar-brand" style="font-size:25px"><i class="fa fa-angle-right"></i> ERP  </div>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navBar" style="height:5vh;">
+
+  		<!-- <ul class="nav navbar-nav" style="height:5vh;">
+  			<li style="height:100%;" ng-class="{active: $state.includes(m.name)}" ng-repeat="m in modules"><a style="padding-top:1.5vh;" ui-sref="{{m.name}}" ><i class="fa {{m.icon}}"></i> {{m.name | humanize}}</a></li>
+  		</ul> -->
+
+  		<ul class="nav navbar-nav navbar-right" style="margin-right:20px;height:5vh;">
+  			<li class="dropdown" style="height:100%;">
+  			  <a class="dropdown-toggle" style="padding-top:1.5vh;" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> {{me.url | getName}}  <span class="glyphicon glyphicon-chevron-down"></span></a>
+  			  <ul class="dropdown-menu">
+    				<li><img class="img-responsive" width="200px" src="/static/images/userIcon.png" ng-src="{{me.profile.displayPicture}}" style="top:-5px; position:relative; width:200px"></li>
+    				<li>
+              <div style="text-align:center; -moz-user-select: none;">{{me.email}}</br>
+                <!-- <small>(HR Associate)</small> -->
+              </div>
+            </li>
+    				<li role="separator" class="divider"></li>
+    				<li><a href="" ng-click="openSettings('right' , false , settings )"><i class="fa fa-gears fa-fw"></i> Settings</a></li>
+            <li><a href="/logout/"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+    				<li role="separator" class="divider"></li>
+    				<li><a href="" ng-click="about()"> <i class="fa fa-info fa-fw"></i> About</a></li>
+  			  </ul>
+  			</li>
+  		</ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div ng-repeat="friend in imWindows">
+  <chat-window friend-url="friend.url" pos="$index" id="chatWindow{{friend.username}}" cancel="closeIMWindow($index)"></chat-window>
+</div>

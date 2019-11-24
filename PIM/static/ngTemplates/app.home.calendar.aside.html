@@ -1,0 +1,25 @@
+<div class="row bg-aqua " style="padding:10px;">
+  <div class="container-fluid">
+
+    <h3>{{data.formTitle}}</h3>
+  </div>
+</div>
+<div class="row" style="padding:10px;display:block;box-sizing:border-box;">
+  <uib-tabset ng-if="!editMode">
+    <uib-tab heading="Meeting">
+      <div ng-include="data.template.meeting"></div>
+    </uib-tab>
+    <uib-tab heading="Reminder">
+      <div ng-include="data.template.reminder"></div>
+    </uib-tab>
+    <uib-tab heading="To Do">
+      <div ng-include="data.template.todo"></div>
+    </uib-tab>
+    <uib-tab heading="Leave Request">
+      <div ng-include="data.template.leave"></div>
+    </uib-tab>
+  </uib-tabset>
+  <div class="container-fluid" ng-if="editMode">
+    <div ng-include="editorTemplate"></div>
+  </div>
+</div>

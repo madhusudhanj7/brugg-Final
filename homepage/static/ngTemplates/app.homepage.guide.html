@@ -1,0 +1,104 @@
+<div class="row" style="margin:0px;padding:40px 0 20px 0;background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(4, 68, 126, 0.9)), url('/static/images/aai.jpg');min-height:30vh;background-repeat:no-repeat;background-size:auto;">
+</div>
+<div class="row" style="margin:0px;padding:0px;padding-bottom:20px;">
+  <!-- <div class="col-md-2 noPadding" style="background-color:#eee;width:13vw;height:100%;">
+    <div class="vertical-menu">
+      <a href="#"><i class="fa fa-list fa-fw" aria-hidden="true"></i> Trending</a>
+      <a href="#"><i class="fa fa-history fa-fw" aria-hidden="true"></i> History</a>
+    </div>
+    <hr>
+    <h3 class="text-muted" style="padding-left:20px;">Best of AI</h3>
+    <hr>
+    <div class="vertical-menu">
+      <a href="#"><i class="fa fa-video-camera fa-fw" aria-hidden="true"></i> Getting started</a>
+      <a href="#"><i class="fa fa-video-camera fa-fw" aria-hidden="true"></i> Installation</a>
+      <a href="#"><i class="fa fa-video-camera fa-fw" aria-hidden="true"></i> Machine Learning</a>
+      <a href="#"><i class="fa fa-video-camera fa-fw" aria-hidden="true"></i> Artificial Intelligence</a>
+      <a href="#"><i class="fa fa-video-camera fa-fw" aria-hidden="true"></i> AI Powered</a>
+    </div>
+    <hr>
+    <h3 class="text-muted" style="padding-left:20px;">More from AI</h3>
+    <div class="vertical-menu">
+      <a href="#"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> Settings</a>
+    </div>
+    <hr>
+  </div> -->
+  <div class="col-md-10 col-md-offset-1" style="margin-top:10px;border-bottom:1px solid #eee;padding-bottom:40px;">
+    <div class="col-md-10" style="margin-left:30px;">
+      <h3 class="text-muted">Trending</h3>
+    </div>
+    <div class="col-md-12">
+      <div class="col-md-3 noPadding" style="margin-top:10px;" ng-repeat="i in [1,2,3,4,5,6,7,8]">
+        <div class="container-fluid">
+          <div ng-if="$index!=[1,2,3,4,5,6,7,8].length-1"class="thumbnil" style="background-image: url('/static/images/ai.jpg');">
+            <div class="thumbnil_overlay" ng-click="watchVideo(v,$index)">
+              <span class="play12"> <i class="fa fa-play" aria-hidden="true"></i></i></span>
+            </div>
+          </div>
+          <div ng-if="$index==[1,2,3,4,5,6,7,8].length-1" class="thumbnil" style="background-color:#fff">
+            <span class="loadmore">Load More..</span >
+            <div class="thumbnil_overlay" ng-click="">
+              <span class="load12"> <i class="fa fa-refresh" aria-hidden="true"></i><br></span>
+            </div>
+          </div>
+          <div class="vid_desc"ng-if="$index!=[1,2,3,4,5,6,7,8].length-1">
+            <span>
+              <strong> Intro to AI.</strong>
+            </span>
+            <div class="col-md-12 noPadding">
+              <span class="text-muted">Tried&Refused Productions.</span>
+              <span class="text-muted pull-right"> 3 days ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-10 col-md-offset-1" style="margin-top:10px;">
+    <div class="col-md-10" style="margin-left:30px;">
+      <h3 class="text-muted">Getting started</h3>
+    </div>
+    <div class="col-md-12">
+      <div class="col-md-3 noPadding" style="margin-top:10px;" ng-repeat="i in [1,2,3,4,5,6,7,8]">
+        <div class="container-fluid">
+          <div ng-if="$index!=[1,2,3,4,5,6,7,8].length-1"class="thumbnil" style="background-image: url('/static/images/aai.jpg');">
+            <div class="thumbnil_overlay" ng-click="watchVideo(v,$index)">
+              <span class="play12"> <i class="fa fa-play" aria-hidden="true"></i></i></span>
+            </div>
+          </div>
+          <div ng-if="$index==[1,2,3,4,5,6,7,8].length-1" class="thumbnil" style="background-color:#fff">
+            <span class="loadmore">Load More..</span>
+            <div class="thumbnil_overlay" ng-click="">
+              <span class="load12"> <i class="fa fa-refresh" aria-hidden="true"></i><br></span>
+            </div>
+          </div>
+          <div class="vid_desc"ng-if="$index!=[1,2,3,4,5,6,7,8].length-1">
+            <span>
+              <strong> what is AI</strong>
+            </span>
+            <div class="col-md-12 noPadding">
+              <span class="text-muted">Tried&Refused Productions.</span>
+              <span class="text-muted pull-right"> 3 days ago</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="col-md-3" ng-repeat="v in [1,2,3,4]">
+    <div class="container-fluid" ng-repeat="i in [1,2,3]">
+      <div class="thumbnil" style="background-image: url('/static/images/ai.jpg');">
+        <div class="thumbnil_overlay" ng-click="watchVideo(v,$index)">
+          <span class="play12"> <i class="fa fa-play" aria-hidden="true"></i></i></span>
+        </div>
+      </div>
+      <div class="vid_desc">
+        <span>
+          <strong> Intro at AI.</strong>
+        </span><br>
+        <span class="text-muted">Tried&Refused Productions.</span><br>
+        <span class="text-muted"> 3 days ago</span>
+      </div>
+    </div>
+  </div> -->

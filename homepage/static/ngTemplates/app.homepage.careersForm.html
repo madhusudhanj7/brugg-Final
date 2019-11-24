@@ -1,0 +1,129 @@
+<div class="" style="min-height:93vh;">
+  <div class="container-fluid">
+    <uib-tabset>
+      <uib-tab>
+        <uib-tab-heading>
+          Template Create <i class="fa fa-plus"></i>
+        </uib-tab-heading>
+        <div style="margin-top:20px" ng-include="'/static/ngTemplates/app.homepage.careersTemplates.newForm.html'"></div>
+      </uib-tab>
+      <uib-tab active="searchTabActive">
+        <uib-tab-heading>
+          Browse Templates <i ng-if="tab.cancel" class="fa fa-search"></i>
+        </uib-tab-heading>
+        <generic-Table callback-Fn="tableAction" data="data.tableData" config-Obj="{{config}}"></generic-Table>
+      </uib-tab>
+      <uib-tab ng-repeat="tab in tabs" active="tab.active" disable="tab.disabled">
+        <uib-tab-heading>
+          {{tab.title}} <i ng-if="tab.cancel" class="fa fa-close" ng-click="closeTab($index);"></i>
+        </uib-tab-heading>
+        <div ng-if="tab.app == 'CareersEdit'">
+          <div ng-include="'/static/ngTemplates/app.homepage.careersTemplates.newForm.html'"></div>
+        </div>
+        <!-- <div ng-if="tab.app == 'Careersview'">
+          <div ng-include="'/static/ngTemplates/app.homepage.careersTemplates.newForm.html'"></div>
+        </div> -->
+      </uib-tab>
+    </uib-tabset>
+  </div>
+</div>
+
+
+
+<!-- <div class="container-fluid" ng-controller="controller.home.productsTemplate.form">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Apply</h3>
+      <div class="form-group">
+      <label>Job Title</label>
+      <input type="text" class="form-control" ng-model="form.name" placeholder="Name">
+    </div>
+
+    <div class="form-group">
+      <label>Job Type</label>
+      <select class="form-control" ng-model="form.jobtype">
+        <option value="Intern">Intern</option>
+        <option value="Contract">Contract</option>
+        <option value="Fulltime">Full Time</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Skills</label>
+      <textarea type="text" class="form-control" ng-model="form.skills" placeholder="Skills"></textarea>
+    </div>
+        <div class="form-group">
+        <label>Description</label>
+
+        <textarea type="text" class="form-control" ng-model="form.description"
+          placeholder= "Description"></textarea>
+      </div>
+        <div class="form-group">
+        <label>Status</label>
+        <br />
+        <input type="radio" ng-model="form.status" >  Visible
+      </div>
+
+
+      <div class="form-group">
+        <label>Maximum CTC</label>
+        <input type="number" class="form-control" ng-model="form.maxctc" placeholder="Maxctc">
+      </div>
+
+      <button type="button" class="btn btn-primary" ng-click="add()">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br />
+<br /> -->
+
+<!-- <div class="col-md-3" style="padding-bottom:20px;padding-left:10px;padding-right:10px;">
+        <div class="container-fluid card" style="padding-bottom:0px;">
+          <div class="row" style="border-bottom: 1px solid #dedede;padding-left: 20px;">
+            <!-- <strong> Name:</strong> {{data.firstname}} {{data.lastname}} <br> -->
+<!-- <strong>Job Title:</strong> {{form.name}} <br>
+            <strong>Job Type:</strong> {{form.jobtype}}<br>
+          </div>
+          <div class="row container-fluid" style="padding-top:20px;height:70px;">
+          <i class="fa fa-pencil fa-2x pull-down" style="cursor:pointer;" ng-click="rowActionClicked('edit')"></i>
+          <i class="fa fa-trash fa-2x pull-down" style="cursor:pointer;" ng-click="rowActionClicked('delete')"></i>
+          <i class="fa fa-info-circle fa-2x text-primary pull-right" style="cursor:pointer;" ng-click="rowActionClicked('candidateBrowse')"></i>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-3" style="padding-bottom:20px;padding-left:10px;padding-right:10px;">
+        <div class="container-fluid card" style="padding-bottom:0px;">
+          <div class="row" style="border-bottom: 1px solid #dedede;padding-left: 20px;">
+            <!-- <strong> Name:</strong> {{data.firstname}} {{data.lastname}} <br> -->
+<!-- <strong>Job Title:</strong> {{form.name}} <br>
+            <strong>Job Type:</strong> {{form.jobtype}}<br>
+          </div>
+          <div class="row container-fluid" style="padding-top:20px;height:70px;">
+          <i class="fa fa-pencil fa-2x pull-down" style="cursor:pointer;" ng-click="rowActionClicked('edit')"></i>
+          <i class="fa fa-trash fa-2x pull-down" style="cursor:pointer;" ng-click="rowActionClicked('delete')"></i>
+          <i class="fa fa-info-circle fa-2x text-primary pull-right" style="cursor:pointer;" ng-click="rowActionClicked('candidateBrowse')"></i>
+          </div>
+        </div>
+      </div>
+
+        <div class="col-md-3" style="padding-bottom:20px;padding-left:10px;padding-right:10px;">
+        <div class="container-fluid card" style="padding-bottom:0px;">
+          <div class="row" style="border-bottom: 1px solid #dedede;padding-left: 20px;">
+            <!-- <strong> Name:</strong> {{data.firstname}} {{data.lastname}} <br> -->
+<!-- <strong>Job Title:</strong> {{form.name}} <br>
+            <strong>Job Type:</strong> {{form.jobtype}}<br>
+          </div>
+          <div class="row container-fluid" style="padding-top:20px;height:70px;">
+          <i class="fa fa-pencil fa-2x pull-down" style="cursor:pointer;" ng-click="rowActionClicked('edit')"></i>
+          <i class="fa fa-trash fa-2x pull-down" style="cursor:pointer;" ng-click="rowActionClicked('delete')"></i>
+          <i class="fa fa-info-circle fa-2x text-primary pull-right" style="cursor:pointer;" ng-click="rowActionClicked('candidateBrowse')"></i>
+          </div>
+        </div>
+      </div> -->

@@ -1,0 +1,57 @@
+<!-- this file is replacement for generic-calendar directive -->
+
+<div class="modal-body" style="min-height:93vh;position:relative;">
+  <div class="container-fluid">
+    <div class="row" style="margin-left:20px;margin-right:20px;">
+    <div class="container-fluid">
+  <div class="row">
+    <div class="btn-group col-md-4 col-sm-12 col-xs-12">
+        <button class="btn btn-success col-sm-4 col-xs-6" ng-click="gotoPrev()"> previous </button>
+
+    </div>
+    <div class="headerCalender col-sm-4 col-xs-12"style="right:10%">
+      <p>{{dateDisp | date:'dd MMM yyyy'}} </p>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12">
+      <div class="col-md-7 col-sm-6 col-xs-6">
+        <button class="btn btn-primary col-sm-4 col-xs-6" ng-click="gotoToday()"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+      </div>
+      <button class="btn btn-success col-sm-4 col-xs-6" ng-click="gotoNext()"> next</button>
+    </div>
+  </div>
+
+  <hr></hr>
+  <div class="input-color">
+    <span class="badge badge-pill space " style="height:25px;width:25px;background-color: #ccffc3;"> </span>&nbsp;worked >8hrs &emsp;&emsp;
+    <span class="badge badge-pill " style="height:25px;width:25px;background-color: #f9d6bf;"> </span>&nbsp;worked <8hrs &emsp;&emsp;
+    <span class="badge badge-pill " style="height:25px;width:25px;background-color: #cbe6ff;"> </span>&nbsp;not registered &emsp;&emsp;
+    <span class="badge badge-pill " style="height:25px;width:25px;background-color: #bdbdbd;"> </span>&nbsp;on Leave &emsp;&emsp;
+</div>
+<hr></hr>
+  <div class="row">
+    <div class="weekHeader text-center"style="padding-top:10px;">
+      <div class="weekDay ">Sunday</div>
+      <div class="weekDay">Monday</div>
+      <div class="weekDay">Tuesday</div>
+      <div class="weekDay">Wednesday</div>
+      <div class="weekDay">Thursday</div>
+      <div class="weekDay">Friday</div>
+      <div class="weekDay">Saturday</div>
+    </div>
+  </div>
+  <div class="week">
+    <table width="100%"  style="height:74vh;">
+      <tr ng-repeat="w in range(0,5)">
+        <td class="dayy {{(dates[w*7 + d] == (dateDisp|date : 'dd')) && (dateFlags[w*7 + d]=='Cur') ? 'dayyActive': ''}}"  ng-repeat="d in range(0,6) track by $index" style="background-color:{{dateFlags[w*7 + d]=='Cur'?getval(dateFlags[w*7 + d],dates[w*7 + d]):''}};">
+          <span  style="top:1%;right:2%;position:absolute;" class="dayyType{{dateFlags[w*7 + d]}} ">
+            {{dates[w*7 + d]}}
+          </span>
+          <span style="top:40%;right:35%;position:absolute;font-size:20px;color:#8f8f8f">{{dateFlags[w*7 + d]=='Cur'?timeList[dates[w*7 + d]-1]:''}} {{dateFlags[w*7 + d]=='Cur' && values[dates[w*7 + d]-1]>=0?'Hrs':''}}</span>
+          <span style="top:40%;right:38%;position:absolute;font-size:20px;color:#909090">{{values[dates[w*7 + d]-1] === -2 ? leavetype[0]:''}}</span>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</div>
+</div>

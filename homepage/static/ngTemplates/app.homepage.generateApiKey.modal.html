@@ -1,0 +1,77 @@
+<div class="modal-body" style="position:relative;">
+  <span style="position:absolute;right:10px;top:10px;cursor:pointer;" ng-click="closeModal()"><i style="color:#002855;" class="fa fa-times" aria-hidden="true"></i></span>
+
+  <div class="row text-center">
+    <h3 style="color:#002855;font-weight:bold;">Generate API</h3>
+  </div>
+
+  <div class="row" style="padding:15px 0px">
+    <div class="col-md-offset-1 col-md-10">
+      <div class="row">
+        <div class="col-xs-12">
+          <ul class="connectingDots">
+            <li id="otp" class="till"><i class="fa fa-keyboard-o" aria-hidden="true"></i></li>
+            <li id="confirm"><i class="fa fa-check" aria-hidden="true"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row" style="margin-top:20px;" ng-if="!booleanForm.otpSent">
+        <form>
+          <div class="col-xs-12 col-md-8" style="position:relative">
+            <div class="form-group">
+              <label for="">Email<span>*</span></label>
+              <input type="text" class="form-control" placeholder="" ng-model="form.email" required>
+            </div>
+            <img ng-if="booleanForm.loading" src="/static/images/loading12.gif" alt="" style="position:absolute; right:6px; top:18px;" width="50px" height="50px">
+          </div>
+          <div class="col-xs-12 col-md-3 text-center">
+            <button type="submit" class="btn btn-default btn-submit" ng-click="sendOtp()">Send OTP</button>
+          </div>
+          <div class="col-xs-12" ng-if="booleanForm.invalidEmail">
+            <p style="font-size:13px; color:red;">Sorry, because of huge demand we don't allow gmail, yahoo and outlook. Please use your professional email Id</p>
+          </div>
+          <div class="col-xs-12" ng-if="booleanForm.apiKeyAlreadySent">
+            <p style="font-size:13px; color:green;">API Key already generated for {{form.email}}.</p>
+          </div>
+        </form>
+      </div>
+      <div class="row" style="margin-top:20px;" ng-if="booleanForm.otpSent && booleanForm.apiKey=='' && !booleanForm.apiKeyAlreadySent">
+        <form>
+          <div class="col-xs-12">
+            <h5 style="color:green;">OTP Sent to {{form.email}}! Please check your email!</h5>
+          </div>
+          <div class="col-xs-12 col-md-8">
+            <div class="form-group">
+              <label for="">Enter OTP<span>*</span></label>
+              <input type="text" class="form-control" id="" placeholder="" ng-model="form.otp" required>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4 text-center">
+            <button type="submit" class="btn btn-default btn-submit" ng-click="submitOtp()">Submit</button>
+          </div>
+          <div class="col-xs-12" style="margin:5px;" ng-if="!booleanForm.correctOtp">
+            <p style="font-size:12px; color:red;">Incorrect OTP</p>
+          </div>
+        </form>
+      </div>
+      <div class="row" ng-if="booleanForm.apiKey==''">
+        <div class="col-xs-12" style="margin:5px;">
+          <p style="font-size:12px;">By proceeding you agree to our <a href="#">Terms and conditions</a> </p>
+        </div>
+      </div>
+      <div class="row" style="margin-top:20px;" ng-if="booleanForm.apiKey.length>0">
+        <div class="col-xs-12 text-center">
+          <h4>API Generated Successfully</h4>
+        </div>
+        <div class="col-xs-12 text-center">
+          <h6 style="position:relative;"> <span id="apiKey"> {{booleanForm.apiKey}}  </span> <span style="margin-left:15px; cursor:pointer;" ng-click="copyAPI('apiKey')"><i class="fa fa-clone fa-2x" aria-hidden="true"></i> </span> <span ng-if="booleanForm.copied" style="font-size:12px; color:green; position:absolute; top:-20px; right:30px;">Copied</span> </h6>
+        </div>
+        <div class="col-xs-12" style=" background:url('/static/images/BPO header.jpg') no-repeat ; background-size:cover; height:300px;position:relative;">
+          <button style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); background-color:#ff6900;border:none;" type="button" class="btn btn-warning bigbtn">
+              Go to Documentation
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

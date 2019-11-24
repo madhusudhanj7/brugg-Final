@@ -1,0 +1,693 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-12-02 21:08+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/header.html:13
+msgid "homeId"
+msgstr "Home"
+
+#: templates/header.html:13
+msgid "serviceId"
+msgstr "Services"
+
+#: templates/header.html:13
+msgid "nameId"
+msgstr "Brugg Drahtseil AG, Wydenstrasse 36 CH-5242 Birr, Switzerland"
+
+
+#: templates/header.html:13
+msgid "applicationId"
+msgstr "Application Tips"
+
+#: templates/header.html:13
+msgid "referenceId"
+msgstr "Reference"
+
+#: templates/header.html:13
+msgid "productId"
+msgstr "Products"
+
+#: templates/header.html:13
+msgid "companyId"
+msgstr "Company"
+
+#: templates/header.html:13
+msgid "elevatorId"
+msgstr "Elevator Ropes"
+
+#: templates/header.html:13
+msgid "blogId"
+msgstr "Blogs"
+
+#: templates/header.html:13
+msgid "ropeselectionId"
+msgstr "Rope Selection"
+
+#: templates/header.html:13
+msgid "ropecomparisonId"
+msgstr "Rope Comparison"
+
+#: templates/header.html:13
+msgid "tractionropesId"
+msgstr "Traction Ropes"
+
+#: templates/header.html:13
+msgid "compensationropesId"
+msgstr "Compensation Ropes"
+
+#: templates/header.html:13
+msgid "governarropesId"
+msgstr "Governor Ropes"
+
+#: templates/header.html:13
+msgid "wireId"
+msgstr "Wire Ropes & Lifting Medium"
+
+#: templates/header.html:13
+msgid "architecturalId"
+msgstr "Architectural Ropes"
+
+#: templates/about.html:13
+msgid "aboutusId"
+msgstr "About US"
+
+#: templates/about.html:13
+msgid "aboutA"
+msgstr "Who we are"
+
+#: templates/about.html:13
+msgid "aboutB"
+msgstr "Leaders in elevator rope innovation"
+
+#: templates/about.html:13
+msgid "aboutC"
+msgstr "We, at Brugg Lifting develop and manufacture technologically advanced elevator ropes. A leader in technology, we provide innovative products to our customers. "
+
+#: templates/about.html:13
+msgid "aboutD"
+msgstr "Our attention to detail ensures that we achieve perfection at every level of the manufacturing process, right up to delivery of the ropes and beyond. "
+
+#: templates/about.html:13
+msgid "aboutE"
+msgstr "We, believe in going the 'extra metre'"
+
+#: templates/about.html:13
+msgid "aboutF"
+msgstr "Our Mission"
+
+#: templates/about.html:13
+msgid "aboutG"
+msgstr "Going Up"
+
+#: templates/about.html:13
+msgid "aboutH"
+msgstr "With cities growing taller, at Brugg Lifting our mission is to provide our clients across the world a secure way of transportation. With our innovative products like coated ropes and belts, we ensure that our products give the best performance at high speed and with no bounce."
+
+#: templates/about.html:13
+msgid "aboutI"
+msgstr "No one knows ropes like we do. And, with our excellent customer service teams across the world we provide the expertise required to make every project a success."
+
+#: templates/about.html:13
+msgid "aboutJ"
+msgstr "Our History"
+
+#: templates/about.html:13
+msgid "aboutK"
+msgstr "One Man. One Vision. Going Up."
+
+#: templates/about.html:13
+msgid "aboutL"
+msgstr "Brugg Lifting is a leading global organisation in the production of elevator ropes. Our history goes back over a hundred years and to our Founder Gottlieb Suhner.  In May 1896, the foundation of our company was laid when Gottlieb Suhner opened a cable factory in Brugg, Switzerland. "
+
+#: templates/about.html:13
+msgid "aboutM"
+msgstr "In 1910, Brugg became the first company in Switzerland to manufacture ropes for mountain cable cars. Kabelwerke Brugg entered the global market as early as 1985 with the establishment of a branch in Houston. The segment of wire ropes manufactured was extended in the same year with the acquisition of Schweizerische Seilindustrie AG based in Shaffhausen."
+
+
+#: templates/work.html:13
+msgid "workA"
+msgstr "In today's world if there is a constant, it is change. In this fast-paced world, Brugg Lifting places high value on the human ability to offer insight using technology to make a significant impact. In this changing environment, we need talented people to help our clients navigate through the possibilities of technology and innovation. We need people driven by passion, curiosity and a need to make a difference. "
+
+#: templates/work.html:13
+msgid "workB"
+msgstr "At Brugg Lifting, we provide you with an exceptional experience from the time you join us. We ensure that your time with us however, long or short is enriching and adds value to you. "
+
+#: templates/work.html:13
+msgid "workC"
+msgstr "At Brugg Lifting each of us strives to go the extra 'metre' in everything we do. Whether it is the way we approach our clients or each other. We create opportunities for our people to make a difference to their lives and to those around them. We believe that this helps us provide technological developments as well as impeccable services to the world. "
+
+#: templates/work.html:13
+msgid "workD"
+msgstr "Here, at Brugg Lifting you will find people invested in using technology and innovation to create impact in people's lives. "
+
+#: templates/work.html:13
+msgid "workE"
+msgstr "We invite you to explore the world of BRUGG LIFTING "
+
+#: templates/work.html:13
+msgid "workF"
+msgstr "Blogs!"
+
+#: templates/work.html:13
+msgid "workG"
+msgstr "Let's make the world Go Up "
+
+#: templates/work.html:13
+msgid "workH"
+msgstr "Work With Us "
+
+
+#: templates/index.html:13
+msgid "indexA"
+msgstr "Get to know us "
+
+#: templates/index.html:13
+msgid "indexB"
+msgstr "Welcome to our  "
+
+#: templates/index.html:13
+msgid "indexB1"
+msgstr " Industrial  Business "
+
+#: templates/index.html:13
+msgid "indexC"
+msgstr "Brugg Lifting is a leader in elevator rope technology.  "
+
+#: templates/index.html:13
+msgid "indexD"
+msgstr "Our Motto: Going Up "
+
+#: templates/index.html:13
+msgid "indexE"
+msgstr "is what we live upto every day. We use cutting edge technology and innovation to manufacture elevator ropes that are efficient, built for speed and safety. With cities growing taller across the world today, our technology and innovation provides people a safe means of transport in some of the tallest buildings of the world."
+
+#: templates/index.html:13
+msgid "indexF"
+msgstr "We have three production sites and six distribution centres across Europe, North America and Asia. "
+
+#: templates/index.html:13
+msgid "indexG"
+msgstr "Our Purpose - Going Up - is the foundation of every product we manufacture "
+
+#: templates/index.html:13
+msgid "indexH"
+msgstr "Our attention to detail, support, solutions and expertise provided by highly skilled people brings our purpose to life. "
+
+#: templates/index.html:13
+msgid "indexI"
+msgstr "We Provide You the Highest Standards in Elevator Rope Technology "
+
+#: templates/index.html:13
+msgid "indexJ"
+msgstr "What Makes Us Go Up "
+
+#: templates/index.html:13
+msgid "indexK"
+msgstr "Products "
+
+#: templates/index.html:13
+msgid "indexL"
+msgstr "Our elevator ropes are manufactured and constructed using advanced technology and techniques under stringent quality control and testing procedures"
+
+#: templates/index.html:13
+msgid "Work CultureL"
+msgstr "Work Culture "
+
+#: templates/index.html:13
+msgid "indexM"
+msgstr "We bring diverse ideas, backgrounds, and mindsets together to create an inclusive environment "
+
+#: templates/index.html:13
+msgid "indexN"
+msgstr "Innovation "
+
+#: templates/index.html:13
+msgid "indexO"
+msgstr "A world's first, CTP® redefines technology in terms of efficiency and function "
+
+#: templates/index.html:13
+msgid "indexP"
+msgstr "WHY PEOPLE CHOOSE US? "
+
+#: templates/index.html:13
+msgid "indexQ"
+msgstr "We have 10+ years of experience in revolutionising elevator rope technology"
+
+#: templates/index.html:13
+msgid "indexR"
+msgstr "Safe and Secure "
+
+#: templates/index.html:13
+msgid "indexS"
+msgstr "Our ropes are built for safe and secure transport at high speeds. They are known for their efficiency and durability "
+
+#: templates/index.html:13
+msgid "indexT"
+msgstr "Deliver Smart Work"
+
+#: templates/index.html:13
+msgid "indexU"
+msgstr "Through our skilled and highly trained personnel we provide you the expertise in choosing ropes that are best suited for your building"
+
+#: templates/index.html:13
+msgid "indexV"
+msgstr "Founded In 1896 "
+
+#: templates/index.html:13
+msgid "indexW"
+msgstr "We have pioneered over 100 years of innovation in rope manufacturing.  "
+
+#: templates/index.html:13
+msgid "indexX"
+msgstr "We Support You "
+
+#: templates/index.html:13
+msgid "indexY"
+msgstr "Brugg Lifting offers support and solutions, consultancy, ideas and expertise -always going the extra 'metre' for our clients "
+
+#: templates/footer.html:13
+msgid "indexZ"
+msgstr "About Us "
+
+#: templates/footer.html:13
+msgid "footerA"
+msgstr "About Us"
+
+#: templates/footer.html:13
+msgid "footerB"
+msgstr "Brugg Lifting is a division of Brugg Group of Companies, headquartered in Switzerland. We manufacture and supply elevator ropes across the world.  "
+
+#: templates/footer.html:13
+msgid "footerC"
+msgstr "Find us on a map "
+
+#: templates/footer.html:13
+msgid "footerD"
+msgstr "Products "
+
+#: templates/footer.html:13
+msgid "footerE"
+msgstr "Traction Ropes "
+
+#: templates/footer.html:13
+msgid "footerF"
+msgstr "Compensation Ropes "
+
+#: templates/footer.html:13
+msgid "footerG"
+msgstr "Governor Ropes "
+
+#: templates/footer.html:13
+msgid "footerH"
+msgstr "Links "
+
+#: templates/footer.html:13
+msgid "footerJ"
+msgstr "Application Tips "
+
+#: templates/footer.html:13
+msgid "footerK"
+msgstr "Accessories "
+
+#: templates/footer.html:13
+msgid "footerL"
+msgstr "Blogs "
+
+#: templates/footer.html:13
+msgid "footerM"
+msgstr "Our Locations "
+
+#: templates/footer.html:13
+msgid "footerN"
+msgstr "Careers "
+
+#: templates/footer.html:13
+msgid "footerO"
+msgstr "Legal and Privacy "
+
+#: templates/footer.html:13
+msgid "footerP"
+msgstr "Sitemap"
+
+#: templates/footer.html:13
+msgid "footerQ"
+msgstr "Copyright 2019 Brugg Lifting "
+
+#: templates/footer.html:13
+msgid "footerR"
+msgstr "Catalogue"
+
+#: templates/footer.html:13
+msgid "footerS"
+msgstr "Elevator Ropes"
+
+
+#: templates/footer.html:13
+msgid "footerT"
+msgstr "CTP"
+
+#: templates/footer.html:13
+msgid "footerU"
+msgstr "Product Information"
+
+#: templates/footer.html:13
+msgid "footerV"
+msgstr "Technical Information"
+
+#: templates/footer.html:13
+msgid "footerW"
+msgstr "Application"
+
+
+
+#: templates/header.html:13
+msgid "searchId"
+msgstr "Search"
+
+
+#: templates/header.html:13
+msgid "careesId"
+msgstr "Careers"
+
+#: templates/header.html:13
+msgid "contactusId"
+msgstr "Contact US"
+
+#: templates/header.html:13
+msgid "prevId"
+msgstr "Previous"
+
+#: templates/header.html:13
+msgid "nextId"
+msgstr "Next"
+
+#: templates/header.html:13
+msgid "blogupdateId"
+msgstr "Get Regular Blog Updates"
+
+#: templates/header.html:13
+msgid "sendId"
+msgstr "Send Updates!"
+
+#: templates/homepage.index.html:13
+msgid "title1Id"
+msgstr "We Help Lift You Higher"
+
+#: templates/homepage.index.html:13
+msgid "title2Id"
+msgstr "We are Powered through Innovation "
+
+#: templates/homepage.index.html:13
+msgid "discoverId"
+msgstr "Discover More"
+
+#: templates/homepage.index.html:13
+msgid "contentId"
+msgstr "Get to know us"
+
+#: templates/homepage.index.html:13
+msgid "content1Id"
+msgstr "Welcome to our"
+
+#: templates/homepage.index.html:13
+msgid "content2Id"
+msgstr "Industrial Business"
+
+#: templates/header.html:13
+msgid "postId"
+msgstr "Most Recent Posts"
+
+#: templates/career.html:13
+msgid "storyId"
+msgstr
+"Born from the success of President Obama’s 2008 campaign trail, BRUGG LIFTING was founded to enable the world to turn data into action.\n "
+" \n"
+" Over the past seven years, BRUGG LIFTING has evolved far beyond simple website A/B testing. We recently launched the world’s leading Experimentation Platform to enable experimentation everywhere: across the entire customer experience, on any channel, for any device, in any application.\n"
+" \n"
+"BRUGG LIFTING allows executives, marketers, product managers, and developers to be brave and make better business decisions."
+"\n    "
+"\n    "
+
+#: templates/career.html:13
+msgid "workId"
+msgstr "Work @ BRUGG LIFTING"
+
+#: templates/career.html:13
+msgid "Why you'll love it here"
+msgstr "We’re building a team of inspired, smart, and driven individuals from all sorts of backgrounds. With countless opportunities for growth and mentorship, we strive to help each employee carve out the path that’s right for them."
+
+#: templates/loction.html:13
+msgid "address1Id"
+msgstr "Switzerland"
+
+#: templates/loction.html:13
+msgid "address2Id"
+msgstr "Switzerland"
+
+#: templates/loction.html:13
+msgid "address3Id"
+msgstr "USA"
+
+#: templates/loction.html:13
+msgid "address4Id"
+msgstr "Dubai UAE"
+
+#: templates/loction.html:13
+msgid "address5Id"
+msgstr "P.R. China"
+
+
+#: templates/loction.html:13
+msgid "address6Id"
+msgstr "United Kingdom"
+
+#: templates/loction.html:13
+msgid "address7Id"
+msgstr "Italy"
+
+#: templates/loction.html:13
+msgid "address8Id"
+msgstr "Poland"
+
+#: templates/loction.html:13
+msgid "address9Id"
+msgstr "Germany"
+
+#: templates/loction.html:13
+msgid "address10Id"
+msgstr "USA"
+
+#: templates/loction.html:13
+msgid "address11Id"
+msgstr "USA"
+
+#: templates/loction.html:13
+msgid "address12Id"
+msgstr "Canada"
+
+#: templates/loction.html:13
+msgid "address13Id"
+msgstr "USA"
+
+#: templates/loction.html:13
+msgid "address14Id"
+msgstr "USA"
+
+#: templates/loction.html:13
+msgid "address15Id"
+msgstr "Canada"
+
+#: templates/loction.html:13
+msgid "address16Id"
+msgstr "USA"
+
+#: templates/loction.html:13
+msgid "address17Id"
+msgstr " "
+
+#: templates/loction.html:13
+msgid "address18Id"
+msgstr "Singapore"
+
+#: templates/loction.html:13
+msgid "address19Id"
+msgstr "Futian Shenzhen"
+
+#: templates/loction.html:13
+msgid "address20Id"
+msgstr "Hong Kong"
+
+#: templates/loction.html:13
+msgid "address21Id"
+msgstr "Korea"
+
+#: templates/loction.html:13
+msgid "address22Id"
+msgstr "Thailand"
+
+#: templates/loction.html:13
+msgid "address23Id"
+msgstr "Philippines"
+
+#: templates/loction.html:13
+msgid "address24Id"
+msgstr "Australia"
+
+#: templates/loction.html:13
+msgid "l1Id"
+msgstr "Brugg Lifting around the world"
+
+#: templates/loction.html:13
+msgid "l2Id"
+msgstr "Brugg Lifting comprises of three production sites and six sales sites in Europe, Asia and North America. We have achieved the status of a global company as early as 1985. Our structure is composed of production regions and sales regions. Working together they oversee, our our business strategy, plans and priorities"
+
+#: templates/loction.html:13
+msgid "l3Id"
+msgstr "This structure is streamlined to help us in providing exceptional client service across the globe. Through our locations we can reach some of the fastest developing countries in every region of the world. Our elevator ropes have been used in buildings from China to North America. In having a global presence, we have extended our reach and experience."
+
+
+#: templates/rope-selection.html:13
+msgid "calculatorDescription"
+msgstr "To choose the appropriate rope for your application, drag the elevator car to the desired height. Click on the selected rope for further details.This rope selection provides a guideline only and is not meant to replace an exact calculation."
+
+#: templates/innovation.html:13
+msgid "coatedProduct"
+msgstr "Coated Products"
+
+#: templates/innovation.html:13
+msgid "productH1"
+msgstr "Elevator Ropes from Brugg Lifting."
+
+#: templates/innovation.html:13
+msgid "productH2"
+msgstr "CTP® Coated Transmission Products"
+
+#: templates/innovation.html:13
+msgid "productD2"
+msgstr "A world first, CTP® unites technological innovation for the highest demands. This high-end rope is unbeatable in terms of function and efficiency. See for yourself:"
+
+
+#: templates/innovation.html:13
+msgid "productDeT1"
+msgstr "Reduce your total cost by up to 40%"
+
+#: templates/innovation.html:13
+msgid "productDeD1"
+msgstr "A small rope diameter and a smaller drive allow for a reduction of capital and operating cost."
+
+#: templates/innovation.html:13
+msgid "productDeT2"
+msgstr "Reduce your maintenance cost by up to 100%"
+
+#: templates/innovation.html:13
+msgid "productDeD2"
+msgstr "Reduzieren Sie Ihre Wartungskosten um bis zu 100%"
+
+#: templates/innovation.html:13
+msgid "productDeT3"
+msgstr "Enjoy improved travelling comfort"
+
+#: templates/innovation.html:13
+msgid "productDeD3"
+msgstr "The polymer coating eliminates or strongly absorbs vibrations, which significantly contributes to a smooth running."
+
+#: templates/innovation.html:13
+msgid "productDeT4"
+msgstr "Increase the service life by 3-fold"
+
+#: templates/innovation.html:13
+msgid "productDeD4"
+msgstr "Since the traction sheave and the elevator rope is not subject to wear, the frequency of rope replacement and the related costs are reduced."
+
+
+#: templates/app.sitemap.html:13
+msgid "sitemapT"
+msgstr "Sitemap"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH1"
+msgstr "About Us"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH2"
+msgstr "Careers"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH3"
+msgstr "Our Locations"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH4"
+msgstr "References"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH5"
+msgstr "Application Tips"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH6"
+msgstr "Elevator Ropes"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH7"
+msgstr "Traction Ropes"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH8"
+msgstr "Compensation Ropes"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH9"
+msgstr "Governor Ropes"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH10"
+msgstr "News"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH11"
+msgstr "Traction Ropes"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH12"
+msgstr "Compensation Ropes"
+
+#: templates/app.sitemap.html:13
+msgid "sitemapH13"
+msgstr "Governor Ropes"
+
+
+#: templates/app.sitemap.html:13
+msgid "index1"
+msgstr "Years of Innovation"
+
+#: templates/app.sitemap.html:13
+msgid "index2"
+msgstr "Business Units"
+
+#: templates/app.sitemap.html:13
+msgid "index3"
+msgstr "Companies"
+
+#: templates/app.sitemap.html:13
+msgid "index4"
+msgstr "Countries"
+
+#: templates/app.sitemap.html:13
+msgid "index5"
+msgstr "Clients"

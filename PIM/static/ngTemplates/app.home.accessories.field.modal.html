@@ -1,0 +1,64 @@
+<div class="modal-header">
+  <h3>Add Fields To Template</h3>
+</div>
+  <div class="modal-body">
+    <div class="form-group">
+      <label>Field Name</label>
+      <input  type="text" class="form-control" ng-model="fieldForm.name" placeholder="Field Name" id = "name">
+    </div>
+    <div class="form-group">
+      <label>Type</label>
+      <select class="form-control" ng-model="fieldForm.type">
+        <option value="Boolean">Boolean</option>
+        <option value="Char">Char</option>
+        <option value="float">float</option>
+        <option value="Integer">Integer</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Dimensions</label>
+      <input type="text" class="form-control" ng-model="fieldForm.dimensions" placeholder="Dimensions">
+    </div>
+    <div class="form-group" style="display:inline">
+      <label>Required</label>
+      <input type="checkbox" ng-model="fieldForm.required">
+    </div>
+
+    <div class="form-group" style="display:inline">
+      <label>In PDF</label>
+      <input type="checkbox" ng-model="fieldForm.inPdf">
+    </div>
+    <div class="form-group" style="display:inline">
+      <label>IN UI</label>
+      <input type="checkbox" ng-model="fieldForm.inUI">
+    </div><br/>
+    <span class="btn btn-primary" ng-click="saveTemplateField()" style="margin-top:15px">Save</span>
+  <div class="" ng-if="tempFieldsData.length>0" style="padding-top:25px">
+    <div  ng-repeat="field in tempFieldsData">
+      <div class="card" style="margin-bottom:5px;border-radius:10px">
+        <div class="row" style="padding:10px">
+          <div class="col-md-12">
+            <div class="col-md-3">
+              <strong>Name</strong><br>{{field.name}}
+            </div>
+            <div class="col-md-2">
+              <strong>Type</strong><br>{{field.type}}
+            </div>
+            <div class="col-md-2">
+              <strong>Required</strong><br><i class="fa {{field.required?'fa-check-circle':'fa-times-circle-o'}} fa-lg"></i>
+            </div>
+            <div class="col-md-2">
+              <strong>In PDF</strong><br><i class="fa {{field.inPdf?'fa-check-circle':'fa-times-circle-o'}} fa-lg"></i>
+            </div>
+            <div class="col-md-2">
+              <strong>IN UI</strong><br><i class="fa {{field.inUI?'fa-check-circle':'fa-times-circle-o'}} fa-lg"></i>
+            </div>
+            <div class="col-md-1">
+              <strong>Edit</strong><br>  <i class="fa fa-pencil" ng-click="editField(field,$index)"></i>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+</div>

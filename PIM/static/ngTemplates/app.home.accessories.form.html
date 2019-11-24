@@ -1,0 +1,119 @@
+<div class="container-fluid" ng-controller="controller.home.accessories.form">
+  <div class="row" style="padding-top:15px">
+    <div class="col-md-4">
+      <h3 ng-if="!form.pk">Create Accessiries</h3>
+      <h3 ng-if="form.pk">Edit {{form.name}}</h3>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" ng-model="form.name" placeholder="Name">
+      </div>
+      <!-- <div class="form-group">
+        <label>Image 1 </label>
+        <input type="file" file-model="form.mainImage">
+      </div> -->
+
+      <div class="button-group">
+      <button type="button" class="btn btn-primary" ng-click="save()">Save</button>
+      <button ng-if="mode=='new'" class="btn btn-default" ng-click="reset()">Reset</button>
+    </div>
+
+
+  <div ng-if="form.pk">
+    <h3 ng-if="!section.pk">Create Product</h3>
+    <h3 ng-if="section.pk">Edit Section</h3>
+    <div class="form-group">
+      <label>Category Name</label>
+      <input type="text" class="form-control" ng-model="section.categoryName" placeholder="Category Name">
+    </div>
+    <div class="form-group">
+      <label>Product Name (English)</label>
+      <input type="text" class="form-control" ng-model="section.basicProductName" placeholder="Name" id= "englishName">
+    </div>
+    <div class="form-group">
+      <label>Product Name</label>
+      <input type="text" class="form-control" ng-model="section.productName" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <label>Tag</label>
+      <input type="text" class="form-control" ng-model="section.tagLine" placeholder="Tag">
+    </div>
+    <div class="form-group">
+      <label>Title 1</label>
+      <input type="text" class="form-control" ng-model="section.title1" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <label>Description 1</label>
+      <textarea ui-tinymce="tinymceOptions" ng-model="section.desc1"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Title 2</label>
+      <input type="text" class="form-control" ng-model="section.title2" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <label>Description 2</label>
+      <textarea ui-tinymce="tinymceOptions" ng-model="section.desc2"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="">Language</label>
+      <select  class="form-control" ng-model="section.lang" ng-options="lang for lang in languages"></select>
+    </div>
+    <div class="form-group">
+      <label>Asseccorie Main </label>
+      <input type="file" file-model="section.image1">
+    </div>
+    <div class="form-group">
+      <label>Asseccorie Product </label>
+      <input type="file" file-model="section.image2">
+    </div>
+    <div class="form-group">
+      <label>Single Template Background1 (JPG, A4 Size) </label>
+      <input type="file" file-model="section.backgroundImage1">
+    </div>
+    <div class="form-group">
+      <label>Single Template Background2 (JPG, A4 Size)</label>
+      <input type="file" file-model="section.backgroundImage2">
+    </div>
+    <div class="form-group">
+      <label>Elevator Catalog Background1 (JPG, A4 Size)</label>
+      <input type="file" file-model="section.catalogBG1">
+    </div>
+    <div class="form-group">
+      <label>Elevator Catalog Background2 (JPG, A4 Size)</label>
+      <input type="file" file-model="section.catalogBG2">
+    </div>
+    <div class="form-group">
+      <label>Note</label>
+      <textarea ui-tinymce="tinymceOptions" ng-model="section.bottomtext"></textarea>
+    </div>
+    <media-Field data="section.media" url="/api/homepage/media/"></media-Field>
+    <button type="button" class="btn btn-primary" ng-click="saveSection()">Save</button>
+  </div>
+</div>
+<div class="col-md-offset-1 col-md-6" style="cursor:pointer">
+    <div class="col-md-6" style="cursor:pointer" ng-repeat = "data in sectionDetails">
+      <div class="container-fluid card" style="border-radius:10px;border:1px solid #eee;margin-bottom:10px;padding:30px;" >
+        <div class="row" style="font-size:25px">
+          <div class="col-md-12">
+            <strong>Language :</strong> {{data.lang}}<br>
+            <strong>Category :</strong> {{data.categoryName}}<br>
+            <strong>Product :</strong> {{data.productName}}<br>
+          </div>
+        </div>
+        <div class="row" style="padding-top:10px">
+          <div class="col-md-3">
+            <i class="fa fa-trash fa-2x"  mwl-confirm title="Confirm" message="Are you sure?" confirm-text="Yes <i class='fa fa-check'></i>" cancel-text="No" on-confirm="deleteSection(data,$index);$event.stopPropagation();" confirm-button-type="default" cancel-button-type="default"></i>  </div>
+              <div class="col-md-3">
+              <i class="fa fa-pencil fa-2x" ng-click="editSection(data,$index)"></i>
+              </div>
+              <div class="col-md-3">
+              <i class="fa fa-plus fa-2x" ng-click="addField(data)"></i>
+              </div>
+                <div class="col-md-3">
+              <i class="fa fa-product-hunt fa-2x" ng-click="viewProduct(data)"></i>
+              </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>

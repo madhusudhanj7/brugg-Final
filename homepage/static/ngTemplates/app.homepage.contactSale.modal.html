@@ -1,0 +1,100 @@
+<div class="modal-body" style="position:relative;">
+
+  <span style="position:absolute;right:10px;top:10px;cursor:pointer;" ng-click="closeModal()"><i style="color:#002855;" class="fa fa-times" aria-hidden="true"></i></span>
+
+  <div class="row text-center">
+    <h3 style="color:#002855;font-weight:bold;">Apply to Connect</h3>
+  </div>
+
+  <div class="row" style="padding:15px 0px">
+    <div class="col-md-offset-1 col-md-10" ng-if="!thankYou">
+
+
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="">First Name<span>*</span></label>
+              <input type="text" class="form-control" id="" placeholder="First Name" required ng-model="form.firstName">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="">Last Name</label>
+              <input type="text" class="form-control" id="" placeholder="Last Name" ng-model="form.lastName">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="">Work Email <span >*</span></label>
+              <input type="text" class="form-control" id="" placeholder="Work Email" required ng-model="form.emailId">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="">Phone Number <span>*</span></label>
+              <input type="text" class="form-control" id="" placeholder="Work Phone Number" required ng-model="form.mobileNumber">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="">What's your field of expertise?</label>
+              <select ng-init="form.companyExpertise = companyExpertise[0]"  class="form-control" ng-model="form.companyExpertise" ng-options="ce for ce in companyExpertise"></select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="">Company <span>*</span> </label>
+              <input type="text" class="form-control" ng-model="form.company" id="" placeholder="Your Company" required>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="">Job Level</label>
+              <select  ng-init="form.jobLevel = jobLevel[0]" class="form-control" ng-model="form.jobLevel" ng-options="j for j in jobLevel"></select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="">Company Industry</label>
+              <select  ng-init="form.companyCategory = companyCategory[0]" class="form-control" ng-model="form.companyCategory" ng-options="cc for cc in companyCategory"></select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="">Country</label>
+              <select ng-init="form.country = country[0]" class="form-control" ng-model="form.country" ng-options="c for c in country"></select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label for="">Requirments <span>*</span> </label>
+              <textarea type="text" class="form-control" rows="4" id="" placeholder="Requirments" required ng-model="form.requirements"></textarea>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row text-center">
+          <button type="submit" style="background-color:#ff6900;border:none;" class="btn btn-warning bigbtn" ng-click="connect()"><b>Connect</b> </button>
+        </div>
+    </div>
+    </form>
+    <div class="col-md-offset-1 col-md-10" ng-if="thankYou">
+      <div class="row text-center">
+        <h3>Thank you for submitting the form. We will get in touch with you soon.</h3>
+      </div>
+    </div>
+  </div>
+</div>

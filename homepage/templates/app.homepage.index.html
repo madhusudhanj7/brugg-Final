@@ -1,0 +1,973 @@
+{% extends "index.html" %}{% load staticfiles %}{% load i18n %}
+{% get_current_language as lang %}
+
+
+{% block brugcontent %}
+{% verbatim %}
+<div class="page-wrapper">
+  <div id="myCarousel" class="carousel slide caption-animate" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active" style="height:80vh;">
+        <img class="hidden-xs" src="/static/images/brugImages/Img_1.jpeg" alt="Chania" style="height:100%;width:100%">
+        <img class="visible-xs" src="/static/images/brugImages/Img_1alt.jpeg" alt="Chania" style="height:100%;width:100%;">
+        <div class="carousel-caption fadeInUp" style="padding-bottom:70px">
+          <strong class="curosel_text" style=" font-weight: bold !important; text-align:center;overflow:hidden;padding:auto; opacity: 2;-webkit-animation: fadein 2.5s; -moz-animation: fadein 2.5s; -ms-animation: fadein 2.5s; -o-animation: fadein 2.5s; animation: fadein 2.5s;">{% endverbatim %} {% trans 'title1Id' %}{% verbatim %}</strong><br>
+          <a href="/about" class="thm-btn">{% endverbatim %} {% trans 'discoverId' %}{% verbatim %}</a>
+        </div>
+      </div>
+
+      <div class="item" style="height:80vh">
+        <img class="hidden-xs" src="/static/images/brugImages/Img_2.jpeg" alt="Chania"  style="height:100%;width:100%;">
+        <img class="visible-xs" src="/static/images/brugImages/Img_2alt.jpeg" alt="Chania" style="height:100%;width:100%;">
+        <div class="carousel-caption fadeInUp" style="padding-bottom:70px">
+          <strong class="curosel_text" style=" font-weight: bold !important; text-align:center;overflow:hidden;padding:auto; opacity: 2;-webkit-animation: fadein 2.5s; -moz-animation: fadein 2.5s; -ms-animation: fadein 2.5s; -o-animation: fadein 2.5s; animation: fadein 2.5s;">{% endverbatim %} {% trans 'title2Id' %}{% verbatim %}</strong><br>
+          <a  href="/innovation" class="thm-btn">{% endverbatim %} {% trans 'discoverId' %}{% verbatim %}</a>
+        </div>
+      </div>
+
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+    <div class="row" >
+  <div class=" col-md-offset-2  col-lg-offset-2 col-md-8 col-lg-8 col-sm-12 col-xs-12" style="padding:120px 0px;">
+    <div class="row" style="margin-bottom:30px">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="content-block text-center">
+                <div class="sec-title">
+                    <span class="tag-line">{% endverbatim %} {% trans 'indexA' %}{% verbatim %}</span>
+                    <h2>{% endverbatim %} {% trans 'indexB' %}{% verbatim %} <br> {% endverbatim %} {% trans 'indexB1' %}{% verbatim %}</h2>
+                </div>
+                <h3 style="padding:15px 50px;"><strong>
+                {% endverbatim %} {% trans 'indexC' %}{% verbatim %}</strong></h3>
+                <div class="sec-title" style="margin-bottom: 10px;">
+                    <span class="tag-line">{% endverbatim %} {% trans 'indexD' %}{% verbatim %}</span>
+                </div>
+                 <p style="padding:0px 25px 0px 25px">{% endverbatim %} {% trans 'indexE' %}{% verbatim %}</p>
+                <div class="phone-block">
+                    <!-- <div class="icon-block-new">
+                        <i class="fa fa-phone icon-home fa-2x"></i>
+                    </div> -->
+                    <!-- <p>Let’s Call us to Get a Free Estimate</p>
+                    <h1 style="color: #002c42">666 888 0000</h1> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+            <div class="image-block">
+                <img src="static/images/brugImages/Img_3.png" alt="Awesome Image" style="width:100%"/>
+            </div>
+            <div class="gray-bg text-center" style="padding:40px;margin-top:15px">
+                <h2 style="color: #002c42">{% endverbatim %} {% trans 'indexG' %}{% verbatim %}</h2>
+                <p>{% endverbatim %} {% trans 'indexH' %}{% verbatim %}</p>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="row cta-style-four text-center" >
+<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" >
+<div class="col-md-offset-3 col-md-6" >
+  <h3>{% endverbatim %} {% trans 'indexI' %}{% verbatim %}</h3>
+  <!-- <h3>We Provide you the Highest <br> Standards in Elevator Rope <br> Technology</h3> -->
+  <!-- <a href="/blogs" class="thm-btn">Our Responsibility</a> -->
+</div>
+</div>
+</div>
+
+<hr class="style-one" />
+<div class="row" >
+<div class=" col-md-offset-2  col-lg-offset-2 col-md-8 col-lg-8 col-sm-12 col-xs-12">
+<div class="brand-carousel-wrapper">
+
+        <div  class="brand-carousel-one-images owl-theme owl-carousel">
+            <!-- <div  ng-repeat="a in reference" class="item">
+                <a href="{{a.url}}"><img src="{{a.image}}" alt="Awesome Image"/></a>
+            </div> -->
+            <!-- <div   class="" >
+                <a href="/reference"><img src="static/images/TowerBuilding/image10.png" style="height:350px"  alt="Awesome Image"/></a>
+            </div> -->
+            <div class="item row curosel_card" style="padding-left:30px">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center" >
+                <div class="row text-center"  style="height:300px">
+                <img src="static/images/TowerBuilding/image10.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+              <div class="row text-center">
+                <span> Basel Trade Fair Tower</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                <span style="color:#009DE0"> Switzerland / Basel </span>
+            </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">105 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">24</p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                  </div>
+              </div>
+              </div>
+            </div>
+            <div class="item row curosel_card">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center" >
+                <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image825.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> Burj Khalifa</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> United Arab Emirates / Dubai </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">828 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">Governor Ropes</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">57</p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center" >
+                <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image854.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> CN Tower</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> Canada / Toronto </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">553 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">6</p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center" >
+                <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image871.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> Comcast</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> USA / Philadelphia </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">297 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">6</p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center" >
+                <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image888.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> Empire State Building</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0">  USA / New York </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">443 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">6</p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card" style="padding-left:30px">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center" style="padding:0px">
+                  <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image905.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> Federation Tower</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> Russia / Moskau </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">360 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px"> </p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card" style="padding-left:30px">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center" style="padding:0px">
+                  <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image922.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> IFC</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> Hong Kong </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">420 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px"> </p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card" style="padding-left:30px">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center" style="padding:0px">
+                  <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image939.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> Menara Kuala Lumpur</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> Malaysia / Kuala Lumpur </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">420 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px"> </p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card" style="padding-left:30px">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center" >
+                <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image956.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> Millenium Tower</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> Austria / Vienna </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">202 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">9</p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card" style="padding-left:30px">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center">
+              <div class="row text-center"  style="height:300px">
+                <img src="static/images/TowerBuilding/image973.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> Nurnberger Versicherung</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> Germany / Nurnberg </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle  text-center">
+                        <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">135 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle  text-center">
+                <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">6</p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center">
+                <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image990.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> One World Trade Center</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> USA / New York </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">541 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">73</p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center">
+                  <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image1007.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> Oriental Pearl Tower</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> China / Shanghai </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">468 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">6</p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center">
+                <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image1024.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> Petronas Twin Tower</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> Malaysia / Kuala Lumpur </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">452 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">78</p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card" style="padding-left:30px">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center">
+                  <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image1041.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> Plaza 66 </span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> China / Shanghai </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">288 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px"> </p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card" style="padding-left:30px">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center">
+                  <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image1058.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> Pollux Frankfurt </span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> Germany </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">130 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px"> </p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card" style="padding-left:30px">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center">
+                  <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image1075.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> Republic Plaza </span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> Singapore </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">280 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px"> </p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+
+            <div class="item row curosel_card" style="padding-left:30px">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center">
+                  <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image1092.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> Tomorrow Square</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> China / Shanghai </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">285 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px"> </p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card" style="padding-left:30px">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center" >
+                  <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image1109.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> Torre Mayor</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> Mexico / Mexico City </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">225 m</p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">14</p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+            <div class="item row curosel_card" style="padding-left:30px">
+              <div class="col-md-7 col-lg-7 col-sm-9 col-xs-7  text-center">
+                  <div class="row text-left"  style="height:300px">
+                <img src="static/images/TowerBuilding/image1126.png" alt="Awesome Image" style="height:100%"/>
+              </div>
+                <div class="row">
+                  <span> Twins Tower</span><hr style="border-top:1.5px solid #009DE0;margin-top:0px;margin-bottom:0px"  width="60%"  align="center"/>
+                  <span style="color:#009DE0"> Austria / Vienna </span>
+              </div>
+              </div>
+              <div class="col-md-5 col-lg-5 col-sm-3 col-xs-5" style="padding:0px">
+                <div style="height:30%;margin-top:15px">
+                  <div class="circle text-center">
+                    <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px">138 m </p> <p style="padding-top:1.5px;margin:0px">Height</p></h4>
+                  </div>
+              </div>
+                <div style="height:30%;margin-top:15px"><img src="static/images/hrs_b.jpg" alt="Awesome Image" style=" border-radius: 50%;width:55%"/>   <div class="centered_top">HRS</div>
+              </div>
+              <div style="height:30%;margin-top:15px">
+                <div class="circle text-center">
+                  <h4><p style="border-bottom:1.5px solid #009de0;padding-bottom:2px;margin:0px"> </p> <p style="padding-top:1.5px;margin:0px">Elevators</p></h4>
+                </div>
+            </div>
+              </div>
+            </div>
+
+
+
+
+        </div><!-- /.brand-carousel-one -->
+</div><!-- /.brand-carousel-wrapper -->
+</div>
+</div>
+
+    <section class="project-style-one sec-pad-top"><p></p>
+        <div class="container-fluid p-0">
+            <div class="sec-title text-center">
+                <!-- <span class="tag-line">Our Projects</span> -->
+                <div class="sec-title">
+                    <span class="tag-line">{% endverbatim %} {% trans 'indexJ' %}{% verbatim %}</span>
+                </div>
+            </div><!-- /.sec-title -->
+            <div class="row no-gutters">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="single-project-style-one">
+                        <div class="image-block">
+                            <img class="hidden-xs" src="static/images/brugImages/8a.jpg" alt="Awesome Image" style="height:470px"/>
+                            <img class="visible-xs" src="static/images/brugImages/8a_alt.jpeg" alt="Awesome Image" style="height:470px"/>
+                            <div class="overlay">
+                                <div class="box">
+                                    <div class="content">
+                                        <div class="inner-content">
+                                            <h3><a href="/product">{% endverbatim %} {% trans 'indexK' %}{% verbatim %}</a></h3>
+                                            <p>{% endverbatim %} {% trans 'indexL' %}{% verbatim %}</p>
+                                            <a href="/product" class="thm-btn style-two white-hover">Read More</a>
+                                        </div><!-- /.inner-content -->
+                                    </div><!-- /.content -->
+                                </div><!-- /.box -->
+                            </div><!-- /.overlay -->
+                        </div><!-- /.image-block -->
+                    </div><!-- /.single-project-style-one -->
+                </div><!-- /.col-lg-3 -->
+                <!-- <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <div class="single-project-style-one">
+                        <div class="image-block">
+                            <img src="static/images/project-1-2.jpg" alt="Awesome Image"/>
+                            <div class="overlay">
+                                <div class="box">
+                                    <div class="content">
+                                        <div class="inner-content">
+                                            <h3><a href="project-details.html">Services</a></h3>
+                                            <p>There are many new variations of available but majority is simple free text.</p>
+                                            <a href="project-details.html" class="thm-btn style-two">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="single-project-style-one">
+                        <div class="image-block">
+                            <img class="hidden-xs" src="static/images/brugImages/7a.jpg" alt="Awesome Image" style="height:470px"/>
+                            <img class="visible-xs" src="static/images/brugImages/7a_alt.jpeg" alt="Awesome Image" style="height:470px"/>
+                            <div class="overlay">
+                                <div class="box">
+                                    <div class="content">
+                                        <div class="inner-content">
+                                            <h3><a href="/work-culture">{% endverbatim %} {% trans 'Work CultureL' %}{% verbatim %}</a></h3>
+                                            <p>{% endverbatim %} {% trans 'indexM' %}{% verbatim %}</p>
+                                            <a href="/work-culture" class="thm-btn style-two">Read More</a>
+                                        </div><!-- /.inner-content -->
+                                    </div><!-- /.content -->
+                                </div><!-- /.box -->
+                            </div><!-- /.overlay -->
+                        </div><!-- /.image-block -->
+                    </div><!-- /.single-project-style-one -->
+                </div><!-- /.col-lg-3 -->
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="single-project-style-one">
+                        <div class="image-block">
+                            <img class="hidden-xs" src="static/images/brugImages/6a.jpg" alt="Awesome Image" style="height:470px"/>
+                            <img class="visible-xs" src="static/images/brugImages/6a_alt.jpeg" alt="Awesome Image" style="height:470px;transform: rotate(180deg);"/>
+                            <div class="overlay">
+                                <div class="box">
+                                    <div class="content">
+                                        <div class="inner-content">
+                                            <h3><a href="/innovation">{% endverbatim %} {% trans 'indexN' %}{% verbatim %}</a></h3>
+                                            <p>{% endverbatim %} {% trans 'indexO' %}{% verbatim %}</p>
+                                            <a href="/innovation" class="thm-btn style-two">Read More</a>
+                                        </div><!-- /.inner-content -->
+                                    </div><!-- /.content -->
+                                </div><!-- /.box -->
+                            </div><!-- /.overlay -->
+                        </div><!-- /.image-block -->
+                    </div><!-- /.single-project-style-one -->
+                </div><!-- /.col-lg-3 -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section><!-- /.project-style-one sec-pad-top -->
+
+
+
+<div class="row">
+<div class="hidden-xs hidden-sm">
+    <section class="sec-pad featured-style-two">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
+                    <div class="sec-title" >
+                        <span class="tag-line">{% endverbatim %} {% trans 'indexP' %}{% verbatim %}</span>
+                        <!-- <h2>We have 10+ years of <br /> experience in <br> revolutionising elevator rope <br> technology</h2> -->
+                        <h2>{% endverbatim %} {% trans 'indexQ' %}{% verbatim %}</h2>
+                    </div><!-- /.sec-title -->
+                    <!-- <a style="margin-top:0px" href="#" class="thm-btn style-two">Read More</a> -->
+                </div><!-- /.col-lg-5 -->
+                <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12">
+                    <div class=" featured-style-two-row">
+                      <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="single-featured-content-two">
+                                <div class="top-box">
+                                    <div class="icon-block">
+
+                                          <i class="fa  fa-shield  fa-2x"></i>
+
+                                    </div><!-- /.icon-block -->
+                                    <div class="text-block">
+                                        <!-- <h3>Safe and <br> Secure</h3> -->
+                                        <h3>{% endverbatim %} {% trans 'indexR' %}{% verbatim %}</h3>
+                                    </div><!-- /.text-block -->
+                                </div><!-- /.top-box -->
+                                <p>{% endverbatim %} {% trans 'indexS' %}{% verbatim %}</p>
+                            </div><!-- /.single-featured-content-two -->
+                        </div><!-- /.col-lg-6 -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="single-featured-content-two">
+                                <div class="top-box">
+                                    <div class="icon-block">
+                                          <i class="fa  fa-building-o  fa-2x"></i>
+                                    </div><!-- /.icon-block -->
+                                    <div class="text-block">
+                                        <!-- <h3>Deliver Smart <br> Work</h3> -->
+                                        <h3>{% endverbatim %} {% trans 'indexT' %}{% verbatim %}</h3>
+                                    </div><!-- /.text-block -->
+                                </div><!-- /.top-box -->
+                                <!-- <p>We ensure that we provide you with the optimum ropes for your specific requirements through our skilled teams</p> -->
+                                <p>
+                                  {% endverbatim %} {% trans 'indexU' %}{% verbatim %}
+                                  </p>
+                            </div><!-- /.single-featured-content-two -->
+                        </div><!-- /.col-lg-6 -->
+                        </div><!-- /.col-lg-6 -->
+                        <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-12 ">
+                            <div class="single-featured-content-two">
+                                <div class="top-box">
+                                    <div class="icon-block">
+                                          <i class="fa  fa-industry  fa-2x"></i>
+                                    </div><!-- /.icon-block -->
+                                    <div class="text-block">
+                                        <!-- <h3>Founded in <br> 1896</h3> -->
+                                        <h3>{% endverbatim %} {% trans 'indexV' %}{% verbatim %}</h3>
+                                    </div><!-- /.text-block -->
+                                </div><!-- /.top-box -->
+                                <p>{% endverbatim %} {% trans 'indexW' %}{% verbatim %}</p>
+                            </div><!-- /.single-featured-content-two -->
+                        </div><!-- /.col-lg-6 -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="single-featured-content-two">
+                                <div class="top-box">
+                                    <div class="icon-block">
+                                        <i class="fa  fa-headphones  fa-2x"></i>
+                                    </div><!-- /.icon-block -->
+                                    <div class="text-block">
+                                        <!-- <h3>We Support <br/> You</h3> -->
+                                        <h3>{% endverbatim %} {% trans 'indexX' %}{% verbatim %}</h3>
+                                    </div><!-- /.text-block -->
+                                </div><!-- /.top-box -->
+                                <p>{% endverbatim %} {% trans 'indexY' %}{% verbatim %}</p>
+                            </div><!-- /.single-featured-content-two -->
+                        </div><!-- /.col-lg-6 -->
+                        </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                </div><!-- /.col-lg-7 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.sec-pad -->
+</div>
+
+
+
+
+<div class="hidden-md hidden-lg">
+    <section class="sec-pad featured-style-two">
+        <div class="col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                    <div class="sec-title text-center">
+                        <span class="tag-line">{% endverbatim %} {% trans 'indexP' %}{% verbatim %}</span>
+                        <!-- <h2>We have 10+ years of <br /> experience in <br> revolutionising elevator rope <br> technology</h2> -->
+                        <h2>{% endverbatim %} {% trans 'indexQ' %}{% verbatim %}</h2>
+                    </div><!-- /.sec-title -->
+                    <!-- <a style="margin-top:0px" href="#" class="thm-btn style-two">Read More</a> -->
+                </div><!-- /.col-lg-5 -->
+                <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 ">
+                    <div class="row featured-style-two-row">
+                        <div class=" col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                            <div class=" col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                            <div class="single-featured-content-two">
+                                <div class="top-box">
+                                    <div class="icon-block">
+
+                                          <i class="fa  fa-shield  fa-2x"></i>
+
+                                    </div><!-- /.icon-block -->
+                                    <div class="text-block">
+                                        <!-- <h3>Safe and <br> Secure</h3> -->
+                                        <h3>{% endverbatim %} {% trans 'indexR' %}{% verbatim %}</h3>
+</div>
+                                    </div><!-- /.text-block -->
+                                </div><!-- /.top-box -->
+                                <p>{% endverbatim %} {% trans 'indexS' %}{% verbatim %}</p>
+                            </div><!-- /.single-featured-content-two -->
+                        </div><!-- /.col-lg-6 -->
+                        <div class=" col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                          <div class=" col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                            <div class="single-featured-content-two">
+                                <div class="top-box">
+                                    <div class="icon-block">
+                                          <i class="fa  fa-building-o  fa-2x"></i>
+                                    </div><!-- /.icon-block -->
+                                    <div class="text-block">
+                                        <!-- <h3>Deliver Smart <br> Work</h3> -->
+                                          <h3>{% endverbatim %} {% trans 'indexT' %}{% verbatim %}</h3>
+                                    </div><!-- /.text-block -->
+                                </div><!-- /.top-box -->
+                                <p>{% endverbatim %} {% trans 'indexU' %}{% verbatim %}</p>
+                              </div>
+                            </div><!-- /.single-featured-content-two -->
+                        </div><!-- /.col-lg-6 -->
+                        <div class=" col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                          <div class=" col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                            <div class="single-featured-content-two">
+                                <div class="top-box">
+                                    <div class="icon-block">
+                                          <i class="fa  fa-industry  fa-2x"></i>
+                                    </div><!-- /.icon-block -->
+                                    <div class="text-block">
+                                        <!-- <h3>Founded in <br> 1896</h3> -->
+                                          <h3>{% endverbatim %} {% trans 'indexV' %}{% verbatim %}</h3>
+                                    </div><!-- /.text-block -->
+                                </div><!-- /.top-box -->
+                                <p>{% endverbatim %} {% trans 'indexW' %}{% verbatim %}</p>
+</div>
+                            </div><!-- /.single-featured-content-two -->
+                        </div><!-- /.col-lg-6 -->
+                        <div class=" col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                          <div class=" col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                            <div class="single-featured-content-two">
+                                <div class="top-box">
+                                    <div class="icon-block">
+                                        <i class="fa  fa-headphones  fa-2x"></i>
+                                    </div><!-- /.icon-block -->
+                                    <div class="text-block">
+                                        <!-- <h3>We Support <br/> You</h3> -->
+                                          <h3>{% endverbatim %} {% trans 'indexX' %}{% verbatim %}</h3>
+                                    </div><!-- /.text-block -->
+                                </div><!-- /.top-box -->
+                                <p>{% endverbatim %} {% trans 'indexY' %}{% verbatim %}</p>
+
+                          </div>  </div><!-- /.single-featured-content-two -->
+                        </div><!-- /.col-lg-6 -->
+                    </div><!-- /.row -->
+                </div><!-- /.col-lg-7 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.sec-pad -->
+</div>
+</div>
+
+<section class="testimonials-style-three gray-bg sec-pad" style="padding-bottom:15px;padding-top:15px">
+    <div class="">
+        <div class="row">
+          <div class="sec-title text-center" style="margin-top: 50px;margin-bottom:0px!important">
+            <div class="sec-title" style="margin-bottom:0px!important">
+              <span class="tag-line">Gallery</span>
+            </div>
+          </div>
+            <div class="col-lg-12  col-md-12">
+              <div class="brand-carousel-wrapper">
+                      <div class="brand-carousel-onee owl-theme owl-carousel">
+                        {% endverbatim %}{% for i in albumImages%}
+                          <div class="item">
+                              <img src="{{i.image.url}}" alt="Awesome Image"  style="height:450px"/>
+                          </div>
+                          {% endfor %}{% verbatim %}
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<div class="">
+   <section class="fun-fact-style-one" id="counter">
+    <!-- <div class="container"> -->
+        <div class="row">
+            <div class="col-lg-2 col-md-2 col-md-offset-1">
+                <div class="single-fun-fact text-center">
+                    <h3><span class="counter">100</span></h3>
+                    <p>{% endverbatim %} {% trans 'index1' %}{% verbatim %}</p>
+                </div><!-- /.single-fun-fact -->
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-2 col-md-2">
+                <div class="single-fun-fact text-center">
+                    <h3><span class="counter">5</span></h3>
+                    <p>{% endverbatim %} {% trans 'index2' %}{% verbatim %}</p>
+                </div><!-- /.single-fun-fact -->
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-2 col-md-2">
+                <div class="single-fun-fact text-center">
+                    <h3><span class="counter">44</span></h3>
+                    <p>{% endverbatim %} {% trans 'index3' %}{% verbatim %}</p>
+                </div><!-- /.single-fun-fact -->
+            </div>
+            <div class="col-lg-2 col-md-2">
+                <div class="single-fun-fact  text-center">
+                    <h3><span class="counter">19</span> </h3>
+                    <p>{% endverbatim %} {% trans 'index4' %}{% verbatim %}</p>
+                </div><!-- /.single-fun-fact -->
+            </div>
+            <div class="col-lg-2 col-md-3">
+                <div class="single-fun-fact  text-center">
+                    <h3><span class="counter">100</span> <span class="plus">+</span></h3>
+                    <p>{% endverbatim %} {% trans 'index5' %}{% verbatim %}</p>
+                </div><!-- /.single-fun-fact -->
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    <!-- </div><!-- /.container --> -->
+</section>
+</div>
+
+
+
+</div><!-- /.page-wrapper -->
+<a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-long-arrow-up"></i></a>
+
+
+
+{% endverbatim %}
+
+{% endblock %}
+
+{% block brugjs %}
+<script>
+  var a = 0;
+$(window).scroll(function() {
+
+  var oTop = $('#counter').offset().top - window.innerHeight;
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $('.counter-value').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+          countNum: countTo
+        },
+
+        {
+
+          duration: 7000,
+          easing: 'swing',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+            //alert('finished');
+          }
+
+        });
+    });
+    a = 1;
+  }
+
+});
+
+
+
+</script>
+{% endblock %}
